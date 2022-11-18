@@ -4,6 +4,8 @@ AllCops:
   NewCops: enable
   Exclude:
     - 'spec/**/*'
+    - 'vendor/**/*'
+    - 'vendor/bundle/**/*'
 
 ####################################
 ## Customization for this project ##
