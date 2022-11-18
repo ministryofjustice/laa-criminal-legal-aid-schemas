@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/client_details.json",
+  "title": "Client details",
+  "description": "Attributes of an applicant for legal aid; the client of a criminal legal aid provider",
+  "type": "object",
+  "properties": {
+    "applicant": { "$ref": "#/definitions/person" },
+    "partner": { "$ref": "#/definitions/person" }
+  },
+  "required": ["applicant"],
+  "definitions": {
+    "person": { "$ref": "person.json" }
+  }
+}

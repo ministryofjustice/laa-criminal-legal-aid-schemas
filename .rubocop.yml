@@ -1,0 +1,13 @@
+AllCops:
+  TargetRubyVersion: 3.0
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - 'spec/**/*'
+
+####################################
+## Customization for this project ##
+####################################
+
+Style/Documentation:
+  Enabled: false

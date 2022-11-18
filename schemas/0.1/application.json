@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/application.json",
+  "title": "An application for criminal legal aid",
+  "description": "Attributes of a criminal legal aid application",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "schema_version": { "type": "number" },
+    "application_type": { "type": "string" },
+    "reference": { "type": "number" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "submitted_at": { "type": "string", "format": "date-time" },
+    "date_stamp": { "type": "string", "format": "date-time" },
+    "status": { "type": "string" },
+    "client_details": { "$ref": "#/definitions/client_details" }
+  },
+  "required": ["id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status", "client_details"],
+  "definitions": {
+    "client_details": { "$ref": "client_details.json" }
+  }
+}

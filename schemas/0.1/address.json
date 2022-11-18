@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/address.json",
+  "title": "Address",
+  "description": "Holds attributes of an address",
+  "type": "object",
+  "properties": {
+    "address_line_one": { "type": "string" },
+    "address_line_two": { "type": "string" },
+    "city": { "type": "string" },
+    "country": { "type": "string" },
+    "postcode": { "type": "string" }
+  },
+  "required": ["address_line_one", "city", "country", "postcode"]
+}
