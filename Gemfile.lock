@@ -61,7 +61,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
   laa-criminal-legal-aid-schemas!
   rake
   rspec
