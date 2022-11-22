@@ -20,10 +20,28 @@
         "partner": { "$ref": "#/definitions/person" }
       },
       "required": ["applicant"]
+    },
+    "case_details": {
+      "type": "object",
+      "properties": {
+        "urn": { "type": "string" },
+        "case_type": { "type": "string" },
+        "appeal_maat_id": { "type": "string" },
+        "appeal_with_changes_maat_id": { "type": "string" },
+        "appeal_with_changes_details": { "type": "string" },
+        "codefendants": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/codefendant" }
+        },
+        "hearing_court_name": { "type": "string" },
+        "hearing_date": { "type": "string", "format": "date" }
+      },
+      "required": ["case_type", "hearing_court_name", "hearing_date"]
     }
   },
   "required": ["id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status", "client_details"],
   "definitions": {
-    "person": { "$ref": "general/person.json" }
+    "person": { "$ref": "general/person.json" },
+    "codefendant": { "$ref": "general/codefendant.json" }
   }
 }

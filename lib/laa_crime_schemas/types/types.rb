@@ -6,6 +6,12 @@ module Types
   SchemaVersion = Coercible::Float
   ApplicationReference = Coercible::Integer
 
+  YESNO_VALUES = %w[
+    yes
+    no
+  ].freeze
+  YesNoValue = String.enum(*YESNO_VALUES)
+
   APPLICATION_STATUSES = %w[
     submitted
     returned
@@ -18,4 +24,15 @@ module Types
     providers_office_address
   ].freeze
   CorrespondenceAddressType = String.enum(*CORRESPONDENCE_ADDRESS_TYPES)
+
+  CASE_TYPES = %w[
+    summary_only
+    either_way
+    indictable
+    already_in_crown_court
+    committal
+    appeal_to_crown_court
+    appeal_to_crown_court_with_changes
+  ].freeze
+  CaseType = String.enum(*CASE_TYPES)
 end

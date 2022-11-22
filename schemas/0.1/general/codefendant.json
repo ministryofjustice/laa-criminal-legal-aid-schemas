@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/general/codefendant.json",
+  "title": "Codefendant",
+  "description": "Holds attributes of a co-defendant",
+  "type": "object",
+  "properties": {
+    "created_at": { "type": "string", "format": "date-time" },
+    "first_name": { "type": "string" },
+    "last_name": { "type": "string" },
+    "conflict_of_interest": { "type": "string" }
+  },
+  "required": ["created_at", "first_name", "last_name", "conflict_of_interest"]
+}

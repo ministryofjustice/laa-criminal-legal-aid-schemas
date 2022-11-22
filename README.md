@@ -73,6 +73,22 @@ app = LaaCrimeSchemas::Structs::CrimeApplication.new(payload)
 => true
 ```
 
+In your code you probably want to inherit from the class `LaaCrimeSchemas::Structs::CrimeApplication` so you have flexibility to customise 
+your own application class. Example:
+
+```ruby
+require 'laa_crime_schemas'
+
+# You have a class in your service
+module Structs
+  class MyCrimeApplication < LaaCrimeSchemas::Structs::CrimeApplication
+  end
+end
+
+# Then use your class like this
+Structs::MyCrimeApplication.new(payload)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

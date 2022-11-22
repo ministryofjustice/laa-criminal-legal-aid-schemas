@@ -14,6 +14,20 @@ module LaaCrimeSchemas
       attribute :client_details, Base do
         attribute :applicant, Person
       end
+
+      attribute? :case_details, Base do
+        attribute :urn, Types::String.optional
+
+        attribute :case_type, Types::CaseType
+        attribute? :appeal_maat_id, Types::String
+        attribute? :appeal_with_changes_maat_id, Types::String
+        attribute? :appeal_with_changes_details, Types::String
+
+        attribute? :codefendants, Types::Array.of(Codefendant)
+
+        attribute :hearing_court_name, Types::String
+        attribute :hearing_date, Types::JSON::Date
+      end
     end
   end
 end
