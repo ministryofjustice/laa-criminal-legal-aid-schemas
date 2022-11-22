@@ -50,6 +50,29 @@ Finally, if you want a detailed collection of all errors found, you can get them
 => [{:schema=>#<Addressable::URI:0x2e40 URI:file://laa-criminal-legal-aid-schemas/schemas/0.1/application.json>, :fragment=>\"#/\", :message=>\"The property '#/' did not contain a required property of 'status' in schema file://laa-criminal-legal-aid-schemas/schemas/0.1/application.json\", :failed_attribute=>\"Required\"}]
 ```
 
+## Building structs that conforms to the schema
+
+In order to facilitate working with the JSON payloads and responses from the datastore API, this gem also contains a shareable collection of `dry-struct` classes.
+
+For instance, include this gem in your service, and them you can build a struct from an API response like this:
+
+```ruby
+require 'laa_crime_schemas'
+
+# payload is a crime application JSON response
+app = LaaCrimeSchemas::Structs::CrimeApplication.new(payload)
+
+> app.reference
+=> 6000020
+
+> app.client_details.applicant.first_name
+=> "John"
+
+# as the struct conforms to the schema, the following is also true:
+> LaaCrimeSchemas::Validator.new(app.to_json).valid?
+=> true
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
