@@ -13,10 +13,17 @@
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
     "status": { "type": "string" },
-    "client_details": { "$ref": "#/definitions/client_details" }
+    "client_details": {
+      "type": "object",
+      "properties": {
+        "applicant": { "$ref": "#/definitions/person" },
+        "partner": { "$ref": "#/definitions/person" }
+      },
+      "required": ["applicant"]
+    }
   },
   "required": ["id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status", "client_details"],
   "definitions": {
-    "client_details": { "$ref": "client_details.json" }
+    "person": { "$ref": "general/person.json" }
   }
 }

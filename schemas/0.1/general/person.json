@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/person.json",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/general/person.json",
   "title": "Person",
   "description": "Holds attributes of a person",
   "type": "object",
