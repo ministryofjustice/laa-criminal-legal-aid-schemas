@@ -21,3 +21,7 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+def file_fixture(fixture_name)
+  Pathname.new(File.join('spec/fixtures', fixture_name))
+end

@@ -4,10 +4,6 @@ RSpec.describe LaaCrimeSchemas::Validator do
   let(:document) { { 'foo' => 'bar' } }
   let(:version) { nil }
 
-  def file_fixture(fixture_name)
-    Pathname.new(File.join('spec/fixtures', fixture_name))
-  end
-
   describe '#schema_version' do
     context 'when a specific version is provided' do
       let(:version) { 1.5 }
