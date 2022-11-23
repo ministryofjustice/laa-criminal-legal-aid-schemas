@@ -41,6 +41,16 @@
         "hearing_date": { "type": "string", "format": "date" }
       },
       "required": ["case_type", "hearing_court_name", "hearing_date"]
+    },
+    "interests_of_justice": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
     }
   },
   "required": ["id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status", "client_details"],

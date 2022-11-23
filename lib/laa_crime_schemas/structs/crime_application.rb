@@ -29,6 +29,11 @@ module LaaCrimeSchemas
         attribute :hearing_court_name, Types::String
         attribute :hearing_date, Types::JSON::Date
       end
+
+      attribute? :interests_of_justice, Types::Array.of(Base) do
+        attribute :type, Types::IojType
+        attribute :reason, Types::String
+      end
     end
   end
 end

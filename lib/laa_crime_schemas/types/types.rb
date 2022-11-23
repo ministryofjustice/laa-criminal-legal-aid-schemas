@@ -35,4 +35,18 @@ module Types
     appeal_to_crown_court_with_changes
   ].freeze
   CaseType = String.enum(*CASE_TYPES)
+
+  INTEREST_OF_JUSTICE_TYPES = %w[
+    loss_of_liberty
+    suspended_sentence
+    loss_of_livelihood
+    reputation
+    question_of_law
+    understanding
+    witness_tracing
+    expert_examination
+    interest_of_another
+    other
+  ].freeze
+  IojType = String.enum(*INTEREST_OF_JUSTICE_TYPES)
 end
