@@ -5,10 +5,9 @@
   "description": "Holds attributes of a co-defendant",
   "type": "object",
   "properties": {
-    "created_at": { "type": "string", "format": "date-time" },
     "first_name": { "type": "string" },
     "last_name": { "type": "string" },
     "conflict_of_interest": { "type": "string" }
   },
-  "required": ["created_at", "first_name", "last_name", "conflict_of_interest"]
+  "required": ["first_name", "last_name", "conflict_of_interest"]
 }

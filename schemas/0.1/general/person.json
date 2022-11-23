@@ -7,7 +7,7 @@
   "properties": {
     "first_name": { "type": "string" },
     "last_name": { "type": "string" },
-    "other_names": { "type": "string" },
+    "other_names": { "type": ["string", "null"] },
     "date_of_birth": { "type": "string", "format": "date" },
     "nino": { "type": "string" },
     "telephone_number": { "type": "string" },

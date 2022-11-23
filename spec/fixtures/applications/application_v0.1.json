@@ -33,10 +33,10 @@
   },
   "case_details": {
     "urn": "",
-    "case_type": "either_way",
+    "case_type": "appeal_to_crown_court",
+    "appeal_maat_id": null,
     "codefendants": [
       {
-        "created_at": "2022-10-24T08:45:00.000+00:00",
         "first_name": "Zoe",
         "last_name": "Blogs",
         "conflict_of_interest": "yes"

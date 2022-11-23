@@ -24,11 +24,11 @@
     "case_details": {
       "type": "object",
       "properties": {
-        "urn": { "type": "string" },
+        "urn": { "type": ["string", "null"] },
         "case_type": { "type": "string" },
-        "appeal_maat_id": { "type": "string" },
-        "appeal_with_changes_maat_id": { "type": "string" },
-        "appeal_with_changes_details": { "type": "string" },
+        "appeal_maat_id": { "type": ["string", "null"] },
+        "appeal_with_changes_maat_id": { "type": ["string", "null"] },
+        "appeal_with_changes_details": { "type": ["string", "null"] },
         "codefendants": {
           "type": "array",
           "items": { "$ref": "#/definitions/codefendant" }

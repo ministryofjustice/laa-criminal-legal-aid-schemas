@@ -19,9 +19,9 @@ module LaaCrimeSchemas
         attribute :urn, Types::String.optional
 
         attribute :case_type, Types::CaseType
-        attribute? :appeal_maat_id, Types::String
-        attribute? :appeal_with_changes_maat_id, Types::String
-        attribute? :appeal_with_changes_details, Types::String
+        attribute? :appeal_maat_id, Types::String.optional
+        attribute? :appeal_with_changes_maat_id, Types::String.optional
+        attribute? :appeal_with_changes_details, Types::String.optional
 
         attribute? :codefendants, Types::Array.of(Codefendant)
 

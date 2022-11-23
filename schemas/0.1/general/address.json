@@ -6,7 +6,7 @@
   "type": "object",
   "properties": {
     "address_line_one": { "type": "string" },
-    "address_line_two": { "type": "string" },
+    "address_line_two": { "type": ["string", "null"] },
     "city": { "type": "string" },
     "country": { "type": "string" },
     "postcode": { "type": "string" }
