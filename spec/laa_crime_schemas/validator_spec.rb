@@ -23,13 +23,21 @@ RSpec.describe LaaCrimeSchemas::Validator do
       end
 
       context 'when the document does not declare a schema version' do
-        it 'assumes a minimum default version' do
-          expect(subject.schema_version).to eq(0.1)
+        it 'raises an error' do
+          expect { subject.schema_version }.to raise_error(LaaCrimeSchemas::Errors::SchemaVersionError)
         end
+      end
+    end
 
-        it 'is not valid because the version property is required in the schema' do
-          expect(subject).not_to be_valid
-        end
+    context 'when the schema version is not recognised' do
+      let(:document) { { 'foo' => 'bar', 'schema_version' => 1.5 } }
+
+      it 'raises an error on `validate`' do
+        expect { subject.valid? }.to raise_error(LaaCrimeSchemas::Errors::SchemaNotFoundError)
+      end
+
+      it 'raises an error on `fully_validate`' do
+        expect { subject.fully_validate }.to raise_error(LaaCrimeSchemas::Errors::SchemaNotFoundError)
       end
     end
   end
