@@ -35,6 +35,18 @@
     "urn": "",
     "case_type": "appeal_to_crown_court",
     "appeal_maat_id": null,
+    "offences": [
+      {
+        "name": "Attempt robbery",
+        "offence_class": "Class C",
+        "dates": ["2020-05-11", "2020-08-11"]
+      },
+      {
+        "name": "Non-listed offence, manually entered",
+        "offence_class": null,
+        "dates": ["2020-09-15"]
+      }
+    ],
     "codefendants": [
       {
         "first_name": "Zoe",

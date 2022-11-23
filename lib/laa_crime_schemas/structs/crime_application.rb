@@ -23,6 +23,7 @@ module LaaCrimeSchemas
         attribute? :appeal_with_changes_maat_id, Types::String.optional
         attribute? :appeal_with_changes_details, Types::String.optional
 
+        attribute? :offences, Types::Array.of(Offence)
         attribute? :codefendants, Types::Array.of(Codefendant)
 
         attribute :hearing_court_name, Types::String

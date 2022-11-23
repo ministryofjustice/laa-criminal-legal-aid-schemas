@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/general/offence.json",
+  "title": "Offence",
+  "description": "Holds attributes of an offence",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "offence_class": { "type": ["string", "null"] },
+    "dates": {
+      "type": "array",
+      "items": { "type": "string", "format": "date" }
+    }
+  },
+  "required": ["name", "dates"]
+}

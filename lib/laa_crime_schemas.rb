@@ -13,6 +13,7 @@ require_relative 'laa_crime_schemas/types/types'
 require_relative 'laa_crime_schemas/structs/base'
 require_relative 'laa_crime_schemas/structs/address'
 require_relative 'laa_crime_schemas/structs/person'
+require_relative 'laa_crime_schemas/structs/offence'
 require_relative 'laa_crime_schemas/structs/codefendant'
 require_relative 'laa_crime_schemas/structs/crime_application'
 
