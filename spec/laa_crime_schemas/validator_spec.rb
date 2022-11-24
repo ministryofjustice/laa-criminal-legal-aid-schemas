@@ -42,9 +42,9 @@ RSpec.describe LaaCrimeSchemas::Validator do
     end
   end
 
-  describe 'schema version 0.1' do
-    let(:valid_fixture) { 'applications/application_v0.1.json' }
-    let(:invalid_fixture) { 'applications/application_v0.1_invalid.json' }
+  describe 'schema version 1.0' do
+    let(:valid_fixture) { 'application/1.0/application.json' }
+    let(:invalid_fixture) { 'application/1.0/application_invalid.json' }
 
     describe '#valid?' do
       context 'when the document is valid' do

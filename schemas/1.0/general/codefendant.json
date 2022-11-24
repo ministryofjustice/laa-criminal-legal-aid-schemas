@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/general/codefendant.json",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/codefendant.json",
   "title": "Codefendant",
   "description": "Holds attributes of a co-defendant",
   "type": "object",

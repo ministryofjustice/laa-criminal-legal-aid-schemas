@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/application.json",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/application.json",
   "title": "An application for criminal legal aid",
   "description": "Attributes of a criminal legal aid application",
   "type": "object",
@@ -16,8 +16,7 @@
     "client_details": {
       "type": "object",
       "properties": {
-        "applicant": { "$ref": "#/definitions/person" },
-        "partner": { "$ref": "#/definitions/person" }
+        "applicant": { "$ref": "#/definitions/person" }
       },
       "required": ["applicant"]
     },
@@ -40,7 +39,7 @@
         "hearing_court_name": { "type": "string" },
         "hearing_date": { "type": "string", "format": "date" }
       },
-      "required": ["case_type", "hearing_court_name", "hearing_date"]
+      "required": ["case_type", "offences", "hearing_court_name", "hearing_date"]
     },
     "interests_of_justice": {
       "type": "array",
@@ -53,7 +52,7 @@
       }
     }
   },
-  "required": ["id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status", "client_details"],
+  "required": ["id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status", "client_details", "case_details"],
   "definitions": {
     "person": { "$ref": "general/person.json" },
     "offence": { "$ref": "general/offence.json" },

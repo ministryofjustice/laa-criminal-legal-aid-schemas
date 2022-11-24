@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/0.1/general/person.json",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/person.json",
   "title": "Person",
   "description": "Holds attributes of a person",
   "type": "object",
@@ -15,7 +15,7 @@
     "address": { "$ref": "#/definitions/address" },
     "correspondence_address": { "$ref": "#/definitions/address" }
   },
-  "required": ["first_name", "last_name", "date_of_birth", "nino"],
+  "required": ["first_name", "last_name", "date_of_birth", "nino", "telephone_number", "correspondence_address_type"],
   "definitions": {
     "address": { "$ref": "address.json" }
   }

@@ -19,7 +19,20 @@ require_relative 'laa_crime_schemas/structs/codefendant'
 require_relative 'laa_crime_schemas/structs/crime_application'
 
 module LaaCrimeSchemas
-  def self.root
-    File.expand_path('..', __dir__)
+  class << self
+    def root
+      File.expand_path('..', __dir__)
+    end
+
+    # Get the path to an application fixture (JSON document)
+    # for a specific schema version.
+    #
+    # @return [Pathname] path to the fixture
+    #
+    def fixture(version, type: 'application')
+      Pathname.new(
+        File.join(root, 'spec', 'fixtures', type, version.to_s, "#{type}.json")
+      )
+    end
   end
 end

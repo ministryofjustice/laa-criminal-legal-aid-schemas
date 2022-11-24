@@ -1,10 +1,10 @@
 RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
   subject { described_class.new(attributes) }
 
-  let(:valid_fixture) { 'applications/application_v0.1.json' }
-  let(:invalid_fixture) { 'applications/application_v0.1_invalid.json' }
+  describe 'schema version 1.0' do
+    let(:valid_fixture) { 'application/1.0/application.json' }
+    let(:invalid_fixture) { 'application/1.0/application_invalid.json' }
 
-  describe '.new' do
     context 'for a valid crime application object' do
       let(:attributes) do
         JSON.parse(file_fixture(valid_fixture).read)
@@ -23,7 +23,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
       end
 
       it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /nino/)
+        expect { subject }.to raise_error(Dry::Struct::Error, /case_details/)
       end
     end
   end

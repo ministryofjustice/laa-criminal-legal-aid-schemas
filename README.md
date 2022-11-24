@@ -4,7 +4,7 @@ JSON schema definitions, fixtures and validator for LAA Apply for criminal legal
 
 Schemas are published versioned with major and minor version and stored in directory [schemas](/schemas).
 
-Initial schema 0.1 is WIP and not intended to be used just yet. It is a minimum schema to have something to start with.
+Initial schema 1.0 is implemented. There might be minor changes but overall should give an idea of the final document structure.
 
 ## Installation
 
@@ -28,10 +28,10 @@ require 'laa_crime_schemas'
 
 Then you can use the `LaaCrimeSchemas::Validator` class to validate a document against a specific JSON schema.
 
-For instance, to validate against version `0.1` of the JSON schema:
+For instance, to validate against version `1.0` of the JSON schema:
 
 ```ruby
-=> LaaCrimeSchemas::Validator.new(document, version: 0.1).valid?
+=> LaaCrimeSchemas::Validator.new(document, version: 1.0).valid?
 => true
 ```
 
@@ -46,8 +46,18 @@ assuming there is a property named `schema_version`.
 Finally, if you want a detailed collection of all errors found, you can get them with:
 
 ```ruby
-=> LaaCrimeSchemas::Validator.new(document, version: 0.1).fully_validate
-=> [{:schema=>#<Addressable::URI:0x2e40 URI:file://laa-criminal-legal-aid-schemas/schemas/0.1/application.json>, :fragment=>\"#/\", :message=>\"The property '#/' did not contain a required property of 'status' in schema file://laa-criminal-legal-aid-schemas/schemas/0.1/application.json\", :failed_attribute=>\"Required\"}]
+=> LaaCrimeSchemas::Validator.new(document, version: 1.0).fully_validate
+=> [{:schema=>#<Addressable::URI:0x2e40 URI:file://laa-criminal-legal-aid-schemas/schemas/1.0/application.json>, :fragment=>\"#/\", :message=>\"The property '#/' did not contain a required property of 'status' in schema file://laa-criminal-legal-aid-schemas/schemas/1.0/application.json\", :failed_attribute=>\"Required\"}]
+```
+
+As a bonus, you can obtain a fixture JSON document that conforms to a given schema as follows:
+
+```ruby
+=> fixture = LaaCrimeSchemas.fixture(1.0)
+=> #<Pathname:/projects/laa-criminal-legal-aid-schemas/spec/fixtures/application/1.0/application.json>
+
+# parse JSON document if you need to
+=> JSON.parse(fixture.read)
 ```
 
 ## Building structs that conforms to the schema
