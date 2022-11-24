@@ -15,6 +15,12 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
       it 'builds a crime application struct' do
         expect(subject.reference).to eq(6000001)
       end
+
+      it 'produces a valid JSON document conforming to the schema' do
+        expect(
+          LaaCrimeSchemas::Validator.new(subject.to_json)
+        ).to be_valid
+      end
     end
 
     context 'for an invalid crime application object' do
