@@ -9,9 +9,9 @@ module LaaCrimeSchemas
       attribute :date_of_birth, Types::JSON::Date
       attribute :nino, Types::String
 
-      attribute? :address, Address
-      attribute? :correspondence_address, Address
-      attribute :telephone_number, Types::String
+      attribute? :address, Address.optional
+      attribute? :correspondence_address, Address.optional
+      attribute? :telephone_number, Types::String.optional
       attribute :correspondence_address_type, Types::CorrespondenceAddressType
     end
   end

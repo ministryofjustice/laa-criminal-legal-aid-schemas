@@ -6,6 +6,7 @@
   "submitted_at": "2022-10-24T09:50:04.000+00:00",
   "date_stamp": "2022-10-24T09:50:04.000+00:00",
   "status": "submitted",
+  "provider_details": {},
   "client_details": {
     "applicant": {
       "first_name": "Kit",
@@ -13,7 +14,7 @@
       "nino": "AJ123456C",
       "date_of_birth": "2011-06-09",
       "telephone_number": "07771231231",
-      "correspondence_address_type": "other_address",
+      "correspondence_address_type": "home_address",
       "address": {
         "address_line_one": "1 Road",
         "address_line_two": "Village",
@@ -21,13 +22,7 @@
         "country": "United Kingdom",
         "postcode": "SW1A 2AA"
       },
-      "correspondence_address": {
-        "address_line_one": "Correspondence Cottage",
-        "address_line_two": "Correspondence Lane",
-        "city": "Correspondence City",
-        "country": "United Kingdom",
-        "postcode": "WM1 1CB"
-      }
+      "correspondence_address": null
     }
   }
 }

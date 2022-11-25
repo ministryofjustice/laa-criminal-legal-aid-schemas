@@ -12,6 +12,10 @@ module LaaCrimeSchemas
       attribute :date_stamp, Types::JSON::DateTime
       attribute :status, Types::ApplicationStatus
 
+      attribute :provider_details, Base do
+        # TBD, requires Portal integration
+      end
+
       attribute :client_details, Base do
         attribute :applicant, Person
       end

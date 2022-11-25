@@ -3,7 +3,7 @@
   "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/address.json",
   "title": "Address",
   "description": "Holds attributes of an address",
-  "type": "object",
+  "type": ["object", "null"],
   "properties": {
     "address_line_one": { "type": "string" },
     "address_line_two": { "type": ["string", "null"] },
