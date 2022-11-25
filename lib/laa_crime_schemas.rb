@@ -9,6 +9,8 @@ require_relative 'laa_crime_schemas/version'
 require_relative 'laa_crime_schemas/errors'
 require_relative 'laa_crime_schemas/validator'
 
+require_relative 'laa_crime_schemas/traits/full_name'
+
 require_relative 'laa_crime_schemas/types/types'
 
 require_relative 'laa_crime_schemas/structs/base'
