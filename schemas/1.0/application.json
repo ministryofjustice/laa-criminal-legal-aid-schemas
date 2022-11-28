@@ -50,7 +50,7 @@
       "required": ["case_type", "offences", "hearing_court_name", "hearing_date"]
     },
     "interests_of_justice": {
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "type": "object",
         "properties": {
@@ -60,7 +60,10 @@
       }
     }
   },
-  "required": ["id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status", "provider_details", "client_details", "case_details"],
+  "required": [
+    "id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status",
+    "provider_details", "client_details", "case_details", "interests_of_justice"
+  ],
   "definitions": {
     "applicant": { "$ref": "general/applicant.json" },
     "codefendant": { "$ref": "general/codefendant.json" },

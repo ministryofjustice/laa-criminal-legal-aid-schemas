@@ -37,7 +37,7 @@ module LaaCrimeSchemas
         attribute :hearing_date, Types::JSON::Date
       end
 
-      attribute :interests_of_justice, Types::Array.of(Base).default([].freeze) do
+      attribute :interests_of_justice, Types::Coercible::Array.of(Base).default([].freeze) do
         attribute :type, Types::IojType
         attribute :reason, Types::String
       end
