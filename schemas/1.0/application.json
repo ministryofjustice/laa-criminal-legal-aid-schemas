@@ -13,6 +13,10 @@
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
     "status": { "type": "string" },
+    "ioj_passport": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "provider_details": {
       "type": "object",
       "properties": {}

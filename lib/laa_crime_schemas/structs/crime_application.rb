@@ -12,6 +12,8 @@ module LaaCrimeSchemas
       attribute :date_stamp, Types::JSON::DateTime
       attribute :status, Types::ApplicationStatus
 
+      attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
+
       attribute :provider_details, Base do
         # TBD, requires Portal integration
       end

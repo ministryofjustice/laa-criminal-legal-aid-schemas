@@ -50,5 +50,12 @@ module LaaCrimeSchemas
       other
     ].freeze
     IojType = String.enum(*INTEREST_OF_JUSTICE_TYPES)
+
+    IOJ_PASSPORT_TYPES = %w[
+      on_age_under18
+      on_case_type
+      on_offence
+    ].freeze
+    IojPassportType = String.enum(*IOJ_PASSPORT_TYPES)
   end
 end
