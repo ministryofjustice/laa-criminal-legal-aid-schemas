@@ -5,6 +5,7 @@
   "description": "Holds attributes of an address",
   "type": ["object", "null"],
   "properties": {
+    "lookup_id": { "type": ["string", "null"] },
     "address_line_one": { "type": "string" },
     "address_line_two": { "type": ["string", "null"] },
     "city": { "type": "string" },

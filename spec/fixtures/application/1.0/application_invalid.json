@@ -15,7 +15,8 @@
       "date_of_birth": "2011-06-09",
       "telephone_number": "07771231231",
       "correspondence_address_type": "home_address",
-      "address": {
+      "home_address": {
+        "lookup_id": null,
         "address_line_one": "1 Road",
         "address_line_two": "Village",
         "city": "Some nice city",

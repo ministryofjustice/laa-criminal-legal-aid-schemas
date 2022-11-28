@@ -11,7 +11,7 @@ module LaaCrimeSchemas
       attribute :date_of_birth, Types::JSON::Date
       attribute :nino, Types::String
 
-      attribute? :address, Address.optional
+      attribute? :home_address, Address.optional
       attribute? :correspondence_address, Address.optional
       attribute? :telephone_number, Types::String.optional
       attribute :correspondence_address_type, Types::CorrespondenceAddressType

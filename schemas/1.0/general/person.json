@@ -12,7 +12,7 @@
     "nino": { "type": "string" },
     "telephone_number": { "type": ["string", "null"] },
     "correspondence_address_type": { "type": "string" },
-    "address": { "$ref": "#/definitions/address" },
+    "home_address": { "$ref": "#/definitions/address" },
     "correspondence_address": { "$ref": "#/definitions/address" }
   },
   "required": ["first_name", "last_name", "date_of_birth", "nino", "correspondence_address_type"],
