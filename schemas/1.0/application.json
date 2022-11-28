@@ -20,7 +20,7 @@
     "client_details": {
       "type": "object",
       "properties": {
-        "applicant": { "$ref": "#/definitions/person" }
+        "applicant": { "$ref": "#/definitions/applicant" }
       },
       "required": ["applicant"]
     },
@@ -58,8 +58,8 @@
   },
   "required": ["id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status", "provider_details", "client_details", "case_details"],
   "definitions": {
-    "person": { "$ref": "general/person.json" },
-    "offence": { "$ref": "general/offence.json" },
-    "codefendant": { "$ref": "general/codefendant.json" }
+    "applicant": { "$ref": "general/applicant.json" },
+    "codefendant": { "$ref": "general/codefendant.json" },
+    "offence": { "$ref": "general/offence.json" }
   }
 }

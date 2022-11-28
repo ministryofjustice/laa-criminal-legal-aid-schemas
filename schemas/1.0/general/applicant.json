@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/applicant.json",
+  "title": "Applicant",
+  "description": "Holds attributes of an applicant. Extends from Person.",
+  "type": "object",
+  "allOf": [{ "$ref": "#/definitions/person" }],
+  "properties": {
+    "date_of_birth": { "type": "string", "format": "date" },
+    "nino": { "type": "string" },
+    "telephone_number": { "type": ["string", "null"] },
+    "correspondence_address_type": { "type": "string" },
+    "home_address": { "$ref": "#/definitions/address" },
+    "correspondence_address": { "$ref": "#/definitions/address" }
+  },
+  "required": ["date_of_birth", "nino", "correspondence_address_type"],
+  "definitions": {
+    "person": { "$ref": "person.json" },
+    "address": { "$ref": "address.json" }
+  }
+}

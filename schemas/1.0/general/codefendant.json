@@ -2,12 +2,14 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/codefendant.json",
   "title": "Codefendant",
-  "description": "Holds attributes of a co-defendant",
+  "description": "Holds attributes of a co-defendant. Extends from Person.",
   "type": "object",
+  "allOf": [{ "$ref": "#/definitions/person" }],
   "properties": {
-    "first_name": { "type": "string" },
-    "last_name": { "type": "string" },
     "conflict_of_interest": { "type": "string" }
   },
-  "required": ["first_name", "last_name", "conflict_of_interest"]
+  "required": ["conflict_of_interest"],
+  "definitions": {
+    "person": { "$ref": "person.json" }
+  }
 }

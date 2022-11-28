@@ -17,7 +17,7 @@ module LaaCrimeSchemas
       end
 
       attribute :client_details, Base do
-        attribute :applicant, Person
+        attribute :applicant, Applicant
       end
 
       attribute :case_details, Base do
