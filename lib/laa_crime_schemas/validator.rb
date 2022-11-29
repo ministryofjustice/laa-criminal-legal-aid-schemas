@@ -12,7 +12,7 @@ module LaaCrimeSchemas
     end
 
     def schema_version
-      @schema_version ||= version || version_from_document
+      @schema_version ||= (version || version_from_document).to_f
     end
 
     def valid?
@@ -34,7 +34,7 @@ module LaaCrimeSchemas
     private
 
     def schema
-      [LaaCrimeSchemas.root, 'schemas', schema_version.to_f, 'application.json'].join('/')
+      File.join(LaaCrimeSchemas.root, 'schemas', schema_version.to_s, 'application.json')
     end
 
     def version_from_document

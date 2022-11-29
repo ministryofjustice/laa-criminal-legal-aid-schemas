@@ -42,7 +42,7 @@ RSpec.describe LaaCrimeSchemas::Validator do
     end
   end
 
-  describe 'schema version 1.0' do
+  describe 'submitted application, schema version 1.0' do
     let(:valid_fixture) { 'application/1.0/application.json' }
     let(:invalid_fixture) { 'application/1.0/application_invalid.json' }
 
@@ -72,6 +72,16 @@ RSpec.describe LaaCrimeSchemas::Validator do
 
         it { expect(subject.fully_validate).not_to be_empty }
       end
+    end
+  end
+
+  describe 'returned application, schema version 1.0' do
+    let(:valid_fixture) { 'application/1.0/application_returned.json' }
+
+    describe '#valid?' do
+      let(:document) { file_fixture(valid_fixture).read }
+
+      it { expect(subject).to be_valid }
     end
   end
 end

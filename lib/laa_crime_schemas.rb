@@ -30,11 +30,14 @@ module LaaCrimeSchemas
     # Get the path to an application fixture (JSON document)
     # for a specific schema version.
     #
+    # @param version [Float] The schema version
+    # @param type [String] Type of fixture. Optional. Defaults to `application`
+    # @param name [String] Name of the fixture. Optional. Defaults to `application`
     # @return [Pathname] path to the fixture
     #
-    def fixture(version, type: 'application')
+    def fixture(version, type: 'application', name: 'application')
       Pathname.new(
-        File.join(root, 'spec', 'fixtures', type, version.to_s, "#{type}.json")
+        File.join(root, 'spec', 'fixtures', type, version.to_s, "#{name}.json")
       )
     end
   end

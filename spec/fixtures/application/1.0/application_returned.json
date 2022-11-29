@@ -1,0 +1,38 @@
+{
+  "id": "47a93336-7da6-48ec-b139-808ddd555a41",
+  "schema_version": 1.0,
+  "reference": 6000002,
+  "created_at": "2022-09-21T16:25:00.000+00:00",
+  "submitted_at": "2022-09-27T14:10:00.000+00:00",
+  "date_stamp": "2022-09-23T16:00:00.000+00:00",
+  "status": "returned",
+  "ioj_passport": ["on_age_under18"],
+  "provider_details": {},
+  "client_details": {
+    "applicant": {
+      "first_name": "John",
+      "last_name": "POTTER",
+      "nino": "NC010155A",
+      "date_of_birth": "2007-01-01",
+      "telephone_number": "",
+      "correspondence_address_type": "providers_office_address",
+      "home_address": null,
+      "correspondence_address": null
+    }
+  },
+  "case_details": {
+    "urn": "12345",
+    "case_type": "summary_only",
+    "offences": [
+      {
+        "name": "Attempt robbery",
+        "offence_class": "Class C",
+        "dates": ["2020-05-11", "2020-08-11"]
+      }
+    ],
+    "codefendants": [],
+    "hearing_court_name": "Cardiff Magistrates' Court",
+    "hearing_date": "2024-11-11"
+  },
+  "interests_of_justice": null
+}
