@@ -47,7 +47,7 @@
         "hearing_court_name": { "type": "string" },
         "hearing_date": { "type": "string", "format": "date" }
       },
-      "required": ["case_type", "offences", "hearing_court_name", "hearing_date"]
+      "required": ["case_type", "offences", "codefendants", "hearing_court_name", "hearing_date"]
     },
     "interests_of_justice": {
       "type": ["array", "null"],
