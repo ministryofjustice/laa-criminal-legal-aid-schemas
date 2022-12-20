@@ -15,7 +15,8 @@ module LaaCrimeSchemas
       attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
 
       attribute :provider_details, Base do
-        # TBD, requires Portal integration
+        # Mark as mandatory once all applications have this attribute
+        attribute? :office_code, Types::String
       end
 
       attribute :client_details, Base do

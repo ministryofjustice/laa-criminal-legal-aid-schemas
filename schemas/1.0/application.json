@@ -19,7 +19,10 @@
     },
     "provider_details": {
       "type": "object",
-      "properties": {}
+      "properties": {
+        "office_code": { "type": "string", "minLength": 1 }
+      },
+      "required": ["office_code"]
     },
     "client_details": {
       "type": "object",
