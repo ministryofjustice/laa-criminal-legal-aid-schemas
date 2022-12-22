@@ -20,9 +20,12 @@
     "provider_details": {
       "type": "object",
       "properties": {
-        "office_code": { "type": "string", "minLength": 1 }
+        "office_code": { "type": "string", "minLength": 1 },
+        "legal_rep_first_name": { "type": "string" },
+        "legal_rep_last_name": { "type": "string" },
+        "legal_rep_telephone": { "type": "string" }
       },
-      "required": ["office_code"]
+      "required": ["office_code", "legal_rep_first_name", "legal_rep_last_name", "legal_rep_telephone"]
     },
     "client_details": {
       "type": "object",

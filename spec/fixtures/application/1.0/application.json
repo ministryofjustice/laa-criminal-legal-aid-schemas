@@ -8,7 +8,10 @@
   "status": "submitted",
   "ioj_passport": [],
   "provider_details": {
-    "office_code": "1A123B"
+    "office_code": "1A123B",
+    "legal_rep_first_name": "John",
+    "legal_rep_last_name": "Doe",
+    "legal_rep_telephone": "123456789"
   },
   "client_details": {
     "applicant": {
