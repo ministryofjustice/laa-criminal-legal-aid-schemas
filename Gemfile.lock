@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    laa-criminal-legal-aid-schemas (0.1.0)
+    laa-criminal-legal-aid-schemas (0.1.1)
       dry-struct
       json-schema (~> 3.0.0)
 
@@ -18,7 +18,7 @@ GEM
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     dry-inflector (1.0.0)
-    dry-logic (1.4.0)
+    dry-logic (1.5.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
       zeitwerk (~> 2.6)
@@ -40,7 +40,7 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
-    public_suffix (5.0.0)
+    public_suffix (5.0.1)
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.6.1)
