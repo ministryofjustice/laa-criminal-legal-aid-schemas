@@ -16,7 +16,6 @@ module LaaCrimeSchemas
     APPLICATION_STATUSES = %w[
       submitted
       returned
-      completed
     ].freeze
     ApplicationStatus = String.enum(*APPLICATION_STATUSES)
 
@@ -58,5 +57,12 @@ module LaaCrimeSchemas
       on_offence
     ].freeze
     IojPassportType = String.enum(*IOJ_PASSPORT_TYPES)
+
+    REVIEW_APPLICATION_STATUSES = %w[
+      application_received
+      returned_to_provider
+      ready_for_assessment
+    ].freeze
+    ReviewApplicationStatus = String.enum(*REVIEW_APPLICATION_STATUSES)
   end
 end
