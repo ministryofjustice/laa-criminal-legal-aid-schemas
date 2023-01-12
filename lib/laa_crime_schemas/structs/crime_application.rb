@@ -15,11 +15,10 @@ module LaaCrimeSchemas
       attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
 
       attribute :provider_details, Base do
-        # Mark as mandatory once all applications have these attributes
-        attribute? :office_code, Types::String
-        attribute? :legal_rep_first_name, Types::String
-        attribute? :legal_rep_last_name, Types::String
-        attribute? :legal_rep_telephone, Types::String
+        attribute :office_code, Types::String
+        attribute :legal_rep_first_name, Types::String
+        attribute :legal_rep_last_name, Types::String
+        attribute :legal_rep_telephone, Types::String
       end
 
       attribute :client_details, Base do
