@@ -10,7 +10,14 @@
     "dates": {
       "type": "array",
       "minItems": 1,
-      "items": { "type": "string", "format": "date" }
+      "items": {
+        "type": "object",
+        "properties": {
+          "date_from": { "type": "string", "format": "date" },
+          "date_to": { "type": ["string", "null"], "format": "date" }
+        },
+        "required": ["date_from"]
+      }
     }
   },
   "required": ["name", "dates"]
