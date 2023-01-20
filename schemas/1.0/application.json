@@ -12,7 +12,6 @@
     "created_at": { "type": "string", "format": "date-time" },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
-    "status": { "type": "string" },
     "ioj_passport": {
       "type": "array",
       "items": { "type": "string" }
@@ -72,7 +71,7 @@
     }
   },
   "required": [
-    "id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp", "status",
+    "id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp",
     "provider_details", "client_details", "case_details", "interests_of_justice"
   ],
   "definitions": {
