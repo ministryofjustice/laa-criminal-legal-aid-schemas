@@ -21,11 +21,15 @@
       "type": "object",
       "properties": {
         "office_code": { "type": "string", "minLength": 1 },
+        "provider_email": { "type": "string" },
         "legal_rep_first_name": { "type": "string" },
         "legal_rep_last_name": { "type": "string" },
         "legal_rep_telephone": { "type": "string" }
       },
-      "required": ["office_code", "legal_rep_first_name", "legal_rep_last_name", "legal_rep_telephone"]
+      "required": [
+        "office_code", "provider_email",
+        "legal_rep_first_name", "legal_rep_last_name", "legal_rep_telephone"
+      ]
     },
     "client_details": {
       "type": "object",

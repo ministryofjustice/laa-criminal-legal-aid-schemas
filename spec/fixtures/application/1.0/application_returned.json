@@ -9,6 +9,7 @@
   "ioj_passport": ["on_age_under18"],
   "provider_details": {
     "office_code": "1A123B",
+    "provider_email": "provider@example.com",
     "legal_rep_first_name": "John",
     "legal_rep_last_name": "Doe",
     "legal_rep_telephone": "123456789"
