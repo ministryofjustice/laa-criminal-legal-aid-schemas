@@ -4,6 +4,7 @@ module LaaCrimeSchemas
   module Structs
     class CrimeApplication < Base
       attribute :id, Types::String
+      attribute? :parent_id, Types::String.optional
       attribute :schema_version, Types::SchemaVersion
       attribute :reference, Types::ApplicationReference
       attribute? :application_type, Types::String

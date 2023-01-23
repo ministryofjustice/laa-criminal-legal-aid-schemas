@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "id": { "type": "string" },
+    "parent_id": { "type": ["string", "null"] },
     "schema_version": { "type": "number" },
     "application_type": { "type": "string" },
     "reference": { "type": "number" },
