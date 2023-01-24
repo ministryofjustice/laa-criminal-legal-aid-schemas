@@ -69,6 +69,15 @@
           "reason": { "type": "string" }
         }
       }
+    },
+    "return_details": {
+      "type": "object",
+      "properties": {
+        "reason": { "type": "string", "enum": ["clarification_required", "evidence_issue", "duplicate_application", "case_concluded", "provider_request"] },
+        "details": { "type": "string" },
+    	"returned_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["reason", "returned_at"]
     }
   },
   "required": [

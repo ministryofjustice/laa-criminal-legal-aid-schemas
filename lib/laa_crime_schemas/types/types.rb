@@ -58,6 +58,15 @@ module LaaCrimeSchemas
     ].freeze
     IojPassportType = String.enum(*IOJ_PASSPORT_TYPES)
 
+    RETURN_REASONS = %w[
+      clarification_required
+      evidence_issue
+      duplicate_application
+      case_concluded
+      provider_request
+    ].freeze
+    ReturnReason = String.enum(*RETURN_REASONS)
+
     REVIEW_APPLICATION_STATUSES = %w[
       application_received
       returned_to_provider
