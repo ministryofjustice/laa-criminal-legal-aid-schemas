@@ -29,7 +29,6 @@ module LaaCrimeSchemas
 
       attribute :case_details, Base do
         attribute :urn, Types::String.optional
-
         attribute :case_type, Types::CaseType
         attribute? :appeal_maat_id, Types::String.optional
         attribute? :appeal_with_changes_maat_id, Types::String.optional
@@ -46,6 +45,8 @@ module LaaCrimeSchemas
         attribute :type, Types::IojType
         attribute :reason, Types::String
       end
+
+      attribute? :return_details, ReturnDetails
     end
   end
 end

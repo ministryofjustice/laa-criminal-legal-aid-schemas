@@ -66,10 +66,6 @@ module LaaCrimeSchemas
       provider_request
     ].freeze
     ReturnReason = String.enum(*RETURN_REASONS)
-    ReturnDetails = Hash.schema(
-      reason: ReturnReason,
-      details: String
-    )
 
     REVIEW_APPLICATION_STATUSES = %w[
       application_received
