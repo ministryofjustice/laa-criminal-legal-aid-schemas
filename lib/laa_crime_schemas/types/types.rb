@@ -16,6 +16,7 @@ module LaaCrimeSchemas
     APPLICATION_STATUSES = %w[
       submitted
       returned
+      superseded
     ].freeze
     ApplicationStatus = String.enum(*APPLICATION_STATUSES)
 
