@@ -72,6 +72,7 @@ module LaaCrimeSchemas
       application_received
       returned_to_provider
       ready_for_assessment
+      assessment_completed
     ].freeze
     ReviewApplicationStatus = String.enum(*REVIEW_APPLICATION_STATUSES)
   end
