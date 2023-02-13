@@ -12,6 +12,7 @@ module LaaCrimeSchemas
       attribute :submitted_at, Types::JSON::DateTime
       attribute :date_stamp, Types::JSON::DateTime
       attribute :status, Types::ApplicationStatus
+      attribute :review_status, Types::ReviewApplicationStatus
 
       attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
 
