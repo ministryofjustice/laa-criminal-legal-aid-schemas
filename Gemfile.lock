@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    laa-criminal-legal-aid-schemas (0.1.1)
+    laa-criminal-legal-aid-schemas (0.1.2)
       dry-struct
       json-schema (~> 3.0.0)
 
@@ -11,7 +11,7 @@ GEM
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.2)
     diff-lcs (1.5.0)
     docile (1.4.0)
     dry-core (1.0.0)
@@ -27,11 +27,11 @@ GEM
       dry-types (>= 1.7, < 2)
       ice_nine (~> 0.11)
       zeitwerk (~> 2.6)
-    dry-types (1.7.0)
+    dry-types (1.7.1)
       concurrent-ruby (~> 1.0)
-      dry-core (~> 1.0, < 2)
-      dry-inflector (~> 1.0, < 2)
-      dry-logic (>= 1.4, < 2)
+      dry-core (~> 1.0)
+      dry-inflector (~> 1.0)
+      dry-logic (~> 1.4)
       zeitwerk (~> 2.6)
     ice_nine (0.11.2)
     json (2.6.2)
@@ -78,7 +78,7 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
     unicode-display_width (2.3.0)
-    zeitwerk (2.6.6)
+    zeitwerk (2.6.7)
 
 PLATFORMS
   ruby
