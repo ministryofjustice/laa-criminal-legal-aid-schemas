@@ -65,6 +65,7 @@ module LaaCrimeSchemas
       duplicate_application
       case_concluded
       provider_request
+      split_case
     ].freeze
     ReturnReason = String.enum(*RETURN_REASONS)
 
