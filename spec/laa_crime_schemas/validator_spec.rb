@@ -84,4 +84,39 @@ RSpec.describe LaaCrimeSchemas::Validator do
       it { expect(subject).to be_valid }
     end
   end
+
+  describe 'maat application, schema version 1.0' do
+    subject { described_class.new(document, version: version, schema_name: 'maat_application') }
+
+    let(:valid_fixture) { 'application/1.0/maat_application.json' }
+    let(:invalid_fixture) { 'application/1.0/maat_application_invalid.json' }
+
+    describe '#valid?' do
+      context 'when the document is valid' do
+        let(:document) { file_fixture(valid_fixture).read }
+
+        it { expect(subject).to be_valid }
+      end
+
+      context 'when the document is not valid' do
+        let(:document) { file_fixture(invalid_fixture).read }
+
+        it { expect(subject).not_to be_valid }
+      end
+    end
+
+    describe '#fully_validate' do
+      context 'when the document is valid' do
+        let(:document) { file_fixture(valid_fixture).read }
+
+        it { expect(subject.fully_validate).to be_empty }
+      end
+
+      context 'when the document is not valid' do
+        let(:document) { file_fixture(invalid_fixture).read }
+
+        it { expect(subject.fully_validate).not_to be_empty }
+      end
+    end
+  end
 end

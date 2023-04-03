@@ -6,9 +6,10 @@ module LaaCrimeSchemas
 
     attr_reader :document, :version
 
-    def initialize(document, version: nil)
+    def initialize(document, version: nil, schema_name: 'application')
       @document = document
       @version = version
+      @schema_name = schema_name
     end
 
     def schema_version
@@ -33,8 +34,10 @@ module LaaCrimeSchemas
 
     private
 
+    attr_reader :schema_name
+
     def schema
-      File.join(LaaCrimeSchemas.root, 'schemas', schema_version.to_s, 'application.json')
+      File.join(LaaCrimeSchemas.root, 'schemas', schema_version.to_s, "#{schema_name}.json")
     end
 
     def version_from_document
