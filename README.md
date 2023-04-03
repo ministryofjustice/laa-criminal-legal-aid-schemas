@@ -35,6 +35,15 @@ For instance, to validate against version `1.0` of the JSON schema:
 => true
 ```
 
+You can also use the `LaaCrimeSchemas::Validator` class to validate a document against the MAAT application JSON schema.
+
+For instance
+
+```ruby
+=> LaaCrimeSchemas::Validator.new(document, version: 1.0, schema_name: 'maat_application').valid?
+=> true
+```
+
 If you don't provide the version to the initialise, then the validator will try to obtain the version from the document itself, 
 assuming there is a property named `schema_version`.
 
