@@ -46,7 +46,7 @@
   "interests_of_justice": null,
   "return_details": {
     "reason": "split_case",
-    "details": "Offense 1 reason requires more detail",
+    "details": "Offence 1 reason requires more detail",
     "returned_at": "2022-09-27T14:10:00.000+00:00"
   }
 }
