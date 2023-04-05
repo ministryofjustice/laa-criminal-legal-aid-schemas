@@ -59,7 +59,7 @@ RSpec.describe LaaCrimeSchemas::Structs::ReturnDetails do
 
       it 'builds the return details struct' do
         expect(subject.reason).to eq('split_case')
-        expect(subject.details).to eq('Offense 1 reason requires more detail')
+        expect(subject.details).to eq('Offence 1 reason requires more detail')
         expect(subject.returned_at.to_s).to eq('2022-09-27T14:10:00+00:00')
       end
     end
