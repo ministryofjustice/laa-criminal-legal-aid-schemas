@@ -3,19 +3,7 @@
 module LaaCrimeSchemas
   module Traits
     module OffenceClass
-      OFFENCE_CLASS_RANKING = %w[
-        a
-        k
-        g
-        b
-        i
-        j
-        d
-        c
-        h
-        f
-        e
-      ].freeze
+      OFFENCE_CLASS_RANKING = %w[a k g b i j d c h f e].freeze
 
       def offence_class
         if any_manually_entered?
