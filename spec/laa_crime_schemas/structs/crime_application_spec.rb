@@ -22,6 +22,10 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
           LaaCrimeSchemas::Validator.new(subject.to_json)
         ).to be_valid
       end
+
+      it 'has an undertermined offence class' do
+        expect(subject.case_details.offence_class).to eq(nil)
+      end
     end
 
     context 'for an invalid crime application object' do
@@ -47,6 +51,10 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
         expect(
           LaaCrimeSchemas::Validator.new(subject.to_json)
         ).to be_valid
+      end
+
+      it 'has an offence class' do
+        expect(subject.case_details.offence_class).to eq("A")
       end
     end
   end

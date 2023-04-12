@@ -36,6 +36,7 @@ module LaaCrimeSchemas
 
         attribute :offences, Types::Array.of(Offence).constrained(min_size: 1)
         attribute :codefendants, Types::Array.of(Codefendant).default([].freeze)
+        include Traits::OffenceClass
 
         attribute :hearing_court_name, Types::String
         attribute :hearing_date, Types::JSON::Date
