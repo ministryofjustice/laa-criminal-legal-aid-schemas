@@ -4,7 +4,7 @@ module LaaCrimeSchemas
   module Structs
     class Applicant < Person
       attribute :date_of_birth, Types::JSON::Date
-      attribute? :nino, Types::String
+      attribute :nino, Types::String.optional
       attribute? :home_address, Address.optional
       attribute? :correspondence_address, Address.optional
       attribute? :telephone_number, Types::String.optional
