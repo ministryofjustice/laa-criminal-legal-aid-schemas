@@ -7,7 +7,7 @@
   "allOf": [{ "$ref": "#/definitions/person" }],
   "properties": {
     "date_of_birth": { "type": "string", "format": "date" },
-    "nino": { "type": "string" },
+    "nino": { "type": ["string", "null"] },
     "telephone_number": { "type": ["string", "null"] },
     "correspondence_address_type": { "type": "string" },
     "home_address": { "$ref": "#/definitions/address" },
