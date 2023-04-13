@@ -5,6 +5,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
     let(:valid_fixture) { 'application/1.0/application.json' }
     let(:returned_fixture) { 'application/1.0/application_returned.json' }
     let(:invalid_fixture) { 'application/1.0/application_invalid.json' }
+    let(:multi_class_offence_fixture) { 'application/1.0/application_with_multi_class_offence.json' }
 
     context 'for a valid crime application object' do
       let(:attributes) do
@@ -23,7 +24,17 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
         ).to be_valid
       end
 
-      it 'has an undertermined offence class' do
+      it 'has an undetermined offence class' do
+        expect(subject.case_details.offence_class).to eq(nil)
+      end
+    end
+
+    context 'for an valid crime application object with multi class offences' do
+      let(:attributes) do
+        JSON.parse(file_fixture(multi_class_offence_fixture).read)
+      end
+
+      it 'has an undetermined offence class' do
         expect(subject.case_details.offence_class).to eq(nil)
       end
     end
@@ -53,8 +64,14 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
         ).to be_valid
       end
 
-      it 'has an offence class' do
+      it 'returns the highest ranking offence class' do
         expect(subject.case_details.offence_class).to eq("A")
+      end
+    end
+
+    context 'failsafe checks for required types' do
+      it 'uses a valid offence class ranking' do
+        expect(LaaCrimeSchemas::Traits::OffenceClass::OFFENCE_CLASS_RANKING).to eq(%w[a k g b i j d c h f e].freeze)
       end
     end
   end
