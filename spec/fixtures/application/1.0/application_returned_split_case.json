@@ -6,7 +6,8 @@
   "submitted_at": "2022-09-27T14:10:00.000+00:00",
   "date_stamp": "2022-09-23T16:00:00.000+00:00",
   "status": "returned",
-  "ioj_passport": [],
+  "ioj_passport": ["on_offence"],
+  "means_passport": ["on_benefit_check"],
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",

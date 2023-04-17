@@ -8,6 +8,7 @@
   "status": "submitted",
   "review_status": "assessment_complete",
   "ioj_passport": ["on_age_under18"],
+  "means_passport": ["on_age_under18"],
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
@@ -20,7 +21,7 @@
       "first_name": "Peter",
       "last_name": "LANDSDALE",
       "nino": "JCT10155B",
-      "date_of_birth": "2003-02-02",
+      "date_of_birth": "2018-02-02",
       "telephone_number": "",
       "correspondence_address_type": "providers_office_address",
       "home_address": null,

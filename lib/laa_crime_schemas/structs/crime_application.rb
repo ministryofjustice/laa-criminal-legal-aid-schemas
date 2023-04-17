@@ -14,6 +14,7 @@ module LaaCrimeSchemas
       attribute :status, Types::ApplicationStatus
 
       attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
+      attribute? :means_passport, Types::Array.of(Types::MeansPassportType).default([].freeze)
 
       attribute :provider_details, Base do
         attribute :office_code, Types::String
