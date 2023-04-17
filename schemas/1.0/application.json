@@ -17,6 +17,10 @@
       "type": "array",
       "items": { "type": "string" }
     },
+    "means_passport": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "provider_details": {
       "type": "object",
       "properties": {

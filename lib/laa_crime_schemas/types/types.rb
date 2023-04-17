@@ -54,10 +54,15 @@ module LaaCrimeSchemas
 
     IOJ_PASSPORT_TYPES = %w[
       on_age_under18
-      on_case_type
       on_offence
     ].freeze
     IojPassportType = String.enum(*IOJ_PASSPORT_TYPES)
+
+    MEANS_PASSPORT_TYPES = %w[
+      on_age_under18
+      on_benefit_check
+    ].freeze
+    MeansPassportType = String.enum(*MEANS_PASSPORT_TYPES)
 
     RETURN_REASONS = %w[
       clarification_required

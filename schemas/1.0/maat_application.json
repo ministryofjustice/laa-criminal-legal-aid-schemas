@@ -11,10 +11,6 @@
     "reference": { "type": "number" },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
-    "ioj_passport": {
-      "type": "array",
-      "items": { "type": "string" }
-    },
     "provider_details": {
       "type": "object",
       "properties": {

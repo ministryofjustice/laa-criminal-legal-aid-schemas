@@ -7,6 +7,7 @@
   "date_stamp": "2022-10-24T09:50:04.000+00:00",
   "status": "submitted",
   "ioj_passport": [],
+  "means_passport": ["on_benefit_check"],
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
@@ -19,7 +20,7 @@
       "first_name": "Kit",
       "last_name": "Pound",
       "nino": "AJ123456C",
-      "date_of_birth": "2011-06-09",
+      "date_of_birth": "2001-06-09",
       "telephone_number": "07771231231",
       "correspondence_address_type": "home_address",
       "home_address": {
