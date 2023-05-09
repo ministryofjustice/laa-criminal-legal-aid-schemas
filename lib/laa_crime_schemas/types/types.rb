@@ -81,5 +81,8 @@ module LaaCrimeSchemas
       assessment_completed
     ].freeze
     ReviewApplicationStatus = String.enum(*REVIEW_APPLICATION_STATUSES)
+
+    OFFENCE_CLASSES = %w[A K G B I J D C H F E].freeze
+    OffenceClass = String.enum(*OFFENCE_CLASSES)
   end
 end
