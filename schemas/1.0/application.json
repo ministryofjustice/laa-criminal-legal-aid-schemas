@@ -47,6 +47,7 @@
       "properties": {
         "urn": { "type": ["string", "null"] },
         "case_type": { "type": "string" },
+        "offence_class": { "type": ["string", "null"] },
         "appeal_maat_id": { "type": ["string", "null"] },
         "appeal_with_changes_maat_id": { "type": ["string", "null"] },
         "appeal_with_changes_details": { "type": ["string", "null"] },
