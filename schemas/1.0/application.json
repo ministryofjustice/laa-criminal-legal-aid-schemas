@@ -82,7 +82,7 @@
   },
   "required": [
     "id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp",
-    "provider_details", "client_details", "case_details", "interests_of_justice"
+    "provider_details", "client_details", "case_details", "interests_of_justice", "parent_id"
   ],
   "definitions": {
     "applicant": { "$ref": "general/applicant.json" },
