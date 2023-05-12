@@ -14,6 +14,7 @@ module LaaCrimeSchemas
       attribute :status, Types::ApplicationStatus
 
       attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
+      attribute? :means_passport, Types::Array.of(Types::MeansPassportType).default([].freeze)
 
       attribute :provider_details, Base do
         attribute :office_code, Types::String
@@ -30,6 +31,7 @@ module LaaCrimeSchemas
       attribute :case_details, Base do
         attribute :urn, Types::String.optional
         attribute :case_type, Types::CaseType
+        attribute? :offence_class, Types::OffenceClass.optional
         attribute? :appeal_maat_id, Types::String.optional
         attribute? :appeal_with_changes_maat_id, Types::String.optional
         attribute? :appeal_with_changes_details, Types::String.optional

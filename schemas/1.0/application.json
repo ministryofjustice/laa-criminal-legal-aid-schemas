@@ -17,6 +17,10 @@
       "type": "array",
       "items": { "type": "string" }
     },
+    "means_passport": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "provider_details": {
       "type": "object",
       "properties": {
@@ -43,6 +47,7 @@
       "properties": {
         "urn": { "type": ["string", "null"] },
         "case_type": { "type": "string" },
+        "offence_class": { "type": ["string", "null"] },
         "appeal_maat_id": { "type": ["string", "null"] },
         "appeal_with_changes_maat_id": { "type": ["string", "null"] },
         "appeal_with_changes_details": { "type": ["string", "null"] },

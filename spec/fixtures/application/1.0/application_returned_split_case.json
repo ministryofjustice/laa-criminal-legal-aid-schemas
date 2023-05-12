@@ -1,14 +1,13 @@
 {
-  "id": "10fd999b-0327-4826-a5f4-ac348c70ede4",
+  "id": "5d7d6320-98cb-40e2-b200-ccc10b75d96f",
   "schema_version": 1.0,
-  "reference": 6000003,
-  "created_at": "2023-01-11T13:25:00.000+00:00",
-  "submitted_at": "2023-01-11T14:10:00.000+00:00",
-  "date_stamp": "2023-01-11T13:28:00.000+00:00",
-  "status": "submitted",
-  "review_status": "assessment_complete",
-  "ioj_passport": ["on_age_under18"],
-  "means_passport": ["on_age_under18"],
+  "reference": 6000002,
+  "created_at": "2022-09-21T16:25:00.000+00:00",
+  "submitted_at": "2022-09-27T14:10:00.000+00:00",
+  "date_stamp": "2022-09-23T16:00:00.000+00:00",
+  "status": "returned",
+  "ioj_passport": ["on_offence"],
+  "means_passport": ["on_benefit_check"],
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
@@ -18,10 +17,10 @@
   },
   "client_details": {
     "applicant": {
-      "first_name": "Peter",
-      "last_name": "LANDSDALE",
-      "nino": "JCT10155B",
-      "date_of_birth": "2018-02-02",
+      "first_name": "Kyle",
+      "last_name": "Walker",
+      "nino": "JL340144C",
+      "date_of_birth": "1990-01-01",
       "telephone_number": "",
       "correspondence_address_type": "providers_office_address",
       "home_address": null,
@@ -46,5 +45,10 @@
     "hearing_court_name": "Cardiff Magistrates' Court",
     "hearing_date": "2024-11-11"
   },
-  "interests_of_justice": null
+  "interests_of_justice": null,
+  "return_details": {
+    "reason": "split_case",
+    "details": "Offence 1 reason requires more detail",
+    "returned_at": "2022-09-27T14:10:00.000+00:00"
+  }
 }
