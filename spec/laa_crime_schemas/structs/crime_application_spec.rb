@@ -34,6 +34,18 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
       end
     end
 
+    context 'for an invalid correspondence_address_type object' do
+      let(:attributes) do
+        json = JSON.parse(file_fixture(invalid_fixture).read)
+        json['client_details']['applicant']['correspondence_address_type'] = 'work_address'
+        json
+      end
+
+      it 'raises an error' do
+        expect { subject }.to raise_error(Dry::Struct::Error, /\"work_address\" \(String\) has invalid type/)
+      end
+    end
+
     context 'for a valid returned JSON document' do
       let(:attributes) do
         JSON.parse(file_fixture(returned_fixture).read)
