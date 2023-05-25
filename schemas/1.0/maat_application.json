@@ -36,11 +36,11 @@
       "type": "object",
       "properties": {
         "urn": { "type": ["string", "null"] },
-        "case_type": { "type": "string" },
+        "case_type": { "type": "string", "enum": ["summary_only", "either_way", "indictable", "already_in_crown_court", "committal", "appeal_to_crown_court", "appeal_to_crown_court_with_changes"] },
         "appeal_maat_id": { "type": ["string", "null"] },
         "appeal_with_changes_maat_id": { "type": ["string", "null"] },
         "appeal_with_changes_details": { "type": ["string", "null"] },
-        "offence_class": { "type": ["string", "null"] },
+        "offence_class": { "type": ["string", "null"], "enum": ["A", "K", "G", "B", "I", "J", "D", "C", "H", "F", "E", null] },
         "hearing_court_name": { "type": "string" },
         "hearing_date": { "type": "string", "format": "date" }
       },
@@ -51,7 +51,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "type": { "type": "string" },
+          "type": { "type": "string", "enum": ["loss_of_liberty", "suspended_sentence", "loss_of_livelihood", "reputation", "question_of_law", "understanding", "witness_tracing", "expert_examination", "interest_of_another", "other"] },
           "reason": { "type": "string" }
         }
       }

@@ -13,13 +13,14 @@
     "created_at": { "type": "string", "format": "date-time" },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["submitted", "returned", "superseded"] },
     "ioj_passport": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": { "type": "string", "enum": ["on_age_under18", "on_offence"] }
     },
     "means_passport": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": { "type": "string", "enum": ["on_age_under18", "on_benefit_check"] }
     },
     "provider_details": {
       "type": "object",
@@ -46,8 +47,8 @@
       "type": "object",
       "properties": {
         "urn": { "type": ["string", "null"] },
-        "case_type": { "type": "string" },
-        "offence_class": { "type": ["string", "null"] },
+        "case_type": { "type": "string", "enum": ["summary_only", "either_way", "indictable", "already_in_crown_court", "committal", "appeal_to_crown_court", "appeal_to_crown_court_with_changes"] },
+        "offence_class": { "type": ["string", "null"], "enum": ["A", "K", "G", "B", "I", "J", "D", "C", "H", "F", "E", null] },
         "appeal_maat_id": { "type": ["string", "null"] },
         "appeal_with_changes_maat_id": { "type": ["string", "null"] },
         "appeal_with_changes_details": { "type": ["string", "null"] },
@@ -70,7 +71,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "type": { "type": "string" },
+          "type": { "type": "string", "enum": ["loss_of_liberty", "suspended_sentence", "loss_of_livelihood", "reputation", "question_of_law", "understanding", "witness_tracing", "expert_examination", "interest_of_another", "other"] },
           "reason": { "type": "string" }
         }
       }
