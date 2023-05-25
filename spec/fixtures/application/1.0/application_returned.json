@@ -2,9 +2,9 @@
   "id": "47a93336-7da6-48ec-b139-808ddd555a41",
   "schema_version": 1.0,
   "reference": 6000002,
-  "created_at": "2022-09-21T16:25:00.000+00:00",
-  "submitted_at": "2022-09-27T14:10:00.000+00:00",
-  "date_stamp": "2022-09-23T16:00:00.000+00:00",
+  "created_at": "2022-09-21T16:25:00.112Z",
+  "submitted_at": "2022-09-27T14:10:00.889Z",
+  "date_stamp": "2022-09-23T16:00:00.208Z",
   "status": "returned",
   "ioj_passport": [],
   "means_passport": ["on_benefit_check"],
@@ -54,6 +54,6 @@
   "return_details": {
     "reason": "clarification_required",
     "details": "Further information regarding IoJ required",
-    "returned_at": "2022-09-27T14:10:00.000+00:00"
+    "returned_at": "2022-09-27T14:10:00.889Z"
   }
 }
