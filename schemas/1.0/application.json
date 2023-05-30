@@ -56,7 +56,7 @@
       "required": ["case_type", "offences", "codefendants", "hearing_court_name", "hearing_date"]
     },
     "interests_of_justice": {
-      "type": ["array", "null"],
+      "type": "array",
       "items": { "$ref": "#/definitions/ioj" }
     },
     "return_details": {

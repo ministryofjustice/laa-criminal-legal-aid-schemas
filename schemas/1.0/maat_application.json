@@ -50,7 +50,7 @@
       "required": ["case_type", "hearing_court_name", "hearing_date", "offence_class"]
     },
     "interests_of_justice": {
-      "type": ["array", "null"],
+      "type": "array",
       "items": { "$ref": "#/definitions/ioj" }
     }
   },
