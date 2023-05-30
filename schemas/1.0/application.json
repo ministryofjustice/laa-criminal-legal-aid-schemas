@@ -8,8 +8,8 @@
     "id": { "type": "string" },
     "parent_id": { "type": ["string", "null"] },
     "schema_version": { "type": "number" },
-    "application_type": { "type": "string" },
     "reference": { "type": "number" },
+    "application_type": { "type": "string", "enum": ["initial"] },
     "created_at": { "type": "string", "format": "date-time" },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
@@ -70,7 +70,7 @@
     }
   },
   "required": [
-    "id", "schema_version", "reference", "created_at", "submitted_at", "date_stamp",
+    "id", "schema_version", "reference", "application_type", "created_at", "submitted_at", "date_stamp",
     "provider_details", "client_details", "case_details", "interests_of_justice"
   ],
   "definitions": {

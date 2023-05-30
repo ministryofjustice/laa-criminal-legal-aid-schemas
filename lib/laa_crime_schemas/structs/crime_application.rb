@@ -7,7 +7,7 @@ module LaaCrimeSchemas
       attribute? :parent_id, Types::String.optional
       attribute :schema_version, Types::SchemaVersion
       attribute :reference, Types::ApplicationReference
-      attribute? :application_type, Types::String
+      attribute? :application_type, Types::ApplicationType # TODO: change attr to required
       attribute :created_at, Types::JSON::DateTime
       attribute :submitted_at, Types::JSON::DateTime
       attribute :date_stamp, Types::JSON::DateTime
