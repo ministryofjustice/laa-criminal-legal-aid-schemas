@@ -13,6 +13,11 @@ module LaaCrimeSchemas
     ].freeze
     YesNoValue = String.enum(*YESNO_VALUES)
 
+    APPLICATION_TYPES = %w[
+      initial
+    ].freeze
+    ApplicationType = String.enum(*APPLICATION_TYPES)
+
     APPLICATION_STATUSES = %w[
       submitted
       returned

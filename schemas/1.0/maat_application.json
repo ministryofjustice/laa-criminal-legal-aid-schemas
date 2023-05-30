@@ -7,8 +7,8 @@
   "properties": {
     "id": { "type": "string" },
     "schema_version": { "type": "number" },
-    "application_type": { "type": "string" },
     "reference": { "type": "number" },
+    "application_type": { "type": "string", "enum": ["initial"] },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
     "provider_details": {
@@ -55,7 +55,7 @@
     }
   },
   "required": [
-    "id", "schema_version", "reference", "submitted_at", "date_stamp",
+    "id", "schema_version", "reference", "application_type", "submitted_at", "date_stamp",
     "provider_details", "client_details", "case_details", "interests_of_justice"
   ],
   "definitions": {
