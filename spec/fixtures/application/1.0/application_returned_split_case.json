@@ -45,7 +45,7 @@
     "hearing_court_name": "Cardiff Magistrates' Court",
     "hearing_date": "2024-11-11"
   },
-  "interests_of_justice": null,
+  "interests_of_justice": [],
   "return_details": {
     "reason": "split_case",
     "details": "Offence 1 reason requires more detail",

@@ -23,18 +23,7 @@
       "items": { "type": "string", "enum": ["on_age_under18", "on_benefit_check"] }
     },
     "provider_details": {
-      "type": "object",
-      "properties": {
-        "office_code": { "type": "string", "minLength": 1 },
-        "provider_email": { "type": "string" },
-        "legal_rep_first_name": { "type": "string" },
-        "legal_rep_last_name": { "type": "string" },
-        "legal_rep_telephone": { "type": "string" }
-      },
-      "required": [
-        "office_code", "provider_email",
-        "legal_rep_first_name", "legal_rep_last_name", "legal_rep_telephone"
-      ]
+      "$ref": "#/definitions/provider"
     },
     "client_details": {
       "type": "object",
@@ -67,14 +56,8 @@
       "required": ["case_type", "offences", "codefendants", "hearing_court_name", "hearing_date"]
     },
     "interests_of_justice": {
-      "type": ["array", "null"],
-      "items": {
-        "type": "object",
-        "properties": {
-          "type": { "type": "string", "enum": ["loss_of_liberty", "suspended_sentence", "loss_of_livelihood", "reputation", "question_of_law", "understanding", "witness_tracing", "expert_examination", "interest_of_another", "other"] },
-          "reason": { "type": "string" }
-        }
-      }
+      "type": "array",
+      "items": { "$ref": "#/definitions/ioj" }
     },
     "return_details": {
       "type": "object",
@@ -83,7 +66,7 @@
         "details": { "type": "string" },
     	"returned_at": { "type": "string", "format": "date-time" }
       },
-      "required": ["reason", "returned_at"]
+      "required": ["reason", "details", "returned_at"]
     }
   },
   "required": [
@@ -91,8 +74,10 @@
     "provider_details", "client_details", "case_details", "interests_of_justice"
   ],
   "definitions": {
+    "provider": { "$ref": "general/provider.json" },
     "applicant": { "$ref": "general/applicant.json" },
     "codefendant": { "$ref": "general/codefendant.json" },
-    "offence": { "$ref": "general/offence.json" }
+    "offence": { "$ref": "general/offence.json" },
+    "ioj": { "$ref": "general/ioj.json" }
   }
 }
