@@ -4,7 +4,6 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
   describe 'schema version 1.0' do
     let(:valid_fixture) { 'application/1.0/application.json' }
     let(:returned_fixture) { 'application/1.0/application_returned.json' }
-    let(:invalid_fixture) { 'application/1.0/application_invalid.json' }
 
     context 'for a valid crime application object' do
       let(:attributes) do
@@ -26,17 +25,19 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
 
     context 'for an invalid crime application object' do
       let(:attributes) do
-        JSON.parse(file_fixture(invalid_fixture).read)
+        json = JSON.parse(file_fixture(valid_fixture).read)
+        json['client_details']['applicant'] = nil
+        json
       end
 
       it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /case_details/)
+        expect { subject }.to raise_error(Dry::Struct::Error, /first_name/)
       end
     end
 
-    context 'for an invalid correspondence_address_type object' do
+    context 'for an invalid `correspondence_address_type` attribute' do
       let(:attributes) do
-        json = JSON.parse(file_fixture(invalid_fixture).read)
+        json = JSON.parse(file_fixture(valid_fixture).read)
         json['client_details']['applicant']['correspondence_address_type'] = 'work_address'
         json
       end

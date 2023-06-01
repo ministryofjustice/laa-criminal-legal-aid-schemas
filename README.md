@@ -67,6 +67,9 @@ As a bonus, you can obtain a fixture JSON document that conforms to a given sche
 
 # parse JSON document if you need to
 => JSON.parse(fixture.read)
+
+# or, if a block is provided, you get the parsed JSON for easier access
+=> LaaCrimeSchemas.fixture(1.0) { |json| json['case_details'] }
 ```
 
 ## Building structs that conforms to the schema
