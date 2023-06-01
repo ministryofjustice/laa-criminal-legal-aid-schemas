@@ -34,12 +34,15 @@ module LaaCrimeSchemas
     # @param version [Float] The schema version
     # @param type [String] Type of fixture. Optional. Defaults to `application`
     # @param name [String] Name of the fixture. Optional. Defaults to `application`
+    # @yield [JSON] Invokes the block with the fixture parsed JSON
     # @return [Pathname] path to the fixture
     #
-    def fixture(version, type: 'application', name: 'application')
-      Pathname.new(
+    def fixture(version, type: 'application', name: 'application', &block)
+      file = Pathname.new(
         File.join(root, 'spec', 'fixtures', type, version.to_s, "#{name}.json")
       )
+
+      block ? yield(JSON.parse(file.read)) : file
     end
   end
 end

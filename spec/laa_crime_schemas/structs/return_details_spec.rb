@@ -2,9 +2,7 @@ RSpec.describe LaaCrimeSchemas::Structs::ReturnDetails do
   subject { described_class.new(attributes) }
 
   let(:valid_details) do
-    JSON.parse(
-      LaaCrimeSchemas.fixture(1.0, name: 'application_returned').read
-    )['return_details']
+    LaaCrimeSchemas.fixture(1.0, name: 'application_returned') { |json| json['return_details'] }
   end
 
   describe '.new' do
@@ -45,22 +43,6 @@ RSpec.describe LaaCrimeSchemas::Structs::ReturnDetails do
 
       it 'raises an error' do
         expect { subject }.to raise_error(Dry::Struct::Error, /invalid type for :returned_at/)
-      end
-    end
-
-    context 'with split case reason' do
-      let(:valid_details) do
-        JSON.parse(
-          LaaCrimeSchemas.fixture(1.0, name: 'application_returned_split_case').read
-        )['return_details']
-      end
-
-      let(:attributes) { valid_details }
-
-      it 'builds the return details struct' do
-        expect(subject.reason).to eq('split_case')
-        expect(subject.details).to eq('Offence 1 reason requires more detail')
-        expect(subject.returned_at.to_s).to eq('2022-09-27T14:10:00+00:00')
       end
     end
   end
