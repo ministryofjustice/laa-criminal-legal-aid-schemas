@@ -7,7 +7,7 @@
   "properties": {
     "id": { "type": "string" },
     "schema_version": { "type": "number" },
-    "reference": { "type": "number" },
+    "reference": { "type": "integer" },
     "application_type": { "type": "string", "enum": ["initial"] },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },

@@ -21,6 +21,7 @@ require_relative 'laa_crime_schemas/structs/applicant'
 require_relative 'laa_crime_schemas/structs/codefendant'
 require_relative 'laa_crime_schemas/structs/return_details'
 require_relative 'laa_crime_schemas/structs/crime_application'
+require_relative 'laa_crime_schemas/structs/pruned_application'
 
 module LaaCrimeSchemas
   class << self

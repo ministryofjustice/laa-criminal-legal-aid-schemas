@@ -84,6 +84,49 @@ RSpec.describe LaaCrimeSchemas::Validator do
     end
   end
 
+  describe 'pruned application, schema version 1.0' do
+    subject { described_class.new(document, version: version, schema_name: 'pruned_application') }
+
+    let(:valid_fixture) { 'application/1.0/pruned_application.json' }
+
+    describe '#valid?' do
+      context 'when the document is valid' do
+        let(:document) { file_fixture(valid_fixture).read }
+
+        it { expect(subject).to be_valid }
+      end
+
+      context 'when the document is not valid' do
+        let(:document) { { schema_version: 1.0 }.to_json }
+
+        it { expect(subject).not_to be_valid }
+      end
+    end
+
+    describe '#fully_validate' do
+      context 'when the document is valid' do
+        let(:document) { file_fixture(valid_fixture).read }
+
+        it { expect(subject.fully_validate).to be_empty }
+      end
+
+      context 'when the document is not valid' do
+        let(:document) { { schema_version: 1.0 }.to_json }
+
+        it { expect(subject.fully_validate).not_to be_empty }
+      end
+
+      context 'when there are additional unrecognised properties' do
+        let(:document) do
+          json = JSON.parse(file_fixture(valid_fixture).read)
+          json.merge!('case_details' => {})
+        end
+
+        it { expect(subject.fully_validate.to_s).to match(/contains additional properties \[\\\"case_details\\\"\]/) }
+      end
+    end
+  end
+
   describe 'maat application, schema version 1.0' do
     subject { described_class.new(document, version: version, schema_name: 'maat_application') }
 

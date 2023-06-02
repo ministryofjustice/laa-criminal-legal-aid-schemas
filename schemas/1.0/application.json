@@ -8,7 +8,7 @@
     "id": { "type": "string" },
     "parent_id": { "type": ["string", "null"] },
     "schema_version": { "type": "number" },
-    "reference": { "type": "number" },
+    "reference": { "type": "integer" },
     "application_type": { "type": "string", "enum": ["initial"] },
     "created_at": { "type": "string", "format": "date-time" },
     "submitted_at": { "type": "string", "format": "date-time" },
