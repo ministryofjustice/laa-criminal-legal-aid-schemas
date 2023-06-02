@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/pruned_application.json",
+  "title": "A pruned application for criminal legal aid",
+  "description": "Attributes of a pruned criminal legal aid application",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "parent_id": { "type": ["string", "null"] },
+    "schema_version": { "type": "number" },
+    "reference": { "type": "integer" },
+    "application_type": { "type": "string", "enum": ["initial"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "submitted_at": { "type": "string", "format": "date-time" },
+    "returned_at": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["submitted", "returned", "superseded"] },
+    "client_details": {
+      "type": "object",
+      "properties": {
+        "applicant": {
+          "type": "object",
+          "properties": {
+            "first_name": { "type": "string" },
+            "last_name": { "type": "string" }
+          },
+          "required": ["first_name", "last_name"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["applicant"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "id", "parent_id", "schema_version", "reference", "application_type",
+    "created_at", "submitted_at", "status", "client_details"
+  ],
+  "additionalProperties": false
+}
