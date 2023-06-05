@@ -36,6 +36,8 @@
     "case_type": "appeal_to_crown_court",
     "offence_class": "A",
     "appeal_maat_id": null,
+    "appeal_with_changes_maat_id": null,
+    "appeal_with_changes_details": null,
     "hearing_court_name": "Cardiff Magistrates' Court",
     "hearing_date": "2024-11-11"
   },

@@ -14,12 +14,17 @@ require_relative 'laa_crime_schemas/traits/full_name'
 require_relative 'laa_crime_schemas/types/types'
 
 require_relative 'laa_crime_schemas/structs/base'
+require_relative 'laa_crime_schemas/structs/base_application'
+
 require_relative 'laa_crime_schemas/structs/offence'
 require_relative 'laa_crime_schemas/structs/address'
 require_relative 'laa_crime_schemas/structs/person'
 require_relative 'laa_crime_schemas/structs/applicant'
 require_relative 'laa_crime_schemas/structs/codefendant'
+require_relative 'laa_crime_schemas/structs/case_details'
+require_relative 'laa_crime_schemas/structs/provider_details'
 require_relative 'laa_crime_schemas/structs/return_details'
+
 require_relative 'laa_crime_schemas/structs/crime_application'
 require_relative 'laa_crime_schemas/structs/pruned_application'
 

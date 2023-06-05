@@ -2,46 +2,17 @@
 
 module LaaCrimeSchemas
   module Structs
-    class CrimeApplication < Base
-      attribute :id, Types::String
-      attribute? :parent_id, Types::String.optional
-      attribute :schema_version, Types::SchemaVersion
-      attribute :reference, Types::ApplicationReference
-      attribute? :application_type, Types::ApplicationType # TODO: change attr to required
-      attribute :created_at, Types::JSON::DateTime
-      attribute :submitted_at, Types::JSON::DateTime
-      attribute :date_stamp, Types::JSON::DateTime
-      attribute :status, Types::ApplicationStatus
+    class CrimeApplication < BaseApplication
+      attribute :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
+      attribute :means_passport, Types::Array.of(Types::MeansPassportType).default([].freeze)
 
-      attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
-      attribute? :means_passport, Types::Array.of(Types::MeansPassportType).default([].freeze)
-
-      attribute :provider_details, Base do
-        attribute :office_code, Types::String
-        attribute? :provider_email, Types::String
-        attribute :legal_rep_first_name, Types::String
-        attribute :legal_rep_last_name, Types::String
-        attribute :legal_rep_telephone, Types::String
-      end
+      attribute :provider_details, ProviderDetails
 
       attribute :client_details, Base do
         attribute :applicant, Applicant
       end
 
-      attribute :case_details, Base do
-        attribute :urn, Types::String.optional
-        attribute :case_type, Types::CaseType
-        attribute? :offence_class, Types::OffenceClass.optional
-        attribute? :appeal_maat_id, Types::String.optional
-        attribute? :appeal_with_changes_maat_id, Types::String.optional
-        attribute? :appeal_with_changes_details, Types::String.optional
-
-        attribute :offences, Types::Array.of(Offence).constrained(min_size: 1)
-        attribute :codefendants, Types::Array.of(Codefendant).default([].freeze)
-
-        attribute :hearing_court_name, Types::String
-        attribute :hearing_date, Types::JSON::Date
-      end
+      attribute :case_details, CaseDetails
 
       attribute :interests_of_justice, Types::Coercible::Array.of(Base).default([].freeze) do
         attribute :type, Types::IojType
