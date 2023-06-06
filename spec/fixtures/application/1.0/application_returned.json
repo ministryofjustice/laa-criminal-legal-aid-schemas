@@ -1,5 +1,6 @@
 {
   "id": "47a93336-7da6-48ec-b139-808ddd555a41",
+  "parent_id": null,
   "schema_version": 1.0,
   "reference": 6000002,
   "application_type": "initial",
@@ -32,6 +33,9 @@
   "case_details": {
     "urn": "12345",
     "case_type": "summary_only",
+    "appeal_maat_id": null,
+    "appeal_with_changes_maat_id": null,
+    "appeal_with_changes_details": null,
     "offence_class": "C",
     "offences": [
       {

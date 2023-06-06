@@ -1,11 +1,12 @@
 {
   "id": "243487dc-4727-44eb-9c9c-29809c0eb080",
   "parent_id": null,
-  "schema_version": 1,
+  "schema_version": 1.0,
   "reference": 6000118,
   "application_type": "initial",
   "created_at": "2023-05-17T08:01:02.490Z",
   "submitted_at": "2023-06-01T10:36:35.650Z",
+  "date_stamp": "2023-06-01T10:36:35.650Z",
   "returned_at": "2023-06-02T11:45:28.126Z",
   "status": "returned",
   "client_details": {

@@ -12,6 +12,7 @@
     "application_type": { "type": "string", "enum": ["initial"] },
     "created_at": { "type": "string", "format": "date-time" },
     "submitted_at": { "type": "string", "format": "date-time" },
+    "date_stamp": { "type": "string", "format": "date-time" },
     "returned_at": { "type": "string", "format": "date-time" },
     "status": { "type": "string", "enum": ["submitted", "returned", "superseded"] },
     "client_details": {
@@ -33,7 +34,7 @@
   },
   "required": [
     "id", "parent_id", "schema_version", "reference", "application_type",
-    "created_at", "submitted_at", "status", "client_details"
+    "created_at", "submitted_at", "date_stamp", "status", "client_details"
   ],
   "additionalProperties": false
 }

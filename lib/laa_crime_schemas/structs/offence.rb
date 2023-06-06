@@ -5,8 +5,8 @@ module LaaCrimeSchemas
     class Offence < Base
       attribute :name, Types::String
 
-      attribute? :offence_class, Types::String.optional
-      attribute? :passportable, Types::Bool
+      attribute :offence_class, Types::OffenceClass.optional
+      attribute :passportable, Types::Bool
 
       attribute :dates, Types::Array.of(Base).constrained(min_size: 1) do
         attribute :date_from, Types::JSON::Date
