@@ -10,7 +10,7 @@ RSpec.describe LaaCrimeSchemas::Structs::Offence do
       it 'builds a codefendant struct' do
         expect(subject.name).to eq('Attempt robbery')
         expect(subject.offence_class).to eq('C')
-        expect(subject.passportable).to eq(true)
+        expect(subject.slipstreamable).to eq(true)
 
         expect(subject.dates.size).to eq(2)
         expect(subject.dates[0].date_from).to be_a(Date)
