@@ -47,7 +47,7 @@
       {
         "name": "Attempt robbery",
         "offence_class": "C",
-        "passportable": true,
+        "slipstreamable": true,
         "dates": [
           { "date_from": "2020-05-11", "date_to": "2020-05-12" },
           { "date_from": "2020-08-11", "date_to": null }
@@ -56,7 +56,7 @@
       {
         "name": "Non-listed offence, manually entered",
         "offence_class": null,
-        "passportable": false,
+        "slipstreamable": false,
         "dates": [
           { "date_from": "2020-09-15", "date_to": null }
         ]
