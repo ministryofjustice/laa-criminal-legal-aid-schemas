@@ -34,7 +34,7 @@
     "urn": "12345",
     "case_type": "summary_only",
     "appeal_maat_id": null,
-    "appeal_with_changes_maat_id": null,
+    "appeal_lodged_date": null,
     "appeal_with_changes_details": null,
     "offence_class": "C",
     "offences": [
