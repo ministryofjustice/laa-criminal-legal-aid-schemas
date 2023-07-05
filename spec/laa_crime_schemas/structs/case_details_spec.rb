@@ -13,7 +13,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
         expect(subject.urn).to eq('')
         expect(subject.case_type).to eq('appeal_to_crown_court')
         expect(subject.appeal_maat_id).to be_nil
-        expect(subject.appeal_with_changes_maat_id).to be_nil
+        expect(subject.appeal_lodged_date).to be_a(Date)
         expect(subject.appeal_with_changes_details).to be_nil
         expect(subject.offences.size).to eq(2)
         expect(subject.codefendants.size).to eq(1)

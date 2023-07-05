@@ -39,7 +39,7 @@
         "case_type": { "type": "string", "enum": ["summary_only", "either_way", "indictable", "already_in_crown_court", "committal", "appeal_to_crown_court", "appeal_to_crown_court_with_changes"] },
         "offence_class": { "type": ["string", "null"], "enum": ["A", "K", "G", "B", "I", "J", "D", "C", "H", "F", "E", null] },
         "appeal_maat_id": { "type": ["string", "null"] },
-        "appeal_with_changes_maat_id": { "type": ["string", "null"] },
+        "appeal_lodged_date": { "type": ["string", "null"], "format": "date" },
         "appeal_with_changes_details": { "type": ["string", "null"] },
         "offences": {
           "type": "array",
