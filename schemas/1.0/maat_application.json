@@ -10,7 +10,7 @@
     "reference": { "type": "integer" },
     "application_type": { "type": "string", "enum": ["initial"] },
     "submitted_at": { "type": "string", "format": "date-time" },
-    "signed_at": { "type": "string", "format": "date-time" },
+    "declaration_signed_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
     "provider_details": {
       "$ref": "#/definitions/provider"
@@ -56,7 +56,7 @@
     }
   },
   "required": [
-    "id", "schema_version", "reference", "application_type", "submitted_at", "signed_at", "date_stamp",
+    "id", "schema_version", "reference", "application_type", "submitted_at", "declaration_signed_at", "date_stamp",
     "provider_details", "client_details", "case_details", "interests_of_justice"
   ],
   "definitions": {
