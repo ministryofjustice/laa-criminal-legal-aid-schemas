@@ -41,11 +41,5 @@
     "appeal_with_changes_details": null,
     "hearing_court_name": "Cardiff Magistrates' Court",
     "hearing_date": "2024-11-11"
-  },
-  "interests_of_justice": [
-    {
-      "type": "loss_of_liberty",
-      "reason": "More details about loss of liberty."
-    }
-  ]
+  }
 }
