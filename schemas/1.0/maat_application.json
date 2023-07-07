@@ -53,7 +53,7 @@
   },
   "required": [
     "id", "schema_version", "reference", "application_type", "submitted_at", "declaration_signed_at", "date_stamp",
-    "provider_details", "client_details", "case_details",
+    "provider_details", "client_details", "case_details"
   ],
   "definitions": {
     "provider": { "$ref": "general/provider.json" },
