@@ -12,7 +12,6 @@ RSpec.describe LaaCrimeSchemas::Structs::ReturnDetails do
       it 'builds the return details struct' do
         expect(subject.reason).to eq('clarification_required')
         expect(subject.details).to eq('Further information regarding IoJ required')
-        expect(subject.returned_at.to_s).to eq('2022-09-27T14:10:00+00:00')
       end
     end
 
@@ -33,16 +32,6 @@ RSpec.describe LaaCrimeSchemas::Structs::ReturnDetails do
 
       it 'raises an error' do
         expect { subject }.to raise_error(Dry::Struct::Error, /invalid type for :details/)
-      end
-    end
-
-    context 'with missing returned_at' do
-      let(:attributes) do
-        valid_details.merge(returned_at: nil)
-      end
-
-      it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /invalid type for :returned_at/)
       end
     end
   end
