@@ -5,7 +5,6 @@ module LaaCrimeSchemas
     class ReturnDetails < Base
       attribute :reason, Types::ReturnReason
       attribute :details, Types::String
-      attribute :returned_at, Types::JSON::DateTime
     end
   end
 end
