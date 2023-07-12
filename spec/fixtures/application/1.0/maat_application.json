@@ -6,6 +6,7 @@
   "submitted_at": "2022-10-24T09:50:04.019Z",
   "declaration_signed_at": "2022-10-24T09:50:04.019Z",
   "date_stamp": "2022-10-24T09:50:04.019Z",
+  "ioj_bypass": false,
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
@@ -41,11 +42,5 @@
     "appeal_with_changes_details": null,
     "hearing_court_name": "Cardiff Magistrates' Court",
     "hearing_date": "2024-11-11"
-  },
-  "interests_of_justice": [
-    {
-      "type": "loss_of_liberty",
-      "reason": "More details about loss of liberty."
-    }
-  ]
+  }
 }

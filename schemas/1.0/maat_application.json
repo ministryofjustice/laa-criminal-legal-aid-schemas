@@ -12,6 +12,10 @@
     "submitted_at": { "type": "string", "format": "date-time" },
     "declaration_signed_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
+    "ioj_bypass": {
+      "description": "Indicates whether the Interests of Justice page was skipped or not",
+      "type": "boolean"
+    },
     "provider_details": {
       "$ref": "#/definitions/provider"
     },
@@ -49,19 +53,15 @@
         "hearing_date": { "type": "string", "format": "date" }
       },
       "required": ["case_type", "hearing_court_name", "hearing_date", "offence_class"]
-    },
-    "interests_of_justice": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/ioj" }
     }
   },
   "required": [
-    "id", "schema_version", "reference", "application_type", "submitted_at", "declaration_signed_at", "date_stamp",
-    "provider_details", "client_details", "case_details", "interests_of_justice"
+    "id", "schema_version", "reference", "application_type", "submitted_at",
+    "date_stamp", "declaration_signed_at", "ioj_bypass",
+    "provider_details", "client_details", "case_details"
   ],
   "definitions": {
     "provider": { "$ref": "general/provider.json" },
-    "address": { "$ref": "general/address.json" },
-    "ioj": { "$ref": "general/ioj.json" }
+    "address": { "$ref": "general/address.json" }
   }
 }
