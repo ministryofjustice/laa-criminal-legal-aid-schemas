@@ -16,6 +16,10 @@
       "description": "Indicates whether the Interests of Justice page was skipped or not",
       "type": "boolean"
     },
+    "means_passport": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["on_age_under18", "on_benefit_check"] }
+    },
     "provider_details": {
       "$ref": "#/definitions/provider"
     },
@@ -57,7 +61,7 @@
   },
   "required": [
     "id", "schema_version", "reference", "application_type", "submitted_at",
-    "date_stamp", "declaration_signed_at", "ioj_bypass",
+    "date_stamp", "declaration_signed_at", "ioj_bypass", "means_passport",
     "provider_details", "client_details", "case_details"
   ],
   "definitions": {

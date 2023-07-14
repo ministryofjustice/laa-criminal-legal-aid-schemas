@@ -7,6 +7,7 @@
   "declaration_signed_at": "2022-10-24T09:50:04.019Z",
   "date_stamp": "2022-10-24T09:50:04.019Z",
   "ioj_bypass": false,
+  "means_passport": ["on_benefit_check"],
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
