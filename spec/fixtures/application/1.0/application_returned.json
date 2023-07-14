@@ -22,6 +22,7 @@
     "applicant": {
       "first_name": "John",
       "last_name": "POTTER",
+      "other_names": "",
       "nino": "NC010155A",
       "date_of_birth": "2007-01-01",
       "telephone_number": "",
