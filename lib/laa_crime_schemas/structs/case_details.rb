@@ -5,11 +5,12 @@ module LaaCrimeSchemas
     class CaseDetails < Base
       attribute :urn, Types::String.optional
       attribute :case_type, Types::CaseType
-      attribute? :offence_class, Types::OffenceClass.optional
 
-      # TODO: mark `appeal_lodged_date` attr as mandatory (keep optional value)
+      # Injected by the datastore, not part of the stored application JSON
+      attribute :offence_class, Types::OffenceClass.optional
+
       attribute :appeal_maat_id, Types::String.optional
-      attribute? :appeal_lodged_date, Types::JSON::Date.optional
+      attribute :appeal_lodged_date, Types::JSON::Date.optional
       attribute :appeal_with_changes_details, Types::String.optional
 
       attribute :offences, Types::Array.of(Offence).constrained(min_size: 1)

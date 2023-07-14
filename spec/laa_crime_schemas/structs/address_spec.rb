@@ -28,7 +28,7 @@ RSpec.describe LaaCrimeSchemas::Structs::Address do
       let(:attributes) { { 'foo' => 'bar' } }
 
       it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /address_line_one/)
+        expect { subject }.to raise_error(Dry::Struct::Error, /lookup_id/)
       end
     end
   end

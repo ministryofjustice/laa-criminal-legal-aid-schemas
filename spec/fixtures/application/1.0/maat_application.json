@@ -19,6 +19,7 @@
     "applicant": {
       "first_name": "Kit",
       "last_name": "Pound",
+      "other_names": "",
       "nino": "AJ123456C",
       "date_of_birth": "2011-06-09",
       "telephone_number": "07771231231",

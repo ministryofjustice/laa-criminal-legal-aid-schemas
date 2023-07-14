@@ -12,5 +12,5 @@
     "country": { "type": "string" },
     "postcode": { "type": "string" }
   },
-  "required": ["address_line_one", "city", "country", "postcode"]
+  "required": ["lookup_id", "address_line_one", "city", "country", "postcode"]
 }
