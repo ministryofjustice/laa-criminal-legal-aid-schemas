@@ -78,5 +78,13 @@
       "type": "loss_of_liberty",
       "reason": "More details about loss of liberty."
     }
+  ],
+  "supporting_evidence": [
+    {
+      "s3_object_key": "123/abcdef1234",
+      "filename": "test.pdf",
+      "content_type": "application/pdf",
+      "file_size": 12
+    }
   ]
 }

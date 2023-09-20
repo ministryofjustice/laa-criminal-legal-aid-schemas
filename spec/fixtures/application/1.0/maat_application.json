@@ -44,5 +44,13 @@
     "appeal_with_changes_details": null,
     "hearing_court_name": "Cardiff Magistrates' Court",
     "hearing_date": "2024-11-11"
-  }
+  },
+  "supporting_evidence": [
+    {
+      "s3_object_key": "123/abcdef1234",
+      "filename": "test.pdf",
+      "content_type": "application/pdf",
+      "file_size": 12
+    }
+  ]
 }
