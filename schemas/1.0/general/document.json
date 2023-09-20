@@ -5,7 +5,7 @@
   "description": "Holds attributes of a document",
   "type": "object",
   "properties": {
-    "s3_object_key": { "type": ["string", "null"] },
+    "s3_object_key": { "type": "string" },
     "filename": { "type": "string" },
     "content_type": { "type": "string" },
     "file_size": { "type": "number" }
