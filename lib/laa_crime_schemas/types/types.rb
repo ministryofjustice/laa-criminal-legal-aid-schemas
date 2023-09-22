@@ -25,6 +25,16 @@ module LaaCrimeSchemas
     ].freeze
     ApplicationStatus = String.enum(*APPLICATION_STATUSES)
 
+    BENEFIT_TYPES = %w[
+      universal_credit
+      guarantee_pension
+      jsa
+      esa
+      income_support
+      none
+    ].freeze
+    BenefitType = String.enum(*BENEFIT_TYPES)
+
     CORRESPONDENCE_ADDRESS_TYPES = %w[
       other_address
       home_address
