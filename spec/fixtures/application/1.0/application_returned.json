@@ -62,5 +62,13 @@
   "return_details": {
     "reason": "clarification_required",
     "details": "Further information regarding IoJ required"
-  }
+  },
+  "supporting_evidence": [
+    {
+      "s3_object_key": "123/abcdef1234",
+      "filename": "test.pdf",
+      "content_type": "application/pdf",
+      "file_size": 12
+    }
+  ]
 }

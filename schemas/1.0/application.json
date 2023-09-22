@@ -72,6 +72,10 @@
       "required": ["reason", "details"]
     }
   },
+  "supporting_evidence": {
+    "type": "array",
+    "items": { "$ref": "#/definitions/document" }
+  },
   "required": [
     "id", "parent_id", "schema_version", "reference", "application_type", "created_at", "submitted_at", "date_stamp",
     "ioj_passport", "means_passport", "provider_details", "client_details", "case_details", "interests_of_justice"
@@ -81,6 +85,7 @@
     "applicant": { "$ref": "general/applicant.json" },
     "codefendant": { "$ref": "general/codefendant.json" },
     "offence": { "$ref": "general/offence.json" },
-    "ioj": { "$ref": "general/ioj.json" }
+    "ioj": { "$ref": "general/ioj.json" },
+    "document": { "$ref": "general/document.json" }
   }
 }

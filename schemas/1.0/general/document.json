@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/document.json",
+  "title": "Document",
+  "description": "Holds attributes of a document",
+  "type": "object",
+  "properties": {
+    "s3_object_key": { "type": "string" },
+    "filename": { "type": "string" },
+    "content_type": { "type": "string" },
+    "file_size": { "type": "number" }
+  },
+  "required": ["s3_object_key", "filename", "file_category", "content_type", "file_size"]
+}
