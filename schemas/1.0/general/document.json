@@ -10,5 +10,5 @@
     "content_type": { "type": "string" },
     "file_size": { "type": "number" }
   },
-  "required": ["s3_object_key", "filename", "file_category", "content_type", "file_size"]
+  "required": ["s3_object_key", "filename", "content_type", "file_size"]
 }
