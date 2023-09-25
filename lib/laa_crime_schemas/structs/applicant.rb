@@ -4,6 +4,7 @@ module LaaCrimeSchemas
   module Structs
     class Applicant < Person
       attribute :date_of_birth, Types::JSON::Date
+      attribute? :benefit_type, Types::BenefitType.optional
       attribute :nino, Types::String.optional
       attribute :home_address, Address.optional
       attribute :correspondence_address, Address.optional
