@@ -52,7 +52,9 @@
     ],
     "codefendants": [],
     "hearing_court_name": "Cardiff Magistrates' Court",
-    "hearing_date": "2024-11-11"
+    "hearing_date": "2024-11-11",
+    "is_first_court_hearing": "no",
+    "first_court_hearing_name": "Bristol Magistrates Court"
   },
   "interests_of_justice": [
     {

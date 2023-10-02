@@ -53,6 +53,13 @@ module LaaCrimeSchemas
     ].freeze
     CaseType = String.enum(*CASE_TYPES)
 
+    FIRST_HEARING_ANSWER_VALUES = %w[
+      yes
+      no
+      no_hearing_yet
+    ].freeze
+    FirstHearingAnswerValues = String.enum(*FIRST_HEARING_ANSWER_VALUES)
+
     INTEREST_OF_JUSTICE_TYPES = %w[
       loss_of_liberty
       suspended_sentence
