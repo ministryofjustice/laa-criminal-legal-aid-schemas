@@ -18,6 +18,9 @@ module LaaCrimeSchemas
 
       attribute :hearing_court_name, Types::String
       attribute :hearing_date, Types::JSON::Date
+
+      attribute? :is_first_court_hearing, Types::FirstHearingAnswerValues.optional
+      attribute? :first_court_hearing_name, Types::String.optional
     end
   end
 end

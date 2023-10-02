@@ -52,7 +52,9 @@
           "items": { "$ref": "#/definitions/codefendant" }
         },
         "hearing_court_name": { "type": "string" },
-        "hearing_date": { "type": "string", "format": "date" }
+        "hearing_date": { "type": "string", "format": "date" },
+        "is_first_court_hearing": { "type": ["string", "null"], "enum": ["yes", "no", "no_hearing_yet", null] },
+        "first_court_hearing_name": { "type": ["string", "null"] }
       },
       "required": [
         "urn", "case_type", "appeal_maat_id", "appeal_lodged_date", "appeal_with_changes_details",

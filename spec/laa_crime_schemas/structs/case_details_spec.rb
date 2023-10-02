@@ -19,6 +19,8 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
         expect(subject.codefendants.size).to eq(1)
         expect(subject.hearing_court_name).to eq("Cardiff Magistrates' Court")
         expect(subject.hearing_date).to be_a(Date)
+        expect(subject.is_first_court_hearing).to eq('no')
+        expect(subject.first_court_hearing_name).to eq('Bristol Magistrates Court')
       end
     end
 
