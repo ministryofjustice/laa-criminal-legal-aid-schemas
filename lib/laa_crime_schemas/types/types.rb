@@ -106,5 +106,18 @@ module LaaCrimeSchemas
 
     OFFENCE_CLASSES = %w[A K G B I J D C H F E].freeze
     OffenceClass = String.enum(*OFFENCE_CLASSES)
+
+    # `awaiting` before a file has been scanned
+    # `incomplete` if virus scan never finished e.g. timeout
+    # `other` for unknown/unsupported scan results
+    VIRUS_SCAN_STATUSES = %w[
+      awaiting
+      pass
+      flagged
+      incomplete
+      other
+    ].freeze
+
+    VirusScanStatus = String.enum(*VIRUS_SCAN_STATUSES)
   end
 end

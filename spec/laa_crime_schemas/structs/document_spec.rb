@@ -12,6 +12,8 @@ RSpec.describe LaaCrimeSchemas::Structs::Document do
         expect(subject.filename).to eq('test.pdf')
         expect(subject.content_type).to eq('application/pdf')
         expect(subject.file_size).to eq(12)
+        expect(subject.scan_status).to eq(LaaCrimeSchemas::Types::VirusScanStatus['pass'])
+        expect(subject.scan_at).to be_a(Date)
       end
     end
 
@@ -20,6 +22,14 @@ RSpec.describe LaaCrimeSchemas::Structs::Document do
 
       it 'raises an error' do
         expect { subject }.to raise_error(Dry::Struct::Error, /filename/)
+      end
+    end
+
+    context 'for an invalid virus scan status' do
+      let(:attributes) { super().merge('scan_status' => 'completed') }
+
+      it 'raises an error' do
+        expect { subject }.to raise_error(Dry::Struct::Error, /scan_status/)
       end
     end
   end

@@ -8,7 +8,11 @@
     "s3_object_key": { "type": "string" },
     "filename": { "type": "string" },
     "content_type": { "type": "string" },
-    "file_size": { "type": "number" }
+    "file_size": { "type": "number" },
+    "scan_provider": { "type": "string" },
+    "scan_status": { "type": "string" },
+    "scan_output": { "type": "string" },
+    "scan_at": { "type": "string", "format": "date-time" }
   },
   "required": ["s3_object_key", "filename", "content_type", "file_size"]
 }
