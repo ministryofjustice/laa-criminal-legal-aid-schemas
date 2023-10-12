@@ -71,7 +71,10 @@
       "s3_object_key": "123/abcdef1234",
       "filename": "test.pdf",
       "content_type": "application/pdf",
-      "file_size": 12
+      "file_size": 12,
+      "scan_status": "flagged",
+      "scan_provider": "ClamAV",
+      "scan_at": "2023-10-01 12:10:00"
     }
   ]
 }
