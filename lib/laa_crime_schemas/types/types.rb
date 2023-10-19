@@ -118,6 +118,6 @@ module LaaCrimeSchemas
       other
     ].freeze
 
-    VirusScanStatus = String.enum(*VIRUS_SCAN_STATUSES)
+    VirusScanStatus = String.default('awaiting').enum(*VIRUS_SCAN_STATUSES)
   end
 end

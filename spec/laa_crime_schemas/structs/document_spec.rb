@@ -12,8 +12,11 @@ RSpec.describe LaaCrimeSchemas::Structs::Document do
         expect(subject.filename).to eq('test.pdf')
         expect(subject.content_type).to eq('application/pdf')
         expect(subject.file_size).to eq(12)
-        expect(subject.scan_status).to eq(LaaCrimeSchemas::Types::VirusScanStatus['pass'])
         expect(subject.scan_at).to be_a(Date)
+      end
+
+      it 'sets the scan_status to `awaiting` by default' do
+        expect(subject.scan_status).to eq(LaaCrimeSchemas::Types::VirusScanStatus['awaiting'])
       end
     end
 
