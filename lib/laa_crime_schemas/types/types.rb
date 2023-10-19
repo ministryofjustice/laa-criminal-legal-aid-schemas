@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+# rubocop:disable Metrics/ModuleLength
 module LaaCrimeSchemas
   module Types
     include Dry.Types()
@@ -121,3 +121,4 @@ module LaaCrimeSchemas
     VirusScanStatus = String.default('awaiting').enum(*VIRUS_SCAN_STATUSES)
   end
 end
+# rubocop:enable Metrics/ModuleLength
