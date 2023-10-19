@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    laa-criminal-legal-aid-schemas (1.0.4)
+    laa-criminal-legal-aid-schemas (1.0.5)
       dry-struct (~> 1.6.0)
       json-schema (~> 4.0.0)
 
