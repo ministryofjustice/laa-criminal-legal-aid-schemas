@@ -88,7 +88,6 @@
       "filename": "test.pdf",
       "content_type": "application/pdf",
       "file_size": 12,
-      "scan_status": "pass",
       "scan_at": "2023-10-01 12:34:56"
     }
   ]
