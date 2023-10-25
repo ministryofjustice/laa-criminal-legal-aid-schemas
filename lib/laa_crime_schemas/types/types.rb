@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ModuleLength
+
 module LaaCrimeSchemas
   module Types
     include Dry.Types()
@@ -86,6 +88,15 @@ module LaaCrimeSchemas
     ].freeze
     MeansPassportType = String.enum(*MEANS_PASSPORT_TYPES)
 
+    MANAGE_WITHOUT_INCOME_TYPES = %w[
+      friends_sofa
+      family
+      homeless
+      custody
+      other
+    ].freeze
+    ManageWithoutIncomeTypes = String.enum(*MANAGE_WITHOUT_INCOME_TYPES)
+
     RETURN_REASONS = %w[
       clarification_required
       evidence_issue
@@ -121,3 +132,4 @@ module LaaCrimeSchemas
     VirusScanStatus = String.default('awaiting').enum(*VIRUS_SCAN_STATUSES)
   end
 end
+# rubocop:enable Metrics/ModuleLength
