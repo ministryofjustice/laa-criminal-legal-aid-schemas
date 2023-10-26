@@ -1,0 +1,22 @@
+{
+  "schema_version": 1.0,
+  "income_details": {
+    "benefits": [
+      {
+	"type": "child",
+	"amount": 22.50,
+	"frequency": "month",
+	"details": null
+      }
+    ],
+    "other_income": [
+      {
+	"type": "other",
+	"amount": 25.0,
+	"frequency": "week",
+	"details": "details of other source of income"
+      }
+    ]
+  },
+  "total_income": 14000.00
+}

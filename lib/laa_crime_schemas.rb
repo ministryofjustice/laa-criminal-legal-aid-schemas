@@ -25,6 +25,7 @@ require_relative 'laa_crime_schemas/structs/case_details'
 require_relative 'laa_crime_schemas/structs/provider_details'
 require_relative 'laa_crime_schemas/structs/return_details'
 require_relative 'laa_crime_schemas/structs/document'
+require_relative 'laa_crime_schemas/structs/means_details'
 
 require_relative 'laa_crime_schemas/structs/crime_application'
 require_relative 'laa_crime_schemas/structs/pruned_application'

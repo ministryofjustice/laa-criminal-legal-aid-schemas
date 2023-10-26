@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.required_ruby_version = '~> 3.2.1'
 
+  spec.add_runtime_dependency 'dry-schema', '~> 1.13'
   spec.add_runtime_dependency 'dry-struct', '~> 1.6.0'
   spec.add_runtime_dependency 'json-schema', '~> 4.0.0'
 end

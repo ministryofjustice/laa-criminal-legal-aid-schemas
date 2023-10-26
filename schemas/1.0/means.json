@@ -1,0 +1,124 @@
+{
+ "$schema": "http://json-schema.org/draft-06/schema#",
+ "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/means.json",
+ "title": "Means attributes for a criminal legal aid application",
+ "type": "object",
+ "properties": {
+	 "income_details": {
+		 "type": "object",
+		 "properties": {
+			 "benefits": {
+				 "type": "array",
+				 "items": {
+					 "type": "object",
+					 "properties": {
+						 "type": {
+							 "type": "string",
+							 "enum": [
+								 "child",
+								 "working_or_child_tax_credit",
+								 "incapacity",
+								 "industrial_injuries_disablement",
+								 "jsa",
+								 "other"
+							 ]
+						 },
+						 "amount": {
+							 "type": "number"
+						 },
+						 "frequency": {
+							 "type": "string",
+							 "enum": [
+								 "week",
+								 "fortnight",
+								 "four_weeks",
+								 "month",
+								 "annual"
+							 ]
+						 },
+						 "details": {
+							 "anyOf": [
+								 {
+									 "type": "null"
+								 },
+								 {
+									 "type": "string"
+								 }
+							 ]
+						 }
+					 },
+					 "required": [
+						 "type",
+						 "amount",
+						 "frequency",
+						 "details"
+					 ]
+				 }
+			 },
+			 "other_income": {
+				 "type": "array",
+				 "items": {
+					 "type": "object",
+					 "properties": {
+						 "type": {
+							 "type": "string",
+							 "enum": [
+								 "friends_family",
+								 "maintenance",
+								 "board_from_family",
+								 "rent",
+								 "private_pension",
+								 "state_pension",
+								 "student",
+								 "interest_from_savings",
+								 "interest_from_investments",
+								 "other"
+							 ]
+						 },
+						 "amount": {
+							 "type": "number"
+						 },
+						 "frequency": {
+							 "type": "string",
+							 "enum": [
+								 "week",
+								 "fortnight",
+								 "four_weeks",
+								 "month",
+								 "annual"
+							 ]
+						 },
+						 "details": {
+							 "anyOf": [
+								 {
+									 "type": "null"
+								 },
+								 {
+									 "type": "string"
+								 }
+							 ]
+						 }
+					 },
+					 "required": [
+						 "type",
+						 "amount",
+						 "frequency",
+						 "details"
+					 ]
+				 }
+			 }
+		 },
+		 "required": [
+			 "benefits",
+			 "other_income"
+		 ]
+	 },
+	 "total_income": {
+		 "type": "number"
+	 }
+ },
+ "required": [
+	 "total_income"
+ ]
+}
+

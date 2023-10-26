@@ -37,6 +37,17 @@ module LaaCrimeSchemas
     ].freeze
     BenefitType = String.enum(*BENEFIT_TYPES)
 
+    OtherBenefitType = String.enum(
+      *%w[
+        child
+        working_or_child_tax_credit
+        incapacity
+        industrial_injuries_disablement
+        jsa
+        other
+      ]
+    )
+
     CORRESPONDENCE_ADDRESS_TYPES = %w[
       other_address
       home_address
@@ -61,6 +72,25 @@ module LaaCrimeSchemas
       no_hearing_yet
     ].freeze
     FirstHearingAnswerValues = String.enum(*FIRST_HEARING_ANSWER_VALUES)
+
+    OTHER_INCOME_TYPES = %w[].freeze
+
+    OtherIncomeType = String.enum(*%w[
+                                    friends_family
+                                    maintenance
+                                    board_from_family
+                                    rent
+                                    private_pension
+                                    state_pension
+                                    student
+                                    interest_from_savings
+                                    interest_from_investments
+                                    other
+                                  ])
+
+    PaymentFrequency = String.enum(
+      *%w[week fortnight four_weeks month annual]
+    )
 
     INTEREST_OF_JUSTICE_TYPES = %w[
       loss_of_liberty
