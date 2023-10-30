@@ -15,8 +15,19 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
       end
 
       it 'builds from the example json' do
-        expect(subject.total_income).to eq(14000.0)
-        expect(subject.income_details.benefits.first.frequency).to eq('month')
+        expect(struct.employment_status).to eq('employed')
+      end
+
+      describe 'storing income details' do 
+        subject(:income_details) { struct.income_details }
+
+        it 'includes income total' do
+          expect(income_details.total).to eq(1370380)
+        end
+
+        it 'records the frequency of benefits' do
+          expect(income_details.benefits.first.frequency).to eq('month')
+        end
       end
 
       it 'produces a valid JSON document conforming to the schema' do

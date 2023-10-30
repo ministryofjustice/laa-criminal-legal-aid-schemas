@@ -1,22 +1,32 @@
 {
   "schema_version": 1.0,
+  "employment_status": "employed",
   "income_details": {
     "benefits": [
       {
-	"type": "child",
-	"amount": 22.50,
-	"frequency": "month",
-	"details": null
-      }
-    ],
-    "other_income": [
-      {
-	"type": "other",
-	"amount": 25.0,
-	"frequency": "week",
-	"details": "details of other source of income"
-      }
-    ]
-  },
-  "total_income": 14000.00
+				"type": "child",
+				"amount": 3990,
+				"frequency": "month"
+			}
+		],
+		"employment_details": {
+			"paye": [
+				{
+				  "amount": 1320000,
+				  "date": "2023-10-30",
+				  "deductions": []
+				}
+			]
+		},
+		"self_employment_details": {
+			"businesses": []
+		},
+		"other_income": [{
+      "type": "other",
+			"amount": 2500,
+			"frequency": "annual",
+			"details": "Book royalty"
+		}],
+    "total": 1370380 
+	}
 }

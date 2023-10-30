@@ -62,7 +62,7 @@ RSpec.shared_examples "a struct aligned to its json schema" do |parameter|
     end
     
     json_schema_base.merge(
-      struct_schema.json_schema.fetch(:properties).fetch(:struct)
+      struct_schema.json_schema(loose: true).fetch(:properties).fetch(:struct)
     )
   end
 

@@ -27,6 +27,8 @@ module LaaCrimeSchemas
     ].freeze
     ApplicationStatus = String.enum(*APPLICATION_STATUSES)
 
+    AssetType = String.enum(%w[valuable_items money_overseas timeshare land interest])
+
     BENEFIT_TYPES = %w[
       universal_credit
       guarantee_pension
@@ -88,6 +90,14 @@ module LaaCrimeSchemas
                                     other
                                   ])
 
+    OutgoingsType = String.enum(*%w[
+                                  housing
+                                  council_tax
+                                  childcare
+                                  maintenance
+                                  legal_aid
+                                ])
+
     PaymentFrequency = String.enum(
       *%w[week fortnight four_weeks month annual]
     )
@@ -147,6 +157,19 @@ module LaaCrimeSchemas
 
     OFFENCE_CLASSES = %w[A K G B I J D C H F E].freeze
     OffenceClass = String.enum(*OFFENCE_CLASSES)
+
+    OwnershipType = String.enum(*%w[with_partner landlord other_person sole])
+
+    SavingsType = String.enum(*%w[
+                                cash
+                                other_person_account
+                                certificates
+                                shares
+                                trusts
+                                policies
+                              ])
+
+    EmploymentStatusType = String.enum(*%w[employed self-employed none])
 
     # `awaiting` before a file has been scanned
     # `incomplete` if virus scan never finished e.g. timeout

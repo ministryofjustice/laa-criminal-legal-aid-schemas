@@ -4,6 +4,14 @@
  "title": "Means attributes for a criminal legal aid application",
  "type": "object",
  "properties": {
+	 "employment_status": {
+		 "type": "string",
+		 "enum": [
+			 "employed",
+			 "self-employed",
+			 "none"
+		 ]
+	 },
 	 "income_details": {
 		 "type": "object",
 		 "properties": {
@@ -24,7 +32,7 @@
 							 ]
 						 },
 						 "amount": {
-							 "type": "number"
+							 "type": "integer"
 						 },
 						 "frequency": {
 							 "type": "string",
@@ -50,10 +58,165 @@
 					 "required": [
 						 "type",
 						 "amount",
-						 "frequency",
-						 "details"
+						 "frequency"
 					 ]
 				 }
+			 },
+			 "employment_details": {
+				 "type": "object",
+				 "properties": {
+					 "paye": {
+						 "type": "array",
+						 "items": {
+							 "type": "object",
+							 "properties": {
+								 "amount": {
+									 "type": "integer"
+								 },
+								 "date": {
+									 "type": "string",
+									 "format": "date"
+								 },
+								 "deductions": {
+									 "type": "array",
+									 "items": {
+										 "type": "object",
+										 "properties": {
+											 "type": {
+												 "type": "string"
+											 },
+											 "amount": {
+												 "type": "integer"
+											 }
+										 },
+										 "required": [
+											 "type",
+											 "amount"
+										 ]
+									 }
+								 }
+							 },
+							 "required": [
+								 "amount",
+								 "date",
+								 "deductions"
+							 ]
+						 }
+					 },
+					 "other": {
+						 "type": "object",
+						 "properties": {
+							 "amount": {
+								 "type": "integer"
+							 },
+							 "details": {
+								 "type": "string"
+							 }
+						 },
+						 "required": [
+							 "amount",
+							 "details"
+						 ]
+					 }
+				 },
+				 "required": [
+					 "paye"
+				 ]
+			 },
+			 "self_employment_details": {
+				 "type": "object",
+				 "properties": {
+					 "businesses": {
+						 "type": "array",
+						 "items": {
+							 "type": "object",
+							 "properties": {
+								 "name": {
+									 "type": "string"
+								 },
+								 "address": {
+									 "type": "array",
+									 "items": {
+										 "type": "object",
+										 "properties": {
+											 "lookup_id": {
+												 "anyOf": [
+													 {
+														 "type": "null"
+													 },
+													 {
+														 "type": "string"
+													 }
+												 ]
+											 },
+											 "address_line_one": {
+												 "type": "string"
+											 },
+											 "address_line_two": {
+												 "anyOf": [
+													 {
+														 "type": "null"
+													 },
+													 {
+														 "type": "string"
+													 }
+												 ]
+											 },
+											 "city": {
+												 "type": "string"
+											 },
+											 "country": {
+												 "type": "string"
+											 },
+											 "postcode": {
+												 "type": "string"
+											 }
+										 },
+										 "required": [
+											 "lookup_id",
+											 "address_line_one",
+											 "address_line_two",
+											 "city",
+											 "country",
+											 "postcode"
+										 ]
+									 }
+								 },
+								 "last_two_years_tax_liability": {
+									 "type": "integer"
+								 },
+								 "total_turnover": {
+									 "type": "integer"
+								 },
+								 "total_drawing": {
+									 "type": "integer"
+								 },
+								 "total_profit": {
+									 "type": "integer"
+								 },
+								 "director_salary": {
+									 "type": "integer"
+								 },
+								 "share": {
+									 "type": "number"
+								 }
+							 },
+							 "required": [
+								 "name",
+								 "address",
+								 "last_two_years_tax_liability",
+								 "total_turnover",
+								 "total_drawing",
+								 "total_profit",
+								 "director_salary",
+								 "share"
+							 ]
+						 }
+					 }
+				 },
+				 "required": [
+					 "businesses"
+				 ]
 			 },
 			 "other_income": {
 				 "type": "array",
@@ -76,7 +239,7 @@
 							 ]
 						 },
 						 "amount": {
-							 "type": "number"
+							 "type": "integer"
 						 },
 						 "frequency": {
 							 "type": "string",
@@ -102,23 +265,274 @@
 					 "required": [
 						 "type",
 						 "amount",
-						 "frequency",
-						 "details"
+						 "frequency"
+					 ]
+				 }
+			 },
+			 "total": {
+				 "type": "integer"
+			 }
+		 },
+		 "required": [
+			 "benefits",
+			 "total"
+		 ]
+	 },
+	 "capital_details": {
+		 "type": "object",
+		 "properties": {
+			 "houses": {
+				 "type": "array",
+				 "items": {
+					 "type": "object",
+					 "properties": {
+						 "ownership_type": {
+							 "type": "string",
+							 "enum": [
+								 "with_partner",
+								 "landlord",
+								 "other_person",
+								 "sole"
+							 ]
+						 },
+						 "share": {
+							 "type": "number"
+						 },
+						 "value": {
+							 "type": "integer"
+						 },
+						 "liability": {
+							 "type": "integer"
+						 },
+						 "details": {
+							 "anyOf": [
+								 {
+									 "type": "null"
+								 },
+								 {
+									 "type": "string"
+								 }
+							 ]
+						 }
+					 },
+					 "required": [
+						 "ownership_type",
+						 "share",
+						 "value",
+						 "liability"
+					 ]
+				 }
+			 },
+			 "vehicles": {
+				 "type": "array",
+				 "items": {
+					 "type": "object",
+					 "properties": {
+						 "regular_use": {
+							 "anyOf": [
+								 {
+								 },
+								 {
+								 }
+							 ]
+						 },
+						 "purchased_over_three_years_ago": {
+							 "anyOf": [
+								 {
+								 },
+								 {
+								 }
+							 ]
+						 },
+						 "value": {
+							 "type": "integer"
+						 },
+						 "liability": {
+							 "type": "integer"
+						 },
+						 "details": {
+							 "anyOf": [
+								 {
+									 "type": "null"
+								 },
+								 {
+									 "type": "string"
+								 }
+							 ]
+						 }
+					 },
+					 "required": [
+						 "regular_use",
+						 "purchased_over_three_years_ago",
+						 "value",
+						 "liability"
+					 ]
+				 }
+			 },
+			 "savings": {
+				 "type": "array",
+				 "items": {
+					 "type": "object",
+					 "properties": {
+						 "type": {
+							 "type": "string",
+							 "enum": [
+								 "cash",
+								 "other_person_account",
+								 "certificates",
+								 "shares",
+								 "trusts",
+								 "policies"
+							 ]
+						 },
+						 "value": {
+							 "type": "integer"
+						 },
+						 "liability": {
+							 "type": "integer"
+						 },
+						 "details": {
+							 "anyOf": [
+								 {
+									 "type": "null"
+								 },
+								 {
+									 "type": "string"
+								 }
+							 ]
+						 }
+					 },
+					 "required": [
+						 "type",
+						 "value",
+						 "liability"
+					 ]
+				 }
+			 },
+			 "assets": {
+				 "type": "array",
+				 "items": {
+					 "type": "object",
+					 "properties": {
+						 "type": {
+							 "type": "string",
+							 "enum": [
+								 [
+									 "valuable_items",
+									 "money_overseas",
+									 "timeshare",
+									 "land",
+									 "interest"
+								 ]
+							 ]
+						 },
+						 "value": {
+							 "type": "integer"
+						 },
+						 "liability": {
+							 "type": "integer"
+						 },
+						 "details": {
+							 "anyOf": [
+								 {
+									 "type": "null"
+								 },
+								 {
+									 "type": "string"
+								 }
+							 ]
+						 }
+					 },
+					 "required": [
+						 "type",
+						 "value",
+						 "liability"
+					 ]
+				 }
+			 },
+			 "total": {
+				 "type": "number"
+			 }
+		 },
+		 "required": [
+			 "houses",
+			 "vehicles",
+			 "savings",
+			 "assets",
+			 "total"
+		 ]
+	 },
+	 "outgoings_details": {
+		 "type": "object",
+		 "properties": {
+			 "outgoings": {
+				 "type": "array",
+				 "items": {
+					 "type": "object",
+					 "properties": {
+						 "type": {
+							 "type": "string",
+							 "enum": [
+								 "housing",
+								 "council_tax",
+								 "childcare",
+								 "maintenance",
+								 "legal_aid"
+							 ]
+						 },
+						 "amount": {
+							 "type": "integer"
+						 },
+						 "frequency": {
+							 "type": "string",
+							 "enum": [
+								 "week",
+								 "fortnight",
+								 "four_weeks",
+								 "month",
+								 "annual"
+							 ]
+						 },
+						 "details": {
+							 "anyOf": [
+								 {
+									 "type": "null"
+								 },
+								 {
+									 "type": "string"
+								 }
+							 ]
+						 }
+					 },
+					 "required": [
+						 "type",
+						 "amount",
+						 "frequency"
 					 ]
 				 }
 			 }
 		 },
 		 "required": [
-			 "benefits",
-			 "other_income"
+			 "outgoings"
 		 ]
 	 },
-	 "total_income": {
-		 "type": "number"
+	 "dependents": {
+		 "type": "array",
+		 "items": {
+			 "type": "object",
+			 "properties": {
+				 "date_of_birth": {
+					 "type": "string",
+					 "format": "date"
+				 }
+			 },
+			 "required": [
+				 "date_of_birth"
+			 ]
+		 }
 	 }
  },
  "required": [
-	 "total_income"
+	 "income_details"
  ]
 }
-
