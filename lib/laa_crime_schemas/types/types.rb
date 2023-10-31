@@ -43,6 +43,7 @@ module LaaCrimeSchemas
       *%w[
         child
         working_or_child_tax_credit
+        universal_credit
         incapacity
         industrial_injuries_disablement
         jsa
@@ -75,18 +76,15 @@ module LaaCrimeSchemas
     ].freeze
     FirstHearingAnswerValues = String.enum(*FIRST_HEARING_ANSWER_VALUES)
 
-    OTHER_INCOME_TYPES = %w[].freeze
-
     OtherIncomeType = String.enum(*%w[
-                                    friends_family
-                                    maintenance
-                                    board_from_family
-                                    rent
                                     private_pension
                                     state_pension
+                                    maintenance
+                                    interest
                                     student
-                                    interest_from_savings
-                                    interest_from_investments
+                                    board_from_family
+                                    rent
+                                    friends_and_family
                                     other
                                   ])
 
