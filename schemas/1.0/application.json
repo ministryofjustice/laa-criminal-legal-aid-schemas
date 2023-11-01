@@ -23,6 +23,9 @@
       "type": "array",
       "items": { "type": "string", "enum": ["on_age_under18", "on_benefit_check"] }
     },
+    "means_details": {
+      "$ref": "#/definitions/means"
+    },
     "provider_details": {
       "$ref": "#/definitions/provider"
     },
@@ -83,6 +86,7 @@
     "ioj_passport", "means_passport", "provider_details", "client_details", "case_details", "interests_of_justice"
   ],
   "definitions": {
+    "means": { "$ref": "means.json" },
     "provider": { "$ref": "general/provider.json" },
     "applicant": { "$ref": "general/applicant.json" },
     "codefendant": { "$ref": "general/codefendant.json" },

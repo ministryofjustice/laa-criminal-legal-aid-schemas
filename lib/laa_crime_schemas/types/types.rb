@@ -27,6 +27,8 @@ module LaaCrimeSchemas
     ].freeze
     ApplicationStatus = String.enum(*APPLICATION_STATUSES)
 
+    AssetType = String.enum(%w[valuable_items money_overseas timeshare land interest])
+
     BENEFIT_TYPES = %w[
       universal_credit
       guarantee_pension
@@ -36,6 +38,18 @@ module LaaCrimeSchemas
       none
     ].freeze
     BenefitType = String.enum(*BENEFIT_TYPES)
+
+    OtherBenefitType = String.enum(
+      *%w[
+        child
+        working_or_child_tax_credit
+        universal_credit
+        incapacity
+        industrial_injuries_disablement
+        jsa
+        other
+      ]
+    )
 
     CORRESPONDENCE_ADDRESS_TYPES = %w[
       other_address
@@ -61,6 +75,32 @@ module LaaCrimeSchemas
       no_hearing_yet
     ].freeze
     FirstHearingAnswerValues = String.enum(*FIRST_HEARING_ANSWER_VALUES)
+
+    OtherIncomeType = String.enum(*%w[
+                                    private_pension
+                                    state_pension
+                                    maintenance
+                                    interest
+                                    student
+                                    board_from_family
+                                    rent
+                                    friends_and_family
+                                    other
+                                  ])
+
+    OutgoingsType = String.enum(*%w[
+                                  housing
+                                  council_tax
+                                  childcare
+                                  maintenance
+                                  legal_aid
+                                ])
+
+    PaymentFrequency = String.enum(
+      *%w[week fortnight four_weeks month annual]
+    )
+
+    PenceSterling = Integer
 
     INTEREST_OF_JUSTICE_TYPES = %w[
       loss_of_liberty
@@ -117,6 +157,26 @@ module LaaCrimeSchemas
 
     OFFENCE_CLASSES = %w[A K G B I J D C H F E].freeze
     OffenceClass = String.enum(*OFFENCE_CLASSES)
+
+    OwnershipType = String.enum(*%w[with_partner landlord other_person sole])
+
+    SavingsType = String.enum(*%w[
+                                cash
+                                other_person_account
+                                certificates
+                                shares
+                                trusts
+                                policies
+                              ])
+
+    EmploymentStatusType = String.enum(*%w[employed self-employed none])
+
+    #
+    # These are s
+    EmploymentIncomeSourceType = String.enum(*%w[paye limited_company_director private_shareholder partnership
+                                                 sole_trader])
+
+    DependentAge = Integer.constrained(lt: 18)
 
     # `awaiting` before a file has been scanned
     # `incomplete` if virus scan never finished e.g. timeout

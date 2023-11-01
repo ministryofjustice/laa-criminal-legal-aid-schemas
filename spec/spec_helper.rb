@@ -25,3 +25,49 @@ end
 def file_fixture(fixture_name)
   Pathname.new(File.join('spec/fixtures', fixture_name))
 end
+
+require 'dry-schema'
+
+RSpec.shared_examples "a struct aligned to its json schema" do |parameter|
+  Dry::Schema.load_extensions(:json_schema)
+  Dry::Schema.load_extensions(:struct)
+
+  let(:struct_json_schema) do
+    described_class.json_schema(loose: false)
+  end
+
+  let(:json_schema) do
+    json = File.read(
+      File.join(
+        LaaCrimeSchemas.root, 'schemas', version.to_s, "#{schema_name}.json"
+      )
+    )
+
+    JSON.parse(json, symbolize_names: true)
+  end
+
+  let(:json_schema_base) {
+    {
+      "$schema": "http://json-schema.org/draft-06/schema#",
+      "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/#{version}/#{schema_name}.json",
+      title: schema_title,
+      description: "Currencies amounts are stored in pence sterling"
+    }
+  }
+
+  let(:struct_json_schema) do
+    # Use Dry::Schema's built in json_schema compiler to produce json_schema
+    # from the struct to compare with this gems json_schema.
+    struct_schema = Dry::Schema.JSON do
+      optional(:struct).maybe(LaaCrimeSchemas::Structs::MeansDetails)
+    end
+    
+    json_schema_base.merge(
+      struct_schema.json_schema(loose: true).fetch(:properties).fetch(:struct)
+    )
+  end
+
+  it 'is alligned with its json_schema' do
+    expect(struct_json_schema).to match(json_schema), JSON.pretty_generate(struct_json_schema, indent: '  ', space: ' ')
+  end
+end
