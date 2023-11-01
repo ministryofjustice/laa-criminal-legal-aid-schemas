@@ -50,7 +50,8 @@ RSpec.shared_examples "a struct aligned to its json schema" do |parameter|
     {
       "$schema": "http://json-schema.org/draft-06/schema#",
       "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/#{version}/#{schema_name}.json",
-      title: schema_title
+      title: schema_title,
+      description: "Currencies amounts are stored in pence sterling"
     }
   }
 
@@ -67,6 +68,6 @@ RSpec.shared_examples "a struct aligned to its json schema" do |parameter|
   end
 
   it 'is alligned with its json_schema' do
-    expect(struct_json_schema).to match(json_schema), JSON.pretty_generate(struct_json_schema)
+    expect(struct_json_schema).to match(json_schema), JSON.pretty_generate(struct_json_schema, indent: '  ', space: ' ')
   end
 end

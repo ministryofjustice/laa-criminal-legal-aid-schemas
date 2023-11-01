@@ -5,47 +5,7 @@ module LaaCrimeSchemas
     class MeansDetails < Base
       attribute :employment_status, Types::EmploymentStatusType
 
-      attribute :income_details do # rubocop:disable Metrics/BlockLength
-        attribute :benefits, Types::Array.of(Base) do
-          attribute :type, Types::OtherBenefitType
-          attributes_from Amount
-        end
-
-        attribute? :employment_details do
-          attribute :paye, Types::Array.of(Base) do
-            attribute :amount, Types::Integer
-            attribute :date, Types::JSON::Date
-            attribute :deductions, Types::Array.of(Base) do
-              attribute :type, Types::String
-              attribute :amount, Types::Integer
-            end
-          end
-          attribute? :other do
-            attribute :amount, Types::Integer
-            attribute :details, Types::String
-          end
-        end
-
-        attribute? :self_employment_details do
-          attribute :businesses, Types::Array.of(Base) do
-            attribute :name, Types::String
-            attribute :address, Address
-            attribute :last_two_years_tax_liability, Types::Integer
-            attribute :total_turnover, Types::Integer
-            attribute :total_drawing, Types::Integer
-            attribute :total_profit, Types::Integer
-            attribute :director_salary, Types::Integer
-            attribute :share, Types::Float
-          end
-        end
-
-        attribute? :other_income, Types::Array.of(Base) do
-          attribute :type, Types::OtherIncomeType
-          attributes_from Amount
-        end
-
-        attribute :total, Types::Integer
-      end
+      attribute :income_details, IncomeDetails
 
       attribute? :capital_details do
         attribute :houses, Types::Array.of(Base) do
@@ -81,7 +41,7 @@ module LaaCrimeSchemas
       end
 
       attribute? :dependents, Types::Array.of(Base) do
-        attribute :date_of_birth, Types::JSON::Date
+        attribute :age, Types::DependentAge
       end
     end
   end

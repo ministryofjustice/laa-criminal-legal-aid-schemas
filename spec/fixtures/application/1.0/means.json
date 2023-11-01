@@ -3,8 +3,7 @@
   "employment_status": "employed",
   "income_details": {
     "benefits": [
-      {
-				"type": "child",
+      {"type": "child",
 				"amount": 3990,
 				"frequency": "month"
 			}
@@ -12,9 +11,9 @@
 		"employment_details": {
 			"paye": [
 				{
-				  "amount": 1320000,
-				  "date": "2023-10-30",
-				  "deductions": []
+					"amount": 1320000,
+					"date": "2023-10-30",
+					"deductions": []
 				}
 			]
 		},

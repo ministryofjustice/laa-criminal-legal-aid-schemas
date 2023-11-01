@@ -100,6 +100,8 @@ module LaaCrimeSchemas
       *%w[week fortnight four_weeks month annual]
     )
 
+    PenceSterling = Integer
+
     INTEREST_OF_JUSTICE_TYPES = %w[
       loss_of_liberty
       suspended_sentence
@@ -168,6 +170,13 @@ module LaaCrimeSchemas
                               ])
 
     EmploymentStatusType = String.enum(*%w[employed self-employed none])
+
+    #
+    # These are s
+    EmploymentIncomeSourceType = String.enum(*%w[paye limited_company_director private_shareholder partnership
+                                                 sole_trader])
+
+    DependentAge = Integer.constrained(lt: 18)
 
     # `awaiting` before a file has been scanned
     # `incomplete` if virus scan never finished e.g. timeout
