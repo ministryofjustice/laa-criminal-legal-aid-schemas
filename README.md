@@ -1,4 +1,5 @@
 # LAA Criminal Legal Aid Schemas
+DO NOT MERGE THIS CHANGE. IT'S A TEST
 
 JSON schema definitions, fixtures and validator for LAA Apply for criminal legal aid.
 
