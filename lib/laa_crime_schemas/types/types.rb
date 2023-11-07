@@ -193,6 +193,8 @@ module LaaCrimeSchemas
 
     WORK_STREAM_TYPES = %w[
       extradition
+      national_crime_team
+      criminal_applications_team
     ].freeze
     WorkStreamType = String.enum(*WORK_STREAM_TYPES)
   end
