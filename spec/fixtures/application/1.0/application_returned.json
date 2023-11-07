@@ -39,6 +39,7 @@
     "appeal_lodged_date": null,
     "appeal_with_changes_details": null,
     "offence_class": "C",
+    "work_stream": null,
     "offences": [
       {
         "name": "Attempt robbery",

@@ -53,6 +53,7 @@
         "appeal_lodged_date": { "type": ["string", "null"], "format": "date" },
         "appeal_with_changes_details": { "type": ["string", "null"] },
         "offence_class": { "type": ["string", "null"], "enum": ["A", "K", "G", "B", "I", "J", "D", "C", "H", "F", "E", null] },
+        "work_stream": { "type": ["string", "null"], "enum": ["Extradition", null] },
         "hearing_court_name": { "type": "string" },
         "hearing_date": { "type": "string", "format": "date" }
       },
