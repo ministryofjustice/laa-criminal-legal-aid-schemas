@@ -42,7 +42,7 @@
         "urn": { "type": ["string", "null"] },
         "case_type": { "type": "string", "enum": ["summary_only", "either_way", "indictable", "already_in_crown_court", "committal", "appeal_to_crown_court", "appeal_to_crown_court_with_changes"] },
         "offence_class": { "type": ["string", "null"], "enum": ["A", "K", "G", "B", "I", "J", "D", "C", "H", "F", "E", null] },
-        "work_stream": { "type": ["string", "null"], "enum": ["Extradition", null] },
+        "work_stream": { "type": ["string"], "enum": ["extradition", "national_crime_team", "criminal_applications_team"] },
         "appeal_maat_id": { "type": ["string", "null"] },
         "appeal_lodged_date": { "type": ["string", "null"], "format": "date" },
         "appeal_with_changes_details": { "type": ["string", "null"] },
