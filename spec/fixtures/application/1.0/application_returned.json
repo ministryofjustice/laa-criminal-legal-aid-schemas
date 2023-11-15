@@ -39,7 +39,6 @@
     "appeal_lodged_date": null,
     "appeal_with_changes_details": null,
     "offence_class": "C",
-    "work_stream": "criminal_applications_team",
     "offences": [
       {
         "name": "Attempt robbery",
@@ -77,5 +76,6 @@
       "scan_provider": "ClamAV",
       "scan_at": "2023-10-01 12:10:00"
     }
-  ]
+  ],
+  "work_stream": "criminal_applications_team"
 }
