@@ -22,6 +22,8 @@ module LaaCrimeSchemas
       attribute? :supporting_evidence, Types::Array.of(Document).default([].freeze)
 
       attribute? :return_details, ReturnDetails
+
+      attribute? :work_stream, Types::WorkStreamType.optional
     end
   end
 end

@@ -42,7 +42,6 @@
     "urn": "",
     "case_type": "appeal_to_crown_court",
     "offence_class": null,
-    "work_stream": "criminal_applications_team",
     "appeal_maat_id": null,
     "appeal_lodged_date": "2021-10-25",
     "appeal_with_changes_details": null,
@@ -91,5 +90,6 @@
       "file_size": 12,
       "scan_at": "2023-10-01 12:34:56"
     }
-  ]
+  ],
+  "work_stream": "criminal_applications_team"
 }
