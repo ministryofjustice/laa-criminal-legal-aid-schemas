@@ -23,7 +23,7 @@ module LaaCrimeSchemas
 
       attribute? :return_details, ReturnDetails
 
-      attribute :work_stream, Types::WorkStreamType.optional
+      attribute? :work_stream, Types::WorkStreamType.optional
     end
   end
 end
