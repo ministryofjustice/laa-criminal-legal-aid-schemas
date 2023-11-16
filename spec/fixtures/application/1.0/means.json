@@ -2,6 +2,7 @@
   "schema_version": 1.0,
   "employment_status": "employed",
   "income_details": {
+    "income_above_threshold": "yes",
     "benefits": [
       {"type": "child",
 				"amount": 3990,
@@ -26,6 +27,6 @@
 			"frequency": "annual",
 			"details": "Book royalty"
 		}],
-    "total": 1370380 
+    "total": 1370380
 	}
 }

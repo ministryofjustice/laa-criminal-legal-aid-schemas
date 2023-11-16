@@ -61,7 +61,7 @@ RSpec.shared_examples "a struct aligned to its json schema" do |parameter|
     struct_schema = Dry::Schema.JSON do
       optional(:struct).maybe(LaaCrimeSchemas::Structs::MeansDetails)
     end
-    
+
     json_schema_base.merge(
       struct_schema.json_schema(loose: true).fetch(:properties).fetch(:struct)
     )

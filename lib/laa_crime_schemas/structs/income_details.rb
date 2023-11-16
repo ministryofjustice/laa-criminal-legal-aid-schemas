@@ -3,7 +3,9 @@
 module LaaCrimeSchemas
   module Structs
     class IncomeDetails < Base
-      attribute :benefits, Types::Array.of(Base) do
+      attribute :income_above_threshold, Types::YesNoValue
+
+      attribute? :benefits, Types::Array.of(Base) do
         attribute :type, Types::OtherBenefitType
         attributes_from Amount
       end
@@ -40,7 +42,7 @@ module LaaCrimeSchemas
         attributes_from Amount
       end
 
-      attribute :total, Types::PenceSterling
+      attribute? :total, Types::PenceSterling
     end
   end
 end
