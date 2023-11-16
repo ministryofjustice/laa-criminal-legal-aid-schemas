@@ -18,9 +18,6 @@
 				}
 			]
 		},
-		"self_employment_details": {
-			"businesses": []
-		},
 		"other_income": [{
       "type": "other",
 			"amount": 2500,

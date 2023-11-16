@@ -3,7 +3,7 @@
 module LaaCrimeSchemas
   module Structs
     class MeansDetails < Base
-      attribute :employment_status, Types::EmploymentStatusType
+      attribute? :employment_status, Types::EmploymentStatusType
 
       attribute :income_details, IncomeDetails
 
