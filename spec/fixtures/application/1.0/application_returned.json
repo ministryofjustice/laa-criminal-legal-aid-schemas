@@ -62,6 +62,11 @@
       "reason": "More details about loss of liberty."
     }
   ],
+  "means_details": {
+    "income_details": {
+      "income_above_threshold": "yes"
+    }
+  },
   "return_details": {
     "reason": "clarification_required",
     "details": "Further information regarding IoJ required"

@@ -82,6 +82,11 @@
       "reason": "More details about loss of liberty."
     }
   ],
+  "means_details": {
+    "income_details": {
+      "income_above_threshold": "yes"
+    }
+  },
   "supporting_evidence": [
     {
       "s3_object_key": "123/abcdef1234",
