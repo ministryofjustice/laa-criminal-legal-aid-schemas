@@ -531,7 +531,5 @@
       }
     }
   },
-  "required":[
-    "income_details"
-  ]
+  "required":[]
 }

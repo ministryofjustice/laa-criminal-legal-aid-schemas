@@ -3,9 +3,8 @@
 module LaaCrimeSchemas
   module Structs
     class MeansDetails < Base
-      attribute? :employment_status, Types::EmploymentStatusType
-
       attribute :income_details, IncomeDetails
+      attribute? :employment_status, Types::EmploymentStatusType
 
       attribute? :capital_details do
         attribute :houses, Types::Array.of(Base) do

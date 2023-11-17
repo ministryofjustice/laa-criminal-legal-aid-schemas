@@ -5,6 +5,8 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
     let(:version) { 1.0 }
     let(:schema_title) { 'Means attributes for a criminal legal aid application' }
 
+    it_behaves_like 'a struct aligned to its json schema'
+
     context 'when initialised with valid means details' do
       subject(:struct) { described_class.new(attributes) }
 
