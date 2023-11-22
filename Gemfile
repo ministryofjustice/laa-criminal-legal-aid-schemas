@@ -7,3 +7,7 @@ gem 'rake'
 gem 'rspec'
 gem 'rubocop'
 gem 'simplecov'
+
+group :development, :test do
+  gem 'debug'
+end

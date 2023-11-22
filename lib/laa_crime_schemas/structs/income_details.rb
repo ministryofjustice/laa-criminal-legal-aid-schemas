@@ -44,8 +44,10 @@ module LaaCrimeSchemas
 
       attribute? :total, Types::PenceSterling
 
-      attribute? :lost_job_in_custody, Types::YesNoValue
-      attribute? :date_job_lost, Types::JSON::Date
+      attribute? :lost_job do
+        attribute :lost_job_in_custody, Types::YesNoValue
+        attribute :date_job_lost, Types::JSON::Date
+      end
     end
   end
 end

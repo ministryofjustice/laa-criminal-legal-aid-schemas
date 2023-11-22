@@ -268,12 +268,21 @@
         "total":{
           "type":"integer"
         },
-        "lost_job_in_custody":{
-          "type":"string", "enum": ["yes", "no"]
-        },
-        "date_job_lost":{
-          "type":"string",
-          "format":"date"
+        "lost_job":{
+          "type":"object",
+          "properties": {
+            "lost_job_in_custody":{
+              "type":"string", "enum": ["yes", "no"]
+            },
+            "date_job_lost":{
+              "type":"string",
+              "format":"date"
+            }
+          },
+          "required": [
+            "lost_job_in_custody",
+            "date_job_lost"
+          ]
         }
       },
       "required":[

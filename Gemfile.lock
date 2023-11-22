@@ -14,6 +14,9 @@ GEM
     ast (2.4.2)
     base64 (0.1.1)
     concurrent-ruby (1.2.2)
+    debug (1.8.0)
+      irb (>= 1.5.0)
+      reline (>= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
     dry-configurable (1.1.0)
@@ -48,6 +51,10 @@ GEM
       dry-logic (~> 1.4)
       zeitwerk (~> 2.6)
     ice_nine (0.11.2)
+    io-console (0.6.0)
+    irb (1.8.3)
+      rdoc
+      reline (>= 0.3.8)
     json (2.6.3)
     json-schema (4.0.0)
       addressable (>= 2.8)
@@ -56,11 +63,17 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
+    psych (5.1.1.1)
+      stringio
     public_suffix (5.0.3)
     racc (1.7.1)
     rainbow (3.1.1)
     rake (13.0.6)
+    rdoc (6.6.0)
+      psych (>= 4.0.0)
     regexp_parser (2.8.2)
+    reline (0.4.0)
+      io-console (~> 0.5)
     rexml (3.2.6)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
@@ -96,6 +109,7 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
+    stringio (3.0.8)
     unicode-display_width (2.5.0)
     zeitwerk (2.6.12)
 
@@ -103,6 +117,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  debug
   laa-criminal-legal-aid-schemas!
   rake
   rspec

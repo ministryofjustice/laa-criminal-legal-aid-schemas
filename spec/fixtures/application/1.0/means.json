@@ -25,7 +25,9 @@
       }
     ],
     "total": 1370380,
-    "lost_job_in_custody": "yes",
-    "date_job_lost": "2023-09-01"
+    "lost_job": {
+      "lost_job_in_custody": "yes",
+      "date_job_lost": "2023-09-01"
+    }
   }
 }
