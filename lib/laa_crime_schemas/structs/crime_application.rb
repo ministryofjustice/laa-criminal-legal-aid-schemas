@@ -19,6 +19,8 @@ module LaaCrimeSchemas
         attribute :reason, Types::String
       end
 
+      attribute? :means_details, MeansDetails
+
       attribute? :supporting_evidence, Types::Array.of(Document).default([].freeze)
 
       attribute? :return_details, ReturnDetails

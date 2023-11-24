@@ -3,7 +3,9 @@
 module LaaCrimeSchemas
   module Structs
     class MeansDetails < Base
-      attribute :employment_status, Types::EmploymentStatusType
+      # TODO: Temporarily made optional, awaiting complete implementation
+      # Apply allows applicant to have multiple employment_status
+      attribute? :employment_status, Types::EmploymentStatusType
 
       attribute :income_details, IncomeDetails
 

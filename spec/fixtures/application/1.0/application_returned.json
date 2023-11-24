@@ -63,6 +63,7 @@
     }
   ],
   "means_details": {
+    "employment_status": "self-employed",
     "income_details": {
       "income_above_threshold": "yes",
       "lost_job_in_custody": "yes",
