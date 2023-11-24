@@ -3,7 +3,8 @@
 module LaaCrimeSchemas
   module Structs
     class MeansDetails < Base
-      attribute :employment_status, Types::EmploymentStatusType
+      # TODO: Temporarily made optional, awaiting complete implementation
+      attribute? :employment_status, Types::EmploymentStatusType
 
       attribute :income_details, IncomeDetails
 
