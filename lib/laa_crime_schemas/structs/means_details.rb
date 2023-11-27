@@ -7,7 +7,7 @@ module LaaCrimeSchemas
       # Apply allows applicant to have multiple employment_status
       attribute? :employment_status, Types::EmploymentStatusType
 
-      attribute :income_details, IncomeDetails
+      attribute? :income_details, IncomeDetails
 
       attribute? :capital_details do
         attribute :houses, Types::Array.of(Base) do

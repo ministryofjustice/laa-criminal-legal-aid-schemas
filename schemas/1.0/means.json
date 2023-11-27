@@ -276,9 +276,7 @@
           "format":"date"
         }
       },
-      "required":[
-        "income_above_threshold"
-      ]
+      "required":[]
     },
     "capital_details":{
       "type":"object",
