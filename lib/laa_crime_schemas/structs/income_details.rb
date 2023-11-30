@@ -12,6 +12,10 @@ module LaaCrimeSchemas
 
       attribute? :employment_type, Types::Array.of(Types::EmploymentType)
       attribute? :ended_employment_within_three_months, Types::YesNoValue
+      attribute? :lost_job_in_custody, Types::YesNoValue
+      attribute? :date_job_lost, Types::JSON::Date
+      attribute? :manage_without_income, Types::YesNoValue
+      attribute? :manage_other_details, Types::String
 
       attribute? :employment_details do
         attribute :paye, Types::Array.of(Base) do
@@ -46,9 +50,6 @@ module LaaCrimeSchemas
       end
 
       attribute? :total, Types::PenceSterling
-
-      attribute? :lost_job_in_custody, Types::YesNoValue
-      attribute? :date_job_lost, Types::JSON::Date
     end
   end
 end
