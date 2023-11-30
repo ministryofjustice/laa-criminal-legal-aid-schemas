@@ -14,7 +14,7 @@ module LaaCrimeSchemas
       attribute? :ended_employment_within_three_months, Types::YesNoValue
       attribute? :lost_job_in_custody, Types::YesNoValue
       attribute? :date_job_lost, Types::JSON::Date
-      attribute? :manage_without_income, Types::YesNoValue
+      attribute? :manage_without_income, Types::ManageWithoutIncomeTypes
       attribute? :manage_other_details, Types::String
 
       attribute? :employment_details do

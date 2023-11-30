@@ -77,6 +77,13 @@
           }
         },
         "ended_employment_within_three_months": { "type": "string", "enum": ["yes", "no"] },
+        "manage_without_income": {
+          "type": "string",
+          "enum": [
+            "friends_sofa", "family", "homeless", "custody", "other"
+          ]
+        },
+        "manage_other_details": { "type": "string" },
         "employment_details":{
           "type":"object",
           "properties":{
@@ -530,7 +537,7 @@
         "outgoings"
       ]
     },
-    "dependents":{
+    "dependants":{
       "type":"array",
       "items":{
         "type":"object",
