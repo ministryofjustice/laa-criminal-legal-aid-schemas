@@ -76,14 +76,38 @@
             ]
           }
         },
-        "ended_employment_within_three_months": { "type": "string", "enum": ["yes", "no"] },
-        "manage_without_income": {
-          "type": "string",
-          "enum": [
-            "friends_sofa", "family", "homeless", "custody", "other"
+        "ended_employment_within_three_months":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
           ]
         },
-        "manage_other_details": { "type": "string" },
+        "manage_without_income": {
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["friends_sofa", "family", "homeless", "custody", "other"]
+            }
+          ]
+        },
+        "manage_other_details":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string"
+            }
+          ]
+        },
         "employment_details":{
           "type":"object",
           "properties":{
@@ -286,11 +310,26 @@
           "type":"integer"
         },
         "lost_job_in_custody":{
-          "type":"string", "enum": ["yes", "no"]
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
         },
         "date_job_lost":{
-          "type":"string",
-          "format":"date"
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "format":"date"
+            }
+          ]
         }
       },
       "required":[]

@@ -11,11 +11,11 @@ module LaaCrimeSchemas
       end
 
       attribute? :employment_type, Types::Array.of(Types::EmploymentType)
-      attribute? :ended_employment_within_three_months, Types::YesNoValue
-      attribute? :lost_job_in_custody, Types::YesNoValue
-      attribute? :date_job_lost, Types::JSON::Date
-      attribute? :manage_without_income, Types::ManageWithoutIncomeTypes
-      attribute? :manage_other_details, Types::String
+      attribute? :ended_employment_within_three_months, Types::YesNoValue.optional
+      attribute? :lost_job_in_custody, Types::YesNoValue.optional
+      attribute? :date_job_lost, Types::JSON::Date.optional
+      attribute? :manage_without_income, Types::ManageWithoutIncomeTypes.optional
+      attribute? :manage_other_details, Types::String.optional
 
       attribute? :employment_details do
         attribute :paye, Types::Array.of(Base) do
