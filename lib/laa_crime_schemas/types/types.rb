@@ -171,10 +171,7 @@ module LaaCrimeSchemas
 
     EmploymentStatusType = String.enum(*%w[employed self-employed none])
 
-    #
-    # These are s
-    EmploymentIncomeSourceType = String.enum(*%w[paye limited_company_director private_shareholder partnership
-                                                 sole_trader])
+    EmploymentType = String.enum(*%w[employed self-employed business_partnership director shareholder not_working])
 
     DependentAge = Integer.constrained(lt: 18)
 

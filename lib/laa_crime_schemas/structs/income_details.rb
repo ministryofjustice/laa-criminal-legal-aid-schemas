@@ -10,6 +10,9 @@ module LaaCrimeSchemas
         attributes_from Amount
       end
 
+      attribute? :employment_type, Types::Array.of(Types::EmploymentType)
+      attribute? :ended_employment_within_three_months, Types::YesNoValue
+
       attribute? :employment_details do
         attribute :paye, Types::Array.of(Base) do
           attribute :amount, Types::PenceSterling
