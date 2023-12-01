@@ -42,8 +42,8 @@ module LaaCrimeSchemas
         end
       end
 
-      attribute? :dependents, Types::Array.of(Base) do
-        attribute :age, Types::DependentAge
+      attribute? :dependants, Types::Array.of(Base) do
+        attribute :age, Types::DependantAge
       end
     end
   end

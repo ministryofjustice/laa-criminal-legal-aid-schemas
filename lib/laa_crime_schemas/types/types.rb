@@ -173,7 +173,7 @@ module LaaCrimeSchemas
 
     EmploymentType = String.enum(*%w[employed self-employed business_partnership director shareholder not_working])
 
-    DependentAge = Integer.constrained(lt: 18)
+    DependantAge = Integer.constrained(lt: 18)
 
     # `awaiting` before a file has been scanned
     # `incomplete` if virus scan never finished e.g. timeout
