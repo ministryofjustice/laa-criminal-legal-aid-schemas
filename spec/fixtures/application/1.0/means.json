@@ -2,6 +2,10 @@
   "schema_version": 1.0,
   "employment_status": "employed",
   "income_details": {
+    "employment_type": ["not_working"],
+    "ended_employment_within_three_months": "yes",
+    "lost_job_in_custody": "yes",
+    "date_job_lost": "2023-09-01",
     "income_above_threshold": "yes",
     "benefits": [{ "type": "child", "amount": 3990, "frequency": "month" }],
     "employment_details": {
@@ -24,8 +28,6 @@
         "details": "Book royalty"
       }
     ],
-    "total": 1370380,
-    "lost_job_in_custody": "yes",
-    "date_job_lost": "2023-09-01"
+    "total": 1370380
   }
 }

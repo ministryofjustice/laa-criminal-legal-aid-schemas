@@ -35,11 +35,7 @@
         "country": "United Kingdom",
         "postcode": "SW1A 2AA"
       },
-      "correspondence_address": null,
-      "income_details": {
-        "employment_type": ["not_working"],
-        "ended_employment_within_three_months": "no"
-      }
+      "correspondence_address": null
     }
   },
   "case_details": {
@@ -89,9 +85,11 @@
   "means_details": {
     "employment_status": "none",
     "income_details": {
-      "income_above_threshold": "yes",
+      "employment_type": ["not_working"],
+      "ended_employment_within_three_months": "yes",
       "lost_job_in_custody": "yes",
-      "date_job_lost": "2023-09-01"
+      "date_job_lost": "2023-09-01",
+      "income_above_threshold": "yes"
     }
   },
   "supporting_evidence": [
