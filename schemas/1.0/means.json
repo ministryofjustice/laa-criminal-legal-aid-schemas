@@ -87,6 +87,17 @@
             }
           ]
         },
+        "has_frozen_income_or_assets":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
         "manage_without_income": {
           "anyOf":[
             {
