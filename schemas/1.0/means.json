@@ -130,6 +130,17 @@
             }
           ]
         },
+        "client_owns_property":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
         "employment_details":{
           "type":"object",
           "properties":{
