@@ -91,6 +91,7 @@
       "date_job_lost": "2023-09-01",
       "income_above_threshold": "no",
       "has_frozen_income_or_assets": "no",
+      "client_owns_property": "no",
       "has_savings": "no",
       "manage_without_income": "other",
       "manage_other_details": "Another way they manage"
