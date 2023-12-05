@@ -15,6 +15,7 @@ module LaaCrimeSchemas
       attribute? :lost_job_in_custody, Types::YesNoValue.optional
       attribute? :date_job_lost, Types::JSON::Date.optional
       attribute? :has_frozen_income_or_assets, Types::YesNoValue.optional
+      attribute? :has_savings, Types::YesNoValue.optional
       attribute? :manage_without_income, Types::ManageWithoutIncomeTypes.optional
       attribute? :manage_other_details, Types::String.optional
 

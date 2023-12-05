@@ -98,6 +98,17 @@
             }
           ]
         },
+        "has_savings":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
         "manage_without_income": {
           "anyOf":[
             {
