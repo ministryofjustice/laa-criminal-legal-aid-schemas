@@ -18,6 +18,7 @@ module LaaCrimeSchemas
       attribute? :has_savings, Types::YesNoValue.optional
       attribute? :manage_without_income, Types::ManageWithoutIncomeTypes.optional
       attribute? :manage_other_details, Types::String.optional
+      attribute? :client_owns_property, Types::YesNoValue.optional
 
       attribute? :employment_details do
         attribute :paye, Types::Array.of(Base) do
