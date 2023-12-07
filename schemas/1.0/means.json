@@ -116,7 +116,7 @@
             },
             {
               "type":"string",
-              "enum": ["friends_sofa", "family", "homeless", "custody", "other"]
+              "enum": ["friends_sofa", "family", "living_on_streets", "custody", "other"]
             }
           ]
         },

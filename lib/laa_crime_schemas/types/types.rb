@@ -131,7 +131,7 @@ module LaaCrimeSchemas
     MANAGE_WITHOUT_INCOME_TYPES = %w[
       friends_sofa
       family
-      homeless
+      living_on_streets
       custody
       other
     ].freeze
