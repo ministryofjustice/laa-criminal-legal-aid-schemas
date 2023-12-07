@@ -189,11 +189,11 @@ module LaaCrimeSchemas
     VirusScanStatus = String.default('awaiting').enum(*VIRUS_SCAN_STATUSES)
 
     WORK_STREAM_TYPES = %w[
-      extradition
-      national_crime_team
       criminal_applications_team
+      criminal_applications_team_2
+      extradition
     ].freeze
-    WorkStreamType = String.enum(*WORK_STREAM_TYPES)
+    WorkStreamType = Coercible::String.enum(*WORK_STREAM_TYPES)
   end
 end
 # rubocop:enable Metrics/ModuleLength
