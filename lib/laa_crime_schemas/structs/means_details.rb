@@ -35,12 +35,7 @@ module LaaCrimeSchemas
         attribute :total, Types::Float
       end
 
-      attribute? :outgoings_details do
-        attribute :outgoings, Types::Array.of(Base) do
-          attribute :type, Types::OutgoingsType
-          attributes_from Amount
-        end
-      end
+      attribute? :outgoings_details, OutgoingsDetails
 
       attribute? :dependants, Types::Array.of(Base) do
         attribute :age, Types::DependantAge

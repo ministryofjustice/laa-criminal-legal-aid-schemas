@@ -95,6 +95,10 @@
       "has_savings": "no",
       "manage_without_income": "other",
       "manage_other_details": "Another way they manage"
+    },
+    "outgoings_details": {
+      "outgoings_more_than_income": "yes",
+      "how_manage": "A description of how they manage"
     }
   },
   "supporting_evidence": [
