@@ -30,6 +30,14 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
         end
       end
 
+      describe 'storing outgoings details' do
+        subject(:outgoings_details) { struct.outgoings_details }
+
+        it 'includes outgoings_more_than_income' do
+          expect(outgoings_details.outgoings_more_than_income).to eq('yes')
+        end
+      end
+
       it 'produces a valid JSON document conforming to the schema' do
         validator = LaaCrimeSchemas::Validator.new(
             struct.to_json,

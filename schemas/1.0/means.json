@@ -603,11 +603,30 @@
               "frequency"
             ]
           }
+        },
+        "outgoings_more_than_income":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
+        "how_manage":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string"
+            }
+          ]
         }
       },
-      "required":[
-        "outgoings"
-      ]
+      "required":[]
     },
     "dependants":{
       "type":"array",
