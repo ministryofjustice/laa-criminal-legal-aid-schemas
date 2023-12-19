@@ -6,7 +6,7 @@ module LaaCrimeSchemas
       attribute? :outgoings, Types::Array.of(Base) do
         attribute :type, Types::OutgoingsType
         attributes_from Amount
-      end
+      end.optional
       attribute? :outgoings_more_than_income, Types::YesNoValue.optional
       attribute? :how_manage, Types::String.optional
     end
