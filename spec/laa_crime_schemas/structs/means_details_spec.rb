@@ -18,7 +18,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
         expect(struct.employment_status).to eq('employed')
       end
 
-      describe 'storing income details' do 
+      describe 'storing income details' do
         subject(:income_details) { struct.income_details }
 
         it 'includes income total' do
@@ -33,6 +33,10 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
       describe 'storing outgoings details' do
         subject(:outgoings_details) { struct.outgoings_details }
 
+        it 'includes income_tax_rate_above_threshold' do
+          expect(outgoings_details.income_tax_rate_above_threshold).to eq('no')
+        end
+
         it 'includes outgoings_more_than_income' do
           expect(outgoings_details.outgoings_more_than_income).to eq('yes')
         end
@@ -45,7 +49,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
             schema_name:
         )
 
-        expect(validator).to be_valid, validator.fully_validate 
+        expect(validator).to be_valid, validator.fully_validate
       end
     end
   end
