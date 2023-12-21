@@ -72,6 +72,11 @@
       "income_above_threshold": "yes",
       "lost_job_in_custody": "yes",
       "date_job_lost": "2023-09-01"
+    },
+    "outgoings_details": {
+      "income_tax_rate_above_threshold": "yes",
+      "outgoings_more_than_income": null,
+      "how_manage": "Somehow they managed"
     }
   },
   "return_details": {

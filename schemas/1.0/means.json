@@ -604,6 +604,17 @@
             ]
           }
         },
+        "income_tax_rate_above_threshold":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
         "outgoings_more_than_income":{
           "anyOf":[
             {
