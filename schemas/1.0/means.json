@@ -363,6 +363,21 @@
               "format":"date"
             }
           ]
+        },
+        "dependants":{
+          "type":"array",
+          "items":{
+            "type":"object",
+            "properties":{
+              "age":{
+                "type":"integer",
+                "exclusiveMaximum":18
+              }
+            },
+            "required":[
+              "age"
+            ]
+          }
         }
       },
       "required":[]
@@ -638,21 +653,6 @@
         }
       },
       "required":[]
-    },
-    "dependants":{
-      "type":"array",
-      "items":{
-        "type":"object",
-        "properties":{
-          "age":{
-            "type":"integer",
-            "exclusiveMaximum":18
-          }
-        },
-        "required":[
-          "age"
-        ]
-      }
     }
   },
   "required":[]

@@ -47,6 +47,10 @@ module LaaCrimeSchemas
         end
       end
 
+      attribute? :dependants, Types::Array.of(Base) do
+        attribute :age, Types::DependantAge
+      end
+
       attribute? :other_income, Types::Array.of(Base) do
         attribute :type, Types::OtherIncomeType
         attributes_from Amount
