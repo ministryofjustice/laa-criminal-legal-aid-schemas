@@ -36,10 +36,6 @@ module LaaCrimeSchemas
       end
 
       attribute? :outgoings_details, OutgoingsDetails
-
-      attribute? :dependants, Types::Array.of(Base) do
-        attribute :age, Types::DependantAge
-      end
     end
   end
 end
