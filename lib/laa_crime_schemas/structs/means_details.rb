@@ -35,10 +35,6 @@ module LaaCrimeSchemas
 
         attribute :total, Types::Float
       end
-
-      attribute? :dependants, Types::Array.of(Base) do
-        attribute :age, Types::DependantAge
-      end
     end
   end
 end
