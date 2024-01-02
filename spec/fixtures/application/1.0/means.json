@@ -33,6 +33,7 @@
         "details": "Book royalty"
       }
     ],
+    "dependants": [{"age": 1}, {"age":  5}],
     "total": 1370380
   },
   "outgoings_details": {
