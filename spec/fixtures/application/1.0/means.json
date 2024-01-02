@@ -36,6 +36,7 @@
     "total": 1370380
   },
   "outgoings_details": {
+    "housing_payment_type": "rent",
     "income_tax_rate_above_threshold": "no",
     "outgoings_more_than_income": "yes",
     "how_manage": "A description of how they manage"

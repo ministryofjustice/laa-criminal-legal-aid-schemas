@@ -604,6 +604,17 @@
             ]
           }
         },
+        "housing_payment_type":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["rent", "mortgage", "board_lodgings", "none"]
+            }
+          ]
+        },
         "income_tax_rate_above_threshold":{
           "anyOf":[
             {
