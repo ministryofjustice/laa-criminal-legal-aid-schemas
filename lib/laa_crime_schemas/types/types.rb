@@ -97,6 +97,13 @@ module LaaCrimeSchemas
                                   maintenance
                                   legal_aid
                                 ])
+    HOUSING_PAYMENT_TYPES = %w[
+      rent
+      mortgage
+      board_lodgings
+      none
+    ].freeze
+    HousingPaymentType = String.enum(*HOUSING_PAYMENT_TYPES)
 
     PaymentFrequency = String.enum(
       *%w[week fortnight four_weeks month annual]

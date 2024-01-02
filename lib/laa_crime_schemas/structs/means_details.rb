@@ -8,6 +8,7 @@ module LaaCrimeSchemas
       attribute? :employment_status, Types::EmploymentStatusType
 
       attribute? :income_details, IncomeDetails
+      attribute? :outgoings_details, OutgoingsDetails
 
       attribute? :capital_details do
         attribute :houses, Types::Array.of(Base) do
@@ -34,8 +35,6 @@ module LaaCrimeSchemas
 
         attribute :total, Types::Float
       end
-
-      attribute? :outgoings_details, OutgoingsDetails
     end
   end
 end
