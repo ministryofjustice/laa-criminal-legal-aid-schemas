@@ -9,7 +9,7 @@
     "parent_id": { "type": ["string", "null"] },
     "schema_version": { "type": "number" },
     "reference": { "type": "integer" },
-    "application_type": { "type": "string", "enum": ["initial", "post_submission_evidence"] },
+    "application_type": { "type": "string", "enum": ["initial", "post_submission_evidence", "change_in_financial_circumstances"] },
     "created_at": { "type": "string", "format": "date-time" },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },

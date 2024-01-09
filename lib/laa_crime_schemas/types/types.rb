@@ -18,6 +18,7 @@ module LaaCrimeSchemas
     APPLICATION_TYPES = %w[
       initial
       post_submission_evidence
+      change_in_financial_circumstances
     ].freeze
     ApplicationType = String.enum(*APPLICATION_TYPES)
 
