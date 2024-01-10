@@ -28,7 +28,7 @@ module LaaCrimeSchemas
       attribute? :work_stream, Types::WorkStreamType.optional
 
       attribute? :post_submission_evidence, Types::Array.of(Document).default([].freeze)
-      attribute? :pse_notes, Types::String
+      attribute? :pse_notes, Types::String.optional
     end
   end
 end
