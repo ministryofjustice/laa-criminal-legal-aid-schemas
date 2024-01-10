@@ -7,6 +7,7 @@ module LaaCrimeSchemas
       attribute :filename, Types::String
       attribute :content_type, Types::String
       attribute :file_size, Types::Coercible::Integer
+      attribute? :application_type, Types::String
 
       # Virus scanning
       attribute :scan_status, Types::VirusScanStatus
