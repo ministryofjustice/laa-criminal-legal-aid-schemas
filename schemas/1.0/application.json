@@ -84,8 +84,8 @@
   "notes": { "type": ["string", "null"] },
   "work_stream": { "type": ["string", "null"], "enum": ["extradition", "national_crime_team", "criminal_applications_team", null] },
   "required": [
-    "id", "parent_id", "schema_version", "reference", "application_type", "created_at", "submitted_at", "date_stamp",
-    "ioj_passport", "means_passport", "provider_details", "client_details", "case_details", "interests_of_justice"
+    "id", "parent_id", "schema_version", "reference", "application_type", "created_at", "submitted_at",
+    "provider_details", "client_details"
   ],
   "definitions": {
     "means": { "$ref": "means.json" },

@@ -3,8 +3,8 @@
 module LaaCrimeSchemas
   module Structs
     class CrimeApplication < BaseApplication
-      attribute :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
-      attribute :means_passport, Types::Array.of(Types::MeansPassportType).default([].freeze)
+      attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
+      attribute? :means_passport, Types::Array.of(Types::MeansPassportType).default([].freeze)
 
       attribute :provider_details, ProviderDetails
 
@@ -12,9 +12,9 @@ module LaaCrimeSchemas
         attribute :applicant, Applicant
       end
 
-      attribute :case_details, CaseDetails
+      attribute? :case_details, CaseDetails
 
-      attribute :interests_of_justice, Types::Coercible::Array.of(Base).default([].freeze) do
+      attribute? :interests_of_justice, Types::Coercible::Array.of(Base).default([].freeze) do
         attribute :type, Types::IojType
         attribute :reason, Types::String
       end
