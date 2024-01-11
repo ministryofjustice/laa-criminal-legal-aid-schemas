@@ -81,11 +81,7 @@
     "type": "array",
     "items": { "$ref": "#/definitions/document" }
   },
-  "post_submission_evidence": {
-    "type": "array",
-    "items": { "$ref": "#/definitions/document" }
-  },
-  "pse_notes": { "type": ["string", "null"] },
+  "notes": { "type": ["string", "null"] },
   "work_stream": { "type": ["string", "null"], "enum": ["extradition", "national_crime_team", "criminal_applications_team", null] },
   "required": [
     "id", "parent_id", "schema_version", "reference", "application_type", "created_at", "submitted_at", "date_stamp",
