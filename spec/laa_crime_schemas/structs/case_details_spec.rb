@@ -25,10 +25,10 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
     end
 
     context 'for an invalid case details object' do
-      let(:attributes) { super().merge('case_type' => nil) }
+      let(:attributes) { super().merge('offences' => nil) }
 
       it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /case_type/)
+        expect { subject }.to raise_error(Dry::Struct::Error, /offences/)
       end
     end
   end
