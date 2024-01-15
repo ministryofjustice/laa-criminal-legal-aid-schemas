@@ -21,7 +21,7 @@
     },
     "means_passport": {
       "type": "array",
-      "items": { "type": "string", "enum": ["on_age_under18", "on_benefit_check"] }
+      "items": { "type": "string", "enum": ["on_not_means_tested", "on_age_under18", "on_benefit_check"] }
     },
     "means_details": {
       "$ref": "#/definitions/means"
@@ -40,7 +40,7 @@
       "type": "object",
       "properties": {
         "urn": { "type": ["string", "null"] },
-        "case_type": { "type": "string", "enum": ["summary_only", "either_way", "indictable", "already_in_crown_court", "committal", "appeal_to_crown_court", "appeal_to_crown_court_with_changes"] },
+        "case_type": { "type": ["string", "null"], "enum": ["summary_only", "either_way", "indictable", "already_in_crown_court", "committal", "appeal_to_crown_court", "appeal_to_crown_court_with_changes", null] },
         "offence_class": { "type": ["string", "null"], "enum": ["A", "K", "G", "B", "I", "J", "D", "C", "H", "F", "E", null] },
         "appeal_maat_id": { "type": ["string", "null"] },
         "appeal_lodged_date": { "type": ["string", "null"], "format": "date" },
@@ -60,7 +60,7 @@
         "first_court_hearing_name": { "type": ["string", "null"] }
       },
       "required": [
-        "urn", "case_type", "appeal_maat_id", "appeal_lodged_date", "appeal_with_changes_details",
+        "urn", "appeal_maat_id", "appeal_lodged_date", "appeal_with_changes_details",
         "offences", "codefendants", "hearing_court_name", "hearing_date"
       ]
     },

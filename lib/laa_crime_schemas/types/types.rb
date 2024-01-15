@@ -132,6 +132,7 @@ module LaaCrimeSchemas
     IojPassportType = String.enum(*IOJ_PASSPORT_TYPES)
 
     MEANS_PASSPORT_TYPES = %w[
+      on_not_means_tested
       on_age_under18
       on_benefit_check
     ].freeze
