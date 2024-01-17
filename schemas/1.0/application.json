@@ -13,8 +13,9 @@
     "created_at": { "type": "string", "format": "date-time" },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": "string", "format": "date-time" },
-    "returned_at": { "type": "string", "format": "date-time" },
-    "status": { "type": "string", "enum": ["submitted", "returned", "superseded"] },
+    "returned_at": { "type": "string", "format": "date-time", "readOnly": true },
+    "reviewed_at": { "type": "string", "format": "date-time", "readOnly": true },
+    "status": { "type": "string", "enum": ["submitted", "returned", "superseded"], "readOnly": true },
     "ioj_passport": {
       "type": "array",
       "items": { "type": "string", "enum": ["on_age_under18", "on_offence"] }
