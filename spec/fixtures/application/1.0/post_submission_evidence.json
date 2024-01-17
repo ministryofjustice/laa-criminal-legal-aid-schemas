@@ -41,8 +41,7 @@
       "filename": "test.pdf",
       "content_type": "application/pdf",
       "file_size": 12,
-      "scan_at": "2023-10-01 12:34:56",
-      "application_type": "post_submission_evidence"
+      "scan_at": "2023-10-01 12:34:56"
     }
   ],
   "notes": "Some kind of note from the provider about this application",
