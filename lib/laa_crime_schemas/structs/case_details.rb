@@ -4,7 +4,7 @@ module LaaCrimeSchemas
   module Structs
     class CaseDetails < Base
       attribute :urn, Types::String.optional
-      attribute :case_type, Types::CaseType
+      attribute :case_type, Types::CaseType.optional
 
       # Injected by the datastore, not part of the stored application JSON
       attribute :offence_class, Types::OffenceClass.optional
