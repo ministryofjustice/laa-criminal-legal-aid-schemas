@@ -8,6 +8,7 @@
   "submitted_at": "2022-10-24T09:50:04.019Z",
   "date_stamp": "2022-10-24T09:50:04.019Z",
   "status": "submitted",
+  "review_status": "application_received",
   "ioj_passport": [],
   "means_passport": ["on_benefit_check"],
   "provider_details": {
