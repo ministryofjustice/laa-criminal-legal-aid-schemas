@@ -109,8 +109,7 @@
       "filename": "test.pdf",
       "content_type": "application/pdf",
       "file_size": 12,
-      "scan_at": "2023-10-01 12:34:56",
-      "application_type": "initial"
+      "scan_at": "2023-10-01 12:34:56"
     }
   ],
   "work_stream": "criminal_applications_team"
