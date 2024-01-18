@@ -3,6 +3,7 @@ RSpec.describe LaaCrimeSchemas::Structs::PrunedApplication do
 
   describe 'schema version 1.0' do
     let(:fixture) { 'application/1.0/pruned_application.json' }
+    let(:validator) { LaaCrimeSchemas::Validator.new(subject.to_json, schema_name: 'pruned_application') }
 
     context 'for a valid pruned crime application object' do
       let(:attributes) do
@@ -16,9 +17,7 @@ RSpec.describe LaaCrimeSchemas::Structs::PrunedApplication do
       end
 
       it 'produces a valid JSON document conforming to the schema' do
-        expect(
-          LaaCrimeSchemas::Validator.new(subject.to_json, schema_name: 'pruned_application')
-        ).to be_valid
+        expect(validator).to be_valid, validator.fully_validate
       end
     end
 
