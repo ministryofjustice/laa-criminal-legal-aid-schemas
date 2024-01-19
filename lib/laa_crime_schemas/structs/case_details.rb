@@ -13,6 +13,9 @@ module LaaCrimeSchemas
       attribute :appeal_lodged_date, Types::JSON::Date.optional
       attribute :appeal_with_changes_details, Types::String.optional
 
+      attribute? :has_case_concluded, Types::String
+      attribute? :date_case_concluded, Types::JSON::Date.optional
+
       attribute :offences, Types::Array.of(Offence).constrained(min_size: 1)
       attribute :codefendants, Types::Array.of(Codefendant).default([].freeze)
 

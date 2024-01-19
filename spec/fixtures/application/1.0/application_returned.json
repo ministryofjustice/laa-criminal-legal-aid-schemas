@@ -39,6 +39,8 @@
   "case_details": {
     "urn": "12345",
     "case_type": "summary_only",
+    "has_case_concluded": "no",
+    "date_case_concluded": null,
     "appeal_maat_id": null,
     "appeal_lodged_date": null,
     "appeal_with_changes_details": null,
