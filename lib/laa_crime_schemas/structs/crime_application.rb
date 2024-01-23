@@ -27,7 +27,7 @@ module LaaCrimeSchemas
 
       attribute? :work_stream, Types::WorkStreamType.optional
 
-      attribute? :notes, Types::String.optional
+      attribute? :additional_information, Types::String.optional
     end
   end
 end

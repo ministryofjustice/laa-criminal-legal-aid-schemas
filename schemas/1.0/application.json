@@ -84,7 +84,7 @@
     "type": "array",
     "items": { "$ref": "#/definitions/document" }
   },
-  "notes": { "type": ["string", "null"] },
+  "additional_information": { "type": ["string", "null"] },
   "work_stream": { "type": ["string", "null"], "enum": ["extradition", "national_crime_team", "criminal_applications_team", null] },
   "required": [
     "id", "parent_id", "schema_version", "reference", "application_type", "created_at", "submitted_at",
