@@ -78,17 +78,18 @@ module LaaCrimeSchemas
     ].freeze
     FirstHearingAnswerValues = String.enum(*FIRST_HEARING_ANSWER_VALUES)
 
-    OtherIncomeType = String.enum(*%w[
-                                    private_pension
-                                    state_pension
-                                    maintenance
-                                    interest
-                                    student
-                                    board_from_family
-                                    rent
-                                    friends_and_family
-                                    other
-                                  ])
+    IncomePaymentType = String.enum(*%w[
+                                      private_pension
+                                      state_pension
+                                      maintenance
+                                      interest_investment
+                                      student_loan_grant
+                                      board_from_family
+                                      rent
+                                      financial_support_with_access
+                                      from_friends_relatives
+                                      other
+                                    ])
 
     OutgoingsType = String.enum(*%w[
                                   housing

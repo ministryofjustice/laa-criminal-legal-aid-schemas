@@ -51,8 +51,8 @@ module LaaCrimeSchemas
         attribute :age, Types::DependantAge
       end
 
-      attribute? :other_income, Types::Array.of(Base) do
-        attribute :type, Types::OtherIncomeType
+      attribute? :income_payments, Types::Coercible::Array.of(Base).default([].freeze) do
+        attribute :payment_type, Types::IncomePaymentType
         attributes_from Amount
       end
 

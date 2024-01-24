@@ -25,9 +25,9 @@
     "self_employment_details": {
       "businesses": []
     },
-    "other_income": [
+    "income_payments": [
       {
-        "type": "other",
+        "payment_type": "other",
         "amount": 2500,
         "frequency": "annual",
         "details": "Book royalty"
