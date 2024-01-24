@@ -46,7 +46,7 @@
         "appeal_maat_id": { "type": ["string", "null"] },
         "appeal_lodged_date": { "type": ["string", "null"], "format": "date" },
         "appeal_with_changes_details": { "type": ["string", "null"] },
-        "has_case_concluded": { "type": ["string", "null"], "enum": ["yes", "no"] },
+        "has_case_concluded": { "type": ["string", "null"], "enum": ["yes", "no", null] },
         "date_case_concluded": { "type": ["string", "null"], "format": "date" },
         "offences": {
           "type": "array",
