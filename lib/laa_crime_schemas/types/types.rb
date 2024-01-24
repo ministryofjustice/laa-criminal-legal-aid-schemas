@@ -41,18 +41,6 @@ module LaaCrimeSchemas
     ].freeze
     BenefitType = String.enum(*BENEFIT_TYPES)
 
-    OtherBenefitType = String.enum(
-      *%w[
-        child
-        working_or_child_tax_credit
-        universal_credit
-        incapacity
-        industrial_injuries_disablement
-        jsa
-        other
-      ]
-    )
-
     CORRESPONDENCE_ADDRESS_TYPES = %w[
       other_address
       home_address
@@ -89,6 +77,15 @@ module LaaCrimeSchemas
                                     friends_and_family
                                     other
                                   ])
+
+    IncomeBenefitType = String.enum(*%w[
+                                      child_benefit
+                                      working_or_child_tax_credit
+                                      incapacity_benefit
+                                      industrial_injuries_disablement
+                                      jsa
+                                      other
+                                    ])
 
     OutgoingsType = String.enum(*%w[
                                   housing

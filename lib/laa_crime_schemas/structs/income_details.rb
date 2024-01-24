@@ -5,11 +5,6 @@ module LaaCrimeSchemas
     class IncomeDetails < Base
       attribute? :income_above_threshold, Types::YesNoValue
 
-      attribute? :benefits, Types::Array.of(Base) do
-        attribute :type, Types::OtherBenefitType
-        attributes_from Amount
-      end
-
       attribute? :employment_type, Types::Array.of(Types::EmploymentType)
       attribute? :ended_employment_within_three_months, Types::YesNoValue.optional
       attribute? :lost_job_in_custody, Types::YesNoValue.optional
@@ -53,6 +48,11 @@ module LaaCrimeSchemas
 
       attribute? :other_income, Types::Array.of(Base) do
         attribute :type, Types::OtherIncomeType
+        attributes_from Amount
+      end
+
+      attribute? :income_benefits, Types::Coercible::Array.of(Base).default([].freeze) do
+        attribute :benefit_type, Types::IncomeBenefitType
         attributes_from Amount
       end
 

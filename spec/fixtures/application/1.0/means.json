@@ -12,7 +12,7 @@
     "has_savings": "no",
     "manage_without_income": "other",
     "manage_other_details": "Another way they manage",
-    "benefits": [{ "type": "child", "amount": 3990, "frequency": "month" }],
+    "income_benefits": [{ "benefit_type": "child_benefit", "amount": 3990, "frequency": "month" }],
     "employment_details": {
       "paye": [
         {
