@@ -16,6 +16,9 @@ module LaaCrimeSchemas
       attribute? :has_case_concluded, Types::YesNoValue.optional
       attribute? :date_case_concluded, Types::JSON::Date.optional
 
+      attribute? :is_client_remanded, Types::YesNoValue.optional
+      attribute? :date_client_remanded, Types::JSON::Date.optional
+
       attribute :offences, Types::Array.of(Offence).constrained(min_size: 1)
       attribute :codefendants, Types::Array.of(Codefendant).default([].freeze)
 

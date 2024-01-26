@@ -43,6 +43,8 @@
     "case_type": "appeal_to_crown_court",
     "has_case_concluded": "no",
     "date_case_concluded": null,
+    "is_client_remanded": "no",
+    "date_client_remanded": null,
     "offence_class": null,
     "appeal_maat_id": null,
     "appeal_lodged_date": "2021-10-25",
