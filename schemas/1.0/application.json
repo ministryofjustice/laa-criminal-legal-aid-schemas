@@ -48,6 +48,8 @@
         "appeal_with_changes_details": { "type": ["string", "null"] },
         "has_case_concluded": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "date_case_concluded": { "type": ["string", "null"], "format": "date" },
+        "is_client_remanded": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+        "date_client_remanded": { "type": ["string", "null"], "format": "date" },
         "offences": {
           "type": "array",
           "minItems": 1,
