@@ -14,10 +14,6 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
         JSON.parse(file_fixture(valid_fixture).read)
       end
 
-      it 'builds from the example json' do
-        expect(struct.employment_status).to eq('employed')
-      end
-
       describe 'storing income details' do
         subject(:income_details) { struct.income_details }
 

@@ -5,14 +5,6 @@
   "description":"Currencies amounts are stored in pence sterling",
   "type":"object",
   "properties":{
-    "employment_status":{
-      "type":"string",
-      "enum":[
-        "employed",
-        "self-employed",
-        "none"
-      ]
-    },
     "income_details":{
       "type":"object",
       "properties":{

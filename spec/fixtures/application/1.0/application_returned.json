@@ -29,11 +29,7 @@
       "telephone_number": "",
       "correspondence_address_type": "providers_office_address",
       "home_address": null,
-      "correspondence_address": null,
-      "income_details": {
-        "employment_type": ["not_working"],
-        "ended_employment_within_three_months": "no"
-      }
+      "correspondence_address": null
     }
   },
   "case_details": {
@@ -71,8 +67,9 @@
     }
   ],
   "means_details": {
-    "employment_status": "self-employed",
     "income_details": {
+      "employment_type": ["not_working"],
+      "ended_employment_within_three_months": "no",
       "income_above_threshold": "yes",
       "lost_job_in_custody": "yes",
       "date_job_lost": "2023-09-01"
