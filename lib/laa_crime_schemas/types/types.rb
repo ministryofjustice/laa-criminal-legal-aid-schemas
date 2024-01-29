@@ -179,8 +179,6 @@ module LaaCrimeSchemas
                                 policies
                               ])
 
-    EmploymentStatusType = String.enum(*%w[employed self-employed none])
-
     EmploymentType = String.enum(*%w[employed self-employed business_partnership director shareholder not_working])
 
     DependantAge = Integer.constrained(lt: 18)

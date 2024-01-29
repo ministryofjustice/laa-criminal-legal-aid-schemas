@@ -87,7 +87,6 @@
     }
   ],
   "means_details": {
-    "employment_status": "none",
     "income_details": {
       "employment_type": ["not_working"],
       "ended_employment_within_three_months": "yes",
