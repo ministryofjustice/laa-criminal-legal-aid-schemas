@@ -50,6 +50,9 @@
         "date_case_concluded": { "type": ["string", "null"], "format": "date" },
         "is_client_remanded": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "date_client_remanded": { "type": ["string", "null"], "format": "date" },
+        "is_preorder_work_claimed": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+        "preorder_work_date": { "type": ["string", "null"], "format": "date" },
+        "preorder_work_details": { "type": ["string", "null"] },
         "offences": {
           "type": "array",
           "minItems": 1,
