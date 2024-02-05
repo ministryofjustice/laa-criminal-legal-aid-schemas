@@ -60,13 +60,17 @@
       "required": ["case_type", "hearing_court_name", "hearing_date", "offence_class"]
     }
   },
+  "means_details": {
+    "$ref": "#/definitions/means"
+  },
   "required": [
     "id", "schema_version", "reference", "application_type", "submitted_at",
     "date_stamp", "declaration_signed_at", "ioj_bypass", "means_passport",
-    "provider_details", "client_details", "case_details"
+    "provider_details", "client_details", "case_details", "means_details"
   ],
   "definitions": {
     "provider": { "$ref": "general/provider.json" },
-    "address": { "$ref": "general/address.json" }
+    "address": { "$ref": "general/address.json" },
+    "means": { "$ref": "maat_means.json" }
   }
 }
