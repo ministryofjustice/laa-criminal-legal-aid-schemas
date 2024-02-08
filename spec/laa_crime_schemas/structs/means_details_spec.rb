@@ -22,7 +22,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
         end
 
         it 'records the frequency of benefits' do
-          expect(income_details.benefits.first.frequency).to eq('month')
+          expect(income_details.income_benefits.first.frequency).to eq('month')
         end
       end
 
