@@ -281,22 +281,23 @@
             "paye"
           ]
         },
-        "other_income":{
+        "income_payments":{
           "type":"array",
           "items":{
             "type":"object",
             "properties":{
-              "type":{
+              "payment_type":{
                 "type":"string",
                 "enum":[
                   "private_pension",
                   "state_pension",
                   "maintenance",
-                  "interest",
-                  "student",
+                  "interest_investment",
+                  "student_loan_grant",
                   "board_from_family",
                   "rent",
-                  "friends_and_family",
+                  "financial_support_with_access",
+                  "from_friends_relatives",
                   "other"
                 ]
               },
@@ -325,7 +326,7 @@
               }
             },
             "required":[
-              "type",
+              "payment_type",
               "amount",
               "frequency"
             ]
