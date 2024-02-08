@@ -43,6 +43,11 @@
     "case_type": "appeal_to_crown_court",
     "has_case_concluded": "no",
     "date_case_concluded": null,
+    "is_client_remanded": "no",
+    "date_client_remanded": null,
+    "is_preorder_work_claimed": "yes",
+    "preorder_work_date": "2001-06-09",
+    "preorder_work_details": "Work Details",
     "offence_class": null,
     "appeal_maat_id": null,
     "appeal_lodged_date": "2021-10-25",
@@ -85,7 +90,6 @@
     }
   ],
   "means_details": {
-    "employment_status": "none",
     "income_details": {
       "employment_type": ["not_working"],
       "ended_employment_within_three_months": "yes",

@@ -29,11 +29,7 @@
       "telephone_number": "",
       "correspondence_address_type": "providers_office_address",
       "home_address": null,
-      "correspondence_address": null,
-      "income_details": {
-        "employment_type": ["not_working"],
-        "ended_employment_within_three_months": "no"
-      }
+      "correspondence_address": null
     }
   },
   "case_details": {
@@ -41,6 +37,11 @@
     "case_type": "summary_only",
     "has_case_concluded": "no",
     "date_case_concluded": null,
+    "is_client_remanded": "no",
+    "date_client_remanded": null,
+    "is_preorder_work_claimed": "yes",
+    "preorder_work_date": "2001-06-09",
+    "preorder_work_details": "Work Details",
     "appeal_maat_id": null,
     "appeal_lodged_date": null,
     "appeal_with_changes_details": null,
@@ -69,8 +70,9 @@
     }
   ],
   "means_details": {
-    "employment_status": "self-employed",
     "income_details": {
+      "employment_type": ["not_working"],
+      "ended_employment_within_three_months": "no",
       "income_above_threshold": "yes",
       "lost_job_in_custody": "yes",
       "date_job_lost": "2023-09-01"
