@@ -13,8 +13,15 @@ module LaaCrimeSchemas
       attribute :appeal_lodged_date, Types::JSON::Date.optional
       attribute :appeal_with_changes_details, Types::String.optional
 
-      attribute? :has_case_concluded, Types::String
+      attribute? :has_case_concluded, Types::YesNoValue.optional
       attribute? :date_case_concluded, Types::JSON::Date.optional
+
+      attribute? :is_client_remanded, Types::YesNoValue.optional
+      attribute? :date_client_remanded, Types::JSON::Date.optional
+
+      attribute? :is_preorder_work_claimed, Types::YesNoValue.optional
+      attribute? :preorder_work_date, Types::JSON::Date.optional
+      attribute? :preorder_work_details, Types::String.optional
 
       attribute :offences, Types::Array.of(Offence).constrained(min_size: 1)
       attribute :codefendants, Types::Array.of(Codefendant).default([].freeze)
