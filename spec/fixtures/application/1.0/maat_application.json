@@ -47,5 +47,42 @@
     "hearing_date": "2024-11-11"
   },
   "means_details": {
+    "income_details": {
+      "benefits": [
+        {
+          "type": "universal_credit",
+          "amount": 400,
+          "frequency": "month"
+        }
+      ],
+      "employment_type": ["not_working"],
+      "employment_details": {
+        "paye": [],
+        "other": {
+          "amount": 300,
+          "details": "Other employment details"
+        },
+        "businesses": []
+      },
+      "other_income": [
+        {
+          "type": "friends_and_family",
+          "amount": 300,
+          "frequency": "month"
+        }
+      ],
+      "total": 1000,
+      "dependants": [ { "age": 15 } ]
+    },
+    "outgoings_details": {
+      "outgoings": [
+        {
+          "type": "housing",
+          "amount": 700,
+          "frequency": "month"
+        }
+      ],
+     "housing_payment_type": "mortgage"
+    }
   }
 }
