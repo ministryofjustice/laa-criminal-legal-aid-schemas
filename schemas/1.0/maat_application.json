@@ -58,10 +58,10 @@
         "hearing_date": { "type": "string", "format": "date" }
       },
       "required": ["case_type", "hearing_court_name", "hearing_date", "offence_class"]
+    },
+    "means_details": {
+      "$ref": "#/definitions/means"
     }
-  },
-  "means_details": {
-    "$ref": "#/definitions/means"
   },
   "required": [
     "id", "schema_version", "reference", "application_type", "submitted_at",
