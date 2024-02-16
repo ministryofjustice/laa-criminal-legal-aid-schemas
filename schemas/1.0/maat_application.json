@@ -71,6 +71,6 @@
   "definitions": {
     "provider": { "$ref": "general/provider.json" },
     "address": { "$ref": "general/address.json" },
-    "means": { "$ref": "maat_means.json" }
+    "means": { "$ref": "maat/means.json" }
   }
 }
