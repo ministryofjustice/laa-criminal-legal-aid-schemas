@@ -51,7 +51,6 @@ module LaaCrimeSchemas
         attributes_from Amount
       end
 
-
       attribute? :income_benefits, Types::Coercible::Array.of(Base).default([].freeze) do
         attribute :payment_type, Types::IncomeBenefitType
         attributes_from Amount
