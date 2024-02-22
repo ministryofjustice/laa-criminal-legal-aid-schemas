@@ -16,12 +16,12 @@
           "items":{
             "type":"object",
             "properties":{
-              "benefit_type":{
+              "payment_type":{
                 "type":"string",
                 "enum":[
-                  "child_benefit",
+                  "child",
                   "working_or_child_tax_credit",
-                  "incapacity_benefit",
+                  "incapacity",
                   "industrial_injuries_disablement",
                   "jsa",
                   "other"
@@ -40,19 +40,25 @@
                   "annual"
                 ]
               },
-              "details":{
-                "anyOf":[
-                  {
-                    "type":"null"
-                  },
-                  {
-                    "type":"string"
+              "metadata":{
+                "type":"object",
+                "properties":{
+                  "details":{
+                    "anyOf": [
+                      {
+                        "type":"null"
+                      },
+                      {
+                        "type":"string"
+                      }
+                    ]
                   }
-                ]
+                },
+                "required": []
               }
             },
             "required":[
-              "benefit_type",
+              "payment_type",
               "amount",
               "frequency"
             ]
@@ -313,15 +319,21 @@
                   "annual"
                 ]
               },
-              "details":{
-                "anyOf":[
-                  {
-                    "type":"null"
-                  },
-                  {
-                    "type":"string"
+              "metadata":{
+                "type":"object",
+                "properties":{
+                  "details": {
+                    "anyOf": [
+                      {
+                        "type":"null"
+                      },
+                      {
+                        "type":"string"
+                      }
+                    ]
                   }
-                ]
+                },
+                "required": []
               }
             },
             "required":[

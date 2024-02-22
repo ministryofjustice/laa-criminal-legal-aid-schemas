@@ -4,7 +4,7 @@ module LaaCrimeSchemas
   module Structs
     class OutgoingsDetails < Base
       attribute? :outgoings, Types::Array.of(Base) do
-        attribute :type, Types::OutgoingsType
+        attribute :payment_type, Types::OutgoingsType
         attributes_from Amount
       end
       attribute? :housing_payment_type, Types::HousingPaymentType.optional

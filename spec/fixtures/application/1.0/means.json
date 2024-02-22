@@ -11,7 +11,19 @@
     "has_savings": "no",
     "manage_without_income": "other",
     "manage_other_details": "Another way they manage",
-    "income_benefits": [{ "benefit_type": "child_benefit", "amount": 3990, "frequency": "month" }],
+    "income_benefits": [
+      {
+        "payment_type": "child",
+        "amount": 3990,
+        "frequency": "month"
+      },
+      {
+        "payment_type": "other",
+        "amount": 1884,
+        "frequency": "fortnight",
+        "metadata": { "details": "Top up" }
+      }
+    ],
     "employment_details": {
       "paye": [
         {
@@ -29,7 +41,12 @@
         "payment_type": "other",
         "amount": 2500,
         "frequency": "annual",
-        "details": "Book royalty"
+        "metadata": { "details": "Book royalty" }
+      },
+      {
+        "payment_type": "board_from_family",
+        "amount": 1603,
+        "frequency": "week"
       }
     ],
     "dependants": [{"age": 1}, {"age":  5}],
