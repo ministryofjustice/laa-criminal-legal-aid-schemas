@@ -17,12 +17,26 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
       describe 'storing income details' do
         subject(:income_details) { struct.income_details }
 
-        it 'includes income total' do
-          expect(income_details.total).to eq(1370380)
+        context 'with income payments' do
+          let(:income_payment) { income_details.income_payments.first }
+
+          it 'allows valid data' do
+            expect(income_payment.payment_type).to eq 'other'
+            expect(income_payment.amount).to eq 2500
+            expect(income_payment.frequency).to eq 'annual'
+            expect(income_payment.metadata.details).to eq 'Book royalty'
+          end
         end
 
-        it 'records the frequency of benefits' do
-          expect(income_details.income_benefits.first.frequency).to eq('month')
+        context 'with income benefits' do
+          let(:income_benefit) { income_details.income_benefits.first }
+
+          it 'allows valid data' do
+            expect(income_benefit.payment_type).to eq 'child'
+            expect(income_benefit.amount).to eq 3990
+            expect(income_benefit.frequency).to eq 'month'
+            expect(income_benefit.metadata).to be_nil
+          end
         end
       end
 

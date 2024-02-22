@@ -80,9 +80,9 @@ module LaaCrimeSchemas
                                     ])
 
     IncomeBenefitType = String.enum(*%w[
-                                      child_benefit
+                                      child
                                       working_or_child_tax_credit
-                                      incapacity_benefit
+                                      incapacity
                                       industrial_injuries_disablement
                                       jsa
                                       other
