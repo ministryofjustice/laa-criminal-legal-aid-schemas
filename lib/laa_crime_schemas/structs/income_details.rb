@@ -48,23 +48,13 @@ module LaaCrimeSchemas
 
       attribute? :income_payments, Types::Coercible::Array.of(Base).default([].freeze) do
         attribute :payment_type, Types::IncomePaymentType
-        attribute :amount, Types::PenceSterling
-        attribute :frequency, Types::PaymentFrequency
-
-        attribute? :metadata do
-          attribute? :details, Types::String.optional
-        end
+        attributes_from Amount
       end
 
 
       attribute? :income_benefits, Types::Coercible::Array.of(Base).default([].freeze) do
         attribute :payment_type, Types::IncomeBenefitType
-        attribute :amount, Types::PenceSterling
-        attribute :frequency, Types::PaymentFrequency
-
-        attribute? :metadata do
-          attribute? :details, Types::String.optional
-        end
+        attributes_from Amount
       end
     end
   end
