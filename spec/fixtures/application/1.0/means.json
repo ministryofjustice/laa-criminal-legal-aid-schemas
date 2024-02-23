@@ -56,6 +56,19 @@
     "housing_payment_type": "rent",
     "income_tax_rate_above_threshold": "no",
     "outgoings_more_than_income": "yes",
-    "how_manage": "A description of how they manage"
+    "how_manage": "A description of how they manage",
+    "outgoings": [
+      {
+        "payment_type": "childcare",
+        "amount": 98281,
+        "frequency": "week"
+      },
+      {
+        "payment_type": "legal_aid_contribution",
+        "amount": 1234,
+        "frequency": "week",
+        "metadata": { "case_reference": "CASE1234" }
+      }
+    ]
   }
 }

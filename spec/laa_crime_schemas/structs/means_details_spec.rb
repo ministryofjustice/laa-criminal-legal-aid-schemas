@@ -50,6 +50,22 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
         it 'includes outgoings_more_than_income' do
           expect(outgoings_details.outgoings_more_than_income).to eq('yes')
         end
+
+        context 'with outgoing payments' do
+          let(:outgoing_payment_1) { outgoings_details.outgoings[0] }
+          let(:outgoing_payment_2) { outgoings_details.outgoings[1] }
+
+          it 'allows valid data' do
+            expect(outgoing_payment_1.payment_type).to eq 'childcare'
+            expect(outgoing_payment_1.amount).to eq 98281
+            expect(outgoing_payment_1.frequency).to eq 'week'
+          end
+
+          it 'allows case reference' do
+            expect(outgoing_payment_2.payment_type).to eq 'legal_aid_contribution'
+            expect(outgoing_payment_2.metadata.case_reference).to eq 'CASE1234'
+          end
+        end
       end
 
       it 'produces a valid JSON document conforming to the schema' do

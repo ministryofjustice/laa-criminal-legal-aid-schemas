@@ -8,6 +8,7 @@ module LaaCrimeSchemas
 
       attribute? :metadata do
         attribute? :details, Types::String.optional
+        attribute? :case_reference, Types::String.optional
       end
     end
   end

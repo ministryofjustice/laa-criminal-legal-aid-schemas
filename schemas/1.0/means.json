@@ -582,14 +582,16 @@
           "items":{
             "type":"object",
             "properties":{
-              "type":{
+              "payment_type":{
                 "type":"string",
                 "enum":[
-                  "housing",
+                  "rent",
+                  "mortgage",
+                  "board_and_lodging",
                   "council_tax",
                   "childcare",
                   "maintenance",
-                  "legal_aid"
+                  "legal_aid_contribution"
                 ]
               },
               "amount":{
@@ -605,19 +607,21 @@
                   "annual"
                 ]
               },
-              "details":{
-                "anyOf":[
-                  {
-                    "type":"null"
+              "metadata":{
+                "type":"object",
+                "properties":{
+                  "details":{
+                    "anyOf": [{ "type":"null" }, { "type":"string" }]
                   },
-                  {
-                    "type":"string"
+                  "case_reference":{
+                    "anyOf": [{ "type":"null" }, { "type":"string" }]
                   }
-                ]
+                },
+                "required": []
               }
             },
             "required":[
-              "type",
+              "payment_type",
               "amount",
               "frequency"
             ]
@@ -630,7 +634,7 @@
             },
             {
               "type":"string",
-              "enum": ["rent", "mortgage", "board_lodgings", "none"]
+              "enum": ["rent", "mortgage", "board_and_lodging", "none"]
             }
           ]
         },
