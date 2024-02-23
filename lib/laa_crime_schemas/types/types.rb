@@ -89,12 +89,15 @@ module LaaCrimeSchemas
                                     ])
 
     OutgoingsType = String.enum(*%w[
-                                  housing
+                                  rent
+                                  mortgage
+                                  board_and_lodging
                                   council_tax
                                   childcare
                                   maintenance
-                                  legal_aid
+                                  legal_aid_contribution
                                 ])
+
     HOUSING_PAYMENT_TYPES = %w[
       rent
       mortgage
