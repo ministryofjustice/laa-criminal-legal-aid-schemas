@@ -634,7 +634,7 @@
             },
             {
               "type":"string",
-              "enum": ["rent", "mortgage", "board_and_lodging", "none"]
+              "enum": ["rent", "mortgage", "board_lodgings", "none"]
             }
           ]
         },
