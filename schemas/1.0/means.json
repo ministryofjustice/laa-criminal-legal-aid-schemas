@@ -391,7 +391,11 @@
       "properties":{
       	"has_premium_bonds":{"type":"string", "enum": ["yes", "no"]},
         "premium_bonds_total_value":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
-        "premium_bonds_holder_number":{"anyOf":[{ "type":"null" }, { "type":"string" }]}
+        "premium_bonds_holder_number":{"anyOf":[{ "type":"null" }, { "type":"string" }]},
+        "savings": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/saving" }
+        }
       },
       "required":[
         "has_premium_bonds"
@@ -497,5 +501,8 @@
       "required":[]
     }
   },
-  "required":[]
+  "required":[],
+  "definitions": {
+    "saving": { "$ref": "general/saving.json" }
+  }
 }

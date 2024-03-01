@@ -169,16 +169,7 @@ module LaaCrimeSchemas
     OFFENCE_CLASSES = %w[A K G B I J D C H F E].freeze
     OffenceClass = String.enum(*OFFENCE_CLASSES)
 
-    OwnershipType = String.enum(*%w[with_partner landlord other_person sole])
-
-    SavingsType = String.enum(*%w[
-                                cash
-                                other_person_account
-                                certificates
-                                shares
-                                trusts
-                                policies
-                              ])
+    OwnershipType = String.enum(*%w[applicant applicant_and_partner partner])
 
     EmploymentType = String.enum(*%w[employed self-employed business_partnership director shareholder not_working])
 
@@ -203,6 +194,14 @@ module LaaCrimeSchemas
       extradition
     ].freeze
     WorkStreamType = Coercible::String.enum(*WORK_STREAM_TYPES)
+
+    SavingType = String.enum(*%w[
+                               bank
+                               building_society
+                               cash_isa
+                               national_savings_or_post_office
+                               other
+                             ])
   end
 end
 # rubocop:enable Metrics/ModuleLength

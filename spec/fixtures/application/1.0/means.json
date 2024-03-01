@@ -74,6 +74,18 @@
   "capital_details": {
     "has_premium_bonds": "no",
     "premium_bonds_total_value": null,
-    "premium_bonds_holder_number": null
+    "premium_bonds_holder_number": null,
+    "savings": [
+      {
+        "saving_type": "bank",
+        "provider_name": "Halifax",
+        "sort_code": "123456",
+        "account_number": "12345678",
+        "account_balance": 200,
+        "is_overdrawn": "yes",
+        "are_wages_paid_into_account": "yes",
+        "account_holder": "applicant"
+      }
+    ]
   }
 }
