@@ -29,6 +29,7 @@ require_relative 'laa_crime_schemas/structs/return_details'
 require_relative 'laa_crime_schemas/structs/document'
 require_relative 'laa_crime_schemas/structs/income_details'
 require_relative 'laa_crime_schemas/structs/outgoings_details'
+require_relative 'laa_crime_schemas/structs/capital_details'
 require_relative 'laa_crime_schemas/structs/means_details'
 
 require_relative 'laa_crime_schemas/structs/crime_application'

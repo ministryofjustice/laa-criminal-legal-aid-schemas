@@ -70,5 +70,10 @@
         "metadata": { "case_reference": "CASE1234" }
       }
     ]
+  },
+  "capital_details": {
+    "has_premium_bonds": "no",
+    "premium_bonds_total_value": null,
+    "premium_bonds_holder_number": null
   }
 }
