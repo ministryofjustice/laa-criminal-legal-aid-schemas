@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/saving.json",
+  "title": "Saving",
+  "description": "Holds attributes of a saving",
+  "type": "object",
+  "properties": {
+    "saving_type": { "type": ["string"], "enum": ["bank", "building_society", "cash_isa", "national_savings_or_post_office", "other"] },
+    "provider_name": { "type": "string" },
+    "account_balance": { "type": "integer" },
+    "sort_code": { "type": "string" },
+    "account_number": { "type": "string" },
+    "is_overdrawn": { "type": "string", "enum": ["yes", "no"] },
+    "are_wages_paid_into_account": { "type": "string", "enum": ["yes", "no"] },
+    "account_holder": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] }
+  },
+  "required": ["saving_type", "provider_name", "account_balance", "sort_code", "account_number", "is_overdrawn", "are_wages_paid_into_account", "account_holder"]
+}
