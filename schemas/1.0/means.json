@@ -398,7 +398,7 @@
         }
       },
       "required":[
-        "has_premium_bonds"
+        "has_premium_bonds", "savings"
       ]
     },
     "outgoings_details":{
