@@ -119,6 +119,7 @@
       "housing_payment_type": "rent",
       "income_tax_rate_above_threshold": "no",
       "outgoings_more_than_income": "yes",
+      "pays_council_tax": "yes",
       "how_manage": "A description of how they manage",
       "outgoings": [
         {
@@ -131,6 +132,12 @@
           "amount": 1234,
           "frequency": "week",
           "metadata": { "case_reference": "CASE1234" }
+        },
+        {
+          "payment_type": "council_tax",
+          "amount": 92983,
+          "frequency": "annual",
+          "metadata": {}
         }
       ]
     }
