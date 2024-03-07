@@ -496,6 +496,16 @@
               "type":"string"
             }
           ]
+        },
+        "pays_council_tax":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string"
+            }
+          ]
         }
       },
       "required":[]

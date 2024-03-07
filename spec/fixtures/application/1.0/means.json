@@ -57,6 +57,7 @@
     "income_tax_rate_above_threshold": "no",
     "outgoings_more_than_income": "yes",
     "how_manage": "A description of how they manage",
+    "pays_council_tax": "no",
     "outgoings": [
       {
         "payment_type": "childcare",
