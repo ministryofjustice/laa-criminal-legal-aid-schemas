@@ -100,13 +100,46 @@
       "client_owns_property": "no",
       "has_savings": "no",
       "manage_without_income": "other",
-      "manage_other_details": "Another way they manage"
+      "manage_other_details": "Another way they manage",
+      "income_payments": [
+        {
+          "payment_type": "other",
+          "amount": 2500,
+          "frequency": "annual",
+          "metadata": { "details": "Book royalty" }
+        },
+        {
+          "payment_type": "board_from_family",
+          "amount": 1603,
+          "frequency": "week"
+        }
+      ]
     },
     "outgoings_details": {
       "housing_payment_type": "rent",
       "income_tax_rate_above_threshold": "no",
       "outgoings_more_than_income": "yes",
-      "how_manage": "A description of how they manage"
+      "pays_council_tax": "yes",
+      "how_manage": "A description of how they manage",
+      "outgoings": [
+        {
+          "payment_type": "childcare",
+          "amount": 98281,
+          "frequency": "week"
+        },
+        {
+          "payment_type": "legal_aid_contribution",
+          "amount": 1234,
+          "frequency": "week",
+          "metadata": { "case_reference": "CASE1234" }
+        },
+        {
+          "payment_type": "council_tax",
+          "amount": 92983,
+          "frequency": "annual",
+          "metadata": {}
+        }
+      ]
     }
   },
   "supporting_evidence": [
