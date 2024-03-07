@@ -14,6 +14,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
         expect(subject.premium_bonds_total_value).to be_nil
         expect(subject.premium_bonds_holder_number).to be_nil
         expect(subject.savings.size).to eq(1)
+        expect(subject.investments.size).to eq(1)
       end
     end
 

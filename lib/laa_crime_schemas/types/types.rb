@@ -202,6 +202,15 @@ module LaaCrimeSchemas
                                national_savings_or_post_office
                                other
                              ])
+
+    InvestmentType = String.enum(*%w[
+                                   bond
+                                   pep
+                                   share_isa
+                                   stock
+                                   unit_trust
+                                   other
+                                 ])
   end
 end
 # rubocop:enable Metrics/ModuleLength

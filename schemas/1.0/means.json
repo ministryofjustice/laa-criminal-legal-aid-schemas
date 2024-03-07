@@ -395,6 +395,10 @@
         "savings": {
           "type": "array",
           "items": { "$ref": "#/definitions/saving" }
+        },
+        "investments": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/investment" }
         }
       },
       "required":[
@@ -513,6 +517,7 @@
   },
   "required":[],
   "definitions": {
-    "saving": { "$ref": "general/saving.json" }
+    "saving": { "$ref": "general/saving.json" },
+    "investment": { "$ref": "general/investment.json" }
   }
 }

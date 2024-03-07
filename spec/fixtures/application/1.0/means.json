@@ -87,6 +87,14 @@
         "are_wages_paid_into_account": "yes",
         "account_holder": "applicant"
       }
+    ],
+    "investments": [
+      {
+        "investment_type": "unit_trust",
+        "description": "Details of investment",
+        "value": 200,
+        "holder": "partner"
+      }
     ]
   }
 }
