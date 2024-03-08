@@ -101,7 +101,7 @@ module LaaCrimeSchemas
     HOUSING_PAYMENT_TYPES = %w[
       rent
       mortgage
-      board_lodgings
+      board_and_lodging
       none
     ].freeze
     HousingPaymentType = String.enum(*HOUSING_PAYMENT_TYPES)
