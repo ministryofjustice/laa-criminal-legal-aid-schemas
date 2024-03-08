@@ -443,6 +443,8 @@
                 "properties":{
                   "details":{ "anyOf": [{ "type":"null" }, { "type":"string" }] },
                   "case_reference":{ "anyOf": [{ "type":"null" }, { "type":"string" }] },
+                  "board_amount": { "type":"integer" },
+                  "food_amount": { "type":"integer" },
                   "payee_name":{ "anyOf": [{ "type":"null" }, { "type":"string" }] },
                   "payee_relationship_to_client":{ "anyOf": [{ "type":"null" }, { "type":"string" }] }
                 },
@@ -463,7 +465,7 @@
             },
             {
               "type":"string",
-              "enum": ["rent", "mortgage", "board_lodgings", "none"]
+              "enum": ["rent", "mortgage", "board_and_lodging", "none"]
             }
           ]
         },

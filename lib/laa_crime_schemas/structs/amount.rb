@@ -13,6 +13,8 @@ module LaaCrimeSchemas
         attribute? :case_reference, Types::String.optional
 
         # Used by board_and_lodging
+        attribute? :board_amount, Types::PenceSterling
+        attribute? :food_amount, Types::PenceSterling
         attribute? :payee_name, Types::String.optional
         attribute? :payee_relationship_to_client, Types::String.optional
       end

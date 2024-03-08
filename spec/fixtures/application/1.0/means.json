@@ -74,7 +74,12 @@
         "payment_type": "board_and_lodging",
         "amount": 82881,
         "frequency": "month",
-        "metadata": { "payee_name": "Willy Wonka", "payee_relationship_to_client": "Her Eccentric Uncle" }
+        "metadata": {
+          "board_amount": 87273,
+          "food_amount": 1772,
+          "payee_name": "Willy Wonka",
+          "payee_relationship_to_client": "Her Eccentric Uncle"
+        }
       }
     ]
   },

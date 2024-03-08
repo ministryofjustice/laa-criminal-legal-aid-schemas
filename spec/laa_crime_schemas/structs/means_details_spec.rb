@@ -67,8 +67,10 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
             expect(outgoing_payment_2.metadata.case_reference).to eq 'CASE1234'
           end
 
-          it 'allows payee details' do
+          it 'allows board_and_lodging details' do
             expect(outgoing_payment_3.payment_type).to eq 'board_and_lodging'
+            expect(outgoing_payment_3.metadata.board_amount).to eq 87273
+            expect(outgoing_payment_3.metadata.food_amount).to eq 1772
             expect(outgoing_payment_3.metadata.payee_name).to eq 'Willy Wonka'
             expect(outgoing_payment_3.metadata.payee_relationship_to_client).to eq 'Her Eccentric Uncle'
           end
