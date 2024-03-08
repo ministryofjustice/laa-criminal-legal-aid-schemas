@@ -69,6 +69,17 @@
         "amount": 1234,
         "frequency": "week",
         "metadata": { "case_reference": "CASE1234" }
+      },
+      {
+        "payment_type": "board_and_lodging",
+        "amount": 82881,
+        "frequency": "month",
+        "metadata": {
+          "board_amount": 87273,
+          "food_amount": 1772,
+          "payee_name": "Willy Wonka",
+          "payee_relationship_to_client": "Her Eccentric Uncle"
+        }
       }
     ]
   },
