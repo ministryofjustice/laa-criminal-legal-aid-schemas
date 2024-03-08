@@ -54,6 +54,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
         context 'with outgoing payments' do
           let(:outgoing_payment_1) { outgoings_details.outgoings[0] }
           let(:outgoing_payment_2) { outgoings_details.outgoings[1] }
+          let(:outgoing_payment_3) { outgoings_details.outgoings[2] }
 
           it 'allows valid data' do
             expect(outgoing_payment_1.payment_type).to eq 'childcare'
@@ -64,6 +65,12 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
           it 'allows case reference' do
             expect(outgoing_payment_2.payment_type).to eq 'legal_aid_contribution'
             expect(outgoing_payment_2.metadata.case_reference).to eq 'CASE1234'
+          end
+
+          it 'allows payee details' do
+            expect(outgoing_payment_3.payment_type).to eq 'board_and_lodging'
+            expect(outgoing_payment_3.metadata.payee_name).to eq 'Willy Wonka'
+            expect(outgoing_payment_3.metadata.payee_relationship_to_client).to eq 'Her Eccentric Uncle'
           end
         end
       end
