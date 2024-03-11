@@ -8,6 +8,7 @@ module LaaCrimeSchemas
       attribute :premium_bonds_holder_number, Types::String.optional
 
       attribute? :savings, Types::Array.of(Saving).default([].freeze)
+      attribute? :properties, Types::Array.of(Property).default([].freeze)
       attribute? :investments, Types::Array.of(Investment).default([].freeze)
     end
   end

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/property.json",
+  "title": "Property",
+  "description": "Holds attributes of a property",
+  "type": "object",
+  "properties": {
+    "property_type": { "type": ["string"], "enum": ["residential", "commercial", "land"] },
+    "house_type": { "type": ["string"], "enum": ["bungalow", "detached", "flat_or_maisonette", "semidetached", "terraced", "custom"] },
+    "custom_house_type": { "type": ["string"] },
+    "size_in_acres": { "type": "integer" },
+    "usage": { "type": "string" },
+    "bedrooms": { "type": "integer" },
+    "value": { "type": "integer" },
+    "outstanding_mortgage": { "type": "integer" },
+    "percentage_applicant_owned": { "type": "integer" },
+    "percentage_partner_owned": { "type": "integer" },
+    "is_home_address": { "type": "string" },
+    "has_other_owners": { "type": "string" },
+    "address": { "type": "object"}
+  },
+  "required": ["property_type"]
+}

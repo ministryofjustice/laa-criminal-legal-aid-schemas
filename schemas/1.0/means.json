@@ -399,6 +399,10 @@
         "investments": {
           "type": "array",
           "items": { "$ref": "#/definitions/investment" }
+        },
+        "properties": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/property" }
         }
       },
       "required":[
@@ -518,6 +522,7 @@
   "required":[],
   "definitions": {
     "saving": { "$ref": "general/saving.json" },
-    "investment": { "$ref": "general/investment.json" }
+    "investment": { "$ref": "general/investment.json" },
+    "property": { "$ref": "general/property.json" }
   }
 }
