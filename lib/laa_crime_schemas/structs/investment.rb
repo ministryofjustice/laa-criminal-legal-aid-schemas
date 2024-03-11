@@ -6,7 +6,7 @@ module LaaCrimeSchemas
       attribute :investment_type, Types::InvestmentType
       attribute :description, Types::String
       attribute :value, Types::PenceSterling
-      attribute :holder, Types::OwnershipType
+      attribute :ownership_type, Types::OwnershipType
     end
   end
 end

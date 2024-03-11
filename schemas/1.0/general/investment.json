@@ -8,7 +8,7 @@
     "investment_type": { "type": ["string"], "enum": ["bond", "pep", "share_isa", "stock", "unit_trust", "other"] },
     "description": { "type": "string" },
     "value": { "type": "integer" },
-    "holder": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] }
+    "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] }
   },
-  "required": ["investment_type", "value", "description", "holder"]
+  "required": ["investment_type", "value", "description", "ownership_type"]
 }

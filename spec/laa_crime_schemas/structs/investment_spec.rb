@@ -13,7 +13,7 @@ RSpec.describe LaaCrimeSchemas::Structs::Investment do
         expect(subject.investment_type).to eq('unit_trust')
         expect(subject.description).to eq('Details of investment')
         expect(subject.value).to eq(200)
-        expect(subject.holder).to eq('partner')
+        expect(subject.ownership_type).to eq('partner')
       end
     end
 

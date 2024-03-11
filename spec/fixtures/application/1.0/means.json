@@ -96,7 +96,7 @@
         "account_balance": 200,
         "is_overdrawn": "yes",
         "are_wages_paid_into_account": "yes",
-        "account_holder": "applicant"
+        "ownership_type": "applicant"
       }
     ],
     "investments": [
@@ -104,7 +104,7 @@
         "investment_type": "unit_trust",
         "description": "Details of investment",
         "value": 200,
-        "holder": "partner"
+        "ownership_type": "partner"
       }
     ]
   }
