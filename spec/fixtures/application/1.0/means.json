@@ -106,6 +106,27 @@
         "value": 200,
         "ownership_type": "partner"
       }
+    ],
+    "properties": [
+      {
+        "property_type": "residential",
+        "house_type": "custom",
+        "custom_house_type": "custom house type",
+        "size_in_acres": 100,
+        "usage": "usage details",
+        "bedrooms": 2,
+        "value": 200000,
+        "outstanding_mortgage": 100000,
+        "percentage_applicant_owned": 80,
+        "percentage_partner_owned": 20,
+        "is_home_address": "yes",
+        "has_other_owners": "no",
+        "address": { "address_line_one": "address_line_one_x",
+          "address_line_two": "address_line_two_x",
+          "city": "city_x",
+          "country": "country_x",
+          "postcode": "postcode_x" }
+      }
     ]
   }
 }

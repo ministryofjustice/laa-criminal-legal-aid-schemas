@@ -211,6 +211,21 @@ module LaaCrimeSchemas
                                    unit_trust
                                    other
                                  ])
+
+    PropertyType = String.enum(*%w[
+                                 residential
+                                 commercial
+                                 land
+                               ])
+
+    HouseType = String.enum(*%w[
+                              bungalow
+                              detached
+                              flat_or_maisonette
+                              semidetached
+                              terraced
+                              custom
+                            ])
   end
 end
 # rubocop:enable Metrics/ModuleLength

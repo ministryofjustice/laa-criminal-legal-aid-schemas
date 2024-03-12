@@ -399,10 +399,14 @@
         "investments": {
           "type": "array",
           "items": { "$ref": "#/definitions/investment" }
+        },
+        "properties": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/property" }
         }
       },
       "required":[
-        "has_premium_bonds", "savings"
+        "has_premium_bonds", "savings", "properties"
       ]
     },
     "outgoings_details":{
@@ -518,6 +522,7 @@
   "required":[],
   "definitions": {
     "saving": { "$ref": "general/saving.json" },
-    "investment": { "$ref": "general/investment.json" }
+    "investment": { "$ref": "general/investment.json" },
+    "property": { "$ref": "general/property.json" }
   }
 }
