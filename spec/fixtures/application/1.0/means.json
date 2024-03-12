@@ -87,6 +87,9 @@
     "has_premium_bonds": "no",
     "premium_bonds_total_value": null,
     "premium_bonds_holder_number": null,
+    "will_benefit_from_trust_fund": "no",
+    "trust_fund_amount_held": null,
+    "yearly_dividend": null,
     "savings": [
       {
         "saving_type": "bank",

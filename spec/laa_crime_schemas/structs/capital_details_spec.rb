@@ -13,6 +13,9 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
         expect(subject.has_premium_bonds).to eq('no')
         expect(subject.premium_bonds_total_value).to be_nil
         expect(subject.premium_bonds_holder_number).to be_nil
+        expect(subject.will_benefit_from_trust_fund).to eq('no')
+        expect(subject.trust_fund_amount_held).to be_nil
+        expect(subject.yearly_dividend).to be_nil
         expect(subject.savings.size).to eq(1)
         expect(subject.investments.size).to eq(1)
         expect(subject.properties.size).to eq(1)
@@ -107,6 +110,101 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
     
       context 'when attribute is missing' do
         let(:attributes) { super().except(key) }
+
+        it 'raises an error' do
+          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
+        end
+      end
+    end
+
+    describe '#will_benefit_from_trust_fund' do
+      let(:key) { 'will_benefit_from_trust_fund' }
+      subject(:value) { struct.send(key) }
+
+      context 'when nil' do
+        let(:attributes) { super().merge(key => nil) }
+
+        it 'raises an error' do
+          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
+        end
+      end
+
+      context 'when not a yes/no' do
+        let(:attributes) { super().merge('will_benefit_from_trust_fund' => 'NotYesOrNo') }
+
+        it 'raises an error' do
+          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
+        end
+      end
+
+      context 'when attribute is missing' do
+        let(:attributes) { super().except(key) }
+
+        it 'raises an error' do
+          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
+        end
+      end
+    end
+
+    describe '#trust_fund_amount_held' do
+      let(:key) { 'trust_fund_amount_held' }
+      subject(:value) { struct.send(key) }
+
+      context 'when attribute is missing' do
+        let(:attributes) { super().except(key) }
+
+        it 'raises an error' do
+          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
+        end
+      end
+
+      context 'when an integer' do
+        let(:attributes) { super().merge(key => 123100) }
+
+        it { is_expected.to be 123100 }
+      end
+
+      context 'when nil' do
+        let(:attributes) { super().merge(key => nil) }
+
+        it { is_expected.to be nil }
+      end
+
+      context 'when not an integer' do
+        let(:attributes) { super().merge(key => '1231.00') }
+
+        it 'raises an error' do
+          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
+        end
+      end
+    end
+
+    describe '#yearly_dividend' do
+      let(:key) { 'yearly_dividend' }
+      subject(:value) { struct.send(key) }
+
+      context 'when attribute is missing' do
+        let(:attributes) { super().except(key) }
+
+        it 'raises an error' do
+          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
+        end
+      end
+
+      context 'when an integer' do
+        let(:attributes) { super().merge(key => 123100) }
+
+        it { is_expected.to be 123100 }
+      end
+
+      context 'when nil' do
+        let(:attributes) { super().merge(key => nil) }
+
+        it { is_expected.to be nil }
+      end
+
+      context 'when not an integer' do
+        let(:attributes) { super().merge(key => '1231.00') }
 
         it 'raises an error' do
           expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
