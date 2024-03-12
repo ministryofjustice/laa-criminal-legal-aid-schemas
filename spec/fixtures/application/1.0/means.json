@@ -121,7 +121,11 @@
         "percentage_partner_owned": 20,
         "is_home_address": "yes",
         "has_other_owners": "no",
-        "address": null
+        "address": { "address_line_one": "address_line_one_x",
+          "address_line_two": "address_line_two_x",
+          "city": "city_x",
+          "country": "country_x",
+          "postcode": "postcode_x" }
       }
     ]
   }

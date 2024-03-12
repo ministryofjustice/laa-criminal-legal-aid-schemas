@@ -406,7 +406,7 @@
         }
       },
       "required":[
-        "has_premium_bonds", "savings"
+        "has_premium_bonds", "savings", "properties"
       ]
     },
     "outgoings_details":{
