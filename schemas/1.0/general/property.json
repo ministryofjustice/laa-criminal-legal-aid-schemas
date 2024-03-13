@@ -13,8 +13,8 @@
     "bedrooms": { "type": ["integer", "null"] },
     "value": { "type": "integer" },
     "outstanding_mortgage": { "type": "integer" },
-    "percentage_applicant_owned": { "type": "integer" },
-    "percentage_partner_owned": { "type": ["integer", "null"] },
+    "percentage_applicant_owned": { "type": "number" },
+    "percentage_partner_owned": { "type": ["number", "null"] },
     "is_home_address": { "type": ["string", "null"] },
     "has_other_owners": { "type": "string" },
     "address": { "type": ["object", "null"]}
