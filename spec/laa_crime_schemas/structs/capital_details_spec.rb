@@ -19,6 +19,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
         expect(subject.savings.size).to eq(1)
         expect(subject.investments.size).to eq(1)
         expect(subject.properties.size).to eq(1)
+        expect(subject.national_savings_certificates.size).to eq(1)
       end
     end
 

@@ -32,6 +32,7 @@ require_relative 'laa_crime_schemas/structs/outgoings_details'
 require_relative 'laa_crime_schemas/structs/saving'
 require_relative 'laa_crime_schemas/structs/property'
 require_relative 'laa_crime_schemas/structs/investment'
+require_relative 'laa_crime_schemas/structs/national_savings_certificate'
 require_relative 'laa_crime_schemas/structs/capital_details'
 require_relative 'laa_crime_schemas/structs/means_details'
 

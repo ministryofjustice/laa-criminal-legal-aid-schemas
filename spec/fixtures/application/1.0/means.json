@@ -102,6 +102,14 @@
         "ownership_type": "applicant"
       }
     ],
+    "national_savings_certificates": [
+      {
+        "holder_number": "A123",
+        "certificate_number": "B456",
+        "value": 20010,
+        "ownership_type": "partner"
+      }
+    ],
     "investments": [
       {
         "investment_type": "unit_trust",

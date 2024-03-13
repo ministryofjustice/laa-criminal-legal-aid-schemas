@@ -14,6 +14,7 @@ module LaaCrimeSchemas
       attribute? :savings, Types::Array.of(Saving).default([].freeze)
       attribute? :properties, Types::Array.of(Property).default([].freeze)
       attribute? :investments, Types::Array.of(Investment).default([].freeze)
+      attribute? :national_savings_certificates, Types::Array.of(NationalSavingsCertificate).default([].freeze)
     end
   end
 end

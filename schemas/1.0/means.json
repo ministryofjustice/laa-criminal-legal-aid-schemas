@@ -399,6 +399,10 @@
           "type": "array",
           "items": { "$ref": "#/definitions/saving" }
         },
+        "national_savings_certificates": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/national_savings_certificate" }
+        },
         "investments": {
           "type": "array",
           "items": { "$ref": "#/definitions/investment" }
@@ -524,6 +528,7 @@
   "definitions": {
     "saving": { "$ref": "general/saving.json" },
     "investment": { "$ref": "general/investment.json" },
-    "property": { "$ref": "general/property.json" }
+    "property": { "$ref": "general/property.json" },
+    "national_savings_certificate": { "$ref": "general/national_savings_certificate.json" }
   }
 }
