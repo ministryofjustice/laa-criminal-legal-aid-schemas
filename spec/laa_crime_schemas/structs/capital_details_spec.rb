@@ -26,14 +26,6 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
       let(:key) { 'premium_bonds_total_value' }
       subject(:value) { struct.send(key) }
 
-      context 'when attribute is missing' do
-        let(:attributes) { super().except(key) }
-
-        it 'raises an error' do
-          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
-        end
-      end
-
       context 'when an integer' do
         let(:attributes) { super().merge(key => 123100) }
 
@@ -71,14 +63,6 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
         it { is_expected.to eq '001210' }
       end
 
-      context 'when attribute is missing' do
-        let(:attributes) { super().except(key) }
-
-        it 'raises an error' do
-          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
-        end
-      end
-
       context 'when an integer' do
         let(:attributes) { super().merge(key => 123100) }
 
@@ -107,14 +91,6 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
           expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
         end
       end
-    
-      context 'when attribute is missing' do
-        let(:attributes) { super().except(key) }
-
-        it 'raises an error' do
-          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
-        end
-      end
     end
 
     describe '#will_benefit_from_trust_fund' do
@@ -136,27 +112,11 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
           expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
         end
       end
-
-      context 'when attribute is missing' do
-        let(:attributes) { super().except(key) }
-
-        it 'raises an error' do
-          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
-        end
-      end
     end
 
     describe '#trust_fund_amount_held' do
       let(:key) { 'trust_fund_amount_held' }
       subject(:value) { struct.send(key) }
-
-      context 'when attribute is missing' do
-        let(:attributes) { super().except(key) }
-
-        it 'raises an error' do
-          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
-        end
-      end
 
       context 'when an integer' do
         let(:attributes) { super().merge(key => 123100) }
@@ -182,14 +142,6 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
     describe '#yearly_dividend' do
       let(:key) { 'yearly_dividend' }
       subject(:value) { struct.send(key) }
-
-      context 'when attribute is missing' do
-        let(:attributes) { super().except(key) }
-
-        it 'raises an error' do
-          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
-        end
-      end
 
       context 'when an integer' do
         let(:attributes) { super().merge(key => 123100) }

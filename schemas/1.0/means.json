@@ -408,9 +408,7 @@
           "items": { "$ref": "#/definitions/property" }
         }
       },
-      "required":[
-        "has_premium_bonds", "savings", "properties", "investments"
-      ]
+      "required":[]
     },
     "outgoings_details":{
       "type":"object",
