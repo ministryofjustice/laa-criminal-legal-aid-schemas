@@ -6,18 +6,18 @@
   "type": "object",
   "properties": {
     "property_type": { "type": ["string"], "enum": ["residential", "commercial", "land"] },
-    "house_type": { "type": ["string"], "enum": ["bungalow", "detached", "flat_or_maisonette", "semidetached", "terraced", "custom"] },
-    "custom_house_type": { "type": ["string"] },
-    "size_in_acres": { "type": "integer" },
-    "usage": { "type": "string" },
-    "bedrooms": { "type": "integer" },
+    "house_type": { "type": ["string", "null"], "enum": ["bungalow", "detached", "flat_or_maisonette", "semidetached", "terraced", "custom"] },
+    "custom_house_type": { "type": ["string", "null"] },
+    "size_in_acres": { "type": ["integer", "null"] },
+    "usage": { "type": ["string", "null"] },
+    "bedrooms": { "type": ["integer", "null"] },
     "value": { "type": "integer" },
     "outstanding_mortgage": { "type": "integer" },
     "percentage_applicant_owned": { "type": "integer" },
-    "percentage_partner_owned": { "type": "integer" },
-    "is_home_address": { "type": "string" },
+    "percentage_partner_owned": { "type": ["integer", "null"] },
+    "is_home_address": { "type": ["string", "null"] },
     "has_other_owners": { "type": "string" },
-    "address": { "type": "object"}
+    "address": { "type": ["object", "null"]}
   },
   "required": ["property_type"]
 }
