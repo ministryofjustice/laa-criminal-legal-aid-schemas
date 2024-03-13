@@ -19,5 +19,5 @@
     "has_other_owners": { "type": "string" },
     "address": { "type": ["object", "null"]}
   },
-  "required": ["property_type"]
+  "required": ["property_type", "value", "outstanding_mortgage", "percentage_applicant_owned", "has_other_owners"]
 }
