@@ -409,7 +409,7 @@
         }
       },
       "required":[
-        "has_premium_bonds", "savings", "properties"
+        "has_premium_bonds", "savings", "properties", "investments"
       ]
     },
     "outgoings_details":{
