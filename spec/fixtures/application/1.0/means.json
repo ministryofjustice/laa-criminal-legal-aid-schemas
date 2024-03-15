@@ -84,12 +84,12 @@
     ]
   },
   "capital_details": {
-    "has_premium_bonds": "no",
-    "premium_bonds_total_value": null,
-    "premium_bonds_holder_number": null,
-    "will_benefit_from_trust_fund": "no",
-    "trust_fund_amount_held": null,
-    "yearly_dividend": null,
+    "has_premium_bonds": "yes",
+    "premium_bonds_total_value": 100000,
+    "premium_bonds_holder_number": "123568A",
+    "will_benefit_from_trust_fund": "yes",
+    "trust_fund_amount_held": 100000,
+    "yearly_dividend": 200000,
     "savings": [
       {
         "saving_type": "bank",
@@ -126,8 +126,8 @@
         "size_in_acres": 100,
         "usage": "usage details",
         "bedrooms": 2,
-        "value": 200000,
-        "outstanding_mortgage": 100000,
+        "value": 20000000,
+        "outstanding_mortgage": 10000000,
         "percentage_applicant_owned": 80.0,
         "percentage_partner_owned": 20.0,
         "is_home_address": "yes",

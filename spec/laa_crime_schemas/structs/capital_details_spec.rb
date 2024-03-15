@@ -10,12 +10,12 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
   describe '.new' do
     context 'with valid capital details from fixture' do
       it 'builds the capital details struct' do
-        expect(subject.has_premium_bonds).to eq('no')
-        expect(subject.premium_bonds_total_value).to be_nil
-        expect(subject.premium_bonds_holder_number).to be_nil
-        expect(subject.will_benefit_from_trust_fund).to eq('no')
-        expect(subject.trust_fund_amount_held).to be_nil
-        expect(subject.yearly_dividend).to be_nil
+        expect(subject.has_premium_bonds).to eq('yes')
+        expect(subject.premium_bonds_total_value).to eq(100_000)
+        expect(subject.premium_bonds_holder_number).to eq('123568A')
+        expect(subject.will_benefit_from_trust_fund).to eq('yes')
+        expect(subject.trust_fund_amount_held).to eq(100_000)
+        expect(subject.yearly_dividend).to eq(200_000)
         expect(subject.savings.size).to eq(1)
         expect(subject.investments.size).to eq(1)
         expect(subject.properties.size).to eq(1)
