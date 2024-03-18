@@ -138,6 +138,7 @@
           "country": "country_x",
           "postcode": "postcode_x" }
       }
-    ]
+    ],
+    "has_frozen_income_or_assets": null
   }
 }
