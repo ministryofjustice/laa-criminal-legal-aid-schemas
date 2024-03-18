@@ -394,7 +394,7 @@
         "premium_bonds_holder_number":{"anyOf":[{ "type":"null" }, { "type":"string" }]},
         "will_benefit_from_trust_fund":{"type":"string", "enum": ["yes", "no"]},
         "trust_fund_amount_held":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
-        "yearly_dividend":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
+        "trust_fund_yearly_dividend":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "savings": {
           "type": "array",
           "items": { "$ref": "#/definitions/saving" }

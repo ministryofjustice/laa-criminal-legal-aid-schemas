@@ -15,7 +15,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
         expect(subject.premium_bonds_holder_number).to eq('123568A')
         expect(subject.will_benefit_from_trust_fund).to eq('yes')
         expect(subject.trust_fund_amount_held).to eq(100_000)
-        expect(subject.yearly_dividend).to eq(200_000)
+        expect(subject.trust_fund_yearly_dividend).to eq(200_000)
         expect(subject.savings.size).to eq(1)
         expect(subject.investments.size).to eq(1)
         expect(subject.properties.size).to eq(1)
@@ -140,8 +140,8 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
       end
     end
 
-    describe '#yearly_dividend' do
-      let(:key) { 'yearly_dividend' }
+    describe '#trust_fund_yearly_dividend' do
+      let(:key) { 'trust_fund_yearly_dividend' }
       subject(:value) { struct.send(key) }
 
       context 'when an integer' do
