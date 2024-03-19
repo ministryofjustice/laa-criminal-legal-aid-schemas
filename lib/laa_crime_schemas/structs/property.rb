@@ -16,6 +16,7 @@ module LaaCrimeSchemas
       attribute :is_home_address, Types::YesNoValue.optional
       attribute :has_other_owners, Types::YesNoValue
       attribute :address, Address.optional
+      attribute? :property_owners, Types::Array.of(PropertyOwner).default([].freeze)
     end
   end
 end

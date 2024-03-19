@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/property_owner.json",
+  "title": "PropertyOwner",
+  "description": "Holds attributes of a property owner",
+  "type": "object",
+  "properties": {
+    "name": { "type": ["string"] },
+    "relationship": { "type": "string", "enum": ["business_associates", "ex_partner", "family_members", "friends", "house_builder", "housing_association", "local_authority", "partner_with_a_contrary_interest", "property_company", "custom"] },
+    "custom_relationship": { "type": ["string", "null"] },
+    "percentage_owned": { "type": "number" }
+  },
+  "required": ["name", "relationship", "percentage_owned"]
+}

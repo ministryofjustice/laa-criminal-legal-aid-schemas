@@ -27,6 +27,15 @@ RSpec.describe LaaCrimeSchemas::Structs::Property do
         expect(subject.address.city).to eq('city_x')
         expect(subject.address.country).to eq('country_x')
         expect(subject.address.postcode).to eq('postcode_x')
+        expect(subject.property_owners.count).to eq(2)
+        expect(subject.property_owners[0].name).to eq("Jack")
+        expect(subject.property_owners[0].relationship).to eq("ex_partner")
+        expect(subject.property_owners[0].custom_relationship).to be_nil
+        expect(subject.property_owners[0].percentage_owned).to eq(20.0)
+        expect(subject.property_owners[1].name).to eq("Joe")
+        expect(subject.property_owners[1].relationship).to eq("custom")
+        expect(subject.property_owners[1].custom_relationship).to eq("custom relationship")
+        expect(subject.property_owners[1].percentage_owned).to eq(80.0)
       end
     end
 

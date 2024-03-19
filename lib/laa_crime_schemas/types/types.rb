@@ -227,6 +227,19 @@ module LaaCrimeSchemas
                               terraced
                               custom
                             ])
+
+    RelationshipType = String.enum(*%w[
+                                     business_associates
+                                     ex_partner
+                                     family_members
+                                     friends
+                                     house_builder
+                                     housing_association
+                                     local_authority
+                                     partner_with_a_contrary_interest
+                                     property_company
+                                     custom
+                                   ])
   end
 end
 # rubocop:enable Metrics/ModuleLength

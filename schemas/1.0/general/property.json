@@ -17,7 +17,14 @@
     "percentage_partner_owned": { "type": ["number", "null"] },
     "is_home_address": { "type": ["string", "null"] },
     "has_other_owners": { "type": "string" },
-    "address": { "type": ["object", "null"]}
+    "address": { "type": ["object", "null"]},
+    "property_owners": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/property_owner" }
+    }
   },
-  "required": ["property_type", "value", "outstanding_mortgage", "percentage_applicant_owned", "has_other_owners"]
+  "required": ["property_type", "value", "outstanding_mortgage", "percentage_applicant_owned", "has_other_owners"],
+  "definitions": {
+    "property_owner": { "$ref": "property_owner.json" }
+  }
 }

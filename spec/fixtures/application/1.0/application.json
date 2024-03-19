@@ -214,7 +214,21 @@
             "address_line_two": "address_line_two_x",
             "city": "city_x",
             "country": "country_x",
-            "postcode": "postcode_x" }
+            "postcode": "postcode_x" },
+          "property_owners": [
+            {
+              "name": "Jack",
+              "relationship": "ex_partner",
+              "custom_relationship": null,
+              "percentage_owned": 20.0
+            },
+            {
+              "name": "Joe",
+              "relationship": "custom",
+              "custom_relationship": "custom relationship",
+              "percentage_owned": 80.0
+            }
+          ]
         }
       ],
       "has_frozen_income_or_assets": null
