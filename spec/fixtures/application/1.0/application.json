@@ -98,9 +98,7 @@
       "income_above_threshold": "no",
       "has_frozen_income_or_assets": "no",
       "client_owns_property": "no",
-      "has_savings": "no",
-      "manage_without_income": "other",
-      "manage_other_details": "Another way they manage",
+      "has_savings": "yes",
       "income_payments": [
         {
           "payment_type": "other",
@@ -113,7 +111,23 @@
           "amount": 1603,
           "frequency": "week"
         }
-      ]
+      ],
+      "income_benefits": [
+        {
+          "payment_type": "child",
+          "amount": 3990,
+          "frequency": "month"
+        },
+        {
+          "payment_type": "other",
+          "amount": 1884,
+          "frequency": "fortnight",
+          "metadata": { "details": "Top up" }
+        }
+      ],
+      "dependants": [{"age": 1}, {"age":  5}],
+      "manage_without_income": "other",
+      "manage_other_details": "Another way they manage"
     },
     "outgoings_details": {
       "housing_payment_type": "rent",

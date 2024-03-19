@@ -8,9 +8,7 @@
     "income_above_threshold": "no",
     "has_frozen_income_or_assets": "no",
     "client_owns_property": "no",
-    "has_savings": "no",
-    "manage_without_income": "other",
-    "manage_other_details": "Another way they manage",
+    "has_savings": "yes",
     "income_benefits": [
       {
         "payment_type": "child",
@@ -24,18 +22,6 @@
         "metadata": { "details": "Top up" }
       }
     ],
-    "employment_details": {
-      "paye": [
-        {
-          "amount": 1320000,
-          "date": "2023-10-30",
-          "deductions": []
-        }
-      ]
-    },
-    "self_employment_details": {
-      "businesses": []
-    },
     "income_payments": [
       {
         "payment_type": "other",
@@ -50,6 +36,20 @@
       }
     ],
     "dependants": [{"age": 1}, {"age":  5}],
+    "manage_without_income": "other",
+    "manage_other_details": "Another way they manage",
+    "employment_details": {
+      "paye": [
+        {
+          "amount": 1320000,
+          "date": "2023-10-30",
+          "deductions": []
+        }
+      ]
+    },
+    "self_employment_details": {
+      "businesses": []
+    },
     "total": 1370380
   },
   "outgoings_details": {
