@@ -5,7 +5,7 @@
   "description": "Holds attributes of an investment",
   "type": "object",
   "properties": {
-    "investment_type": { "type": ["string"], "enum": ["bond", "pep", "share_isa", "stock", "unit_trust", "other"] },
+    "investment_type": { "type": ["string"], "enum": ["bond", "pep", "share", "share_isa", "stock", "unit_trust", "other"] },
     "description": { "type": "string" },
     "value": { "type": "integer" },
     "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] }

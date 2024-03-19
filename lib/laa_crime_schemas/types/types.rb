@@ -206,6 +206,7 @@ module LaaCrimeSchemas
     InvestmentType = String.enum(*%w[
                                    bond
                                    pep
+                                   share
                                    share_isa
                                    stock
                                    unit_trust
