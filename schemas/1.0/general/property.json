@@ -6,8 +6,8 @@
   "type": "object",
   "properties": {
     "property_type": { "type": ["string"], "enum": ["residential", "commercial", "land"] },
-    "house_type": { "type": ["string", "null"], "enum": ["bungalow", "detached", "flat_or_maisonette", "semidetached", "terraced", "custom", null] },
-    "custom_house_type": { "type": ["string", "null"] },
+    "house_type": { "type": ["string", "null"], "enum": ["bungalow", "detached", "flat_or_maisonette", "semidetached", "terraced", "other", null] },
+    "other_house_type": { "type": ["string", "null"] },
     "size_in_acres": { "type": ["integer", "null"] },
     "usage": { "type": ["string", "null"] },
     "bedrooms": { "type": ["integer", "null"] },

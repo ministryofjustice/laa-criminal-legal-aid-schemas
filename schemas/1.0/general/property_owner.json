@@ -6,8 +6,8 @@
   "type": "object",
   "properties": {
     "name": { "type": ["string"] },
-    "relationship": { "type": "string", "enum": ["business_associates", "ex_partner", "family_members", "friends", "house_builder", "housing_association", "local_authority", "partner_with_a_contrary_interest", "property_company", "custom"] },
-    "custom_relationship": { "type": ["string", "null"] },
+    "relationship": { "type": "string", "enum": ["business_associates", "ex_partner", "family_members", "friends", "house_builder", "housing_association", "local_authority", "partner_with_a_contrary_interest", "property_company", "other"] },
+    "other_relationship": { "type": ["string", "null"] },
     "percentage_owned": { "type": "number" }
   },
   "required": ["name", "relationship", "percentage_owned"]

@@ -5,7 +5,7 @@ module LaaCrimeSchemas
     class PropertyOwner < Base
       attribute :name, Types::String
       attribute :relationship, Types::RelationshipType
-      attribute :custom_relationship, Types::String.optional
+      attribute :other_relationship, Types::String.optional
       attribute :percentage_owned, Types::Float
     end
   end

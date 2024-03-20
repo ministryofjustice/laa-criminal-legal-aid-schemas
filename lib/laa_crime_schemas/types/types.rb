@@ -225,7 +225,7 @@ module LaaCrimeSchemas
                               flat_or_maisonette
                               semidetached
                               terraced
-                              custom
+                              other
                             ])
 
     RelationshipType = String.enum(*%w[
@@ -238,7 +238,7 @@ module LaaCrimeSchemas
                                      local_authority
                                      partner_with_a_contrary_interest
                                      property_company
-                                     custom
+                                     other
                                    ])
   end
 end
