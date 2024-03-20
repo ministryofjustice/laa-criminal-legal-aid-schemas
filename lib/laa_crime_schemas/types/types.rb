@@ -225,8 +225,21 @@ module LaaCrimeSchemas
                               flat_or_maisonette
                               semidetached
                               terraced
-                              custom
+                              other
                             ])
+
+    RelationshipType = String.enum(*%w[
+                                     business_associates
+                                     ex_partner
+                                     family_members
+                                     friends
+                                     house_builder
+                                     housing_association
+                                     local_authority
+                                     partner_with_a_contrary_interest
+                                     property_company
+                                     other
+                                   ])
   end
 end
 # rubocop:enable Metrics/ModuleLength

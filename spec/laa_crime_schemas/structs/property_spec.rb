@@ -11,8 +11,8 @@ RSpec.describe LaaCrimeSchemas::Structs::Property do
     context 'for a valid property object' do
       it 'builds a property struct' do
         expect(subject.property_type).to eq('residential')
-        expect(subject.house_type).to eq('custom')
-        expect(subject.custom_house_type).to eq('custom house type')
+        expect(subject.house_type).to eq('other')
+        expect(subject.other_house_type).to eq('other house type')
         expect(subject.size_in_acres).to eq(100)
         expect(subject.usage).to eq("usage details")
         expect(subject.bedrooms).to eq(2)
@@ -27,6 +27,15 @@ RSpec.describe LaaCrimeSchemas::Structs::Property do
         expect(subject.address.city).to eq('city_x')
         expect(subject.address.country).to eq('country_x')
         expect(subject.address.postcode).to eq('postcode_x')
+        expect(subject.property_owners.count).to eq(2)
+        expect(subject.property_owners[0].name).to eq("Jack")
+        expect(subject.property_owners[0].relationship).to eq("ex_partner")
+        expect(subject.property_owners[0].other_relationship).to be_nil
+        expect(subject.property_owners[0].percentage_owned).to eq(20.0)
+        expect(subject.property_owners[1].name).to eq("Joe")
+        expect(subject.property_owners[1].relationship).to eq("other")
+        expect(subject.property_owners[1].other_relationship).to eq("other relationship")
+        expect(subject.property_owners[1].percentage_owned).to eq(80.0)
       end
     end
 

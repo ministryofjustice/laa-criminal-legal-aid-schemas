@@ -6,8 +6,8 @@
   "type": "object",
   "properties": {
     "property_type": { "type": ["string"], "enum": ["residential", "commercial", "land"] },
-    "house_type": { "type": ["string", "null"], "enum": ["bungalow", "detached", "flat_or_maisonette", "semidetached", "terraced", "custom"] },
-    "custom_house_type": { "type": ["string", "null"] },
+    "house_type": { "type": ["string", "null"], "enum": ["bungalow", "detached", "flat_or_maisonette", "semidetached", "terraced", "other", null] },
+    "other_house_type": { "type": ["string", "null"] },
     "size_in_acres": { "type": ["integer", "null"] },
     "usage": { "type": ["string", "null"] },
     "bedrooms": { "type": ["integer", "null"] },
@@ -17,7 +17,14 @@
     "percentage_partner_owned": { "type": ["number", "null"] },
     "is_home_address": { "type": ["string", "null"] },
     "has_other_owners": { "type": "string" },
-    "address": { "type": ["object", "null"]}
+    "address": { "type": ["object", "null"]},
+    "property_owners": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/property_owner" }
+    }
   },
-  "required": ["property_type", "value", "outstanding_mortgage", "percentage_applicant_owned", "has_other_owners"]
+  "required": ["property_type", "value", "outstanding_mortgage", "percentage_applicant_owned", "has_other_owners"],
+  "definitions": {
+    "property_owner": { "$ref": "property_owner.json" }
+  }
 }

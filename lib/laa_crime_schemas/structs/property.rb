@@ -5,7 +5,7 @@ module LaaCrimeSchemas
     class Property < Base
       attribute :property_type, Types::PropertyType
       attribute :house_type, Types::HouseType.optional
-      attribute :custom_house_type, Types::String.optional
+      attribute :other_house_type, Types::String.optional
       attribute :size_in_acres, Types::Integer.optional
       attribute :usage, Types::String.optional
       attribute :bedrooms, Types::Integer.optional
@@ -16,6 +16,7 @@ module LaaCrimeSchemas
       attribute :is_home_address, Types::YesNoValue.optional
       attribute :has_other_owners, Types::YesNoValue
       attribute :address, Address.optional
+      attribute? :property_owners, Types::Array.of(PropertyOwner).default([].freeze)
     end
   end
 end
