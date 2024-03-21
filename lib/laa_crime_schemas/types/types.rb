@@ -68,17 +68,17 @@ module LaaCrimeSchemas
 
     # NOTE: maintain order as per designs when editing this list
     INCOME_PAYMENT_TYPES = %w[
-                             maintenance
-                             private_pension
-                             state_pension
-                             interest_investment
-                             student_loan_grant
-                             board_from_family
-                             rent
-                             financial_support_with_access
-                             from_friends_relatives
-                             other
-                           ].freeze
+      maintenance
+      private_pension
+      state_pension
+      interest_investment
+      student_loan_grant
+      board_from_family
+      rent
+      financial_support_with_access
+      from_friends_relatives
+      other
+    ].freeze
     IncomePaymentType = String.enum(*INCOME_PAYMENT_TYPES)
 
     IncomeBenefitType = String.enum(*%w[
