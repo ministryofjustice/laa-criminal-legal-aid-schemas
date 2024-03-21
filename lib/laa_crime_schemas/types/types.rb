@@ -81,6 +81,7 @@ module LaaCrimeSchemas
     ].freeze
     IncomePaymentType = String.enum(*INCOME_PAYMENT_TYPES)
 
+    # NOTE: maintain order as per designs when editing this list
     INCOME_BENEFIT_TYPES = %w[
       child
       working_or_child_tax_credit
