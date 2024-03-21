@@ -160,8 +160,8 @@
           "metadata": {
             "payee_name": "Willy Wonka",
             "payee_relationship_to_client": "Her Eccentric Uncle",
-            "board_amount": 1075,
-            "food_amount": 2060
+            "board_amount": 19999,
+            "food_amount": 1300
           }
         }
       ]
