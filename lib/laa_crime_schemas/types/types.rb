@@ -81,14 +81,15 @@ module LaaCrimeSchemas
     ].freeze
     IncomePaymentType = String.enum(*INCOME_PAYMENT_TYPES)
 
-    IncomeBenefitType = String.enum(*%w[
-                                      child
-                                      working_or_child_tax_credit
-                                      incapacity
-                                      industrial_injuries_disablement
-                                      jsa
-                                      other
-                                    ])
+    INCOME_BENEFIT_TYPES = %w[
+      child
+      working_or_child_tax_credit
+      incapacity
+      industrial_injuries_disablement
+      jsa
+      other
+    ].freeze
+    IncomeBenefitType = String.enum(*INCOME_BENEFIT_TYPES)
 
     OutgoingsType = String.enum(*%w[
                                   rent
