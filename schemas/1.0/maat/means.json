@@ -8,12 +8,55 @@
     "income_details":{
       "type":"object",
       "properties":{
-        "benefits":{
+        "income_payments":{
           "type":"array",
           "items":{
             "type":"object",
             "properties":{
-              "type":{
+              "payment_type":{
+                "type":"string",
+                "enum":[
+                  "private_pension",
+                  "state_pension",
+                  "maintenance",
+                  "interest",
+                  "student",
+                  "board_from_family",
+                  "rent",
+                  "friends_and_family",
+                  "other"
+                ]
+              },
+              "amount":{
+                "type":"integer"
+              },
+              "frequency":{
+                "type":"string",
+                "enum":[
+                  "week",
+                  "fortnight",
+                  "four_weeks",
+                  "month",
+                  "annual"
+                ]
+              },
+              "details":{
+                "type":"string"
+              }
+            },
+            "required":[
+              "payment_type",
+              "amount",
+              "frequency"
+            ]
+          }
+        },
+        "income_benefits":{
+          "type":"array",
+          "items":{
+            "type":"object",
+            "properties":{
+              "payment_type":{
                 "type":"string",
                 "enum":[
                   "child",
@@ -39,18 +82,11 @@
                 ]
               },
               "details":{
-                "anyOf":[
-                  {
-                    "type":"null"
-                  },
-                  {
-                    "type":"string"
-                  }
-                ]
+                "type":"string"
               }
             },
             "required":[
-              "type",
+              "payment_type",
               "amount",
               "frequency"
             ]
@@ -213,56 +249,6 @@
             "paye"
           ]
         },
-        "other_income":{
-          "type":"array",
-          "items":{
-            "type":"object",
-            "properties":{
-              "type":{
-                "type":"string",
-                "enum":[
-                  "private_pension",
-                  "state_pension",
-                  "maintenance",
-                  "interest",
-                  "student",
-                  "board_from_family",
-                  "rent",
-                  "friends_and_family",
-                  "other"
-                ]
-              },
-              "amount":{
-                "type":"integer"
-              },
-              "frequency":{
-                "type":"string",
-                "enum":[
-                  "week",
-                  "fortnight",
-                  "four_weeks",
-                  "month",
-                  "annual"
-                ]
-              },
-              "details":{
-                "anyOf":[
-                  {
-                    "type":"null"
-                  },
-                  {
-                    "type":"string"
-                  }
-                ]
-              }
-            },
-            "required":[
-              "type",
-              "amount",
-              "frequency"
-            ]
-          }
-        },
         "total":{
           "type":"integer"
         },
@@ -292,14 +278,16 @@
           "items":{
             "type":"object",
             "properties":{
-              "type":{
+              "payment_type":{
                 "type":"string",
                 "enum":[
-                  "housing",
+                  "rent",
+                  "mortgage",
+                  "board_and_lodging",
                   "council_tax",
                   "childcare",
                   "maintenance",
-                  "legal_aid"
+                  "legal_aid_contribution"
                 ]
               },
               "amount":{
@@ -314,35 +302,14 @@
                   "month",
                   "annual"
                 ]
-              },
-              "details":{
-                "anyOf":[
-                  {
-                    "type":"null"
-                  },
-                  {
-                    "type":"string"
-                  }
-                ]
               }
             },
             "required":[
-              "type",
+              "payment_type",
               "amount",
               "frequency"
             ]
           }
-        },
-        "housing_payment_type":{
-          "anyOf":[
-            {
-              "type":"null"
-            },
-            {
-              "type":"string",
-              "enum": ["rent", "mortgage", "board_and_lodging", "none"]
-            }
-          ]
         }
       },
       "required":[]

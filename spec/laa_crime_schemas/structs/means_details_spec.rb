@@ -35,7 +35,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
             expect(income_benefit.payment_type).to eq 'child'
             expect(income_benefit.amount).to eq 3990
             expect(income_benefit.frequency).to eq 'month'
-            expect(income_benefit.metadata).to be_nil
+            expect(income_benefit.metadata).to be_a LaaCrimeSchemas::Structs::Amount::Metadata
           end
         end
       end

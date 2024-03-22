@@ -109,14 +109,16 @@
         {
           "payment_type": "board_from_family",
           "amount": 1603,
-          "frequency": "week"
+          "frequency": "week",
+          "metadata": {}
         }
       ],
       "income_benefits": [
         {
           "payment_type": "child",
           "amount": 3990,
-          "frequency": "month"
+          "frequency": "month",
+          "metadata": {}
         },
         {
           "payment_type": "other",
@@ -139,7 +141,8 @@
         {
           "payment_type": "childcare",
           "amount": 98281,
-          "frequency": "week"
+          "frequency": "week",
+          "metadata": {}
         },
         {
           "payment_type": "legal_aid_contribution",
