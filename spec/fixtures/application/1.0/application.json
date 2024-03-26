@@ -236,7 +236,8 @@
           ]
         }
       ],
-      "has_frozen_income_or_assets": null
+      "has_frozen_income_or_assets": null,
+      "has_no_other_assets": "yes"
     }
   },
   "supporting_evidence": [
