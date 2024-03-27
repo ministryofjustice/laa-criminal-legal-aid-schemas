@@ -48,13 +48,6 @@
   },
   "means_details": {
     "income_details": {
-      "benefits": [
-        {
-          "type": "universal_credit",
-          "amount": 400,
-          "frequency": "month"
-        }
-      ],
       "employment_type": ["not_working"],
       "employment_details": {
         "paye": [],
@@ -64,10 +57,17 @@
         },
         "businesses": []
       },
-      "other_income": [
+      "income_payments": [
         {
-          "type": "friends_and_family",
+          "payment_type": "friends_and_family",
           "amount": 300,
+          "frequency": "month"
+        }
+      ],
+      "income_benefits": [
+        {
+          "payment_type": "universal_credit",
+          "amount": 400,
           "frequency": "month"
         }
       ],
@@ -77,12 +77,11 @@
     "outgoings_details": {
       "outgoings": [
         {
-          "type": "housing",
+          "payment_type": "rent",
           "amount": 700,
           "frequency": "month"
         }
-      ],
-     "housing_payment_type": "mortgage"
+      ]
     }
   }
 }
