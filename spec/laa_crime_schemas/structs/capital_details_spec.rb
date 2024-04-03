@@ -80,9 +80,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
       context 'when nil' do
         let(:attributes) { super().merge(key => nil) }
 
-        it 'raises an error' do
-          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
-        end
+        it { is_expected.to be nil }
       end
 
       context 'when not a yes/no' do
