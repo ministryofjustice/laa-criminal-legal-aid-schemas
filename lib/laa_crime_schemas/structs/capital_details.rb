@@ -3,7 +3,7 @@
 module LaaCrimeSchemas
   module Structs
     class CapitalDetails < Base
-      attribute? :has_premium_bonds, Types::YesNoValue
+      attribute? :has_premium_bonds, Types::YesNoValue.optional
       attribute? :premium_bonds_total_value, Types::PenceSterling.optional
       attribute? :premium_bonds_holder_number, Types::String.optional
 
