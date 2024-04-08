@@ -94,6 +94,126 @@
           "frequency": "month"
         }
       ]
+    },
+    "capital_details": {
+      "premium_bonds_total_value":100000000,
+      "trust_fund_amount_held":500000,
+      "savings":[
+        {
+          "saving_type":"bank",
+          "account_balance":10000,
+          "provider_name":"Lloyds Bank",
+          "sort_code":"12-23-45",
+          "ownership_type":"applicant",
+          "is_overdrawn":"no",
+          "account_number":"12345678",
+          "are_wages_paid_into_account":"yes"
+        },
+        {
+          "saving_type":"cash_isa",
+          "account_balance":10000,
+          "provider_name":"Lloyds Bank",
+          "sort_code":"12-23-45",
+          "ownership_type":"applicant",
+          "is_overdrawn":"no",
+          "account_number":"87654321",
+          "are_wages_paid_into_account":"no"
+        }
+      ],
+      "investments":[
+        {
+          "investment_type":"pep",
+          "value":50000,
+          "description":"Private equity plan",
+          "ownership_type":"applicant"
+        },
+        {
+          "investment_type":"share",
+          "value":10000,
+          "description":"500 Shares in Acme Ltd",
+          "ownership_type":"applicant"
+        }
+      ],
+      "national_savings_certificates":[
+        {   
+          "value":2000,
+          "holder_number":"9313456",
+          "ownership_type":"applicant",
+          "certificate_number":"4441252"
+        }
+      ],
+      "properties":[
+        {
+          "property_type":"residential",
+          "house_type":"semidetached",
+          "value":4800000,
+          "outstanding_mortgage":39000,
+          "bedrooms":3,
+          "is_home_address":"no",
+          "address":{
+            "city":"London",
+            "country":"United Kingdom",
+            "postcode":"E1 4AD",
+            "address_line_one":"296 Oak Court",
+            "address_line_two":"Higham"
+          },
+          "percentage_applicant_owned":62.0,
+          "percentage_partner_owned":null,
+          "property_owners":[
+            {
+              "name":"Freya Brennan",
+              "relationship":"family_members",
+              "percentage_owned":38.0,
+              "other_relationship":""
+            }
+          ],
+          "has_other_owners":"yes",
+          "usage":null,
+          "size_in_acres":null
+        },
+        {
+          "property_type":"commercial",
+          "house_type":null,
+          "value":880000,
+          "outstanding_mortgage":0,
+          "bedrooms":null,
+          "is_home_address":"no",
+          "address":{
+            "city":"London",
+            "country":"United Kingdom",
+            "postcode":"E1 2DA",
+            "address_line_one":"1 Park Road",
+            "address_line_two":"Oldtown"
+          },
+          "percentage_applicant_owned":100.0,
+          "percentage_partner_owned":null,
+          "property_owners":[],
+          "has_other_owners":"no",
+          "usage":"Storage",
+          "size_in_acres":null
+        },
+        {
+          "property_type":"land",
+          "house_type":null,
+          "value":720000,
+          "outstanding_mortgage":22000,
+          "bedrooms":null,
+          "is_home_address":"no",
+          "address":{
+            "city":"London",
+            "country":"United Kingdom",
+            "postcode":"SW1A 2AA",
+            "address_line_one":"1 High Street",
+            "address_line_two":"Newtown"
+          },
+          "percentage_applicant_owned":100.0,
+          "percentage_partner_owned":null,
+          "property_owners":[],
+          "has_other_owners":"no",
+          "usage":"Agriculture",
+          "size_in_acres":1
+        }
+      ]
     }
   }
 }
