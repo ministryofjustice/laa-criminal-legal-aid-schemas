@@ -412,6 +412,23 @@
                   "applicant_and_partner",
                   "partner"
                 ]
+              },
+              "is_overdrawn":{
+                "type":"string",
+                "enum": [
+                  "yes",
+                  "no"
+                ]
+              },
+              "account_number":{
+                "type":"string"
+              },
+              "are_wages_paid_into_account":{
+                "type":"string",
+                "enum": [
+                  "yes",
+                  "no"
+                ]
               }
             },
             "required":[
@@ -419,7 +436,10 @@
               "account_balance",
               "provider_name",
               "sort_code",
-              "ownership_type"
+              "ownership_type",
+              "is_overdrawn",
+              "account_number",
+              "are_wages_paid_into_account"
             ]
           }
         },
@@ -431,17 +451,25 @@
               "value":{
                 "type":"integer"
               },
+              "holder_number":{
+                "type":"string"
+              },
               "ownership_type":{
                 "type":"string",
                 "enum":[
                   "applicant",
                   "partner"
                 ]
+              },
+              "certificate_number":{
+                "type":"string"
               }
             },
             "required":[
               "value",
-              "ownership_type"
+              "holder_number",
+              "ownership_type",
+              "certificate_number"
             ]
           }
         },
@@ -477,7 +505,12 @@
                 ]
               }
             },
-            "required": ["investment_type", "value", "description", "ownership_type"]
+            "required": [
+              "investment_type",
+              "value",
+              "description",
+              "ownership_type"
+            ]
            }
         },
         "properties": {
@@ -558,7 +591,10 @@
                   },
                   {
                     "type":"string",
-                    "enum": ["yes", "no"]
+                    "enum": [
+                      "yes",
+                      "no"
+                    ]
                   }
                 ]
               },
@@ -594,7 +630,7 @@
                   "type":"string"
                 }
               },
-              "property_owners": {
+              "property_owners":{
                 "type":"array",
                 "items":{
                   "type":"object",
@@ -631,11 +667,56 @@
                       "type": "number"
                     }
                   }
-                }
+                },
+                "required":[
+                  "name",
+                  "relationship",
+                  "percentage_owned"
+                ]
+              },
+              "has_other_owners":{
+                "anyOf":[
+                  {
+                    "type":"null"
+                  },
+                  {
+                    "type":"string",
+                    "enum": [
+                      "yes",
+                      "no"
+                    ]
+                  }
+                ]
+              },
+              "usage":{
+                "anyOf": [
+                  {
+                    "type":"null"
+                  },
+                  {
+                    "type":"string"
+                  }
+                ]
+              },
+              "size_in_acres":{
+                "anyOf": [
+                  {
+                    "type":"null"
+                  },
+                  {
+                    "type":"integer"
+                  }
+                ]
               }
             }
           },
-          "required":["property_type", "value", "outstanding_mortgage", "percentage_applicant_owned"]
+          "required":[
+            "property_type",
+            "value",
+            "outstanding_mortgage",
+            "percentage_applicant_owned",
+            "has_other_owners"
+          ]
         }
       },
       "required":[]

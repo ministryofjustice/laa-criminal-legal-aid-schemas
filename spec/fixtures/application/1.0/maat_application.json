@@ -104,14 +104,20 @@
           "account_balance":10000,
           "provider_name":"Lloyds Bank",
           "sort_code":"12-23-45",
-          "ownership_type":"applicant"
+          "ownership_type":"applicant",
+          "is_overdrawn":"no",
+          "account_number":"12345678",
+          "are_wages_paid_into_account":"yes"
         },
         {
           "saving_type":"cash_isa",
           "account_balance":10000,
           "provider_name":"Lloyds Bank",
           "sort_code":"12-23-45",
-          "ownership_type":"applicant"
+          "ownership_type":"applicant",
+          "is_overdrawn":"no",
+          "account_number":"87654321",
+          "are_wages_paid_into_account":"no"
         }
       ],
       "investments":[
@@ -131,7 +137,9 @@
       "national_savings_certificates":[
         {   
           "value":2000,
-          "ownership_type":"applicant"
+          "holder_number": "9313456",
+          "ownership_type":"applicant",
+          "certificate_number": "4441252"
         }
       ],
       "properties":[
@@ -158,7 +166,10 @@
               "percentage_owned":38.0,
               "other_relationship":""
             }
-          ]
+          ],
+          "has_other_owners":"yes",
+          "usage": null,
+          "size_in_acres":null
         },
         {
           "property_type":"land",
@@ -166,7 +177,7 @@
           "value":720000,
           "outstanding_mortgage":22000,
           "bedrooms":null,
-          "is_home_address":null,
+          "is_home_address":"no",
           "address":{
             "city":"London",
             "country":"United Kingdom",
@@ -176,7 +187,10 @@
           },
           "percentage_applicant_owned":100.0,
           "percentage_partner_owned":null,
-          "property_owners":[]
+          "property_owners":[],
+          "has_other_owners": "no",
+          "usage": null,
+          "size_in_acres":1
         }
       ]
     }
