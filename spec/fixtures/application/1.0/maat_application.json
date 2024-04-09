@@ -59,8 +59,48 @@
       },
       "income_payments": [
         {
-          "payment_type": "friends_and_family",
-          "amount": 300,
+          "payment_type": "private_pension",
+          "amount": 10,
+          "frequency": "week"
+        },
+        {
+          "payment_type": "state_pension",
+          "amount": 360,
+          "frequency": "fortnight"
+        },
+        {
+          "payment_type": "interest_investment",
+          "amount": 100,
+          "frequency": "four_weeks"
+        },
+        {
+          "payment_type": "student_loan_grant",
+          "amount": 55,
+          "frequency": "month"
+        },
+        {
+          "payment_type": "board_from_family",
+          "amount": 1000,
+          "frequency": "annual"
+        },
+        {
+          "payment_type": "from_friends_relatives",
+          "amount": 50,
+          "frequency": "week"
+        },
+        {
+          "payment_type": "rent",
+          "amount": 310,
+          "frequency": "month"
+        },
+        {
+          "payment_type": "financial_support_with_access",
+          "amount": 80,
+          "frequency": "month"
+        },
+        {
+          "payment_type": "from_friends_relatives",
+          "amount": 390,
           "frequency": "month"
         },
         {
@@ -72,9 +112,29 @@
       ],
       "income_benefits": [
         {
-          "payment_type": "universal_credit",
+          "payment_type": "child",
+          "amount": 100,
+          "frequency": "week"
+        },
+        {
+          "payment_type": "working_or_child_tax_credit",
+          "amount": 160,
+          "frequency": "fortnight"
+        },
+        {
+          "payment_type": "incapacity",
+          "amount": 400,
+          "frequency": "four_weeks"
+        },
+        {
+          "payment_type": "industrial_injuries_disablement",
           "amount": 400,
           "frequency": "month"
+        },
+        {
+          "payment_type": "jsa",
+          "amount": 400,
+          "frequency": "annual"
         },
         {
           "payment_type": "other",
@@ -92,6 +152,29 @@
           "payment_type": "rent",
           "amount": 700,
           "frequency": "month"
+        },
+        {
+          "payment_type": "council_tax",
+          "amount": 1000,
+          "frequency": "annual"
+        },
+        {
+          "payment_type": "childcare",
+          "amount": 100,
+          "frequency": "month"
+        },
+        {
+          "payment_type": "maintenance",
+          "amount": 250,
+          "frequency": "month"
+        },
+        {
+          "payment_type": "legal_aid_contribution",
+          "amount": 100,
+          "frequency": "month",
+          "metadata": {
+            "case_reference": "6300928"
+          }
         }
       ]
     },
