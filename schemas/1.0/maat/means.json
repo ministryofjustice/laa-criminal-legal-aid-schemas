@@ -19,11 +19,12 @@
                   "private_pension",
                   "state_pension",
                   "maintenance",
-                  "interest",
-                  "student",
+                  "interest_investment",
+                  "student_loan_grant",
                   "board_from_family",
                   "rent",
-                  "friends_and_family",
+                  "financial_support_with_access",
+                  "from_friends_relatives",
                   "other"
                 ]
               },

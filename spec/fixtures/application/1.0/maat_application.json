@@ -59,7 +59,7 @@
       },
       "income_payments": [
         {
-          "payment_type": "friends_and_family",
+          "payment_type": "from_friends_relatives",
           "amount": 300,
           "frequency": "month"
         },
