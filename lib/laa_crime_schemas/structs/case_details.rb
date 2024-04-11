@@ -9,9 +9,13 @@ module LaaCrimeSchemas
       # Injected by the datastore, not part of the stored application JSON
       attribute :offence_class, Types::OffenceClass.optional
 
-      attribute :appeal_maat_id, Types::String.optional
       attribute :appeal_lodged_date, Types::JSON::Date.optional
-      attribute :appeal_with_changes_details, Types::String.optional
+      attribute? :appeal_original_app_submitted, Types::YesNoValue.optional
+      attribute? :appeal_financial_circumstances_changed, Types::YesNoValue.optional
+      attribute? :appeal_with_changes_details, Types::String.optional
+      attribute? :appeal_reference_number, Types::String.optional
+      attribute :appeal_maat_id, Types::String.optional
+      attribute? :appeal_usn, Types::String.optional
 
       attribute? :has_case_concluded, Types::YesNoValue.optional
       attribute? :date_case_concluded, Types::JSON::Date.optional

@@ -42,9 +42,13 @@
     "is_preorder_work_claimed": "yes",
     "preorder_work_date": "2001-06-09",
     "preorder_work_details": "Work Details",
-    "appeal_maat_id": null,
-    "appeal_lodged_date": null,
+    "appeal_lodged_date": "2021-10-25",
+    "appeal_original_app_submitted": null,
+    "appeal_financial_circumstances_changed": null,
     "appeal_with_changes_details": null,
+    "appeal_reference_number": null,
+    "appeal_maat_id": null,
+    "appeal_usn": null,
     "offence_class": "C",
     "offences": [
       {
