@@ -12,9 +12,13 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
       it 'builds the case details struct' do
         expect(subject.urn).to eq('')
         expect(subject.case_type).to eq('appeal_to_crown_court')
-        expect(subject.appeal_maat_id).to be_nil
         expect(subject.appeal_lodged_date).to be_a(Date)
+        expect(subject.appeal_original_app_submitted).to be_nil
+        expect(subject.appeal_financial_circumstances_changed).to be_nil
         expect(subject.appeal_with_changes_details).to be_nil
+        expect(subject.appeal_reference_number).to be_nil
+        expect(subject.appeal_maat_id).to be_nil
+        expect(subject.appeal_usn).to be_nil
         expect(subject.offences.size).to eq(2)
         expect(subject.codefendants.size).to eq(1)
         expect(subject.hearing_court_name).to eq("Cardiff Magistrates' Court")
