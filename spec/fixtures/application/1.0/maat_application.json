@@ -22,6 +22,7 @@
       "other_names": "",
       "nino": "AJ123456C",
       "benefit_type": "universal_credit",
+      "last_jsa_appointment_date": null,
       "date_of_birth": "2011-06-09",
       "telephone_number": "07771231231",
       "correspondence_address_type": "home_address",
