@@ -9,7 +9,15 @@
       "type":"object",
       "properties":{
         "income_above_threshold":{
-          "type":"string", "enum": ["yes", "no"]
+          "anyOf": [
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
         },
         "income_benefits":{
           "type":"array",
