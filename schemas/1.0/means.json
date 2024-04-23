@@ -429,7 +429,7 @@
         "has_no_savings": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "has_no_properties": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "has_no_investments": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
-        "has_no_national_savings_certificates": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+        "has_national_savings_certificates": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "savings": {
           "type": "array",
           "items": { "$ref": "#/definitions/saving" }
