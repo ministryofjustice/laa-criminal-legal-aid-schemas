@@ -9,6 +9,8 @@
     "has_frozen_income_or_assets": "no",
     "client_owns_property": "no",
     "has_savings": "yes",
+    "has_no_income_payments": null,
+    "has_no_income_benefits": null,
     "income_benefits": [
       {
         "payment_type": "child",
@@ -60,6 +62,7 @@
     "outgoings_more_than_income": "yes",
     "how_manage": "A description of how they manage",
     "pays_council_tax": "no",
+    "has_no_other_outgoings": null,
     "outgoings": [
       {
         "payment_type": "childcare",
@@ -93,6 +96,10 @@
     "will_benefit_from_trust_fund": "yes",
     "trust_fund_amount_held": 100000,
     "trust_fund_yearly_dividend": 200000,
+    "has_no_savings": null,
+    "has_no_properties": null,
+    "has_no_investments": null,
+    "has_no_national_savings_certificates": null,
     "savings": [
       {
         "saving_type": "bank",
