@@ -13,6 +13,7 @@ module LaaCrimeSchemas
       attribute? :has_savings, Types::YesNoValue.optional
       attribute? :manage_without_income, Types::ManageWithoutIncomeTypes.optional
       attribute? :manage_other_details, Types::String.optional
+      attribute? :client_has_dependants, Types::YesNoValue.optional
       attribute? :client_owns_property, Types::YesNoValue.optional
       attribute? :has_no_income_payments, Types::YesNoValue.optional
       attribute? :has_no_income_benefits, Types::YesNoValue.optional
