@@ -55,6 +55,5 @@
         "required": ["id", "group", "ruleset", "key", "run"]
       }
     }
-  },
-  "required": ["last_run_at", "evidence_prompts"]
+  }
 }
