@@ -6,7 +6,7 @@
   "type": "object",
   "properties": {
     "last_run_at": { "type": "string", "format": "date-time" },
-    "prompts": {
+    "evidence_prompts": {
       "type": "array",
       "items": {
         "type": "object",
@@ -56,5 +56,5 @@
       }
     }
   },
-  "required": ["last_run_at", "prompts"]
+  "required": ["last_run_at", "evidence_prompts"]
 }

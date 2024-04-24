@@ -99,7 +99,7 @@
   },
   "evidence_details": {
     "last_run_at": "2024-04-24T13:28:30.835Z",
-    "prompts": [
+    "evidence_prompts": [
       {
         "id": "NationalInsuranceProof",
         "group": "none",
