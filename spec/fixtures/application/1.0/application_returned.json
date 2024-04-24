@@ -97,6 +97,32 @@
     "reason": "clarification_required",
     "details": "Further information regarding IoJ required"
   },
+  "evidence_details": {
+    "last_run_at": "2024-04-24T13:28:30.835Z",
+    "evidence_prompts": [
+      {
+        "id": "NationalInsuranceProof",
+        "group": "none",
+        "ruleset": "Hydrated",
+        "key": "national_insurance_32",
+        "run": {
+          "client": {
+            "result": false,
+            "prompt": []
+          },
+          "partner": {
+            "result": false,
+            "prompt": []
+          },
+          "other": {
+            "result": true,
+            "prompt": ["their National Insurance number"]
+          }
+
+        }
+      }
+    ]
+  },
   "supporting_evidence": [
     {
       "s3_object_key": "123/abcdef1234",
