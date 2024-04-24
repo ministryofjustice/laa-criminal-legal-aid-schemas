@@ -41,6 +41,18 @@ module LaaCrimeSchemas
     ].freeze
     BenefitType = String.enum(*BENEFIT_TYPES)
 
+    RESIDENCE_TYPES = %w[
+      rented
+      temporary
+      parents
+      applicant_owned
+      partner_owned
+      joint_owned
+      someone_else
+      none
+    ].freeze
+    ResidenceType = String.enum(*BENEFIT_TYPES)
+
     CORRESPONDENCE_ADDRESS_TYPES = %w[
       other_address
       home_address
