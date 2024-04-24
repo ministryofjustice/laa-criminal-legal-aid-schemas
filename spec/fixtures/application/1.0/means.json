@@ -100,7 +100,7 @@
     "has_no_savings": "no",
     "has_no_properties": "no",
     "has_no_investments": "no",
-    "has_national_savings_certificates": "no",
+    "has_national_savings_certificates": "yes",
     "savings": [
       {
         "saving_type": "bank",
