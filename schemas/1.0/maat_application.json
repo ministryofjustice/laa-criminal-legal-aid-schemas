@@ -39,7 +39,6 @@
             "telephone_number": { "type": ["string", "null"] },
             "correspondence_address_type": { "type": "string", "enum": ["other_address", "home_address", "providers_office_address"] },
             "residence_type": {"type": ["string", "null"], "enum": ["rented", "temporary", "parents", "esa", "applicant_owned", "partner_owned", "joint_owned", "someone_else", "none", null] },
-            "relationship_to_someone_else": { "type": ["string", "null"] },
             "home_address": { "$ref": "#/definitions/address" },
             "correspondence_address": { "$ref": "#/definitions/address" }
           },
