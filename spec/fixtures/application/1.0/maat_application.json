@@ -34,7 +34,8 @@
         "country": "United Kingdom",
         "postcode": "SW1A 2AA"
       },
-      "correspondence_address": null
+      "correspondence_address": null,
+      "residence_type": null
     }
   },
   "case_details": {
