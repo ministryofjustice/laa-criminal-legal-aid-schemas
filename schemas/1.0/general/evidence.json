@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/evidence.json",
+  "title": "Evidence",
+  "description": "Prompts shown to the provider for adding supporting evidence",
+  "type": "object",
+  "properties": {
+    "last_run_at": { "type": "string", "format": "date-time" },
+    "evidence_prompts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "group": { "type": "string" },
+          "ruleset": { "type": "string" },
+          "key": { "type": "string" },
+          "run": {
+            "type": "object",
+            "properties": {
+              "client": {
+                "type": "object",
+                "properties": {
+                  "result": { "anyOf": [{ "type": "null" }, { "type": "boolean" }] },
+                  "prompt": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              },
+              "partner": {
+                "type": "object",
+                "properties": {
+                  "result": { "anyOf": [{ "type": "null" }, { "type": "boolean" }] },
+                  "prompt": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              },
+              "other": {
+                "type": "object",
+                "properties": {
+                  "result": { "anyOf": [{ "type": "null" }, { "type": "boolean" }] },
+                  "prompt": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              }
+            },
+            "required": ["client", "partner", "other"]
+          }
+        },
+        "required": ["id", "group", "ruleset", "key", "run"]
+      }
+    }
+  },
+  "required": ["last_run_at", "evidence_prompts"]
+}
