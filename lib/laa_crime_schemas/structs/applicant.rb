@@ -12,7 +12,7 @@ module LaaCrimeSchemas
       attribute? :correspondence_address_type, Types::CorrespondenceAddressType.optional
       attribute? :telephone_number, Types::String.optional
       attribute? :residence_type, Types::String.optional
-      attribute? :relationship_to_someone_else, Types::String.optional
+      attribute? :relationship_to_owner_of_usual_home_address, Types::String.optional
     end
   end
 end
