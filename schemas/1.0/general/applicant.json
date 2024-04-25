@@ -15,7 +15,7 @@
     "home_address": { "$ref": "#/definitions/address" },
     "correspondence_address": { "$ref": "#/definitions/address" },
     "residence_type": {"type": ["string", "null"], "enum": ["rented", "temporary", "parents", "esa", "applicant_owned", "partner_owned", "joint_owned", "someone_else", "none", null] },
-    "relationship_to_someone_else": { "type": ["string", "null"] }
+    "relationship_to_owner_of_usual_home_address": { "type": ["string", "null"] }
   },
   "required": [
     "date_of_birth", "nino", "telephone_number", "correspondence_address_type",
