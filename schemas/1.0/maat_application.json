@@ -39,7 +39,7 @@
             "last_jsa_appointment_date": { "type": ["string", "null"], "format": "date" },
             "telephone_number": { "type": ["string", "null"] },
             "correspondence_address_type": { "type": "string", "enum": ["other_address", "home_address", "providers_office_address"] },
-            "residence_type": {"type": ["string", "null"], "enum": ["rented", "temporary", "parents", "esa", "applicant_owned", "partner_owned", "joint_owned", "someone_else", "none", null] },
+            "residence_type": {"type": ["string", "null"], "enum": ["rented", "temporary", "parents", "applicant_owned", "partner_owned", "joint_owned", "someone_else", "none", null] },
             "home_address": { "$ref": "#/definitions/address" },
             "correspondence_address": { "$ref": "#/definitions/address" },
             "relationship_to_partner": {"type": ["string", "null"], "enum": ["married_or_partnership", "living_together", "prefer_not_to_say", null] },
