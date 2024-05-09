@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/national_savings_certificate.json",
-  "title": "National Savings Sertificate",
+  "title": "National Savings Certificate",
   "description": "Holds attributes of an National Savings Certificate",
   "type": "object",
   "properties": {

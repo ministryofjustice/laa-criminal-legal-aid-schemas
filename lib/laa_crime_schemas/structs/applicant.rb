@@ -13,6 +13,10 @@ module LaaCrimeSchemas
       attribute? :telephone_number, Types::String.optional
       attribute? :residence_type, Types::String.optional
       attribute? :relationship_to_owner_of_usual_home_address, Types::String.optional
+
+      attribute? :relationship_to_partner, Types::String.optional
+      attribute? :separation_date, Types::JSON::Date.optional
+      attribute? :partnership_status, Types::String.optional
     end
   end
 end

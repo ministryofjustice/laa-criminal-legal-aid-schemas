@@ -41,6 +41,14 @@
                   "annual"
                 ]
               },
+              "ownership_type":{
+                "type":"string",
+                "enum":[
+                  "applicant",
+                  "partner",
+                  "applicant_and_partner"
+                ]
+              },
               "metadata":{
                 "type":"object",
                 "properties":{
@@ -97,6 +105,14 @@
                   "annual"
                 ]
               },
+              "ownership_type":{
+                "type":"string",
+                "enum":[
+                  "applicant",
+                  "partner",
+                  "applicant_and_partner"
+                ]
+              },
               "metadata":{
                 "type":"object",
                 "properties":{
@@ -125,6 +141,15 @@
           }
         },
         "employment_type":{
+          "type":"array",
+          "items":{
+            "type":"string",
+            "enum":[
+              "employed", "self-employed", "business_partnership", "director", "shareholder", "not_working"
+            ]
+          }
+        },
+        "partner_employment_type":{
           "type":"array",
           "items":{
             "type":"string",
@@ -334,6 +359,14 @@
                   "month",
                   "annual"
                 ]
+              },
+              "ownership_type":{
+                "type":"string",
+                "enum":[
+                  "applicant",
+                  "partner",
+                  "applicant_and_partner"
+                ]
               }
             },
             "metadata":{
@@ -372,6 +405,26 @@
           ]
         },
         "trust_fund_amount_held":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"integer"
+            }
+          ]
+        },
+        "partner_premium_bonds_total_value":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"integer"
+            }
+          ]
+        },
+        "partner_trust_fund_amount_held":{
           "anyOf":[
             {
               "type":"null"

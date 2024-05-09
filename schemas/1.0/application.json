@@ -37,6 +37,9 @@
       },
       "required": ["applicant"]
     },
+    "partner_details": {
+      "$ref": "#/definitions/partner_details"
+    },
     "case_details": {
       "type": "object",
       "properties": {
@@ -104,6 +107,7 @@
   ],
   "definitions": {
     "means": { "$ref": "means.json" },
+    "partner_details": { "$ref": "general/partner_details.json" },
     "provider": { "$ref": "general/provider.json" },
     "applicant": { "$ref": "general/applicant.json" },
     "codefendant": { "$ref": "general/codefendant.json" },

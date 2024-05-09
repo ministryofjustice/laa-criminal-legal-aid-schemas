@@ -10,6 +10,7 @@ module LaaCrimeSchemas
 
       attribute? :housing_payment_type, Types::HousingPaymentType.optional
       attribute? :income_tax_rate_above_threshold, Types::YesNoValue.optional
+      attribute? :partner_income_tax_rate_above_threshold, Types::YesNoValue.optional
       attribute? :outgoings_more_than_income, Types::YesNoValue.optional
       attribute? :how_manage, Types::String.optional
       attribute? :pays_council_tax, Types::YesNoValue.optional

@@ -6,6 +6,7 @@ module LaaCrimeSchemas
       attribute? :income_above_threshold, Types::YesNoValue.optional
 
       attribute? :employment_type, Types::Array.of(Types::EmploymentType)
+      attribute? :partner_employment_type, Types::Array.of(Types::EmploymentType)
       attribute? :ended_employment_within_three_months, Types::YesNoValue.optional
       attribute? :lost_job_in_custody, Types::YesNoValue.optional
       attribute? :date_job_lost, Types::JSON::Date.optional
@@ -17,6 +18,8 @@ module LaaCrimeSchemas
       attribute? :client_owns_property, Types::YesNoValue.optional
       attribute? :has_no_income_payments, Types::YesNoValue.optional
       attribute? :has_no_income_benefits, Types::YesNoValue.optional
+      attribute? :partner_has_no_income_payments, Types::YesNoValue.optional
+      attribute? :partner_has_no_income_benefits, Types::YesNoValue.optional
 
       attribute? :employment_details do
         attribute :paye, Types::Array.of(Base) do

@@ -29,6 +29,11 @@ module LaaCrimeSchemas
       attribute? :work_stream, Types::WorkStreamType.optional
 
       attribute? :additional_information, Types::String.optional
+
+      # keeping optional due to other app types e.g. pse
+      # if it has not been added to the schema is there an opportunity to rename to has_partner
+      # also should it be moved?
+      attribute? :client_has_partner, Types::String.optional
     end
   end
 end
