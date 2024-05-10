@@ -245,17 +245,17 @@ module LaaCrimeSchemas
                             ])
 
     PropertyRelationshipType = String.enum(*%w[
-                                     business_associates
-                                     ex_partner
-                                     family_members
-                                     friends
-                                     house_builder
-                                     housing_association
-                                     local_authority
-                                     partner_with_a_contrary_interest
-                                     property_company
-                                     other
-                                   ])
+                                             business_associates
+                                             ex_partner
+                                             family_members
+                                             friends
+                                             house_builder
+                                             housing_association
+                                             local_authority
+                                             partner_with_a_contrary_interest
+                                             property_company
+                                             other
+                                           ])
 
     CaseInvolvement = String.enum(*%w[victim prosecution_witness codefendant no_involvement])
     RelationshipStatus = String.enum(*%w[single widowed divorced separated prefer_not_to_say])
