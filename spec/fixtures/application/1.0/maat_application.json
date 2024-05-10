@@ -8,7 +8,7 @@
   "date_stamp": "2022-10-24T09:50:04.019Z",
   "ioj_bypass": false,
   "means_passport": ["on_benefit_check"],
-  "has_partner": "no",
+  "has_partner": "yes",
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
@@ -37,29 +37,29 @@
       },
       "correspondence_address": null,
       "residence_type": null,
-      "relationship_to_partner": null,
-      "separation_date": null,
-      "partnership_status": "single"
+      "relationship_to_partner": "living_together",
+      "separation_date": "2023-06-09",
+      "relationship_status": null
     },
     "partner": {
-      "first_name": null,
-      "last_name": null,
-      "other_names": null,
-      "nino": null,
+      "first_name": "Jennifer",
+      "last_name": "Holland",
+      "other_names": "Diane",
+      "nino": "AB123456C",
       "benefit_type": null,
       "last_jsa_appointment_date": null,
-      "date_of_birth": null,
+      "date_of_birth": "2001-12-23",
       "home_address": {
         "lookup_id": null,
-        "address_line_one": null,
-        "address_line_two": null,
-        "city": null,
-        "country": null,
-        "postcode": null
+        "address_line_one": "1 Road",
+        "address_line_two": "Village",
+        "city": "Some nice city",
+        "country": "United Kingdom",
+        "postcode": "SW1A 2AA"
       },
-      "involvement_in_case": null,
-      "conflict_of_interest": null,
-      "has_same_address_as_client": null
+      "involvement_in_case": "codefendant",
+      "conflict_of_interest": "no",
+      "has_same_address_as_client": "yes"
     }
   },
   "case_details": {
@@ -75,7 +75,7 @@
   "means_details": {
     "income_details": {
       "employment_type": ["not_working"],
-      "partner_employment_type": [],
+      "partner_employment_type": ["not_working"],
       "employment_details": {
         "paye": [],
         "other": {
@@ -145,6 +145,12 @@
           "frequency": "month",
           "details": "Details of the other payment",
           "ownership_type": "applicant"
+        },
+        {
+          "payment_type": "rent",
+          "amount": 150,
+          "frequency": "month",
+          "ownership_type": "partner"
         }
       ],
       "income_benefits": [
@@ -184,6 +190,12 @@
           "frequency": "month",
           "details": "Details of the other benefit",
           "ownership_type": "applicant"
+        },
+        {
+          "payment_type": "working_or_child_tax_credit",
+          "amount": 1532,
+          "frequency": "month",
+          "ownership_type": "partner"
         }
       ],
       "total": 1000,
@@ -219,9 +231,9 @@
           "payment_type": "legal_aid_contribution",
           "amount": 100,
           "frequency": "month",
+          "ownership_type": "applicant_and_partner",
           "metadata": {
-            "case_reference": "6300928",
-            "ownership_type": "applicant_and_partner"
+            "case_reference": "6300928"
           }
         }
       ]

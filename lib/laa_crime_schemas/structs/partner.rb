@@ -9,7 +9,7 @@ module LaaCrimeSchemas
       attribute? :nino, Types::String.optional
       attribute? :home_address, Address.optional
 
-      attribute? :involvement_in_case, Types::String.optional
+      attribute? :involvement_in_case, Types::CaseInvolvement.optional
       attribute? :conflict_of_interest, Types::YesNoValue.optional
       attribute? :has_same_address_as_client, Types::YesNoValue.optional
     end

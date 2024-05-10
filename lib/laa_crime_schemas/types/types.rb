@@ -256,6 +256,10 @@ module LaaCrimeSchemas
                                      property_company
                                      other
                                    ])
+
+    CaseInvolvement = String.enum(*%w[victim prosecution_witness codefendant no_involvement])
+    RelationshipStatus = String.enum(*%w[single widowed divorced separated prefer_not_to_say])
+    RelationshipToPartner = String.enum(*%w[married_or_partnership living_together prefer_not_to_say])
   end
 end
 # rubocop:enable Metrics/ModuleLength
