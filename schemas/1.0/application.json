@@ -33,12 +33,10 @@
     "client_details": {
       "type": "object",
       "properties": {
-        "applicant": { "$ref": "#/definitions/applicant" }
+        "applicant": { "$ref": "#/definitions/applicant" },
+        "partner": { "$ref": "#/definitions/partner" }
       },
       "required": ["applicant"]
-    },
-    "partner_details": {
-      "$ref": "#/definitions/partner_details"
     },
     "case_details": {
       "type": "object",
@@ -100,6 +98,7 @@
     "items": { "$ref": "#/definitions/document" }
   },
   "additional_information": { "type": ["string", "null"] },
+  "has_partner": { "type": ["string", "null"] },
   "work_stream": { "type": ["string", "null"], "enum": ["extradition", "national_crime_team", "criminal_applications_team", null] },
   "required": [
     "id", "parent_id", "schema_version", "reference", "application_type", "created_at", "submitted_at",
@@ -107,7 +106,7 @@
   ],
   "definitions": {
     "means": { "$ref": "means.json" },
-    "partner_details": { "$ref": "general/partner_details.json" },
+    "partner": { "$ref": "general/partner.json" },
     "provider": { "$ref": "general/provider.json" },
     "applicant": { "$ref": "general/applicant.json" },
     "codefendant": { "$ref": "general/codefendant.json" },

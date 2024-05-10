@@ -47,6 +47,10 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
           expect(outgoings_details.income_tax_rate_above_threshold).to eq('no')
         end
 
+        it 'includes partner_income_tax_rate_above_threshold' do
+          expect(outgoings_details.partner_income_tax_rate_above_threshold).to eq(nil)
+        end
+
         it 'includes outgoings_more_than_income' do
           expect(outgoings_details.outgoings_more_than_income).to eq('yes')
         end

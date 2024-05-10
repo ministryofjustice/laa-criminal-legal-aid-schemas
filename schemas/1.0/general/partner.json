@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/applicant.json",
-  "title": "Partner Details",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/partner.json",
+  "title": "Partner",
   "description": "Holds attributes of a partner. Extends from Person.",
   "type": "object",
   "allOf": [{ "$ref": "#/definitions/person" }],

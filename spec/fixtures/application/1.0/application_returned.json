@@ -11,6 +11,7 @@
   "status": "returned",
   "ioj_passport": [],
   "means_passport": ["on_benefit_check"],
+  "has_partner": "no",
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
@@ -32,7 +33,30 @@
       "home_address": null,
       "correspondence_address": null,
       "residence_type": null,
-      "relationship_to_owner_of_usual_home_address": null
+      "relationship_to_owner_of_usual_home_address": null,
+      "relationship_to_partner": null,
+      "separation_date": null,
+      "partnership_status": "single"
+    },
+    "partner": {
+      "first_name": null,
+      "last_name": null,
+      "other_names": null,
+      "nino": null,
+      "benefit_type": null,
+      "last_jsa_appointment_date": null,
+      "date_of_birth": null,
+      "home_address": {
+        "lookup_id": null,
+        "address_line_one": null,
+        "address_line_two": null,
+        "city": null,
+        "country": null,
+        "postcode": null
+      },
+      "involvement_in_case": null,
+      "conflict_of_interest": null,
+      "has_same_address_as_client": null
     }
   },
   "case_details": {
@@ -79,6 +103,7 @@
   "means_details": {
     "income_details": {
       "employment_type": ["not_working"],
+      "partner_employment_type": [],
       "ended_employment_within_three_months": "no",
       "income_above_threshold": "yes",
       "has_no_income_payments": "yes",
@@ -88,6 +113,7 @@
     },
     "outgoings_details": {
       "income_tax_rate_above_threshold": "yes",
+      "partner_income_tax_rate_above_threshold": null,
       "outgoings_more_than_income": null,
       "how_manage": "Somehow they managed",
       "has_no_other_outgoings": "yes"

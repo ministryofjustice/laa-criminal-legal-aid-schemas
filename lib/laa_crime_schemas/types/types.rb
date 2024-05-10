@@ -51,7 +51,7 @@ module LaaCrimeSchemas
       someone_else
       none
     ].freeze
-    ResidenceType = String.enum(*BENEFIT_TYPES)
+    ResidenceType = String.enum(*RESIDENCE_TYPES)
 
     CORRESPONDENCE_ADDRESS_TYPES = %w[
       other_address

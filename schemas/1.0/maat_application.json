@@ -23,7 +23,7 @@
     "provider_details": {
       "$ref": "#/definitions/provider"
     },
-    "client_has_partner":{ "type":"string", "enum":["yes", "no"] },
+    "has_partner":{ "type":"string", "enum":["yes", "no"] },
     "client_details": {
       "type": "object",
       "properties": {
@@ -51,7 +51,7 @@
       },
       "required": ["applicant"]
     },
-    "partner_details": {
+    "partner": {
       "type": "object",
       "properties": {
         "first_name": { "type": "string" },

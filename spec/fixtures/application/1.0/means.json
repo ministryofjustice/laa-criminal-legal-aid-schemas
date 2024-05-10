@@ -2,6 +2,7 @@
   "schema_version": 1.0,
   "income_details": {
     "employment_type": ["not_working"],
+    "partner_employment_type": [],
     "ended_employment_within_three_months": "yes",
     "lost_job_in_custody": "yes",
     "date_job_lost": "2023-09-01",
@@ -17,12 +18,14 @@
         "payment_type": "child",
         "amount": 3990,
         "frequency": "month",
+        "ownership_type": "applicant",
         "metadata": {}
       },
       {
         "payment_type": "other",
         "amount": 1884,
         "frequency": "fortnight",
+        "ownership_type": "applicant",
         "metadata": { "details": "Top up" }
       }
     ],
@@ -31,12 +34,14 @@
         "payment_type": "other",
         "amount": 2500,
         "frequency": "annual",
+        "ownership_type": "applicant",
         "metadata": { "details": "Book royalty" }
       },
       {
         "payment_type": "board_from_family",
         "amount": 1603,
         "frequency": "week",
+        "ownership_type": "applicant",
         "metadata": {}
       }
     ],
@@ -60,6 +65,7 @@
   "outgoings_details": {
     "housing_payment_type": "rent",
     "income_tax_rate_above_threshold": "no",
+    "partner_income_tax_rate_above_threshold": null,
     "outgoings_more_than_income": "yes",
     "how_manage": "A description of how they manage",
     "pays_council_tax": "no",
@@ -69,18 +75,21 @@
         "payment_type": "childcare",
         "amount": 98281,
         "frequency": "week",
+        "ownership_type": "applicant_and_partner",
         "metadata": {}
       },
       {
         "payment_type": "legal_aid_contribution",
         "amount": 1234,
         "frequency": "week",
+        "ownership_type": "applicant_and_partner",
         "metadata": { "case_reference": "CASE1234" }
       },
       {
         "payment_type": "board_and_lodging",
         "amount": 82881,
         "frequency": "month",
+        "ownership_type": "applicant_and_partner",
         "metadata": {
           "board_amount": 87273,
           "food_amount": 1772,
@@ -94,9 +103,15 @@
     "has_premium_bonds": "yes",
     "premium_bonds_total_value": 100000,
     "premium_bonds_holder_number": "123568A",
+    "partner_has_premium_bonds": null,
+    "partner_premium_bonds_total_value": null,
+    "partner_premium_bonds_holder_number": null,
     "will_benefit_from_trust_fund": "yes",
     "trust_fund_amount_held": 100000,
     "trust_fund_yearly_dividend": 200000,
+    "partner_will_benefit_from_trust_fund": null,
+    "partner_trust_fund_amount_held": null,
+    "partner_trust_fund_yearly_dividend": null,
     "has_no_savings": "no",
     "has_no_properties": "no",
     "has_no_investments": "no",
