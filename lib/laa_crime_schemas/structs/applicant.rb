@@ -14,6 +14,7 @@ module LaaCrimeSchemas
       attribute? :residence_type, Types::ResidenceType.optional
       attribute? :relationship_to_owner_of_usual_home_address, Types::String.optional
 
+      attribute? :has_partner, Types::String.optional
       attribute? :relationship_to_partner, Types::RelationshipType.optional
       attribute? :separation_date, Types::JSON::Date.optional
       attribute? :relationship_status, Types::RelationshipStatus.optional

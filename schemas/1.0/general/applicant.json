@@ -16,6 +16,7 @@
     "correspondence_address": { "$ref": "#/definitions/address" },
     "residence_type": {"type": ["string", "null"], "enum": ["rented", "temporary", "parents", "applicant_owned", "partner_owned", "joint_owned", "someone_else", "none", null] },
     "relationship_to_owner_of_usual_home_address": { "type": ["string", "null"] },
+    "has_partner":{ "type":"string", "enum":["yes", "no"] },
     "relationship_to_partner": {"type": ["string", "null"], "enum": ["married_or_partnership", "living_together", "prefer_not_to_say", null] },
     "separation_date": { "type": ["string", "null"], "format": "date" },
     "relationship_status": {"type": ["string", "null"], "enum": ["single", "widowed", "divorced", "separated", "prefer_not_to_say", null] }

@@ -29,8 +29,6 @@ module LaaCrimeSchemas
       attribute? :work_stream, Types::WorkStreamType.optional
 
       attribute? :additional_information, Types::String.optional
-
-      attribute? :has_partner, Types::String.optional
     end
   end
 end

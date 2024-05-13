@@ -5,7 +5,6 @@ module LaaCrimeSchemas
     class Amount < Base
       attribute :amount, Types::PenceSterling
       attribute :frequency, Types::PaymentFrequency
-      attribute :ownership_type, Types::OwnershipType
 
       attribute? :metadata do
         attribute? :details, Types::String.optional

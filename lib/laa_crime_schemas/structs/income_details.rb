@@ -54,11 +54,13 @@ module LaaCrimeSchemas
 
       attribute? :income_payments, Types::Coercible::Array.of(Base).default([].freeze) do
         attribute :payment_type, Types::IncomePaymentType
+        attribute :ownership_type, Types::OwnershipType
         attributes_from Amount
       end
 
       attribute? :income_benefits, Types::Coercible::Array.of(Base).default([].freeze) do
         attribute :payment_type, Types::IncomeBenefitType
+        attribute :ownership_type, Types::OwnershipType
         attributes_from Amount
       end
     end

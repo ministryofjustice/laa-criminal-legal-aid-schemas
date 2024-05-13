@@ -10,7 +10,6 @@
   "status": "submitted",
   "ioj_passport": [],
   "means_passport": ["on_benefit_check"],
-  "has_partner": "yes",
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
@@ -40,6 +39,7 @@
       "correspondence_address": null,
       "residence_type": null,
       "relationship_to_owner_of_usual_home_address": null,
+      "has_partner": "yes",
       "relationship_to_partner": "living_together",
       "separation_date": "2023-06-09",
       "relationship_status": null
@@ -193,28 +193,24 @@
           "payment_type": "childcare",
           "amount": 98281,
           "frequency": "week",
-          "ownership_type": "applicant_and_partner",
           "metadata": {}
         },
         {
           "payment_type": "legal_aid_contribution",
           "amount": 1234,
           "frequency": "week",
-          "ownership_type": "applicant_and_partner",
           "metadata": { "case_reference": "CASE1234" }
         },
         {
           "payment_type": "council_tax",
           "amount": 92983,
           "frequency": "annual",
-          "ownership_type": "applicant_and_partner",
           "metadata": {}
         },
         {
           "payment_type": "board_and_lodging",
           "amount": 82881,
           "frequency": "month",
-          "ownership_type": "applicant_and_partner",
           "metadata": {
             "payee_name": "Willy Wonka",
             "payee_relationship_to_client": "Her Eccentric Uncle",

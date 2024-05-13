@@ -548,14 +548,6 @@
                   "annual"
                 ]
               },
-              "ownership_type":{
-                "type":"string",
-                "enum":[
-                  "applicant",
-                  "partner",
-                  "applicant_and_partner"
-                ]
-              },
               "metadata":{
                 "type":"object",
                 "properties":{
@@ -572,8 +564,7 @@
             "required":[
               "payment_type",
               "amount",
-              "frequency",
-              "ownership_type"
+              "frequency"
             ]
           }
         },
