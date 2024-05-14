@@ -56,7 +56,7 @@
       },
       "involvement_in_case": "codefendant",
       "conflict_of_interest": "no",
-      "has_same_address_as_client": "yes"
+      "has_same_address_as_client": "no"
     }
   },
   "case_details": {

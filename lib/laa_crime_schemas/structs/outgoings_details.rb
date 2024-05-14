@@ -5,6 +5,7 @@ module LaaCrimeSchemas
     class OutgoingsDetails < Base
       attribute? :outgoings, Types::Array.of(Base) do
         attribute :payment_type, Types::OutgoingsType
+        attribute :ownership_type, Types::OwnershipType
         attributes_from Amount
       end
 

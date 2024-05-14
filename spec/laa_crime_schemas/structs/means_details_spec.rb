@@ -66,6 +66,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
             expect(outgoing_payment_1.payment_type).to eq 'childcare'
             expect(outgoing_payment_1.amount).to eq 98281
             expect(outgoing_payment_1.frequency).to eq 'week'
+            expect(outgoing_payment_1.ownership_type).to eq 'applicant_and_partner'
           end
 
           it 'allows case reference' do

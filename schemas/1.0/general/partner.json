@@ -15,10 +15,7 @@
     "conflict_of_interest": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "has_same_address_as_client": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]}
   },
-  "required":[
-    "date_of_birth", "nino", "home_address", "involvement_in_case", "conflict_of_interest",
-    "has_same_address_as_client"
-  ],
+  "required":[ "date_of_birth", "nino", "involvement_in_case" ],
   "definitions": {
     "person": { "$ref": "person.json" },
     "address": { "$ref": "address.json" }

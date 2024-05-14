@@ -54,15 +54,15 @@
       "date_of_birth": "2001-12-23",
       "home_address": {
         "lookup_id": null,
-        "address_line_one": "1 Road",
-        "address_line_two": "Village",
-        "city": "Some nice city",
+        "address_line_one": "53 Road",
+        "address_line_two": "Street",
+        "city": "Another nice city",
         "country": "United Kingdom",
-        "postcode": "SW1A 2AA"
+        "postcode": "W1 2AA"
       },
       "involvement_in_case": "codefendant",
       "conflict_of_interest": "no",
-      "has_same_address_as_client": "yes"
+      "has_same_address_as_client": "no"
     }
   },
   "case_details": {
@@ -193,24 +193,28 @@
           "payment_type": "childcare",
           "amount": 98281,
           "frequency": "week",
+          "ownership_type": "applicant_and_partner",
           "metadata": {}
         },
         {
           "payment_type": "legal_aid_contribution",
           "amount": 1234,
           "frequency": "week",
+          "ownership_type": "applicant_and_partner",
           "metadata": { "case_reference": "CASE1234" }
         },
         {
           "payment_type": "council_tax",
           "amount": 92983,
           "frequency": "annual",
+          "ownership_type": "applicant_and_partner",
           "metadata": {}
         },
         {
           "payment_type": "board_and_lodging",
           "amount": 82881,
           "frequency": "month",
+          "ownership_type": "applicant_and_partner",
           "metadata": {
             "payee_name": "Willy Wonka",
             "payee_relationship_to_client": "Her Eccentric Uncle",
