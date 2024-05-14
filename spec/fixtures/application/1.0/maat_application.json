@@ -38,8 +38,8 @@
       "residence_type": null,
       "has_partner": "yes",
       "relationship_to_partner": "living_together",
-      "separation_date": "2023-06-09",
-      "relationship_status": null
+      "relationship_status": null,
+      "separation_date": null
     },
     "partner": {
       "first_name": "Jennifer",
