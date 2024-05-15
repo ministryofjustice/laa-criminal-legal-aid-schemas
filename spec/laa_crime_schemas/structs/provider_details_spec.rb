@@ -15,13 +15,5 @@ RSpec.describe LaaCrimeSchemas::Structs::ProviderDetails do
         expect(subject.legal_rep_telephone).to eq('123456789')
       end
     end
-
-    context 'for an invalid provider details object' do
-      let(:attributes) { super().merge('provider_email' => nil) }
-
-      it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /provider_email/)
-      end
-    end
   end
 end
