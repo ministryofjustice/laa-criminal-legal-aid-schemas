@@ -7,7 +7,7 @@ module LaaCrimeSchemas
       attribute :case_type, Types::CaseType.optional
 
       # Injected by the datastore, not part of the stored application JSON
-      attribute :offence_class, Types::OffenceClass.optional
+      attribute? :offence_class, Types::OffenceClass.optional
 
       attribute :appeal_lodged_date, Types::JSON::Date.optional
       attribute? :appeal_original_app_submitted, Types::YesNoValue.optional
