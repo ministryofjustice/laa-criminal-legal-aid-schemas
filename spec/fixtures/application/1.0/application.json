@@ -38,7 +38,31 @@
       },
       "correspondence_address": null,
       "residence_type": null,
-      "relationship_to_owner_of_usual_home_address": null
+      "relationship_to_owner_of_usual_home_address": null,
+      "has_partner": "yes",
+      "relationship_to_partner": "living_together",
+      "relationship_status": null,
+      "separation_date": null
+    },
+    "partner": {
+      "first_name": "Jennifer",
+      "last_name": "Holland",
+      "other_names": "Diane",
+      "nino": "AB123456C",
+      "benefit_type": null,
+      "last_jsa_appointment_date": null,
+      "date_of_birth": "2001-12-23",
+      "home_address": {
+        "lookup_id": null,
+        "address_line_one": "53 Road",
+        "address_line_two": "Street",
+        "city": "Another nice city",
+        "country": "United Kingdom",
+        "postcode": "W1 2AA"
+      },
+      "involvement_in_case": "codefendant",
+      "conflict_of_interest": "no",
+      "has_same_address_as_client": "no"
     }
   },
   "case_details": {
@@ -99,6 +123,7 @@
   "means_details": {
     "income_details": {
       "employment_type": ["not_working"],
+      "partner_employment_type": ["not_working"],
       "ended_employment_within_three_months": "yes",
       "lost_job_in_custody": "yes",
       "date_job_lost": "2023-09-01",
@@ -111,12 +136,21 @@
           "payment_type": "other",
           "amount": 2500,
           "frequency": "annual",
+          "ownership_type": "applicant",
           "metadata": { "details": "Book royalty" }
         },
         {
           "payment_type": "board_from_family",
           "amount": 1603,
           "frequency": "week",
+          "ownership_type": "applicant",
+          "metadata": {}
+        },
+        {
+          "payment_type": "rent",
+          "amount": 1250,
+          "frequency": "month",
+          "ownership_type": "partner",
           "metadata": {}
         }
       ],
@@ -125,13 +159,22 @@
           "payment_type": "child",
           "amount": 3990,
           "frequency": "month",
+          "ownership_type": "applicant",
           "metadata": {}
         },
         {
           "payment_type": "other",
           "amount": 1884,
           "frequency": "fortnight",
+          "ownership_type": "applicant",
           "metadata": { "details": "Top up" }
+        },
+        {
+          "payment_type": "working_or_child_tax_credit",
+          "amount": 1532,
+          "frequency": "month",
+          "ownership_type": "partner",
+          "metadata": {}
         }
       ],
       "dependants": [{"age": 1}, {"age":  5}],
@@ -141,6 +184,7 @@
     "outgoings_details": {
       "housing_payment_type": "rent",
       "income_tax_rate_above_threshold": "no",
+      "partner_income_tax_rate_above_threshold": null,
       "outgoings_more_than_income": "yes",
       "pays_council_tax": "yes",
       "how_manage": "A description of how they manage",
@@ -149,24 +193,28 @@
           "payment_type": "childcare",
           "amount": 98281,
           "frequency": "week",
+          "ownership_type": "applicant_and_partner",
           "metadata": {}
         },
         {
           "payment_type": "legal_aid_contribution",
           "amount": 1234,
           "frequency": "week",
+          "ownership_type": "applicant_and_partner",
           "metadata": { "case_reference": "CASE1234" }
         },
         {
           "payment_type": "council_tax",
           "amount": 92983,
           "frequency": "annual",
+          "ownership_type": "applicant_and_partner",
           "metadata": {}
         },
         {
           "payment_type": "board_and_lodging",
           "amount": 82881,
           "frequency": "month",
+          "ownership_type": "applicant_and_partner",
           "metadata": {
             "payee_name": "Willy Wonka",
             "payee_relationship_to_client": "Her Eccentric Uncle",
@@ -180,9 +228,15 @@
       "has_premium_bonds": "yes",
       "premium_bonds_total_value": 100000,
       "premium_bonds_holder_number": "123568A",
+      "partner_has_premium_bonds": "no",
+      "partner_premium_bonds_holder_number": null,
+      "partner_premium_bonds_total_value":null,
       "will_benefit_from_trust_fund": "yes",
       "trust_fund_amount_held": 100000,
       "trust_fund_yearly_dividend": 200000,
+      "partner_will_benefit_from_trust_fund": "no",
+      "partner_trust_fund_amount_held":null,
+      "partner_trust_fund_yearly_dividend": null,
       "savings": [
         {
           "saving_type": "bank",

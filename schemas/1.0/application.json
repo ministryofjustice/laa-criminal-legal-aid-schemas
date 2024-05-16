@@ -33,7 +33,8 @@
     "client_details": {
       "type": "object",
       "properties": {
-        "applicant": { "$ref": "#/definitions/applicant" }
+        "applicant": { "$ref": "#/definitions/applicant" },
+        "partner": { "$ref": "#/definitions/partner" }
       },
       "required": ["applicant"]
     },
@@ -104,6 +105,7 @@
   ],
   "definitions": {
     "means": { "$ref": "means.json" },
+    "partner": { "$ref": "general/partner.json" },
     "provider": { "$ref": "general/provider.json" },
     "applicant": { "$ref": "general/applicant.json" },
     "codefendant": { "$ref": "general/codefendant.json" },

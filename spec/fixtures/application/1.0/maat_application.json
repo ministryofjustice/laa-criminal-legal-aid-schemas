@@ -35,7 +35,31 @@
         "postcode": "SW1A 2AA"
       },
       "correspondence_address": null,
-      "residence_type": null
+      "residence_type": null,
+      "has_partner": "yes",
+      "relationship_to_partner": "living_together",
+      "relationship_status": null,
+      "separation_date": null
+    },
+    "partner": {
+      "first_name": "Jennifer",
+      "last_name": "Holland",
+      "other_names": "Diane",
+      "nino": "AB123456C",
+      "benefit_type": null,
+      "last_jsa_appointment_date": null,
+      "date_of_birth": "2001-12-23",
+      "home_address": {
+        "lookup_id": null,
+        "address_line_one": "53 Road",
+        "address_line_two": "Street",
+        "city": "Another nice city",
+        "country": "United Kingdom",
+        "postcode": "W1 2AA"
+      },
+      "involvement_in_case": "codefendant",
+      "conflict_of_interest": "no",
+      "has_same_address_as_client": "no"
     }
   },
   "case_details": {
@@ -51,6 +75,7 @@
   "means_details": {
     "income_details": {
       "employment_type": ["not_working"],
+      "partner_employment_type": ["not_working"],
       "employment_details": {
         "paye": [],
         "other": {
@@ -63,86 +88,114 @@
         {
           "payment_type": "private_pension",
           "amount": 10,
-          "frequency": "week"
+          "frequency": "week",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "state_pension",
           "amount": 360,
-          "frequency": "fortnight"
+          "frequency": "fortnight",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "interest_investment",
           "amount": 100,
-          "frequency": "four_weeks"
+          "frequency": "four_weeks",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "student_loan_grant",
           "amount": 55,
-          "frequency": "month"
+          "frequency": "month",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "board_from_family",
           "amount": 1000,
-          "frequency": "annual"
+          "frequency": "annual",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "from_friends_relatives",
           "amount": 50,
-          "frequency": "week"
+          "frequency": "week",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "rent",
           "amount": 310,
-          "frequency": "month"
+          "frequency": "month",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "financial_support_with_access",
           "amount": 80,
-          "frequency": "month"
+          "frequency": "month",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "from_friends_relatives",
           "amount": 390,
-          "frequency": "month"
+          "frequency": "month",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "other",
           "amount": 250,
           "frequency": "month",
-          "details": "Details of the other payment"
+          "details": "Details of the other payment",
+          "ownership_type": "applicant"
+        },
+        {
+          "payment_type": "rent",
+          "amount": 150,
+          "frequency": "month",
+          "ownership_type": "partner"
         }
       ],
       "income_benefits": [
         {
           "payment_type": "child",
           "amount": 100,
-          "frequency": "week"
+          "frequency": "week",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "working_or_child_tax_credit",
           "amount": 160,
-          "frequency": "fortnight"
+          "frequency": "fortnight",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "incapacity",
           "amount": 400,
-          "frequency": "four_weeks"
+          "frequency": "four_weeks",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "industrial_injuries_disablement",
           "amount": 400,
-          "frequency": "month"
+          "frequency": "month",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "jsa",
           "amount": 400,
-          "frequency": "annual"
+          "frequency": "annual",
+          "ownership_type": "applicant"
         },
         {
           "payment_type": "other",
           "amount": 800,
           "frequency": "month",
-          "details": "Details of the other benefit"
+          "details": "Details of the other benefit",
+          "ownership_type": "applicant"
+        },
+        {
+          "payment_type": "working_or_child_tax_credit",
+          "amount": 1532,
+          "frequency": "month",
+          "ownership_type": "partner"
         }
       ],
       "total": 1000,
@@ -153,27 +206,32 @@
         {
           "payment_type": "rent",
           "amount": 700,
-          "frequency": "month"
+          "frequency": "month",
+          "ownership_type": "applicant_and_partner"
         },
         {
           "payment_type": "council_tax",
           "amount": 1000,
-          "frequency": "annual"
+          "frequency": "annual",
+          "ownership_type": "applicant_and_partner"
         },
         {
           "payment_type": "childcare",
           "amount": 100,
-          "frequency": "month"
+          "frequency": "month",
+          "ownership_type": "applicant_and_partner"
         },
         {
           "payment_type": "maintenance",
           "amount": 250,
-          "frequency": "month"
+          "frequency": "month",
+          "ownership_type": "applicant_and_partner"
         },
         {
           "payment_type": "legal_aid_contribution",
           "amount": 100,
           "frequency": "month",
+          "ownership_type": "applicant_and_partner",
           "metadata": {
             "case_reference": "6300928"
           }
@@ -183,6 +241,8 @@
     "capital_details": {
       "premium_bonds_total_value":100000000,
       "trust_fund_amount_held":500000,
+      "partner_premium_bonds_total_value":null,
+      "partner_trust_fund_amount_held":null,
       "savings":[
         {
           "saving_type":"bank",

@@ -48,6 +48,13 @@
                   "annual"
                 ]
               },
+              "ownership_type":{
+                "type":"string",
+                "enum":[
+                  "applicant",
+                  "partner"
+                ]
+              },
               "metadata":{
                 "type":"object",
                 "properties":{
@@ -68,11 +75,21 @@
             "required":[
               "payment_type",
               "amount",
-              "frequency"
+              "frequency",
+              "ownership_type"
             ]
           }
         },
         "employment_type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "employed", "self-employed", "business_partnership", "director", "shareholder", "not_working"
+            ]
+          }
+        },
+        "partner_employment_type": {
           "type": "array",
           "items": {
             "type": "string",
@@ -115,6 +132,28 @@
           ]
         },
         "has_no_income_benefits":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
+        "partner_has_no_income_payments":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
+        "partner_has_no_income_benefits":{
           "anyOf":[
             {
               "type":"null"
@@ -360,6 +399,13 @@
                   "annual"
                 ]
               },
+              "ownership_type":{
+                "type":"string",
+                "enum":[
+                  "applicant",
+                  "partner"
+                ]
+              },
               "metadata":{
                 "type":"object",
                 "properties":{
@@ -380,7 +426,8 @@
             "required":[
               "payment_type",
               "amount",
-              "frequency"
+              "frequency",
+              "ownership_type"
             ]
           }
         },
@@ -433,9 +480,15 @@
         "has_premium_bonds": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "premium_bonds_total_value":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "premium_bonds_holder_number":{"anyOf":[{ "type":"null" }, { "type":"string" }]},
+        "partner_has_premium_bonds": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+        "partner_premium_bonds_total_value":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
+        "partner_premium_bonds_holder_number":{"anyOf":[{ "type":"null" }, { "type":"string" }]},
         "will_benefit_from_trust_fund":{"type":"string", "enum": ["yes", "no"]},
         "trust_fund_amount_held":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "trust_fund_yearly_dividend":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
+        "partner_will_benefit_from_trust_fund":{ "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+        "partner_trust_fund_amount_held":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
+        "partner_trust_fund_yearly_dividend":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "has_frozen_income_or_assets": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "has_no_savings": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "has_no_properties": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
@@ -493,6 +546,13 @@
                   "annual"
                 ]
               },
+              "ownership_type":{
+                "type":"string",
+                "enum":[
+                  "applicant",
+                  "applicant_and_partner"
+                ]
+              },
               "metadata":{
                 "type":"object",
                 "properties":{
@@ -509,7 +569,8 @@
             "required":[
               "payment_type",
               "amount",
-              "frequency"
+              "frequency",
+              "ownership_type"
             ]
           }
         },
@@ -525,6 +586,17 @@
           ]
         },
         "income_tax_rate_above_threshold":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
+        "partner_income_tax_rate_above_threshold":{
           "anyOf":[
             {
               "type":"null"

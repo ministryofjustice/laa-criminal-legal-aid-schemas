@@ -24,6 +24,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
             expect(income_payment.payment_type).to eq 'other'
             expect(income_payment.amount).to eq 2500
             expect(income_payment.frequency).to eq 'annual'
+            expect(income_payment.ownership_type).to eq 'applicant'
             expect(income_payment.metadata.details).to eq 'Book royalty'
           end
         end
@@ -35,6 +36,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
             expect(income_benefit.payment_type).to eq 'child'
             expect(income_benefit.amount).to eq 3990
             expect(income_benefit.frequency).to eq 'month'
+            expect(income_benefit.ownership_type).to eq 'applicant'
             expect(income_benefit.metadata).to be_a LaaCrimeSchemas::Structs::Amount::Metadata
           end
         end
@@ -45,6 +47,10 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
 
         it 'includes income_tax_rate_above_threshold' do
           expect(outgoings_details.income_tax_rate_above_threshold).to eq('no')
+        end
+
+        it 'includes partner_income_tax_rate_above_threshold' do
+          expect(outgoings_details.partner_income_tax_rate_above_threshold).to eq(nil)
         end
 
         it 'includes outgoings_more_than_income' do
@@ -60,6 +66,7 @@ RSpec.describe LaaCrimeSchemas::Structs::MeansDetails do
             expect(outgoing_payment_1.payment_type).to eq 'childcare'
             expect(outgoing_payment_1.amount).to eq 98281
             expect(outgoing_payment_1.frequency).to eq 'week'
+            expect(outgoing_payment_1.ownership_type).to eq 'applicant_and_partner'
           end
 
           it 'allows case reference' do

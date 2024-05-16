@@ -32,7 +32,31 @@
       "home_address": null,
       "correspondence_address": null,
       "residence_type": null,
-      "relationship_to_owner_of_usual_home_address": null
+      "relationship_to_owner_of_usual_home_address": null,
+      "has_partner": "yes",
+      "relationship_to_partner": "living_together",
+      "relationship_status": null,
+      "separation_date": null
+    },
+    "partner": {
+      "first_name": "Jennifer",
+      "last_name": "Holland",
+      "other_names": "Diane",
+      "nino": "AB123456C",
+      "benefit_type": null,
+      "last_jsa_appointment_date": null,
+      "date_of_birth": "2001-12-23",
+      "home_address": {
+        "lookup_id": null,
+        "address_line_one": "1 Road",
+        "address_line_two": "Village",
+        "city": "Some nice city",
+        "country": "United Kingdom",
+        "postcode": "SW1A 2AA"
+      },
+      "involvement_in_case": "codefendant",
+      "conflict_of_interest": "no",
+      "has_same_address_as_client": "no"
     }
   },
   "case_details": {
@@ -79,6 +103,7 @@
   "means_details": {
     "income_details": {
       "employment_type": ["not_working"],
+      "partner_employment_type": ["not_working"],
       "ended_employment_within_three_months": "no",
       "income_above_threshold": "yes",
       "has_no_income_payments": "yes",
@@ -88,6 +113,7 @@
     },
     "outgoings_details": {
       "income_tax_rate_above_threshold": "yes",
+      "partner_income_tax_rate_above_threshold": null,
       "outgoings_more_than_income": null,
       "how_manage": "Somehow they managed",
       "has_no_other_outgoings": "yes"

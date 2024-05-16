@@ -51,7 +51,7 @@ module LaaCrimeSchemas
       someone_else
       none
     ].freeze
-    ResidenceType = String.enum(*BENEFIT_TYPES)
+    ResidenceType = String.enum(*RESIDENCE_TYPES)
 
     CORRESPONDENCE_ADDRESS_TYPES = %w[
       other_address
@@ -244,18 +244,22 @@ module LaaCrimeSchemas
                               other
                             ])
 
-    RelationshipType = String.enum(*%w[
-                                     business_associates
-                                     ex_partner
-                                     family_members
-                                     friends
-                                     house_builder
-                                     housing_association
-                                     local_authority
-                                     partner_with_a_contrary_interest
-                                     property_company
-                                     other
-                                   ])
+    PropertyRelationshipType = String.enum(*%w[
+                                             business_associates
+                                             ex_partner
+                                             family_members
+                                             friends
+                                             house_builder
+                                             housing_association
+                                             local_authority
+                                             partner_with_a_contrary_interest
+                                             property_company
+                                             other
+                                           ])
+
+    CaseInvolvement = String.enum(*%w[victim prosecution_witness codefendant no_involvement])
+    RelationshipStatus = String.enum(*%w[single widowed divorced separated prefer_not_to_say])
+    RelationshipType = String.enum(*%w[married_or_partnership living_together prefer_not_to_say])
   end
 end
 # rubocop:enable Metrics/ModuleLength
