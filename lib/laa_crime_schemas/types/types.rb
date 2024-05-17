@@ -185,7 +185,7 @@ module LaaCrimeSchemas
     OFFENCE_CLASSES = %w[A K G B I J D C H F E].freeze
     OffenceClass = String.enum(*OFFENCE_CLASSES)
 
-    OwnershipType = String.enum(*%w[applicant applicant_and_partner partner])
+    OwnershipType = String.default('applicant').enum(*%w[applicant applicant_and_partner partner])
 
     EmploymentType = String.enum(*%w[employed self-employed business_partnership director shareholder not_working])
 

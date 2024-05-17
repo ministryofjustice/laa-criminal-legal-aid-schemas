@@ -36,10 +36,7 @@
       },
       "correspondence_address": null,
       "residence_type": null,
-      "has_partner": "yes",
-      "relationship_to_partner": "living_together",
-      "relationship_status": null,
-      "separation_date": null
+      "has_partner": "yes"
     },
     "partner": {
       "first_name": "Jennifer",
@@ -49,17 +46,8 @@
       "benefit_type": null,
       "last_jsa_appointment_date": null,
       "date_of_birth": "2001-12-23",
-      "home_address": {
-        "lookup_id": null,
-        "address_line_one": "53 Road",
-        "address_line_two": "Street",
-        "city": "Another nice city",
-        "country": "United Kingdom",
-        "postcode": "W1 2AA"
-      },
       "involvement_in_case": "codefendant",
-      "conflict_of_interest": "no",
-      "has_same_address_as_client": "no"
+      "conflict_of_interest": "no"
     }
   },
   "case_details": {
