@@ -22,9 +22,6 @@
       "first_name": "Kit",
       "last_name": "Pound",
       "other_names": "",
-      "nino": "AJ123456C",
-      "benefit_type": "universal_credit",
-      "last_jsa_appointment_date": null,
       "date_of_birth": "2001-06-09",
       "telephone_number": "07771231231",
       "correspondence_address_type": "home_address",
@@ -42,7 +39,16 @@
       "has_partner": "yes",
       "relationship_to_partner": "living_together",
       "relationship_status": null,
-      "separation_date": null
+      "separation_date": null,
+      "has_nino": "yes",
+      "nino": "AJ123456C",
+      "benefit_type": "universal_credit",
+      "last_jsa_appointment_date": null,
+      "passporting_benefit": false,
+      "confirm_dwp_result": "no",
+      "confirm_details": "yes",
+      "has_benefit_evidence": "no",
+      "will_enter_nino": null
     },
     "partner": {
       "first_name": "Jennifer",
