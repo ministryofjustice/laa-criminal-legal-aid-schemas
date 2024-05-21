@@ -38,7 +38,7 @@
       "nino": "NC010155A",
       "benefit_type": "universal_credit",
       "last_jsa_appointment_date": null,
-      "passporting_benefit": false,
+      "benefit_check_result": false,
       "confirm_dwp_result": "no",
       "confirm_details": "yes",
       "has_benefit_evidence": "no",

@@ -21,7 +21,7 @@
     "relationship_to_partner": {"type": ["string", "null"], "enum": ["married_or_partnership", "living_together", "prefer_not_to_say", null] },
     "separation_date": { "type": ["string", "null"], "format": "date" },
     "relationship_status": {"type": ["string", "null"], "enum": ["single", "widowed", "divorced", "separated", "prefer_not_to_say", null] },
-    "passporting_benefit": { "anyOf": [{"type": "null"}, {"type": "boolean"}]},
+    "benefit_check_result": { "anyOf": [{"type": "null"}, {"type": "boolean"}]},
     "has_benefit_evidence": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "will_enter_nino": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "confirm_dwp_result": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
