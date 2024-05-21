@@ -19,6 +19,7 @@ module LaaCrimeSchemas
       attribute? :has_benefit_evidence, Types::String.optional
       attribute? :will_enter_nino, Types::String.optional
       attribute? :confirm_details, Types::String.optional
+      attribute? :confirm_dwp_result, Types::String.optional
 
       attribute? :has_partner, Types::String.optional
       attribute? :relationship_to_partner, Types::RelationshipType.optional
