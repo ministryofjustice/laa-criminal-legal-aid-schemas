@@ -6,7 +6,7 @@ module LaaCrimeSchemas
       attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
       attribute? :means_passport, Types::Array.of(Types::MeansPassportType).default([].freeze)
 
-      attribute :provider_details, ProviderDetails
+      attribute? :provider_details, ProviderDetails
 
       attribute :client_details, Base do
         attribute :applicant, Applicant
