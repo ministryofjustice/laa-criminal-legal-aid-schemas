@@ -26,6 +26,7 @@ module LaaCrimeSchemas
       submitted
       returned
       superseded
+      in_progress
     ].freeze
     ApplicationStatus = String.enum(*APPLICATION_STATUSES)
 
