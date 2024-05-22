@@ -71,8 +71,7 @@
             "required":[
               "payment_type",
               "amount",
-              "frequency",
-              "ownership_type"
+              "frequency"
             ]
           }
         },
@@ -135,8 +134,7 @@
             "required":[
               "payment_type",
               "amount",
-              "frequency",
-              "ownership_type"
+              "frequency"
             ]
           }
         },
@@ -383,8 +381,7 @@
             "required":[
               "payment_type",
               "amount",
-              "frequency",
-              "ownership_type"
+              "frequency"
             ]
           }
         }
