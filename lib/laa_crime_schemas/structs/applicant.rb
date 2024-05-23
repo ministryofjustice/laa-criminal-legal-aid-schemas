@@ -16,6 +16,7 @@ module LaaCrimeSchemas
       attribute? :relationship_to_owner_of_usual_home_address, Types::String.optional
 
       attribute? :benefit_check_result, Types::Bool.optional
+      attribute? :benefit_check_status, Types::BenefitCheckStatus.optional
       attribute? :has_benefit_evidence, Types::String.optional
       attribute? :will_enter_nino, Types::String.optional
       attribute? :confirm_details, Types::String.optional
