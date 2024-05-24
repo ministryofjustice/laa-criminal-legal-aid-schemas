@@ -23,9 +23,6 @@
       "first_name": "John",
       "last_name": "POTTER",
       "other_names": "",
-      "nino": "NC010155A",
-      "benefit_type": "universal_credit",
-      "last_jsa_appointment_date": null,
       "date_of_birth": "2007-01-01",
       "telephone_number": "",
       "correspondence_address_type": "providers_office_address",
@@ -36,7 +33,17 @@
       "has_partner": "yes",
       "relationship_to_partner": "living_together",
       "relationship_status": null,
-      "separation_date": null
+      "separation_date": null,
+      "has_nino": "yes",
+      "nino": "NC010155A",
+      "benefit_type": "universal_credit",
+      "last_jsa_appointment_date": null,
+      "benefit_check_result": false,
+      "benefit_check_status": "no_record_found",
+      "confirm_dwp_result": "no",
+      "confirm_details": "yes",
+      "has_benefit_evidence": "no",
+      "will_enter_nino": null
     },
     "partner": {
       "first_name": "Jennifer",
