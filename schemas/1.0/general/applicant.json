@@ -7,6 +7,7 @@
   "allOf": [{ "$ref": "#/definitions/person" }],
   "properties": {
     "date_of_birth": { "type": "string", "format": "date" },
+    "has_nino": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "nino": { "type": ["string", "null"] },
     "benefit_type": {"type": ["string", "null"], "enum": ["universal_credit", "guarantee_pension", "jsa", "esa", "income_support", "none", null] },
     "last_jsa_appointment_date": { "type": ["string", "null"], "format": "date" },
@@ -19,7 +20,13 @@
     "has_partner":{ "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "relationship_to_partner": {"type": ["string", "null"], "enum": ["married_or_partnership", "living_together", "prefer_not_to_say", null] },
     "separation_date": { "type": ["string", "null"], "format": "date" },
-    "relationship_status": {"type": ["string", "null"], "enum": ["single", "widowed", "divorced", "separated", "prefer_not_to_say", null] }
+    "relationship_status": {"type": ["string", "null"], "enum": ["single", "widowed", "divorced", "separated", "prefer_not_to_say", null] },
+    "benefit_check_status": {"type": ["string", "null"], "enum": ["no_check_no_nino", "undetermined", "no_record_found", "no_check_required", "checker_unavailable", "confirmed", null] },
+    "benefit_check_result": { "anyOf": [{"type": "null"}, {"type": "boolean"}]},
+    "has_benefit_evidence": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+    "will_enter_nino": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+    "confirm_dwp_result": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+    "confirm_details": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]}
   },
   "required": [
     "date_of_birth", "nino", "telephone_number", "correspondence_address_type",
