@@ -10,6 +10,7 @@ module LaaCrimeSchemas
 
       attribute :client_details, Base do
         attribute :applicant, Applicant
+        attribute :partner, Partner
       end
 
       attribute? :case_details, CaseDetails
