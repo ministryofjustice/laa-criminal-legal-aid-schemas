@@ -13,10 +13,6 @@
     "applicant": {
       "first_name": "John",
       "last_name": "Doe"
-    },
-    "partner": {
-      "first_name": "Roger",
-      "last_name": "Rarebit"
     }
   }
 }
