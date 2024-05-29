@@ -88,6 +88,10 @@
             ]
           }
         },
+        "employments": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/employment" }
+        },
         "partner_employment_type": {
           "type": "array",
           "items": {
@@ -655,6 +659,7 @@
     "saving": { "$ref": "general/saving.json" },
     "investment": { "$ref": "general/investment.json" },
     "property": { "$ref": "general/property.json" },
+    "employment": { "$ref": "general/employment.json" },
     "national_savings_certificate": { "$ref": "general/national_savings_certificate.json" }
   }
 }

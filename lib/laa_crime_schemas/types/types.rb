@@ -190,6 +190,8 @@ module LaaCrimeSchemas
 
     EmploymentType = String.enum(*%w[employed self-employed business_partnership director shareholder not_working])
 
+    DeductionType = String.enum(*%w[income_tax national_insurance other])
+
     DependantAge = Integer.constrained(lt: 18)
 
     # `awaiting` before a file has been scanned
