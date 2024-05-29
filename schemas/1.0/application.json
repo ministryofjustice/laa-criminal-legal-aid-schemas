@@ -34,7 +34,7 @@
       "type": "object",
       "properties": {
         "applicant": { "$ref": "#/definitions/applicant" },
-        "partner": { "anyOf": [ { "$ref": "#/definitions/partner" }, { "type": "null" } ] }
+        "partner": { "anyOf": [{ "$ref": "#/definitions/partner" }, { "type": "null" }] }
       },
       "required": ["applicant"]
     },
