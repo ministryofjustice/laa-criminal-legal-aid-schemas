@@ -25,6 +25,8 @@
                   "rent",
                   "financial_support_with_access",
                   "from_friends_relatives",
+                  "employment",
+                  "work_benefits",
                   "other"
                 ]
               },
@@ -342,7 +344,8 @@
                   "council_tax",
                   "childcare",
                   "maintenance",
-                  "legal_aid_contribution"
+                  "legal_aid_contribution",
+                  "self_assessment_tax_bill"
                 ]
               },
               "amount":{

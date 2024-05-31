@@ -90,6 +90,8 @@ module LaaCrimeSchemas
       rent
       financial_support_with_access
       from_friends_relatives
+      employment
+      work_benefits
       other
     ].freeze
     IncomePaymentType = String.enum(*INCOME_PAYMENT_TYPES)
@@ -113,6 +115,7 @@ module LaaCrimeSchemas
                                   childcare
                                   maintenance
                                   legal_aid_contribution
+                                  self_assessment_tax_bill
                                 ])
 
     HOUSING_PAYMENT_TYPES = %w[
