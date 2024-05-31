@@ -96,13 +96,15 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
       let(:key) { 'will_benefit_from_trust_fund' }
       subject(:value) { struct.send(key) }
 
-      context 'when nil' do
+      # :nocov:
+      context 'when nil', skip: 'CRIMAPP-973 Apply submitting null' do
         let(:attributes) { super().merge(key => nil) }
 
-        it 'raises an error', skip: 'CRIMAPP-973 Apply submitting null' do
+        it 'raises an error' do
           expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
         end
       end
+      # :nocov:
 
       context 'when not a yes/no' do
         let(:attributes) { super().merge('will_benefit_from_trust_fund' => 'NotYesOrNo') }
