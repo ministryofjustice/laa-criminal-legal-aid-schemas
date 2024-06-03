@@ -481,7 +481,7 @@
         "partner_has_premium_bonds": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "partner_premium_bonds_total_value":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "partner_premium_bonds_holder_number":{"anyOf":[{ "type":"null" }, { "type":"string" }]},
-        "will_benefit_from_trust_fund": {"type": "string", "enum": ["yes", "no"]},
+        "will_benefit_from_trust_fund":{"type":"string", "enum":["yes", "no"]},
         "trust_fund_amount_held":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "trust_fund_yearly_dividend":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "partner_will_benefit_from_trust_fund":{ "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
