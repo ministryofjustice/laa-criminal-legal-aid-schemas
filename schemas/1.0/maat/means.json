@@ -145,7 +145,7 @@
           "items":{
             "type":"string",
             "enum":[
-              "employed", "self-employed", "business_partnership", "director", "shareholder", "not_working"
+              "employed", "self_employed", "self-employed", "business_partnership", "director", "shareholder", "not_working"
             ]
           }
         },
@@ -154,7 +154,7 @@
           "items":{
             "type":"string",
             "enum":[
-              "employed", "self-employed", "business_partnership", "director", "shareholder", "not_working"
+              "employed", "self_employed", "self-employed", "business_partnership", "director", "shareholder", "not_working"
             ]
           }
         },

@@ -20,6 +20,7 @@ module LaaCrimeSchemas
       attribute? :has_no_income_benefits, Types::YesNoValue.optional
       attribute? :partner_has_no_income_payments, Types::YesNoValue.optional
       attribute? :partner_has_no_income_benefits, Types::YesNoValue.optional
+      attribute? :employments, Types::Array.of(Employment).default([].freeze)
 
       attribute? :employment_details do
         attribute :paye, Types::Array.of(Base) do
