@@ -11,7 +11,7 @@ module LaaCrimeSchemas
       attribute? :partner_premium_bonds_total_value, Types::PenceSterling.optional
       attribute? :partner_premium_bonds_holder_number, Types::String.optional
 
-      attribute? :will_benefit_from_trust_fund, Types::YesNoValue
+      attribute? :will_benefit_from_trust_fund, Types::YesNoValue.optional
       attribute? :trust_fund_amount_held, Types::PenceSterling.optional
       attribute? :trust_fund_yearly_dividend, Types::PenceSterling.optional
 

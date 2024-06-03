@@ -6,7 +6,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
   let(:attributes) do
     JSON.parse(file_fixture(valid_fixture).read).fetch('capital_details')
   end
-  
+
   describe '.new' do
     context 'with valid capital details from fixture' do
       it 'builds the capital details struct' do
@@ -32,13 +32,13 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
 
         it { is_expected.to be 123100 }
       end
-      
+
       context 'when nil' do
         let(:attributes) { super().merge(key => nil) }
 
         it { is_expected.to be nil }
       end
-    
+
       context 'when not an integer' do
         let(:attributes) { super().merge(key => '1231.00') }
 
@@ -47,7 +47,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
         end
       end
     end
-    
+
     describe '#premium_bonds_holder_number' do
       let(:key) { 'premium_bonds_holder_number' }
       subject(:value) { struct.send(key) }
@@ -57,7 +57,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
 
         it { is_expected.to be nil }
       end
-    
+
       context 'when a string' do
         let(:attributes) { super().merge(key => '001210') }
 
@@ -96,11 +96,12 @@ RSpec.describe LaaCrimeSchemas::Structs::CapitalDetails do
       let(:key) { 'will_benefit_from_trust_fund' }
       subject(:value) { struct.send(key) }
 
+      # NOTE: Corresponding JSON Schema field does not allow `null`
       context 'when nil' do
         let(:attributes) { super().merge(key => nil) }
 
-        it 'raises an error' do
-          expect { subject }.to raise_error(Dry::Struct::Error, /#{key}/)
+        it 'does not raise an error' do
+          expect { subject }.not_to raise_error(Dry::Struct::Error, /#{key}/)
         end
       end
 
