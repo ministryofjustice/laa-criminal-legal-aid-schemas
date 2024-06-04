@@ -19,7 +19,7 @@ module LaaCrimeSchemas
         attribute? :payee_relationship_to_client, Types::String.optional
 
         # Used by employment
-        attribute? :before_or_after_tax, Types::Hash.optional
+        attribute? :before_or_after_tax, Types::String.optional
       end
     end
   end
