@@ -56,8 +56,6 @@
       "last_name": "Holland",
       "other_names": "Diane",
       "nino": "AB123456C",
-      "benefit_type": null,
-      "last_jsa_appointment_date": null,
       "date_of_birth": "2001-12-23",
       "home_address": {
         "lookup_id": null,
@@ -67,6 +65,14 @@
         "country": "United Kingdom",
         "postcode": "W1 2AA"
       },
+      "benefit_type": null,
+      "last_jsa_appointment_date": null,
+      "benefit_check_result": null,
+      "benefit_check_status": null,
+      "confirm_dwp_result": null,
+      "confirm_details": null,
+      "has_benefit_evidence": null,
+      "will_enter_nino": null,
       "involvement_in_case": "codefendant",
       "conflict_of_interest": "no",
       "has_same_address_as_client": "no"
