@@ -17,6 +17,7 @@ RSpec.describe LaaCrimeSchemas::Structs::Saving do
         expect(subject.account_balance).to eq(200)
         expect(subject.is_overdrawn).to eq('yes')
         expect(subject.are_wages_paid_into_account).to eq('yes')
+        expect(subject.are_partners_wages_paid_into_account).to be_nil
         expect(subject.ownership_type).to eq('applicant')
       end
     end

@@ -479,7 +479,13 @@
                   "yes",
                   "no"
                 ]
-              }
+              },
+	      "are_partners_wages_paid_into_account": {
+                "anyOf": [
+                  { "type": "string", "enum": ["yes", "no"] },
+		  { "type":"null" }
+		]
+	      }
             },
             "required":[
               "saving_type",

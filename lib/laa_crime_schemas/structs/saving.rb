@@ -10,6 +10,7 @@ module LaaCrimeSchemas
       attribute :account_number, Types::String
       attribute :is_overdrawn, Types::YesNoValue
       attribute :are_wages_paid_into_account, Types::YesNoValue
+      attribute? :are_partners_wages_paid_into_account, Types::YesNoValue.optional
       attribute :ownership_type, Types::OwnershipType
     end
   end
