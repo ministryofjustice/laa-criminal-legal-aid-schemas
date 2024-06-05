@@ -195,7 +195,7 @@ module LaaCrimeSchemas
 
     OwnershipType = String.default('applicant').enum(*%w[applicant applicant_and_partner partner])
 
-    EmploymentType = String.enum(*%w[employed self_employed business_partnership director shareholder not_working])
+    EmploymentType = String.enum(*%w[employed self_employed not_working])
 
     DeductionType = String.enum(*%w[income_tax national_insurance other])
 
