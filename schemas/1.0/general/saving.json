@@ -12,6 +12,7 @@
     "account_number": { "type": "string" },
     "is_overdrawn": { "type": "string", "enum": ["yes", "no"] },
     "are_wages_paid_into_account": { "type": "string", "enum": ["yes", "no"] },
+    "are_partners_wages_paid_into_account": { "anyOf": [{ "type": "string", "enum": ["yes", "no"] }, { "type":"null" }] },
     "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] }
   },
   "required": ["saving_type", "provider_name", "account_balance", "sort_code", "account_number", "is_overdrawn", "are_wages_paid_into_account", "ownership_type"]

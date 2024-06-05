@@ -90,9 +90,13 @@ module LaaCrimeSchemas
       rent
       financial_support_with_access
       from_friends_relatives
+      employment
+      work_benefits
       other
     ].freeze
     IncomePaymentType = String.enum(*INCOME_PAYMENT_TYPES)
+
+    EmploymentIncomePaymentType = String.enum(*%w[employment work_benefits])
 
     # NOTE: maintain order as per designs when editing this list
     INCOME_BENEFIT_TYPES = %w[
@@ -113,7 +117,10 @@ module LaaCrimeSchemas
                                   childcare
                                   maintenance
                                   legal_aid_contribution
+                                  self_assessment_tax_bill
                                 ])
+
+    EmploymentOutgoingsType = String.enum(*%w[self_assessment_tax_bill])
 
     HOUSING_PAYMENT_TYPES = %w[
       rent
@@ -188,7 +195,9 @@ module LaaCrimeSchemas
 
     OwnershipType = String.default('applicant').enum(*%w[applicant applicant_and_partner partner])
 
-    EmploymentType = String.enum(*%w[employed self-employed business_partnership director shareholder not_working])
+    EmploymentType = String.enum(*%w[employed self_employed not_working])
+
+    DeductionType = String.enum(*%w[income_tax national_insurance other])
 
     DependantAge = Integer.constrained(lt: 18)
 

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/employment.json",
+  "title": "Employment",
+  "description": "Holds attributes of a employment",
+  "type": "object",
+  "employments": {
+    "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] },
+    "employer_name": { "type": ["string"] },
+    "job_title": { "type": ["string"] },
+    "has_no_deductions": { "type": ["string", "null"], "enum": ["yes", "no", null] },
+    "amount": { "type": "integer" },
+    "frequency": { "type": "string" },
+    "address": { "type": ["object"]},
+    "metadata": { "type": ["object"]},
+    "deductions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/deduction" }
+    }
+  },
+  "required": ["ownership_type", "employer_name", "job_title", "has_no_deductions", "amount", "frequency", "address", "metadata"],
+  "definitions": {
+    "deduction": { "$ref": "deduction.json" }
+  }
+}

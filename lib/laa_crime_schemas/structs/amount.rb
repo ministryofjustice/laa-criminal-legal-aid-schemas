@@ -17,6 +17,9 @@ module LaaCrimeSchemas
         attribute? :food_amount, Types::PenceSterling
         attribute? :payee_name, Types::String.optional
         attribute? :payee_relationship_to_client, Types::String.optional
+
+        # Used by employment
+        attribute? :before_or_after_tax, Types::Hash.optional
       end
     end
   end

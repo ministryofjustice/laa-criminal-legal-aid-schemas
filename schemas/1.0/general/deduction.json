@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/deduction.json",
+  "title": "Deduction",
+  "description": "Holds attributes of a deduction",
+  "type": "object",
+  "properties": {
+    "deduction_type": { "type": ["string"], "enum": ["income_tax", "national_insurance", "other"] },
+    "amount": { "type": "integer" },
+    "frequency": { "type": "string" },
+    "details": { "type": ["string", "null"] }
+  },
+  "required": ["deduction_type", "amount", "frequency", "details"]
+}
