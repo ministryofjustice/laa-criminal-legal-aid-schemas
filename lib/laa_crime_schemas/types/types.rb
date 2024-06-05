@@ -96,6 +96,8 @@ module LaaCrimeSchemas
     ].freeze
     IncomePaymentType = String.enum(*INCOME_PAYMENT_TYPES)
 
+    EmploymentIncomePaymentType = String.enum(*%w[employment work_benefits])
+
     # NOTE: maintain order as per designs when editing this list
     INCOME_BENEFIT_TYPES = %w[
       child
@@ -117,6 +119,8 @@ module LaaCrimeSchemas
                                   legal_aid_contribution
                                   self_assessment_tax_bill
                                 ])
+
+    EmploymentOutgoingsType = String.enum(*%w[self_assessment_tax_bill])
 
     HOUSING_PAYMENT_TYPES = %w[
       rent
