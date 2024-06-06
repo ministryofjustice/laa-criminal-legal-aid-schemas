@@ -80,7 +80,7 @@ module LaaCrimeSchemas
     FirstHearingAnswerValues = String.enum(*FIRST_HEARING_ANSWER_VALUES)
 
     # NOTE: maintain order as per designs when editing this list
-    INCOME_PAYMENT_TYPES = %w[
+    OTHER_INCOME_PAYMENT_TYPES = %w[
       maintenance
       private_pension
       state_pension
@@ -90,13 +90,18 @@ module LaaCrimeSchemas
       rent
       financial_support_with_access
       from_friends_relatives
-      employment
-      work_benefits
       other
     ].freeze
-    IncomePaymentType = String.enum(*INCOME_PAYMENT_TYPES)
+    OtherIncomePaymentType = String.enum(*OTHER_INCOME_PAYMENT_TYPES)
 
-    EmploymentIncomePaymentType = String.enum(*%w[employment work_benefits])
+    EMPLOYMENT_INCOME_PAYMENT_TYPES = %w[
+      employment
+      work_benefits
+    ].freeze
+    EmploymentIncomePaymentType = String.enum(*EMPLOYMENT_INCOME_PAYMENT_TYPES)
+
+    INCOME_PAYMENT_TYPES = (OTHER_INCOME_PAYMENT_TYPES + EMPLOYMENT_INCOME_PAYMENT_TYPES).freeze
+    IncomePaymentType = String.enum(*INCOME_PAYMENT_TYPES)
 
     # NOTE: maintain order as per designs when editing this list
     INCOME_BENEFIT_TYPES = %w[
@@ -109,18 +114,24 @@ module LaaCrimeSchemas
     ].freeze
     IncomeBenefitType = String.enum(*INCOME_BENEFIT_TYPES)
 
-    OutgoingsType = String.enum(*%w[
-                                  rent
-                                  mortgage
-                                  board_and_lodging
-                                  council_tax
-                                  childcare
-                                  maintenance
-                                  legal_aid_contribution
-                                  self_assessment_tax_bill
-                                ])
+    OTHER_OUTGOINGS_PAYMENT_TYPES = %w[
+      rent
+      mortgage
+      board_and_lodging
+      council_tax
+      childcare
+      maintenance
+      legal_aid_contribution
+    ].freeze
+    OtherOutgoingsPaymentType = String.enum(*OTHER_OUTGOINGS_PAYMENT_TYPES)
 
-    EmploymentOutgoingsType = String.enum(*%w[self_assessment_tax_bill])
+    EMPLOYMENT_OUTGOINGS_PAYMENT_TYPES = %w[
+      self_assessment_tax_bill
+    ].freeze
+    EmploymentOutgoingsPaymentType = String.enum(*EMPLOYMENT_OUTGOINGS_PAYMENT_TYPES)
+
+    OUTGOINGS_PAYMENT_TYPES = (OTHER_OUTGOINGS_PAYMENT_TYPES + EMPLOYMENT_OUTGOINGS_PAYMENT_TYPES).freeze
+    OutgoingsType = String.enum(*OUTGOINGS_PAYMENT_TYPES)
 
     HOUSING_PAYMENT_TYPES = %w[
       rent
