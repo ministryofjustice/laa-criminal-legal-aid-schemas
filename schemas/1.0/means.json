@@ -145,6 +145,17 @@
             }
           ]
         },
+        "applicant_other_work_benefit_received":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
         "partner_has_no_income_payments":{
           "anyOf":[
             {
@@ -643,6 +654,17 @@
           ]
         },
         "has_no_other_outgoings":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
+        "applicant_self_assessment_tax_bill":{
           "anyOf":[
             {
               "type":"null"
