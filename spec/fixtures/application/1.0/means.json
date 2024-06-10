@@ -49,7 +49,8 @@
         "amount": 35000,
         "frequency": "annual",
         "ownership_type": "applicant",
-        "metadata": { "before_or_after_tax": { "value": "after_tax"} }
+        "metadata": { "before_or_after_tax": { "value": "after_tax"} },
+        "deductions": []
       }
     ],
     "partner_employment_type": [],
