@@ -517,6 +517,7 @@
                 "type":"string",
                 "enum":[
                   "applicant",
+                  "applicant_and_partner",
                   "partner"
                 ]
               },

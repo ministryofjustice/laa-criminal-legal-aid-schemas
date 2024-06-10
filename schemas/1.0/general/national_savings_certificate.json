@@ -8,7 +8,7 @@
     "holder_number": { "type": "string" },
     "certificate_number": { "type": "string" },
     "value": { "type": "integer" },
-    "ownership_type": { "type": ["string"], "enum": ["applicant", "partner"] }
+    "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] }
   },
   "required": ["value", "certificate_number", "holder_number", "ownership_type"]
 }
