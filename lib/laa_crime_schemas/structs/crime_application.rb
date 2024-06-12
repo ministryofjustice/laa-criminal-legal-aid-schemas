@@ -31,7 +31,7 @@ module LaaCrimeSchemas
 
       attribute? :additional_information, Types::String.optional
 
-      attribute? :is_partner_included_in_means_assessment, Types::String.optional
+      attribute? :is_partner_included_in_means_assessment, Types::Bool.optional
     end
   end
 end
