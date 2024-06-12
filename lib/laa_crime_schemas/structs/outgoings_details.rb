@@ -16,7 +16,6 @@ module LaaCrimeSchemas
       attribute? :how_manage, Types::String.optional
       attribute? :pays_council_tax, Types::YesNoValue.optional
       attribute? :has_no_other_outgoings, Types::YesNoValue.optional
-      attribute? :applicant_self_assessment_tax_bill, Types::YesNoValue.optional
     end
   end
 end
