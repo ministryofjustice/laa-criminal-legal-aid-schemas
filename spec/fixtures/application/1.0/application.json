@@ -402,5 +402,6 @@
       "scan_at": "2023-10-01 12:34:56"
     }
   ],
-  "work_stream": "criminal_applications_team"
+  "work_stream": "criminal_applications_team",
+  "is_partner_included_in_means_assessment": "no"
 }
