@@ -20,6 +20,9 @@ module LaaCrimeSchemas
       attribute? :has_no_income_benefits, Types::YesNoValue.optional
       attribute? :partner_has_no_income_payments, Types::YesNoValue.optional
       attribute? :partner_has_no_income_benefits, Types::YesNoValue.optional
+      attribute? :applicant_self_assessment_tax_bill, Types::YesNoValue.optional
+      attribute? :applicant_self_assessment_tax_bill_amount, Types::PenceSterling.optional
+      attribute? :applicant_self_assessment_tax_bill_frequency, Types::PaymentFrequency.optional
       attribute? :applicant_other_work_benefit_received, Types::YesNoValue.optional
       attribute? :employments, Types::Array.of(Employment).default([].freeze)
 
