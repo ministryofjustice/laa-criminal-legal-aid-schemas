@@ -25,6 +25,8 @@ module LaaCrimeSchemas
       attribute? :involvement_in_case, Types::CaseInvolvement.optional
       attribute? :conflict_of_interest, Types::YesNoValue.optional
       attribute? :has_same_address_as_client, Types::YesNoValue.optional
+
+      attribute? :is_included_in_means_assessment, Types::Bool.optional
     end
   end
 end
