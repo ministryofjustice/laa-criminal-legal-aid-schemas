@@ -53,9 +53,9 @@
         "deductions": []
       }
     ],
-    "applicant_self_assessment_tax_bill": "yes",
-    "applicant_self_assessment_tax_bill_amount": 55500,
-    "applicant_self_assessment_tax_bill_frequency": "fortnight",
+    "applicant_self_assessment_tax_bill": null,
+    "applicant_self_assessment_tax_bill_amount": null,
+    "applicant_self_assessment_tax_bill_frequency": null,
     "applicant_other_work_benefit_received": "no",
     "partner_employment_type": [],
     "ended_employment_within_three_months": "yes",
