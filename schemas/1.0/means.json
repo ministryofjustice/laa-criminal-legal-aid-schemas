@@ -156,17 +156,22 @@
             }
           ]
         },
-        "applicant_self_assessment_tax_bill_amount":{
-          "type":"integer"
-        },
-        "applicant_self_assessment_tax_bill_frequency":{
-          "type":"string",
-          "enum":[
-            "week",
-            "fortnight",
-            "four_weeks",
-            "month",
-            "annual"
+        "applicant_self_assessment_tax_bill_amount":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
+        "applicant_self_assessment_tax_bill_frequency": {
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum":[
+                "week",
+                "fortnight",
+                "four_weeks",
+                "month",
+                "annual"
+              ]
+            }
           ]
         },
         "applicant_other_work_benefit_received":{
