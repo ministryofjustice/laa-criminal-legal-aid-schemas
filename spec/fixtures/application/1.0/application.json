@@ -76,7 +76,7 @@
       "involvement_in_case": "codefendant",
       "conflict_of_interest": "no",
       "has_same_address_as_client": "no",
-      "is_partner_included_in_means_assessment": false
+      "is_included_in_means_assessment": false
     }
   },
   "case_details": {
