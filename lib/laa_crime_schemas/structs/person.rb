@@ -13,6 +13,8 @@ module LaaCrimeSchemas
       # future `partner`, and not all of them ask `other_names`,
       # thus the attribute presence is optional (and value too).
       attribute? :other_names, Types::String.optional
+
+      attribute? :is_included_in_means_assessment, Types::Bool.optional
     end
   end
 end

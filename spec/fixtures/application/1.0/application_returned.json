@@ -69,7 +69,8 @@
       "will_enter_nino": null,
       "involvement_in_case": "codefendant",
       "conflict_of_interest": "no",
-      "has_same_address_as_client": "no"
+      "has_same_address_as_client": "no",
+      "is_included_in_means_assessment": false
     }
   },
   "case_details": {
@@ -173,6 +174,5 @@
       "scan_at": "2023-10-01 12:10:00"
     }
   ],
-  "work_stream": "criminal_applications_team",
-  "is_partner_included_in_means_assessment": false
+  "work_stream": "criminal_applications_team"
 }

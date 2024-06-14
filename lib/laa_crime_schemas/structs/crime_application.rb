@@ -30,8 +30,6 @@ module LaaCrimeSchemas
       attribute? :work_stream, Types::WorkStreamType.optional
 
       attribute? :additional_information, Types::String.optional
-
-      attribute? :is_partner_included_in_means_assessment, Types::Bool.optional
     end
   end
 end

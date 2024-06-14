@@ -19,7 +19,8 @@
     "has_benefit_evidence": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "will_enter_nino": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "confirm_dwp_result": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
-    "confirm_details": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]}
+    "confirm_details": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+    "is_included_in_means_assessment": { "anyOf": [{"type": "null"}, {"type": "boolean"}]}
   },
   "required":[ "date_of_birth", "nino", "involvement_in_case" ],
   "definitions": {
