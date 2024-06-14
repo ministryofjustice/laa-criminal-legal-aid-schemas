@@ -244,9 +244,9 @@
       "dependants": [{"age": 1}, {"age":  5}],
       "manage_without_income": "other",
       "manage_other_details": "Another way they manage",
-      "applicant_self_assessment_tax_bill": null,
-      "applicant_self_assessment_tax_bill_amount": null,
-      "applicant_self_assessment_tax_bill_frequency": null,
+      "applicant_self_assessment_tax_bill": "yes",
+      "applicant_self_assessment_tax_bill_amount": 55500,
+      "applicant_self_assessment_tax_bill_frequency": "fortnight",
       "applicant_other_work_benefit_received": "no"
     },
     "outgoings_details": {
