@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/financial.json",
+  "title": "Financial",
+  "description": "Holds attributes of a financial",
+  "type": "object",
+  "properties": {
+    "financial_type": { "type": ["string"], "enum": ["turnover", "drawings", "profit"] },
+    "amount": { "type": "integer" },
+    "frequency": { "type": "string" }
+  },
+  "required": ["financial_type", "amount", "frequency"]
+}

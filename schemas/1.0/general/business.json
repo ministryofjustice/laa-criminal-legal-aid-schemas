@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/business.json",
+  "title": "Business",
+  "description": "Holds attributes of a business",
+  "type": "object",
+  "business": {
+    "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] },
+    "type": { "type": ["string"], "enum": ["self_employed", "partnership", "director_or_shareholder"] },
+    "trading_name": { "type": ["string"] },
+    "description": { "type": ["string"] },
+    "trading_date": { "type": "string", "format": "date" },
+    "address": { "type": ["object"]},
+    "has_additional_owners": { "type": "string", "enum": ["yes", "no"] },
+    "owners": { "type": ["string", "null"] },
+    "has_employees": { "type": "string", "enum": ["yes", "no"] },
+    "number_of_employees": { "type": ["integer", "null"] },
+    "salary": { "type": ["number", "null"] },
+    "total_income": { "type": ["number", "null"] },
+    "profit_share": { "type": ["number", "null"] },
+    "financials": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/financial" }
+    }
+  },
+  "required": ["ownership_type", "type", "trading_name", "description", "trading_date", "address", "has_additional_owners", "has_employees"],
+  "definitions": {
+    "financial": { "$ref": "financial.json" }
+  }
+}

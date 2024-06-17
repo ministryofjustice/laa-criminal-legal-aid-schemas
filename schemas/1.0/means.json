@@ -514,6 +514,10 @@
               "age"
             ]
           }
+        },
+        "businesses": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/business" }
         }
       },
       "required":[]
@@ -703,6 +707,7 @@
     "investment": { "$ref": "general/investment.json" },
     "property": { "$ref": "general/property.json" },
     "employment": { "$ref": "general/employment.json" },
+    "business": { "$ref": "general/business.json" },
     "national_savings_certificate": { "$ref": "general/national_savings_certificate.json" }
   }
 }
