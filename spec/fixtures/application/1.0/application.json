@@ -248,7 +248,8 @@
       "applicant_self_assessment_tax_bill": "yes",
       "applicant_self_assessment_tax_bill_amount": 55500,
       "applicant_self_assessment_tax_bill_frequency": "fortnight",
-      "applicant_other_work_benefit_received": "no"
+      "applicant_other_work_benefit_received": "no",
+      "businesses": []
     },
     "outgoings_details": {
       "housing_payment_type": "rent",
