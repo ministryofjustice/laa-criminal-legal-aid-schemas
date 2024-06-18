@@ -10,7 +10,7 @@
     "trading_name": { "type": ["string", "null"] },
     "description": { "type": ["string", "null"] },
     "trading_start_date": { "type": ["string", "null"], "format": "date" },
-    "address": { "type": ["object", "null"]},
+    "address": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/address" }] },
     "has_additional_owners": { "type": ["string", "null"], "enum": ["yes", "no", null] },
     "additional_owners": { "type": ["string", "null"] },
     "has_employees": { "type": ["string", "null"], "enum": ["yes", "no", null] },
@@ -18,9 +18,13 @@
     "salary": { "type": ["number", "null"] },
     "total_income_share_sales": { "type": ["number", "null"] },
     "percentage_profit_share": { "type": ["number", "null"] },
-    "turnover": { "type": ["object", "null"]},
-    "drawings": { "type": ["object", "null"]},
-    "profit": { "type": ["object", "null"]}
+    "turnover": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] },
+    "drawings": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] },
+    "profit": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] }
   },
-  "required": ["ownership_type", "business_type"]
+  "required": ["ownership_type", "business_type"],
+  "definitions": {
+    "address": { "$ref": "address.json" },
+    "amount": { "$ref": "amount.json" }
+  }
 }
