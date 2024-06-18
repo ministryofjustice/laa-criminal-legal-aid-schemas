@@ -7,21 +7,20 @@
   "businesses": {
     "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] },
     "business_type": { "type": ["string"], "enum": ["self_employed", "partnership", "director_or_shareholder"] },
-    "trading_name": { "type": ["string"] },
-    "description": { "type": ["string"] },
-    "trading_start_date": { "type": "string", "format": "date" },
-    "address": { "type": ["object"]},
-    "has_additional_owners": { "type": "string", "enum": ["yes", "no"] },
+    "trading_name": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] },
+    "trading_start_date": { "type": ["string", "null"], "format": "date" },
+    "address": { "type": ["object", "null"]},
+    "has_additional_owners": { "type": ["string", "null"], "enum": ["yes", "no", null] },
     "additional_owners": { "type": ["string", "null"] },
-    "has_employees": { "type": "string", "enum": ["yes", "no"] },
+    "has_employees": { "type": ["string", "null"], "enum": ["yes", "no", null] },
     "number_of_employees": { "type": ["integer", "null"] },
     "salary": { "type": ["number", "null"] },
     "total_income_share_sales": { "type": ["number", "null"] },
     "percentage_profit_share": { "type": ["number", "null"] },
-    "turnover": { "type": ["object"]},
-    "drawings": { "type": ["object"]},
-    "profit": { "type": ["object"]}
+    "turnover": { "type": ["object", "null"]},
+    "drawings": { "type": ["object", "null"]},
+    "profit": { "type": ["object", "null"]}
   },
-  "required": ["ownership_type", "business_type"],
-  "definitions": {}
+  "required": ["ownership_type", "business_type"]
 }
