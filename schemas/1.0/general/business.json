@@ -4,27 +4,24 @@
   "title": "Business",
   "description": "Holds attributes of a business",
   "type": "object",
-  "business": {
+  "businesses": {
     "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] },
-    "type": { "type": ["string"], "enum": ["self_employed", "partnership", "director_or_shareholder"] },
+    "business_type": { "type": ["string"], "enum": ["self_employed", "partnership", "director_or_shareholder"] },
     "trading_name": { "type": ["string"] },
     "description": { "type": ["string"] },
-    "trading_date": { "type": "string", "format": "date" },
+    "trading_start_date": { "type": "string", "format": "date" },
     "address": { "type": ["object"]},
     "has_additional_owners": { "type": "string", "enum": ["yes", "no"] },
-    "owners": { "type": ["string", "null"] },
+    "additional_owners": { "type": ["string", "null"] },
     "has_employees": { "type": "string", "enum": ["yes", "no"] },
     "number_of_employees": { "type": ["integer", "null"] },
     "salary": { "type": ["number", "null"] },
-    "total_income": { "type": ["number", "null"] },
-    "profit_share": { "type": ["number", "null"] },
-    "financials": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/financial" }
-    }
+    "total_income_share_sales": { "type": ["number", "null"] },
+    "percentage_profit_share": { "type": ["number", "null"] },
+    "turnover": { "type": ["object"]},
+    "drawings": { "type": ["object"]},
+    "profit": { "type": ["object"]}
   },
-  "required": ["ownership_type", "type", "trading_name", "description", "trading_date", "address", "has_additional_owners", "has_employees"],
-  "definitions": {
-    "financial": { "$ref": "financial.json" }
-  }
+  "required": ["ownership_type", "business_type"],
+  "definitions": {}
 }

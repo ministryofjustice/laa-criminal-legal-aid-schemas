@@ -53,6 +53,7 @@
         "deductions": []
       }
     ],
+    "businesses": [],
     "applicant_self_assessment_tax_bill": "yes",
     "applicant_self_assessment_tax_bill_amount": 55500,
     "applicant_self_assessment_tax_bill_frequency": "fortnight",
@@ -102,20 +103,7 @@
     ],
     "dependants": [{"age": 1}, {"age":  5}],
     "manage_without_income": "other",
-    "manage_other_details": "Another way they manage",
-    "employment_details": {
-      "paye": [
-        {
-          "amount": 1320000,
-          "date": "2023-10-30",
-          "deductions": []
-        }
-      ]
-    },
-    "self_employment_details": {
-      "businesses": []
-    },
-    "total": 1370380
+    "manage_other_details": "Another way they manage"
   },
   "outgoings_details": {
     "housing_payment_type": "rent",

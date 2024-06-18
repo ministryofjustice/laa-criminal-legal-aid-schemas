@@ -64,14 +64,6 @@
     "income_details": {
       "employment_type": ["not_working"],
       "partner_employment_type": ["not_working"],
-      "employment_details": {
-        "paye": [],
-        "other": {
-          "amount": 300,
-          "details": "Other employment details"
-        },
-        "businesses": []
-      },
       "income_payments": [
         {
           "payment_type": "private_pension",

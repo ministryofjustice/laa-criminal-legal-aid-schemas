@@ -289,7 +289,6 @@ module LaaCrimeSchemas
                                          confirmed])
 
     BusinessType = String.enum(*%w[self_employed partnership director_or_shareholder])
-    FinancialType = String.enum(*%w[turnover drawings profit])
   end
 end
 # rubocop:enable Metrics/ModuleLength
