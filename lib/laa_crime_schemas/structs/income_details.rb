@@ -25,7 +25,7 @@ module LaaCrimeSchemas
       attribute? :applicant_self_assessment_tax_bill_frequency, Types::PaymentFrequency.optional
       attribute? :partner_self_assessment_tax_bill, Types::YesNoValue.optional
       attribute? :partner_self_assessment_tax_bill_amount, Types::PenceSterling.optional
-      attribute? :partnert_self_assessment_tax_bill_frequency, Types::PaymentFrequency.optional
+      attribute? :partner_self_assessment_tax_bill_frequency, Types::PaymentFrequency.optional
       attribute? :applicant_other_work_benefit_received, Types::YesNoValue.optional
       attribute? :partner_other_work_benefit_received, Types::YesNoValue.optional
       attribute? :employments, Types::Array.of(Employment).default([].freeze)
