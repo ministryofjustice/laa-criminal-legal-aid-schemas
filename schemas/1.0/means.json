@@ -94,7 +94,10 @@
         },
         "businesses": {
           "type": "array",
-          "items": { "$ref": "#/definitions/business" }
+          "items": {
+            "$ref": "#/definitions/business"
+          }
+        },
         "partner_employments": {
           "type": "array",
           "items": { "$ref": "#/definitions/employment" }
