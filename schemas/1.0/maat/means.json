@@ -158,6 +158,47 @@
             ]
           }
         },
+        "employment_income_payments":{
+          "type":"array",
+          "items":{
+            "type":"object",
+            "properties":{
+              "amount":{
+                "type":"integer"
+              },
+              "frequency":{
+                "type":"string",
+                "enum":[
+                  "week",
+                  "fortnight",
+                  "four_weeks",
+                  "month",
+                  "annual"
+                ]
+              },
+              "income_tax":{
+                "type":"integer"
+              },
+              "national_insurance":{
+                "type":"integer"
+              },
+              "ownership_type":{
+                "type":"string",
+                "enum":[
+                  "applicant",
+                  "partner"
+                ]
+              }
+            },
+            "required":[
+              "amount",
+              "frequency",
+              "income_tax",
+              "national_insurance",
+              "ownership_type"
+            ]
+          }
+        },
         "dependants":{
           "type":"array",
           "items":{

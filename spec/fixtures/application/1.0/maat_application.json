@@ -64,6 +64,22 @@
     "income_details": {
       "employment_type": ["not_working"],
       "partner_employment_type": ["not_working"],
+      "employment_income_payments": [
+        {
+          "amount": 50000,
+          "frequency": "annual",
+          "income_tax": 2000,
+          "national_insurance": 2000,
+          "ownership_type": "applicant"
+        },
+        {
+          "amount": 60000,
+          "frequency": "annual",
+          "income_tax": 2000,
+          "national_insurance": 2000,
+          "ownership_type": "partner"
+        }
+      ],
       "income_payments": [
         {
           "payment_type": "private_pension",
