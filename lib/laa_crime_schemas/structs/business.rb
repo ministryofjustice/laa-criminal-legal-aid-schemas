@@ -13,7 +13,7 @@ module LaaCrimeSchemas
       attribute? :additional_owners, Types::String.optional
       attribute? :has_employees, Types::YesNoValue.optional
       attribute? :number_of_employees, Types::Integer.optional
-      attribute? :salary, Types::PenceSterling.optional
+      attribute? :salary, Amount.optional
       attribute? :total_income_share_sales, Types::PenceSterling.optional
       attribute? :percentage_profit_share, Types::Float.optional
 

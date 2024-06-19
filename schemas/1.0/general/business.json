@@ -15,7 +15,7 @@
     "additional_owners": { "type": ["string", "null"] },
     "has_employees": { "type": ["string", "null"], "enum": ["yes", "no", null] },
     "number_of_employees": { "type": ["integer", "null"] },
-    "salary": { "type": ["number", "null"] },
+    "salary": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] },
     "total_income_share_sales": { "type": ["number", "null"] },
     "percentage_profit_share": { "type": ["number", "null"] },
     "turnover": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] },

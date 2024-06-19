@@ -22,7 +22,10 @@ RSpec.describe LaaCrimeSchemas::Structs::Business do
           'additional_owners' => 'Test Owner',
           'has_employees' => 'yes',
           'number_of_employees' => 5,
-          'salary' => 50000,
+          'salary' => {
+            'amount' => 50000,
+            'frequency' => "annual",
+          },
           'total_income_share_sales' => 50000,
           'percentage_profit_share' => 45.6,
           'turnover' => {
@@ -54,7 +57,7 @@ RSpec.describe LaaCrimeSchemas::Structs::Business do
         expect(subject.additional_owners).to eq('Test Owner')
         expect(subject.has_employees).to eq('yes')
         expect(subject.number_of_employees).to eq(5)
-        expect(subject.salary).to eq(50000)
+        expect(subject.salary).to have_attributes({ amount: 50000, frequency: "annual" })
         expect(subject.total_income_share_sales).to eq(50000)
         expect(subject.percentage_profit_share).to eq(45.6)
         expect(subject.turnover).to have_attributes({ amount: 20000, frequency: "month" })
