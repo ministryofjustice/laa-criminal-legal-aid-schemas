@@ -574,8 +574,7 @@
                   "council_tax",
                   "childcare",
                   "maintenance",
-                  "legal_aid_contribution",
-                  "self_assessment_tax_bill"
+                  "legal_aid_contribution"
                 ]
               },
               "amount":{

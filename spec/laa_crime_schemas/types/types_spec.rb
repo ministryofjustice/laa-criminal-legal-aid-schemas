@@ -74,7 +74,7 @@ RSpec.describe LaaCrimeSchemas::Types do
         end
 
         context 'for EmploymentOutgoingsPaymentType' do
-          it 'returns all income payment types' do
+          it 'returns all employment outgoings payment types' do
             expect(LaaCrimeSchemas::Types::EmploymentOutgoingsPaymentType.values).to match_array(%w[
               self_assessment_tax_bill
           ])
@@ -82,7 +82,7 @@ RSpec.describe LaaCrimeSchemas::Types do
         end
 
         context 'for OutgoingsType' do
-          it 'returns all income payment types' do
+          it 'returns all outgoings payment types' do
             expect(LaaCrimeSchemas::Types::OutgoingsType.values).to match_array(%w[
               rent
               mortgage
