@@ -27,6 +27,8 @@
                   "from_friends_relatives",
                   "employment",
                   "work_benefits",
+                  "employment_income",
+                  "self_employment_income",
                   "other"
                 ]
               },
@@ -344,7 +346,9 @@
                   "council_tax",
                   "childcare",
                   "maintenance",
-                  "legal_aid_contribution"
+                  "legal_aid_contribution",
+                  "income_tax",
+                  "national_insurance"
                 ]
               },
               "amount":{
