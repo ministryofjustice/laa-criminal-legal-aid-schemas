@@ -4,7 +4,7 @@ module LaaCrimeSchemas
   module Structs
     class Business < Base
       attribute :ownership_type, Types::OwnershipType
-      attribute :business_type, Types::BusinessType
+      attribute :business_type, Types::BusinessInvolvementType
       attribute? :trading_name, Types::String.optional
       attribute? :address, Address.optional
       attribute? :description, Types::String.optional
