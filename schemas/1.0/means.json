@@ -95,6 +95,9 @@
         "businesses": {
           "type": "array",
           "items": { "$ref": "#/definitions/business" }
+        "partner_employments": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/employment" }
         },
         "partner_employment_type": {
           "type": "array",
@@ -179,6 +182,46 @@
           ]
         },
         "applicant_other_work_benefit_received":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
+        "partner_self_assessment_tax_bill":{
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["yes", "no"]
+            }
+          ]
+        },
+        "partner_self_assessment_tax_bill_amount":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
+        "partner_self_assessment_tax_bill_frequency": {
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum":[
+                "week",
+                "fortnight",
+                "four_weeks",
+                "month",
+                "annual"
+              ]
+            }
+          ]
+        },
+        "partner_other_work_benefit_received":{
           "anyOf":[
             {
               "type":"null"
@@ -427,8 +470,7 @@
                   "council_tax",
                   "childcare",
                   "maintenance",
-                  "legal_aid_contribution",
-                  "self_assessment_tax_bill"
+                  "legal_aid_contribution"
                 ]
               },
               "amount":{
