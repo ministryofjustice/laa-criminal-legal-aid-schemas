@@ -196,6 +196,57 @@
           "deductions": []
         }
       ],
+      "partner_employments": [
+        {
+          "employer_name": "Andy Murray",
+          "job_title": "Manager",
+          "has_no_deductions": null,
+          "address": { "address_line_one": "address_line_one_a",
+            "address_line_two": "address_line_two_a",
+            "city": "city_a",
+            "country": "country_a",
+            "postcode": "postcode_a" },
+          "amount": 15000,
+          "frequency": "annual",
+          "ownership_type": "applicant",
+          "metadata": { "before_or_after_tax": { "value": "before_tax" } },
+          "deductions": [
+            {
+              "deduction_type": "income_tax",
+              "amount": 2000,
+              "frequency": "week",
+              "details": null
+            },
+            {
+              "deduction_type": "national_insurance",
+              "amount": 3000,
+              "frequency": "fortnight",
+              "details": null
+            },
+            {
+              "deduction_type": "other",
+              "amount": 4000,
+              "frequency": "annual",
+              "details": "deduction details"
+            }
+          ]
+        },
+        {
+          "employer_name": "Joe Goodwin",
+          "job_title": "Manager",
+          "has_no_deductions": "yes",
+          "address": { "address_line_one": "address_line_one_z",
+            "address_line_two": "address_line_two_z",
+            "city": "city_z",
+            "country": "country_z",
+            "postcode": "postcode_z" },
+          "amount": 25000,
+          "frequency": "annual",
+          "ownership_type": "applicant",
+          "metadata": { "before_or_after_tax": { "value": "after_tax"} },
+          "deductions": []
+        }
+      ],
       "income_payments": [
         {
           "payment_type": "other",
@@ -248,7 +299,11 @@
       "applicant_self_assessment_tax_bill": "yes",
       "applicant_self_assessment_tax_bill_amount": 55500,
       "applicant_self_assessment_tax_bill_frequency": "fortnight",
-      "applicant_other_work_benefit_received": "no"
+      "applicant_other_work_benefit_received": "no",
+      "partner_self_assessment_tax_bill": "yes",
+      "partner_self_assessment_tax_bill_amount": 22200,
+      "partner_self_assessment_tax_bill_frequency": "week",
+      "partner_other_work_benefit_received": "no"
     },
     "outgoings_details": {
       "housing_payment_type": "rent",
