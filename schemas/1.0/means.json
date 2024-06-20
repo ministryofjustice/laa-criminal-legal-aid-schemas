@@ -92,10 +92,6 @@
           "type": "array",
           "items": { "$ref": "#/definitions/employment" }
         },
-        "partner_employments": {
-          "type": "array",
-          "items": { "$ref": "#/definitions/employment" }
-        },
         "partner_employment_type": {
           "type": "array",
           "items": {

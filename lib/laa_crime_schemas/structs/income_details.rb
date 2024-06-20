@@ -29,7 +29,6 @@ module LaaCrimeSchemas
       attribute? :applicant_other_work_benefit_received, Types::YesNoValue.optional
       attribute? :partner_other_work_benefit_received, Types::YesNoValue.optional
       attribute? :employments, Types::Array.of(Employment).default([].freeze)
-      attribute? :partner_employments, Types::Array.of(Employment).default([].freeze)
 
       attribute? :employment_details do
         attribute :paye, Types::Array.of(Base) do
