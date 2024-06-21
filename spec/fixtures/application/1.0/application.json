@@ -194,9 +194,7 @@
           "ownership_type": "applicant",
           "metadata": { "before_or_after_tax": { "value": "after_tax"} },
           "deductions": []
-        }
-      ],
-      "partner_employments": [
+        },
         {
           "employer_name": "Andy Murray",
           "job_title": "Manager",
@@ -208,7 +206,7 @@
             "postcode": "postcode_a" },
           "amount": 15000,
           "frequency": "annual",
-          "ownership_type": "applicant",
+          "ownership_type": "partner",
           "metadata": { "before_or_after_tax": { "value": "before_tax" } },
           "deductions": [
             {
@@ -242,7 +240,7 @@
             "postcode": "postcode_z" },
           "amount": 25000,
           "frequency": "annual",
-          "ownership_type": "applicant",
+          "ownership_type": "partner",
           "metadata": { "before_or_after_tax": { "value": "after_tax"} },
           "deductions": []
         }
