@@ -92,6 +92,12 @@
           "type": "array",
           "items": { "$ref": "#/definitions/employment" }
         },
+        "businesses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/business"
+          }
+        },
         "partner_employment_type": {
           "type": "array",
           "items": {
@@ -301,154 +307,6 @@
             }
           ]
         },
-        "employment_details":{
-          "type":"object",
-          "properties":{
-            "paye":{
-              "type":"array",
-              "items":{
-                "type":"object",
-                "properties":{
-                  "amount":{
-                    "type":"integer"
-                  },
-                  "date":{
-                    "type":"string",
-                    "format":"date"
-                  },
-                  "deductions":{
-                    "type":"array",
-                    "items":{
-                      "type":"object",
-                      "properties":{
-                        "type":{
-                          "type":"string"
-                        },
-                        "amount":{
-                          "type":"integer"
-                        }
-                      },
-                      "required":[
-                        "type",
-                        "amount"
-                      ]
-                    }
-                  }
-                },
-                "required":[
-                  "amount",
-                  "date",
-                  "deductions"
-                ]
-              }
-            },
-            "other":{
-              "type":"object",
-              "properties":{
-                "amount":{
-                  "type":"integer"
-                },
-                "details":{
-                  "type":"string"
-                }
-              },
-              "required":[
-                "amount",
-                "details"
-              ]
-            },
-            "businesses":{
-              "type":"array",
-              "items":{
-                "type":"object",
-                "properties":{
-                  "name":{
-                    "type":"string"
-                  },
-                  "address":{
-                    "type":"array",
-                    "items":{
-                      "type":"object",
-                      "properties":{
-                        "lookup_id":{
-                          "anyOf":[
-                            {
-                              "type":"null"
-                            },
-                            {
-                              "type":"string"
-                            }
-                          ]
-                        },
-                        "address_line_one":{
-                          "type":"string"
-                        },
-                        "address_line_two":{
-                          "anyOf":[
-                            {
-                              "type":"null"
-                            },
-                            {
-                              "type":"string"
-                            }
-                          ]
-                        },
-                        "city":{
-                          "type":"string"
-                        },
-                        "country":{
-                          "type":"string"
-                        },
-                        "postcode":{
-                          "type":"string"
-                        }
-                      },
-                      "required":[
-                        "lookup_id",
-                        "address_line_one",
-                        "address_line_two",
-                        "city",
-                        "country",
-                        "postcode"
-                      ]
-                    }
-                  },
-                  "last_two_years_tax_liability":{
-                    "type":"integer"
-                  },
-                  "total_turnover":{
-                    "type":"integer"
-                  },
-                  "total_drawing":{
-                    "type":"integer"
-                  },
-                  "total_profit":{
-                    "type":"integer"
-                  },
-                  "director_salary":{
-                    "type":"integer"
-                  },
-                  "share":{
-                    "type":"number"
-                  }
-                },
-                "required":[
-                  "name",
-                  "address",
-                  "last_two_years_tax_liability",
-                  "total_turnover",
-                  "total_drawing",
-                  "total_profit",
-                  "director_salary",
-                  "share"
-                ]
-              }
-            }
-          },
-          "required":[
-            "paye"
-          ]
-        },
         "income_payments":{
           "type":"array",
           "items":{
@@ -514,9 +372,6 @@
               "frequency"
             ]
           }
-        },
-        "total":{
-          "type":"integer"
         },
         "lost_job_in_custody":{
           "anyOf":[
@@ -742,6 +597,7 @@
     "investment": { "$ref": "general/investment.json" },
     "property": { "$ref": "general/property.json" },
     "employment": { "$ref": "general/employment.json" },
+    "business": { "$ref": "general/business.json" },
     "national_savings_certificate": { "$ref": "general/national_savings_certificate.json" }
   }
 }

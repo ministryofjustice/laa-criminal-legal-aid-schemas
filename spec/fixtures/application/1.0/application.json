@@ -245,6 +245,7 @@
           "deductions": []
         }
       ],
+      "businesses": [],
       "income_payments": [
         {
           "payment_type": "other",

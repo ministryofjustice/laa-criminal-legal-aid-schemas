@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/business.json",
+  "title": "Business",
+  "description": "Holds attributes of a business",
+  "type": "object",
+  "businesses": {
+    "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] },
+    "business_type": { "type": ["string"], "enum": ["self_employed", "partnership", "director_or_shareholder"] },
+    "trading_name": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] },
+    "trading_start_date": { "type": ["string", "null"], "format": "date" },
+    "address": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/address" }] },
+    "has_additional_owners": { "type": ["string", "null"], "enum": ["yes", "no", null] },
+    "additional_owners": { "type": ["string", "null"] },
+    "has_employees": { "type": ["string", "null"], "enum": ["yes", "no", null] },
+    "number_of_employees": { "type": ["integer", "null"] },
+    "salary": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] },
+    "total_income_share_sales": { "type": ["number", "null"] },
+    "percentage_profit_share": { "type": ["number", "null"] },
+    "turnover": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] },
+    "drawings": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] },
+    "profit": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/amount" }] }
+  },
+  "required": ["ownership_type", "business_type"],
+  "definitions": {
+    "address": { "$ref": "address.json" },
+    "amount": { "$ref": "amount.json" }
+  }
+}

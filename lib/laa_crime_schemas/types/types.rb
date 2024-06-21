@@ -287,6 +287,8 @@ module LaaCrimeSchemas
                                          no_check_required
                                          checker_unavailable
                                          confirmed])
+
+    BusinessInvolvementType = String.enum(*%w[self_employed partnership director_or_shareholder])
   end
 end
 # rubocop:enable Metrics/ModuleLength
