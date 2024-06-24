@@ -147,6 +147,18 @@
           "amount": 150,
           "frequency": "month",
           "ownership_type": "partner"
+        },
+        {
+          "payment_type": "work_benefits",
+          "amount": 250,
+          "frequency": "annual",
+          "ownership_type": "applicant"
+        },
+        {
+          "payment_type": "work_benefits",
+          "amount": 250,
+          "frequency": "annual",
+          "ownership_type": "partner"
         }
       ],
       "income_benefits": [
