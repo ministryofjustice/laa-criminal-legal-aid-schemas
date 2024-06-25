@@ -10,6 +10,8 @@ RSpec.describe LaaCrimeSchemas::Structs::ProviderDetails do
       it 'builds the provider details struct' do
         expect(subject.office_code).to eq('1A123B')
         expect(subject.provider_email).to eq('provider@example.com')
+        expect(subject.legal_rep_has_partner_declaration).to eq('no')
+        expect(subject.legal_rep_no_partner_declaration_reason).to eq('A reason')
         expect(subject.legal_rep_first_name).to eq('John')
         expect(subject.legal_rep_last_name).to eq('Doe')
         expect(subject.legal_rep_telephone).to eq('123456789')
