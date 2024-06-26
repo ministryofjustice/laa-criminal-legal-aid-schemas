@@ -4,7 +4,7 @@
   "title": "Employment",
   "description": "Holds attributes of a employment",
   "type": "object",
-  "employments": {
+  "properties": {
     "ownership_type": { "type": ["string"], "enum": ["applicant", "applicant_and_partner", "partner"] },
     "employer_name": { "type": ["string"] },
     "job_title": { "type": ["string"] },

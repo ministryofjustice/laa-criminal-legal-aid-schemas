@@ -46,6 +46,14 @@ module LaaCrimeSchemas
         attribute :ownership_type, Types::OwnershipType
         attributes_from Amount
       end
+
+      attribute? :employment_income_payments, Types::Coercible::Array.of(Base).default([].freeze) do
+        attribute :amount, Types::PenceSterling
+        attribute :frequency, Types::PaymentFrequency
+        attribute :income_tax, Types::PenceSterling
+        attribute :national_insurance, Types::PenceSterling
+        attribute :ownership_type, Types::OwnershipType
+      end
     end
   end
 end
