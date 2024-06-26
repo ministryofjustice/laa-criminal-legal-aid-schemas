@@ -13,6 +13,8 @@
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
+    "legal_rep_has_partner_declaration": "no",
+    "legal_rep_no_partner_declaration_reason": "A reason",
     "legal_rep_first_name": "John",
     "legal_rep_last_name": "Doe",
     "legal_rep_telephone": "123456789"

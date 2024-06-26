@@ -7,6 +7,8 @@
   "properties": {
     "office_code": { "type": "string" },
     "provider_email": { "type": "string" },
+    "legal_rep_has_partner_declaration": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+    "legal_rep_no_partner_declaration_reason": { "anyOf": [{"type": "null"}, {"type": "string"}] },
     "legal_rep_first_name": { "type": "string" },
     "legal_rep_last_name": { "type": "string" },
     "legal_rep_telephone": { "type": "string" }

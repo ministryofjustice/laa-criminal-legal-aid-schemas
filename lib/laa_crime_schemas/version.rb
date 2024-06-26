@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module LaaCrimeSchemas
-  VERSION = '1.1.20'
+  VERSION = '1.1.21'
 end
