@@ -12,7 +12,7 @@ module LaaCrimeSchemas
       attribute :schema_version, Types::SchemaVersion
       attribute :reference, Types::ApplicationReference
       attribute :application_type, Types::ApplicationType
-      attribute :status, Types::ApplicationStatus
+      attribute? :status, Types::ApplicationStatus
 
       attribute :created_at, Types::JSON::DateTime
       attribute :submitted_at, Types::JSON::DateTime.optional
