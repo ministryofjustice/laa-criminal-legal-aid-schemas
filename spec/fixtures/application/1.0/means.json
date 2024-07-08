@@ -15,7 +15,7 @@
         "amount": 25000,
         "frequency": "annual",
         "ownership_type": "applicant",
-        "metadata": { "before_or_after_tax": { "value": "before_tax" } },
+        "metadata": { "before_or_after_tax": "before_tax" },
         "deductions": [
           {
             "deduction_type": "income_tax",
@@ -49,7 +49,7 @@
         "amount": 35000,
         "frequency": "annual",
         "ownership_type": "applicant",
-        "metadata": { "before_or_after_tax": { "value": "after_tax"} },
+        "metadata": { "before_or_after_tax": "after_tax" },
         "deductions": []
       },
       {
@@ -64,7 +64,7 @@
         "amount": 15000,
         "frequency": "annual",
         "ownership_type": "partner",
-        "metadata": { "before_or_after_tax": { "value": "before_tax" } },
+        "metadata": { "before_or_after_tax": "before_tax" },
         "deductions": [
           {
             "deduction_type": "income_tax",
@@ -98,7 +98,7 @@
         "amount": 25000,
         "frequency": "annual",
         "ownership_type": "partner",
-        "metadata": { "before_or_after_tax": { "value": "after_tax"} },
+        "metadata": { "before_or_after_tax": "after_tax" },
         "deductions": []
       }
     ],
