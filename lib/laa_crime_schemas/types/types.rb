@@ -289,6 +289,8 @@ module LaaCrimeSchemas
                                          confirmed])
 
     BusinessInvolvementType = String.enum(*%w[self_employed partnership director_or_shareholder])
+
+    EXTRADITION_COURT_NAMES = ["Westminster Magistrates' Court"].freeze
   end
 end
 # rubocop:enable Metrics/ModuleLength

@@ -4,9 +4,8 @@ module LaaCrimeSchemas
   module Structs
     class IncomeDetails < Base
       attribute? :income_above_threshold, Types::YesNoValue.optional
-
-      attribute? :employment_type, Types::Array.of(Types::EmploymentType)
-      attribute? :partner_employment_type, Types::Array.of(Types::EmploymentType)
+      attribute? :employment_type, Types::Array.of(Types::EmploymentType).default([].freeze)
+      attribute? :partner_employment_type, Types::Array.of(Types::EmploymentType).default([].freeze)
       attribute? :ended_employment_within_three_months, Types::YesNoValue.optional
       attribute? :lost_job_in_custody, Types::YesNoValue.optional
       attribute? :date_job_lost, Types::JSON::Date.optional
