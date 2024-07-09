@@ -16,6 +16,7 @@
     "returned_at": { "type": ["string", "null"], "format": "date-time", "readOnly": true },
     "reviewed_at": { "type": ["string", "null"], "format": "date-time", "readOnly": true },
     "status": { "type": "string", "enum": ["submitted", "returned", "superseded"], "readOnly": true },
+    "is_means_tested": { "anyOf": [{ "type": "null" }, { "type": "string", "enum": ["yes", "no"] }] },
     "ioj_passport": {
       "type": "array",
       "items": { "type": "string", "enum": ["on_age_under18", "on_offence"] }
