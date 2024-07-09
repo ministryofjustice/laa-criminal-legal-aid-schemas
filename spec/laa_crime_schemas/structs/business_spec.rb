@@ -26,7 +26,10 @@ RSpec.describe LaaCrimeSchemas::Structs::Business do
             'amount' => 50000,
             'frequency' => "annual",
           },
-          'total_income_share_sales' => 50000,
+          'total_income_share_sales' => {
+            'amount' => 50000,
+            'frequency' => "annual",
+          },
           'percentage_profit_share' => 45.6,
           'turnover' => {
             'amount' => 20000,
@@ -58,7 +61,7 @@ RSpec.describe LaaCrimeSchemas::Structs::Business do
         expect(subject.has_employees).to eq('yes')
         expect(subject.number_of_employees).to eq(5)
         expect(subject.salary).to have_attributes({ amount: 50000, frequency: "annual" })
-        expect(subject.total_income_share_sales).to eq(50000)
+        expect(subject.total_income_share_sales).to have_attributes({ amount: 50000, frequency: "annual" })
         expect(subject.percentage_profit_share).to eq(45.6)
         expect(subject.turnover).to have_attributes({ amount: 20000, frequency: "month" })
         expect(subject.drawings).to have_attributes({ amount: 20000, frequency: "annual" })
