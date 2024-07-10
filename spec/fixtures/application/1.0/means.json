@@ -157,7 +157,12 @@
         "payment_type": "employment",
         "amount": 4500,
         "frequency": "annual",
-        "ownership_type": "applicant"
+        "ownership_type": "applicant",
+        "metadata": {
+          "before_or_after_tax": {
+            "value": "after_tax"
+          }
+        }
       }
     ],
     "dependants": [{"age": 1}, {"age":  5}],
