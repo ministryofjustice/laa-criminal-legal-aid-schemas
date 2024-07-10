@@ -3,6 +3,7 @@
 module LaaCrimeSchemas
   module Structs
     class CrimeApplication < BaseApplication
+      attribute? :is_means_tested, Types::String.optional
       attribute? :ioj_passport, Types::Array.of(Types::IojPassportType).default([].freeze)
       attribute? :means_passport, Types::Array.of(Types::MeansPassportType).default([].freeze)
 
