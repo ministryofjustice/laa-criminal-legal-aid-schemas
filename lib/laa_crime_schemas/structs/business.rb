@@ -14,7 +14,7 @@ module LaaCrimeSchemas
       attribute? :has_employees, Types::YesNoValue.optional
       attribute? :number_of_employees, Types::Integer.optional
       attribute? :salary, Amount.optional
-      attribute? :total_income_share_sales, Types::PenceSterling.optional
+      attribute? :total_income_share_sales, Amount.optional
       attribute? :percentage_profit_share, Types::Float.optional
 
       attribute? :turnover, Amount.optional
