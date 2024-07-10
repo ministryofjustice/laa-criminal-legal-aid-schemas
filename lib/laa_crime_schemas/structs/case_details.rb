@@ -14,7 +14,7 @@ module LaaCrimeSchemas
       attribute? :appeal_financial_circumstances_changed, Types::YesNoValue.optional
       attribute? :appeal_with_changes_details, Types::String.optional
       attribute? :appeal_reference_number, Types::String.optional
-      attribute :appeal_maat_id, Types::String.optional
+      attribute? :appeal_maat_id, Types::String.optional
       attribute? :appeal_usn, Types::String.optional
 
       attribute? :has_case_concluded, Types::YesNoValue.optional
