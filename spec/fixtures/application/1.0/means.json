@@ -152,12 +152,6 @@
         "frequency": "week",
         "ownership_type": "applicant",
         "metadata": {}
-      },
-      {
-        "payment_type": "employment",
-        "amount": 4500,
-        "frequency": "annual",
-        "ownership_type": "applicant"
       }
     ],
     "dependants": [{"age": 1}, {"age":  5}],
