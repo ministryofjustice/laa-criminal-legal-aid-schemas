@@ -17,6 +17,9 @@
     "reviewed_at": { "type": ["string", "null"], "format": "date-time", "readOnly": true },
     "status": { "type": "string", "enum": ["submitted", "returned", "superseded"], "readOnly": true },
     "is_means_tested": { "anyOf": [{ "type": "null" }, { "type": "string", "enum": ["yes", "no"] }] },
+    "pre_cifc_reference_number": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["pre_cifc_maat_id", "pre_cifc_usn"]}]},
+    "pre_cifc_maat_id": { "type": ["string", "null"] },
+    "pre_cifc_usn": { "type": ["string", "null"] },
     "ioj_passport": {
       "type": "array",
       "items": { "type": "string", "enum": ["on_age_under18", "on_offence"] }

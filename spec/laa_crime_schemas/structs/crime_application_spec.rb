@@ -62,5 +62,21 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
         ).to be_valid
       end
     end
+
+    describe 'change in financial circumstances application' do
+      let(:valid_fixture) { 'application/1.0/change_in_financial_circumstances.json' }
+
+      context 'for a valid crime application object' do
+        let(:attributes) do
+          JSON.parse(file_fixture(valid_fixture).read)
+        end
+
+        it 'has correct application_type and pre_cifc fields' do
+          expect(subject.application_type).to eq 'change_in_financial_circumstances'
+          expect(subject.pre_cifc_reference_number).to eq 'pre_cifc_maat_id'
+          expect(subject.pre_cifc_maat_id).to eq '987654321'
+        end
+      end
+    end
   end
 end
