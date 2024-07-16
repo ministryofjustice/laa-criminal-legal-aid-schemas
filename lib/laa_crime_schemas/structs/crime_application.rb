@@ -31,6 +31,10 @@ module LaaCrimeSchemas
       attribute? :work_stream, Types::WorkStreamType.optional
 
       attribute? :additional_information, Types::String.optional
+
+      attribute? :pre_cifc_reference_number, Types::String.optional
+      attribute? :pre_cifc_maat_id, Types::String.optional
+      attribute? :pre_cifc_usn, Types::String.optional
     end
   end
 end
