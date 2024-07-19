@@ -12,6 +12,9 @@
   "is_means_tested": "yes",
   "ioj_passport": [],
   "means_passport": ["on_benefit_check"],
+  "pre_cifc_reference_number": null,
+  "pre_cifc_maat_id": null,
+  "pre_cifc_usn": null,
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
