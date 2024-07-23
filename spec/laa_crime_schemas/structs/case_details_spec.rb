@@ -1,4 +1,3 @@
-require 'debug'
 RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
   subject { described_class.new(attributes) }
 
@@ -45,19 +44,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
   # Change in Financial Circumstances applications
   describe 'change in financial circumstances application' do
     let(:attributes) do
-      json = JSON.parse(file_fixture('application/1.0/change_in_financial_circumstances.json').read)
-
-      json['application_type'] = 'change_in_financial_circumstances'
-      json['case_details'].merge!(
-        'offences' => [],
-        'codefendants' => [],
-        'hearing_court_name' => nil,
-        'hearing_date' => nil,
-        'is_first_court_hearing' => nil,
-        'first_court_hearing_name' => nil,
-      )
-
-      json
+      JSON.parse(file_fixture('application/1.0/change_in_financial_circumstances.json').read)
     end
 
     it 'is valid' do

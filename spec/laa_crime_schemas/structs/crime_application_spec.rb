@@ -76,6 +76,10 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
           expect(subject.pre_cifc_reference_number).to eq 'pre_cifc_maat_id'
           expect(subject.pre_cifc_maat_id).to eq '987654321'
         end
+
+        it 'does not have any interests_of_justice' do
+          expect(subject.interests_of_justice.size).to eq 0
+        end
       end
     end
   end

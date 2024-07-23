@@ -1,5 +1,5 @@
 {
-  "id": "696dd4fd-b619-4637-ab42-a5f4565bcf4a",
+  "id": "98ab235c-f125-4dcb-9604-19e81782e53b",
   "parent_id": null,
   "schema_version": 1.0,
   "reference": 6000001,
@@ -103,43 +103,14 @@
     "appeal_reference_number": null,
     "appeal_maat_id": null,
     "appeal_usn": null,
-    "offences": [
-      {
-        "name": "Attempt robbery",
-        "offence_class": "C",
-        "slipstreamable": true,
-        "dates": [
-          { "date_from": "2020-05-11", "date_to": "2020-05-12" },
-          { "date_from": "2020-08-11", "date_to": null }
-        ]
-      },
-      {
-        "name": "Non-listed offence, manually entered",
-        "offence_class": null,
-        "slipstreamable": false,
-        "dates": [
-          { "date_from": "2020-09-15", "date_to": null }
-        ]
-      }
-    ],
-    "codefendants": [
-      {
-        "first_name": "Zoe",
-        "last_name": "Blogs",
-        "conflict_of_interest": "yes"
-      }
-    ],
-    "hearing_court_name": "Cardiff Magistrates' Court",
-    "hearing_date": "2024-11-11",
-    "is_first_court_hearing": "no",
-    "first_court_hearing_name": "Bristol Magistrates Court"
+    "offences": [],
+    "codefendants": [],
+    "hearing_court_name": null,
+    "hearing_date": null,
+    "is_first_court_hearing": null,
+    "first_court_hearing_name": null
   },
-  "interests_of_justice": [
-    {
-      "type": "loss_of_liberty",
-      "reason": "More details about loss of liberty."
-    }
-  ],
+  "interests_of_justice": [],
   "means_details": {
     "income_details": {
       "employment_type": ["not_working"],
