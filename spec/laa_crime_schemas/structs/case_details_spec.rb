@@ -1,11 +1,11 @@
 RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
   subject { described_class.new(attributes) }
 
-  let(:attributes) do
-    LaaCrimeSchemas.fixture(1.0) { |json| json['case_details'] }
-  end
-
   describe '.new' do
+    let(:attributes) do
+      LaaCrimeSchemas.fixture(1.0) { |json| json['case_details'] }
+    end
+
     context 'for a valid case details object' do
       # Just a sanity check to ensure the struct "understands" the JSON object
       # Offence and Codefendant structs are tested separately
@@ -34,6 +34,26 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
       it 'raises an error' do
         expect { subject }.to raise_error(Dry::Struct::Error, /offences/)
       end
+    end
+  end
+
+  # Consider using JSONSchema draft-07 when Ruby json-schema supports it
+  # to make use of if/then/else type conditions. Current implementation
+  # assumes a baseline level of data, allowing null values for the general
+  # application.json schema. Alternatively introduce a separate schema for
+  # Change in Financial Circumstances applications
+  describe 'change in financial circumstances application' do
+    let(:attributes) do
+      JSON.parse(file_fixture('application/1.0/change_in_financial_circumstances.json').read)
+    end
+
+    it 'is valid' do
+      expect(subject.offences.size).to eq(0)
+      expect(subject.codefendants.size).to eq(0)
+      expect(subject.hearing_court_name).to be_nil
+      expect(subject.hearing_date).to be_nil
+      expect(subject.is_first_court_hearing).to be_nil
+      expect(subject.first_court_hearing_name).to be_nil
     end
   end
 end

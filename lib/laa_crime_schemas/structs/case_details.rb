@@ -27,12 +27,11 @@ module LaaCrimeSchemas
       attribute? :preorder_work_date, Types::JSON::Date.optional
       attribute? :preorder_work_details, Types::String.optional
 
-      attribute :offences, Types::Array.of(Offence).constrained(min_size: 1)
+      # Attributes not required for Change in Financial Circumstances application
+      attribute :offences, Types::Array.of(Offence).default([].freeze)
       attribute :codefendants, Types::Array.of(Codefendant).default([].freeze)
-
       attribute? :hearing_court_name, Types::String.optional
       attribute? :hearing_date, Types::JSON::Date.optional
-
       attribute? :is_first_court_hearing, Types::FirstHearingAnswerValues.optional
       attribute? :first_court_hearing_name, Types::String.optional
     end
