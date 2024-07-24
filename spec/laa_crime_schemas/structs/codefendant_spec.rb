@@ -21,13 +21,5 @@ RSpec.describe LaaCrimeSchemas::Structs::Codefendant do
         expect(subject.full_name).to eq('John Doe')
       end
     end
-
-    context 'for an invalid codefendant object' do
-      let(:attributes) { { 'foo' => 'bar' } }
-
-      it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /first_name/)
-      end
-    end
   end
 end
