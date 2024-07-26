@@ -206,6 +206,8 @@
           "ownership_type": "partner"
         }
       ],
+      "manage_without_income": "other",
+      "manage_other_details": "Another way they manage",
       "total": 1000,
       "dependants": [ { "age": 15 } ]
     },

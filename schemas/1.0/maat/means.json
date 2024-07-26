@@ -198,6 +198,27 @@
             ]
           }
         },
+        "manage_without_income": {
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string",
+              "enum": ["friends_sofa", "family", "living_on_streets", "custody", "other"]
+            }
+          ]
+        },
+        "manage_other_details": {
+          "anyOf":[
+            {
+              "type":"null"
+            },
+            {
+              "type":"string"
+            }
+          ]
+        },
         "dependants":{
           "type":"array",
           "items":{
