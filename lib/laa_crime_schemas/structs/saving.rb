@@ -5,7 +5,7 @@ module LaaCrimeSchemas
     class Saving < Base
       attribute :saving_type, Types::SavingType
       attribute? :provider_name, Types::String.optional
-      attribute :account_balance, Types::PenceSterling
+      attribute? :account_balance, Types::PenceSterling.optional
       attribute? :sort_code, Types::String.optional
       attribute? :account_number, Types::String.optional
       attribute? :is_overdrawn, Types::YesNoValue.optional
