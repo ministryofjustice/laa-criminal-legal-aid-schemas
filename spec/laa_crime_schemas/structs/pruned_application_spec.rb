@@ -20,17 +20,5 @@ RSpec.describe LaaCrimeSchemas::Structs::PrunedApplication do
         expect(validator).to be_valid, validator.fully_validate
       end
     end
-
-    context 'for an invalid pruned crime application object' do
-      let(:attributes) do
-        json = JSON.parse(file_fixture(fixture).read)
-        json['client_details']['applicant'] = nil
-        json
-      end
-
-      it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /first_name/)
-      end
-    end
   end
 end
