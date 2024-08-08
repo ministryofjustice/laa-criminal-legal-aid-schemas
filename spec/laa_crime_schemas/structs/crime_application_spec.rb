@@ -63,6 +63,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
           expect(subject.application_type).to eq 'change_in_financial_circumstances'
           expect(subject.pre_cifc_reference_number).to eq 'pre_cifc_maat_id'
           expect(subject.pre_cifc_maat_id).to eq '987654321'
+          expect(subject.pre_cifc_reason).to eq 'My client has a new job'
         end
 
         it 'does not have any interests_of_justice' do
