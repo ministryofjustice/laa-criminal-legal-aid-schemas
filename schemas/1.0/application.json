@@ -20,6 +20,7 @@
     "pre_cifc_reference_number": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["pre_cifc_maat_id", "pre_cifc_usn"]}]},
     "pre_cifc_maat_id": { "type": ["string", "null"] },
     "pre_cifc_usn": { "type": ["string", "null"] },
+    "pre_cifc_reason": { "type": ["string", "null"] },
     "ioj_passport": {
       "type": "array",
       "items": { "type": "string", "enum": ["on_age_under18", "on_offence"] }

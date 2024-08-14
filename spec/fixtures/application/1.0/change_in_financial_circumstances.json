@@ -14,6 +14,7 @@
   "pre_cifc_reference_number": "pre_cifc_maat_id",
   "pre_cifc_maat_id": "987654321",
   "pre_cifc_usn": null,
+  "pre_cifc_reason": "My client has a new job",
   "provider_details": {
     "office_code": "1A123B",
     "provider_email": "provider@example.com",
