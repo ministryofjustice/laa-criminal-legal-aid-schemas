@@ -6,7 +6,9 @@ module LaaCrimeSchemas
       attribute? :date_of_birth, Types::JSON::Date.optional
       attribute? :benefit_type, Types::BenefitType.optional
       attribute? :last_jsa_appointment_date, Types::JSON::Date.optional
+      attribute? :has_nino, Types::String.optional
       attribute? :nino, Types::String.optional
+      attribute? :arc, Types::String.optional
       attribute? :home_address, Address.optional
 
       attribute? :benefit_check_result, Types::Bool.optional
