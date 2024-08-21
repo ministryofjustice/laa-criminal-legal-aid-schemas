@@ -7,8 +7,9 @@
   "allOf": [{ "$ref": "#/definitions/person" }],
   "properties": {
     "date_of_birth": { "type": "string", "format": "date" },
-    "has_nino": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+    "has_nino": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no", "arc"]}]},
     "nino": { "type": ["string", "null"] },
+    "arc": { "type": ["string", "null"] },
     "benefit_type": {"type": ["string", "null"], "enum": ["universal_credit", "guarantee_pension", "jsa", "esa", "income_support", "none", null] },
     "last_jsa_appointment_date": { "type": ["string", "null"], "format": "date" },
     "telephone_number": { "type": ["string", "null"] },

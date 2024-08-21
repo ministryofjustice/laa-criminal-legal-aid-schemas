@@ -43,6 +43,7 @@
       "separation_date": null,
       "has_nino": "yes",
       "nino": "NC010155A",
+      "arc": null,
       "benefit_type": "universal_credit",
       "last_jsa_appointment_date": null,
       "benefit_check_result": false,
@@ -56,7 +57,9 @@
       "first_name": "Jennifer",
       "last_name": "Holland",
       "other_names": "Diane",
+      "has_nino": "yes",
       "nino": "AB123456C",
+      "arc": null,
       "date_of_birth": "2001-12-23",
       "home_address": {
         "lookup_id": null,
