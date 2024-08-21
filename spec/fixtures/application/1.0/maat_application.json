@@ -102,53 +102,11 @@
           "ownership_type": "applicant"
         },
         {
-          "payment_type": "student_loan_grant",
-          "amount": 55,
-          "frequency": "month",
-          "ownership_type": "applicant"
-        },
-        {
-          "payment_type": "board_from_family",
-          "amount": 1000,
-          "frequency": "annual",
-          "ownership_type": "applicant"
-        },
-        {
-          "payment_type": "from_friends_relatives",
-          "amount": 50,
-          "frequency": "week",
-          "ownership_type": "applicant"
-        },
-        {
-          "payment_type": "rent",
-          "amount": 310,
-          "frequency": "month",
-          "ownership_type": "applicant"
-        },
-        {
-          "payment_type": "financial_support_with_access",
-          "amount": 80,
-          "frequency": "month",
-          "ownership_type": "applicant"
-        },
-        {
-          "payment_type": "from_friends_relatives",
-          "amount": 390,
-          "frequency": "month",
-          "ownership_type": "applicant"
-        },
-        {
           "payment_type": "other",
           "amount": 250,
           "frequency": "month",
           "details": "Details of the other payment",
           "ownership_type": "applicant"
-        },
-        {
-          "payment_type": "rent",
-          "amount": 150,
-          "frequency": "month",
-          "ownership_type": "partner"
         },
         {
           "payment_type": "work_benefits",
@@ -186,12 +144,6 @@
           "payment_type": "industrial_injuries_disablement",
           "amount": 400,
           "frequency": "month",
-          "ownership_type": "applicant"
-        },
-        {
-          "payment_type": "jsa",
-          "amount": 400,
-          "frequency": "annual",
           "ownership_type": "applicant"
         },
         {
