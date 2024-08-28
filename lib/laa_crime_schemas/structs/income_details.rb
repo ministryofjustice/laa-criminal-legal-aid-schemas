@@ -3,6 +3,8 @@
 module LaaCrimeSchemas
   module Structs
     class IncomeDetails < Base
+      attribute? :client_in_armed_forces, Types::YesNoValue.optional
+      attribute? :partner_in_armed_forces, Types::YesNoValue.optional
       attribute? :income_above_threshold, Types::YesNoValue.optional
       attribute? :employment_type, Types::Array.of(Types::EmploymentType).default([].freeze)
       attribute? :partner_employment_type, Types::Array.of(Types::EmploymentType).default([].freeze)
