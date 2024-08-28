@@ -148,6 +148,8 @@
   ],
   "means_details": {
     "income_details": {
+      "client_in_armed_forces": "no",
+      "partner_in_armed_forces": "no",
       "employment_type": ["not_working"],
       "partner_employment_type": ["not_working"],
       "ended_employment_within_three_months": "yes",
