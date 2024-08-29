@@ -228,7 +228,7 @@
             ]
           }
         },
-        "capital_attributes": {
+        "dividends": {
           "type":"object",
           "properties":{
             "trust_fund_yearly_dividend":{
