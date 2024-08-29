@@ -279,7 +279,7 @@ module LaaCrimeSchemas
                                              other
                                            ])
 
-    CaseInvolvement = String.enum(*%w[victim prosecution_witness codefendant none])
+    CaseInvolvement = String.enum(*%w[victim prosecution_witness codefendant])
     RelationshipStatus = String.enum(*%w[single widowed divorced separated prefer_not_to_say])
     RelationshipType = String.enum(*%w[married_or_partnership living_together prefer_not_to_say])
     BenefitCheckStatus = String.enum(*%w[no_check_no_nino

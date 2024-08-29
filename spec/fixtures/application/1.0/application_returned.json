@@ -79,6 +79,7 @@
       "confirm_details": null,
       "has_benefit_evidence": null,
       "will_enter_nino": null,
+      "involved_in_case": "yes",
       "involvement_in_case": "codefendant",
       "conflict_of_interest": "no",
       "has_same_address_as_client": "no",

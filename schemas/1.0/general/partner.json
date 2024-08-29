@@ -14,7 +14,8 @@
     "benefit_type": {"type": ["string", "null"], "enum": ["universal_credit", "guarantee_pension", "jsa", "esa", "income_support", "none", null] },
     "last_jsa_appointment_date": { "type": ["string", "null"], "format": "date" },
     "home_address": { "anyOf": [{"type": "null"}, { "$ref": "#/definitions/address" }] },
-    "involvement_in_case": {"type": ["string", "null"], "enum": ["victim", "prosecution_witness", "codefendant", "none", null] },
+    "involved_in_case": { "anyOf": [{"type": "null"}, {"type": ["string", "null"], "enum": ["yes", "no"]}]},
+    "involvement_in_case": {"type": ["string", "null"], "enum": ["victim", "prosecution_witness", "codefendant", null] },
     "conflict_of_interest": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "has_same_address_as_client": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "benefit_check_status": {"type": ["string", "null"], "enum": ["no_check_no_nino", "undetermined", "no_record_found", "no_check_required", "checker_unavailable", "confirmed", null] },
@@ -25,7 +26,7 @@
     "confirm_details": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "is_included_in_means_assessment": { "anyOf": [{"type": "null"}, {"type": "boolean"}]}
   },
-  "required":[ "date_of_birth", "nino", "involvement_in_case" ],
+  "required":[ "date_of_birth", "nino", "involved_in_case", "involvement_in_case" ],
   "definitions": {
     "person": { "$ref": "person.json" },
     "address": { "$ref": "address.json" }
