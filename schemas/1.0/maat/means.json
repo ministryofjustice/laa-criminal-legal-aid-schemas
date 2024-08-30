@@ -227,31 +227,6 @@
               "age"
             ]
           }
-        },
-        "dividends": {
-          "type":"object",
-          "properties":{
-            "trust_fund_yearly_dividend":{
-              "anyOf":[
-                {
-                  "type":"null"
-                },
-                {
-                  "type":"integer"
-                }
-              ]
-            },
-            "partner_trust_fund_yearly_dividend":{
-              "anyOf":[
-                {
-                  "type":"null"
-                },
-                {
-                  "type":"integer"
-                }
-              ]
-            }
-          }
         }
       },
       "required":[]
@@ -342,16 +317,6 @@
             }
           ]
         },
-        "trust_fund_yearly_dividend":{
-          "anyOf":[
-            {
-              "type":"null"
-            },
-            {
-              "type":"integer"
-            }
-          ]
-        },
         "partner_premium_bonds_total_value":{
           "anyOf":[
             {
@@ -363,16 +328,6 @@
           ]
         },
         "partner_trust_fund_amount_held":{
-          "anyOf":[
-            {
-              "type":"null"
-            },
-            {
-              "type":"integer"
-            }
-          ]
-        },
-        "partner_trust_fund_yearly_dividend":{
           "anyOf":[
             {
               "type":"null"
