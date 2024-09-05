@@ -55,6 +55,7 @@
     "case_type": "appeal_to_crown_court",
     "offence_class": "A",
     "appeal_maat_id": null,
+    "appeal_usn": null,
     "appeal_lodged_date": "2021-10-25",
     "appeal_with_changes_details": null,
     "hearing_court_name": "Cardiff Magistrates' Court",
