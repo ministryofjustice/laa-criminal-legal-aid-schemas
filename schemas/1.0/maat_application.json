@@ -74,7 +74,7 @@
         "appeal_with_changes_details": { "type": ["string", "null"] },
         "offence_class": { "type": ["string", "null"], "enum": ["A", "K", "G", "B", "I", "J", "D", "C", "H", "F", "E", null] },
         "hearing_court_name": { "type": "string" },
-        "hearing_date": { "type": "string", "format": "date" }
+        "hearing_date": { "type": ["string", "null"], "format": "date" }
       },
       "required": ["case_type", "hearing_court_name", "hearing_date", "offence_class"]
     },
