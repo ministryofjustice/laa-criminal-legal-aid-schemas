@@ -8,6 +8,7 @@
     "first_name": { "type": ["string", "null"] },
     "last_name": { "type": ["string", "null"] },
     "date_of_birth": { "type": ["string", "null"], "format": "date" },
+    "created_at": { "type": ["string", "null"], "format": "date-time" },
     "date_stamp": { "type": ["string", "null"], "format": "date-time" }
   }
 }
