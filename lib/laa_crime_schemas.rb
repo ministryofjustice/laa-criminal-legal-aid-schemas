@@ -14,6 +14,7 @@ require_relative 'laa_crime_schemas/traits/full_name'
 require_relative 'laa_crime_schemas/types/types'
 
 require_relative 'laa_crime_schemas/structs/base'
+require_relative 'laa_crime_schemas/structs/date_stamp_context'
 require_relative 'laa_crime_schemas/structs/base_application'
 
 require_relative 'laa_crime_schemas/structs/amount'

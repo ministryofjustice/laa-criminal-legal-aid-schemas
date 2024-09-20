@@ -17,6 +17,7 @@ module LaaCrimeSchemas
       attribute :created_at, Types::JSON::DateTime
       attribute :submitted_at, Types::JSON::DateTime.optional
       attribute? :date_stamp, Types::JSON::DateTime.optional
+      attribute? :date_stamp_context, DateStampContext
       attribute? :returned_at, Types::JSON::DateTime.optional
       attribute? :reviewed_at, Types::JSON::DateTime.optional
     end

@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/date_stamp_context.json",
+  "title": "Date Stamp Context",
+  "description": "Snapshot of Applicant key details when date stamp issued",
+  "type": "object",
+  "properties": {
+    "first_name": { "type": ["string", "null"] },
+    "last_name": { "type": ["string", "null"] },
+    "date_of_birth": { "type": ["string", "null"], "format": "date" },
+    "date_stamp": { "type": ["string", "null"], "format": "date-time" }
+  }
+}

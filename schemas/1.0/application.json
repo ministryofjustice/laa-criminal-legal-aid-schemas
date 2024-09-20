@@ -13,6 +13,9 @@
     "created_at": { "type": "string", "format": "date-time" },
     "submitted_at": { "type": "string", "format": "date-time" },
     "date_stamp": { "type": ["string", "null"], "format": "date-time" },
+    "date_stamp_context": {
+      "anyOf": [{ "$ref": "#/definitions/date_stamp_context" }, { "type": "null" }]
+    },
     "returned_at": { "type": ["string", "null"], "format": "date-time", "readOnly": true },
     "reviewed_at": { "type": ["string", "null"], "format": "date-time", "readOnly": true },
     "status": { "type": "string", "enum": ["submitted", "returned", "superseded"], "readOnly": true },
@@ -115,6 +118,7 @@
     "offence": { "$ref": "general/offence.json" },
     "ioj": { "$ref": "general/ioj.json" },
     "document": { "$ref": "general/document.json" },
-    "evidence": { "$ref": "general/evidence.json" }
+    "evidence": { "$ref": "general/evidence.json" },
+    "date_stamp_context": { "$ref": "general/date_stamp_context.json" }
   }
 }
