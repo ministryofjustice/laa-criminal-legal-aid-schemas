@@ -7,6 +7,13 @@
   "created_at": "2022-09-21T16:25:00.112Z",
   "submitted_at": "2022-09-27T14:10:00.889Z",
   "date_stamp": "2022-09-23T16:00:00.208Z",
+  "date_stamp_context": {
+    "first_name": "Ron",
+    "last_name": "Potter",
+    "date_of_birth": "2007-01-09",
+    "created_at": "2022-10-24T09:51:04.032Z",
+    "date_stamp": "2022-09-23T16:00:00.208Z"
+  },
   "returned_at": "2022-09-27T14:10:00.889Z",
   "status": "returned",
   "is_means_tested": "yes",
