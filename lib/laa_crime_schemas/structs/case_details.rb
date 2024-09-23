@@ -30,6 +30,10 @@ module LaaCrimeSchemas
       # Attributes not required for Change in Financial Circumstances application
       attribute :offences, Types::Array.of(Offence).default([].freeze)
       attribute :codefendants, Types::Array.of(Codefendant).default([].freeze)
+      attribute? :client_other_charge_in_progress, Types::YesNoValue.optional
+      attribute? :partner_other_charge_in_progress, Types::YesNoValue.optional
+      attribute? :client_other_charge, OtherCharge.optional
+      attribute? :partner_other_charge, OtherCharge.optional
       attribute? :hearing_court_name, Types::String.optional
       attribute? :hearing_date, Types::JSON::Date.optional
       attribute? :is_first_court_hearing, Types::FirstHearingAnswerValues.optional
