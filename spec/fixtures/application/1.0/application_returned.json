@@ -122,6 +122,14 @@
       }
     ],
     "codefendants": [],
+    "client_other_charge_in_progress": "yes",
+    "partner_other_charge_in_progress": "no",
+    "client_other_charge": {
+      "charge": "Theft",
+      "hearing_court_name": "Cardiff Magistrates' Court",
+      "next_hearing_date": "2025-01-15"
+    },
+    "partner_other_charge": null,
     "hearing_court_name": "Cardiff Magistrates' Court",
     "hearing_date": "2024-11-11",
     "is_first_court_hearing": "no",

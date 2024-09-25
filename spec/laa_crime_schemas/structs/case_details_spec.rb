@@ -21,6 +21,10 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
         expect(subject.appeal_usn).to be_nil
         expect(subject.offences.size).to eq(2)
         expect(subject.codefendants.size).to eq(1)
+        expect(subject.client_other_charge_in_progress).to eq('yes')
+        expect(subject.partner_other_charge_in_progress).to eq('no')
+        expect(subject.client_other_charge).to have_attributes({ charge: 'Theft', hearing_court_name: "Cardiff Magistrates' Court", next_hearing_date: Date.new(2025, 1, 15) })
+        expect(subject.partner_other_charge).to be_nil
         expect(subject.hearing_court_name).to eq("Cardiff Magistrates' Court")
         expect(subject.hearing_date).to be_a(Date)
         expect(subject.is_first_court_hearing).to eq('no')
@@ -50,6 +54,10 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
     it 'is valid' do
       expect(subject.offences.size).to eq(0)
       expect(subject.codefendants.size).to eq(0)
+      expect(subject.client_other_charge_in_progress).to be_nil
+      expect(subject.partner_other_charge_in_progress).to be_nil
+      expect(subject.client_other_charge).to be_nil
+      expect(subject.partner_other_charge).to be_nil
       expect(subject.hearing_court_name).to be_nil
       expect(subject.hearing_date).to be_nil
       expect(subject.is_first_court_hearing).to be_nil
