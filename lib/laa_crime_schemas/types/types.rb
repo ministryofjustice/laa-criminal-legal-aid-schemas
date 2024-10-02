@@ -293,10 +293,10 @@ module LaaCrimeSchemas
 
     EXTRADITION_COURT_NAMES = ["Westminster Magistrates' Court"].freeze
 
+    TestResult = String.enum('pass', 'fail')
     MeansResult = TestResult
     InterestsOfJusticeResult = TestResult
     FundingDecisionResult = String.enum(*%w[granted granted_on_ioj fail_on_ioj])
-    TestResult = String.enum('pass', 'fail')
 
     InterestsOfJusticeDecision = Hash.schema(
       result: InterestsOfJusticeResult,
