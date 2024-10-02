@@ -97,6 +97,10 @@
     },
     "evidence_details": {
       "$ref": "#/definitions/evidence"
+    },
+    "decisions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/decision" }
     }
   },
   "supporting_evidence": {
@@ -119,6 +123,7 @@
     "ioj": { "$ref": "general/ioj.json" },
     "document": { "$ref": "general/document.json" },
     "evidence": { "$ref": "general/evidence.json" },
-    "date_stamp_context": { "$ref": "general/date_stamp_context.json" }
+    "date_stamp_context": { "$ref": "general/date_stamp_context.json" },
+    "decision": { "$ref": "general/decision.json" }
   }
 }
