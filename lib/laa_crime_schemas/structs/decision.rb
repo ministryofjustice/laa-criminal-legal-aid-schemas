@@ -5,8 +5,8 @@ module LaaCrimeSchemas
     class Decision < Base
       attribute? :reference, Types::Integer.optional
       attribute? :maat_id, Types::Integer.optional
-      attribute? :interests_of_justice, TestResult
-      attribute? :means, TestResult
+      attribute? :interests_of_justice, Types::Nil | TestResult
+      attribute? :means, Types::Nil | TestResult
       attribute :funding_decision, Types::FundingDecisionResult
       attribute? :comments, Types::String.optional
     end
