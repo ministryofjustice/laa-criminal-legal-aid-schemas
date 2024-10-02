@@ -58,7 +58,7 @@
     "funding_decision": {
       "type": "string"
     },
-    "comments": {
+    "comment": {
       "type": "string"
     }
   },
