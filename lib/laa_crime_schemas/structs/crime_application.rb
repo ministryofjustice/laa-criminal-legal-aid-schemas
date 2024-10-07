@@ -36,6 +36,8 @@ module LaaCrimeSchemas
       attribute? :pre_cifc_maat_id, Types::String.optional
       attribute? :pre_cifc_usn, Types::String.optional
       attribute? :pre_cifc_reason, Types::String.optional
+
+      attribute? :decisions, Types::Array.of(Decision).default([].freeze)
     end
   end
 end
