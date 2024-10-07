@@ -69,6 +69,13 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
         it 'does not have any interests_of_justice' do
           expect(subject.interests_of_justice.size).to eq 0
         end
+
+        it 'has date_stamp_context' do
+          expect(subject.date_stamp_context.first_name).to eq 'Reckit'
+          expect(subject.date_stamp_context.last_name).to eq 'Ralph'
+          expect(subject.date_stamp_context.date_of_birth).to eq Date.new(2005, 6, 9)
+          expect(subject.date_stamp_context.date_stamp.to_date).to eq Date.new(2022, 10, 24)
+        end
       end
     end
   end
