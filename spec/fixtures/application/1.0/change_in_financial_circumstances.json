@@ -7,6 +7,13 @@
   "created_at": "2022-10-24T08:33:04.105Z",
   "submitted_at": "2022-10-24T09:50:04.019Z",
   "date_stamp": "2022-10-24T09:50:04.019Z",
+  "date_stamp_context": {
+    "first_name": "Reckit",
+    "last_name": "Ralph",
+    "date_of_birth": "2005-06-09",
+    "created_at": "2022-10-24T09:51:04.032Z",
+    "date_stamp": "2022-10-24T09:50:04.019Z"
+  },
   "status": "submitted",
   "is_means_tested": "yes",
   "ioj_passport": [],
