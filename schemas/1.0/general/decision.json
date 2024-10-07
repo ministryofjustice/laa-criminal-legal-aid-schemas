@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/decision.json",
+  "title": "Decision",
+  "description": "Holds attributes of a decision",
+  "type": "object",
+  "properties": {
+    "reference": {
+      "type": "number"
+    },
+    "maat_id": {
+      "type": "number"
+    },
+    "interests_of_justice": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail"
+          ]
+        },
+        "details": {
+          "type": "string"
+        },
+        "assessed_by": {
+          "type": "string"
+        },
+        "assessed_on": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "means": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail"
+          ]
+        },
+        "details": {
+          "type": "string"
+        },
+        "assessed_by": {
+          "type": "string"
+        },
+        "assessed_on": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "funding_decision": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "funding_decision"
+  ]
+}

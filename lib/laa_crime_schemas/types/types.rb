@@ -292,6 +292,25 @@ module LaaCrimeSchemas
     BusinessInvolvementType = String.enum(*%w[self_employed partnership director_or_shareholder])
 
     EXTRADITION_COURT_NAMES = ["Westminster Magistrates' Court"].freeze
+
+    TestResult = String.enum('pass', 'fail')
+    MeansResult = TestResult
+    InterestsOfJusticeResult = TestResult
+    FundingDecisionResult = String.enum(*%w[granted granted_on_ioj fail_on_ioj])
+
+    InterestsOfJusticeDecision = Hash.schema(
+      result: InterestsOfJusticeResult,
+      details?: String,
+      assessed_by: String,
+      assessed_on: Date
+    )
+
+    MeansDecision = Hash.schema(
+      result: MeansResult,
+      details?: String,
+      assessed_by: String,
+      assessed_on: Date
+    )
   end
 end
 # rubocop:enable Metrics/ModuleLength
