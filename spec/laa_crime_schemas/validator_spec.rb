@@ -160,4 +160,33 @@ RSpec.describe LaaCrimeSchemas::Validator do
       end
     end
   end
+
+  describe 'list of decisions' do
+    subject { described_class.new(document, version: version, schema_name: 'general/decision', list: true) }
+
+    let(:document) do
+      [
+        {
+          'interests_of_justice' => {
+            'result' => 'pass',
+            'assessed_by' => 'Kory Liam',
+            'assessed_on' => '2024-10-04'
+          }
+        },
+        {
+          'funding_decision' => 'fail_on_ioj',
+          'interests_of_justice' => {
+            'result' => 'pass',
+            'assessed_by' => 'Kory Liam'
+          }
+        }
+      ]
+    end
+
+    let(:version) { 1.0 }
+    
+    it 'validates every document' do
+      expect(subject.fully_validate.count).to eq(2)
+    end
+  end
 end
