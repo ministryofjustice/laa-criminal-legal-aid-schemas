@@ -3,7 +3,7 @@
 module LaaCrimeSchemas
   module Structs
     class Codefendant < Person
-      attribute :conflict_of_interest, Types::YesNoValue
+      attribute :conflict_of_interest, Types::YesNoValue.optional
     end
   end
 end
