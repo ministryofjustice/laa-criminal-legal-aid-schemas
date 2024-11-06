@@ -3,8 +3,8 @@
 module LaaCrimeSchemas
   module Structs
     class Amount < Base
-      attribute :amount, Types::PenceSterling
-      attribute :frequency, Types::PaymentFrequency
+      attribute :amount, Types::PenceSterling.optional
+      attribute :frequency, Types::PaymentFrequency.optional
 
       attribute? :metadata do
         attribute? :details, Types::String.optional

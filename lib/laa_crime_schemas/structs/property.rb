@@ -9,12 +9,12 @@ module LaaCrimeSchemas
       attribute :size_in_acres, Types::Integer.optional
       attribute :usage, Types::String.optional
       attribute :bedrooms, Types::Integer.optional
-      attribute :value, Types::PenceSterling
-      attribute :outstanding_mortgage, Types::PenceSterling
-      attribute :percentage_applicant_owned, Types::Float
+      attribute :value, Types::PenceSterling.optional
+      attribute :outstanding_mortgage, Types::PenceSterling.optional
+      attribute :percentage_applicant_owned, Types::Float.optional
       attribute :percentage_partner_owned, Types::Float.optional
       attribute :is_home_address, Types::YesNoValue.optional
-      attribute :has_other_owners, Types::YesNoValue
+      attribute :has_other_owners, Types::YesNoValue.optional
       attribute :address, Address.optional
       attribute? :property_owners, Types::Array.of(PropertyOwner).default([].freeze)
     end

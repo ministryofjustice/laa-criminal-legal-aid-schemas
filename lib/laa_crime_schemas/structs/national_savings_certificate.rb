@@ -6,7 +6,7 @@ module LaaCrimeSchemas
       attribute? :holder_number, Types::String.optional
       attribute? :certificate_number, Types::String.optional
       attribute? :value, Types::PenceSterling.optional
-      attribute :ownership_type, Types::OwnershipType
+      attribute :ownership_type, Types::OwnershipType.optional
     end
   end
 end
