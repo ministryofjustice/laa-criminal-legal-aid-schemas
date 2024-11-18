@@ -47,9 +47,7 @@
               "type": "string",
               "enum": [
                 "pass",
-                "fail",
-                "inel",
-                "full"
+                "fail"
               ]
             },
             "details": {
@@ -128,7 +126,8 @@
         "granted_on_ioj",
         "fail_on_ioj",
         "failmeans",
-        "failioj"
+        "failioj",
+	"failmeioj"
       ]
     },
     "comment": {
