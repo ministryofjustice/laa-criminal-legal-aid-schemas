@@ -1,65 +1,144 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
   "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/decision.json",
   "title": "Decision",
   "description": "Holds attributes of a decision",
   "type": "object",
   "properties": {
     "reference": {
-      "type": "number"
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "integer"
+        }
+      ]
     },
     "maat_id": {
-      "type": "number"
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "case_id": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "interests_of_justice": {
-      "type": "object",
-      "properties": {
-        "result": {
-          "type": "string",
-          "enum": [
-            "pass",
-            "fail"
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail"
+              ]
+            },
+            "details": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "assessed_by": {
+              "type": "string"
+            },
+            "assessed_on": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": [
+            "result",
+            "assessed_by",
+            "assessed_on"
           ]
-        },
-        "details": {
-          "type": "string"
-        },
-        "assessed_by": {
-          "type": "string"
-        },
-        "assessed_on": {
-          "type": "string",
-          "format": "date-time"
         }
-      }
+      ]
     },
     "means": {
-      "type": "object",
-      "properties": {
-        "result": {
-          "type": "string",
-          "enum": [
-            "pass",
-            "fail"
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail",
+                "inel",
+                "full"
+              ]
+            },
+            "details": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "assessed_by": {
+              "type": "string"
+            },
+            "assessed_on": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": [
+            "result",
+            "assessed_by",
+            "assessed_on"
           ]
-        },
-        "details": {
-          "type": "string"
-        },
-        "assessed_by": {
-          "type": "string"
-        },
-        "assessed_on": {
-          "type": "string",
-          "format": "date-time"
         }
-      }
+      ]
     },
     "funding_decision": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "granted",
+        "granted_on_ioj",
+        "fail_on_ioj",
+        "failmeans",
+        "failioj",
+	"failmeioj"
+      ]
     },
     "comment": {
-      "type": "string"
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     }
   },
   "required": [

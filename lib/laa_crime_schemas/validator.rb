@@ -6,10 +6,11 @@ module LaaCrimeSchemas
 
     attr_reader :document, :version
 
-    def initialize(document, version: nil, schema_name: 'application')
+    def initialize(document, version: nil, schema_name: 'application', list: false)
       @document = document
       @version = version
       @schema_name = schema_name
+      @list = list
     end
 
     def schema_version
@@ -18,7 +19,7 @@ module LaaCrimeSchemas
 
     def valid?
       JSON::Validator.validate(
-        schema, document, validate_schema: true
+        schema, document, validate_schema: true, list:
       )
     rescue JSON::Schema::ReadFailed => e
       raise Errors::SchemaNotFoundError, e.message
@@ -26,7 +27,7 @@ module LaaCrimeSchemas
 
     def fully_validate
       JSON::Validator.fully_validate(
-        schema, document, validate_schema: true, errors_as_objects: true
+        schema, document, validate_schema: true, errors_as_objects: true, list:
       )
     rescue JSON::Schema::ReadFailed => e
       raise Errors::SchemaNotFoundError, e.message
@@ -34,7 +35,7 @@ module LaaCrimeSchemas
 
     private
 
-    attr_reader :schema_name
+    attr_reader :schema_name, :list
 
     def schema
       File.join(LaaCrimeSchemas.root, 'schemas', schema_version.to_s, "#{schema_name}.json")
