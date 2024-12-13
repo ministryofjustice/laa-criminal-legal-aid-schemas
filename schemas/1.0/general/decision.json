@@ -89,8 +89,7 @@
               "enum": [
                 "pass",
                 "fail",
-                "inel",
-                "full"
+                "contribution_required"
               ]
             },
             "details": {
@@ -122,12 +121,8 @@
     "funding_decision": {
       "type": "string",
       "enum": [
-        "granted",
-        "granted_on_ioj",
-        "fail_on_ioj",
-        "failmeans",
-        "failioj",
-	"failmeioj"
+        "grant",
+	"refuse"
       ]
     },
     "comment": {

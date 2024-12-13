@@ -21,7 +21,7 @@ RSpec.describe LaaCrimeSchemas::Structs::Decision do
             'assessed_by' => 'Kory Liam',
             'assessed_on' => '2024-11-01 00:00:00'
           },
-          'funding_decision' => 'granted',
+          'funding_decision' => 'grant',
           'comment' => 'test comment'
         }
       end
@@ -38,7 +38,7 @@ RSpec.describe LaaCrimeSchemas::Structs::Decision do
         expect(subject.means.details).to eq('means details')
         expect(subject.means.assessed_by).to eq('Kory Liam')
         expect(subject.means.assessed_on).to eq(Date.new(2024, 11, 1))
-        expect(subject.funding_decision).to eq('granted')
+        expect(subject.funding_decision).to eq('grant')
         expect(subject.comment).to eq('test comment')
       end
     end
