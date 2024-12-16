@@ -174,7 +174,7 @@ RSpec.describe LaaCrimeSchemas::Validator do
           }
         },
         {
-          'funding_decision' => 'fail_on_ioj',
+          'funding_decision' => 'refuse',
           'interests_of_justice' => {
             'result' => 'pass',
             'assessed_by' => 'Kory Liam'

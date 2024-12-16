@@ -8,7 +8,7 @@ module LaaCrimeSchemas
       attribute? :case_id, Types::String.optional
       attribute? :interests_of_justice, Types::Nil | TestResult
       attribute? :means, Types::Nil | TestResult
-      attribute :funding_decision, Types::FundingDecisionResult
+      attribute :funding_decision, Types::FundingDecision
       attribute? :comment, Types::String.optional
     end
   end
