@@ -46,8 +46,8 @@
             "result": {
               "type": "string",
               "enum": [
-                "pass",
-                "fail"
+                "passed",
+                "failed"
               ]
             },
             "details": {
@@ -87,9 +87,9 @@
             "result": {
               "type": "string",
               "enum": [
-                "pass",
-                "fail",
-                "contribution_required"
+                "passed",
+                "failed",
+                "passed_with_contribution"
               ]
             },
             "details": {
@@ -121,8 +121,8 @@
     "funding_decision": {
       "type": "string",
       "enum": [
-        "grant",
-	"refuse"
+        "granted",
+	"refused"
       ]
     },
     "comment": {
