@@ -168,15 +168,15 @@ RSpec.describe LaaCrimeSchemas::Validator do
       [
         {
           'interests_of_justice' => {
-            'result' => 'pass',
+            'result' => 'passed',
             'assessed_by' => 'Kory Liam',
             'assessed_on' => '2024-10-04'
           }
         },
         {
-          'funding_decision' => 'refuse',
+          'funding_decision' => 'refused',
           'interests_of_justice' => {
-            'result' => 'pass',
+            'result' => 'failed',
             'assessed_by' => 'Kory Liam'
           }
         }

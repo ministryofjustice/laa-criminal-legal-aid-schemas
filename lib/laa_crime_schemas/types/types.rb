@@ -293,10 +293,10 @@ module LaaCrimeSchemas
 
     EXTRADITION_COURT_NAMES = ["Westminster Magistrates' Court"].freeze
 
-    TestResult = String.enum('pass', 'fail', 'contribution_required')
+    TestResult = String.enum('passed', 'failed', 'passed_with_contribution')
     MeansResult = TestResult
-    InterestsOfJusticeResult = String.enum(TestResult['pass'], TestResult['fail'])
-    FundingDecision = String.enum(*%w[grant refuse])
+    InterestsOfJusticeResult = String.enum(TestResult['passed'], TestResult['failed'])
+    FundingDecision = String.enum(*%w[granted refused])
   end
 end
 # rubocop:enable Metrics/ModuleLength
