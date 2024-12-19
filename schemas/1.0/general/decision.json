@@ -13,7 +13,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "The LAA Reference Number associated with the original application. For CIFC, this will refer to the original application rather than the CIFC itself."
     },
     "maat_id": {
       "anyOf": [
@@ -23,7 +24,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "The ID of the result in MAAT for means tested application"
     },
     "case_id": {
       "anyOf": [
@@ -87,10 +89,11 @@
             "result": {
               "type": "string",
               "enum": [
-                "passed",
-                "failed",
-                "passed_with_contribution"
-              ]
+		"passed",
+		"failed",
+		"passed_with_contribution"
+	      ],
+	      "description": "The outcome of the means test. 'passed_with_contribution' indicates that gross income is between the upper and lower thresholds, requiring a possible contribution."
             },
             "details": {
               "anyOf": [
@@ -123,7 +126,15 @@
       "enum": [
         "granted",
 	"refused"
-      ]
+      ],
+      "description": "Indicates whether legal aid funding was granted or refused."
+    },
+    "overall_result": {
+      "anyOf": [
+	{ "type": "null" },
+	{"type": "string" }
+      ],
+      "description": "The combined result of the IoJ test, Means test, and funding decision, as used in MAAT communications."
     },
     "comment": {
       "anyOf": [
