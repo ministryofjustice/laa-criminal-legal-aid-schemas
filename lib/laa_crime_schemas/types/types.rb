@@ -297,6 +297,7 @@ module LaaCrimeSchemas
     MeansResult = TestResult
     InterestsOfJusticeResult = String.enum(TestResult['passed'], TestResult['failed'])
     FundingDecision = String.enum(*%w[granted refused])
+    CourtType = String.enum('crown', 'magistrates')
   end
 end
 # rubocop:enable Metrics/ModuleLength
