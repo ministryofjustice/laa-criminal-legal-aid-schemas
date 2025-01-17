@@ -22,9 +22,9 @@ RSpec.describe LaaCrimeSchemas::Structs::CaseDetails do
         expect(subject.offences.size).to eq(2)
         expect(subject.codefendants.size).to eq(1)
         expect(subject.client_other_charge_in_progress).to eq('yes')
-        expect(subject.partner_other_charge_in_progress).to eq('no')
+        expect(subject.partner_other_charge_in_progress).to eq('yes')
         expect(subject.client_other_charge).to have_attributes({ charge: 'Theft', hearing_court_name: "Cardiff Magistrates' Court", next_hearing_date: Date.new(2025, 1, 15) })
-        expect(subject.partner_other_charge).to be_nil
+        expect(subject.partner_other_charge).to have_attributes({ charge: 'Harassment', hearing_court_name: "Bristol Magistrates Court", next_hearing_date: Date.new(2025, 3, 1) })
         expect(subject.hearing_court_name).to eq("Cardiff Magistrates' Court")
         expect(subject.hearing_date).to be_a(Date)
         expect(subject.is_first_court_hearing).to eq('no')
