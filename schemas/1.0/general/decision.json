@@ -89,11 +89,11 @@
             "result": {
               "type": "string",
               "enum": [
-		"passed",
-		"failed",
-		"passed_with_contribution"
-	      ],
-	      "description": "The outcome of the means test. 'passed_with_contribution' indicates that gross income is between the upper and lower thresholds, requiring a possible contribution."
+                "passed",
+                "failed",
+                "passed_with_contribution"
+              ],
+              "description": "The outcome of the means test. 'passed_with_contribution' indicates that gross income is between the upper and lower thresholds, requiring a possible contribution."
             },
             "details": {
               "anyOf": [
@@ -121,18 +121,30 @@
         }
       ]
     },
+    "court_type": {
+      "type": "string",
+      "enum": [
+        "crown",
+        "magistrates"
+      ],
+      "description": "The court type of the MAAT means result and MAAT funding decision used in this decision"
+    },
     "funding_decision": {
       "type": "string",
       "enum": [
         "granted",
-	"refused"
+        "refused"
       ],
       "description": "Indicates whether legal aid funding was granted or refused."
     },
     "overall_result": {
       "anyOf": [
-	{ "type": "null" },
-	{"type": "string" }
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
       ],
       "description": "The combined result of the IoJ test, Means test, and funding decision, as used in MAAT communications."
     },
