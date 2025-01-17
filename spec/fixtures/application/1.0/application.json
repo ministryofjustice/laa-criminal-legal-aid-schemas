@@ -143,13 +143,17 @@
       }
     ],
     "client_other_charge_in_progress": "yes",
-    "partner_other_charge_in_progress": "no",
+    "partner_other_charge_in_progress": "yes",
     "client_other_charge": {
       "charge": "Theft",
       "hearing_court_name": "Cardiff Magistrates' Court",
       "next_hearing_date": "2025-01-15"
     },
-    "partner_other_charge": null,
+    "partner_other_charge":  {
+      "charge": "Harassment",
+      "hearing_court_name": "Bristol Magistrates Court",
+      "next_hearing_date": "2025-03-01"
+    },
     "hearing_court_name": "Cardiff Magistrates' Court",
     "hearing_date": "2024-11-11",
     "is_first_court_hearing": "no",
