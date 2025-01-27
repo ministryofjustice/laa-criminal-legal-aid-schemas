@@ -122,10 +122,17 @@
       ]
     },
     "court_type": {
-      "type": "string",
-      "enum": [
-        "crown",
-        "magistrates"
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "crown",
+            "magistrates"
+          ]
+        }
       ],
       "description": "The court type of the MAAT means result and MAAT funding decision used in this decision"
     },
