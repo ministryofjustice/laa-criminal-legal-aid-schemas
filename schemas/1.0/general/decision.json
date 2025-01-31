@@ -150,10 +150,19 @@
           "type": "null"
         },
         {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "granted",
+            "granted_with_contribution",
+            "granted_failed_means",
+            "refused",
+            "refused_failed_ioj",
+            "refused_failed_ioj_and_means",
+            "refused_failed_means"
+          ]
         }
       ],
-      "description": "The combined result of the IoJ test, Means test, and funding decision, as used in MAAT communications."
+      "description": "The overall result of the funding decision including relvant qualification."
     },
     "comment": {
       "anyOf": [

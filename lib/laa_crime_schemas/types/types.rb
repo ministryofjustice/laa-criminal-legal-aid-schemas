@@ -297,6 +297,17 @@ module LaaCrimeSchemas
     MeansResult = TestResult
     InterestsOfJusticeResult = String.enum(TestResult['passed'], TestResult['failed'])
     FundingDecision = String.enum(*%w[granted refused])
+
+    OverallResult = String.enum(*%w[
+                                  granted
+                                  granted_with_contribution
+                                  granted_failed_means
+                                  refused
+                                  refused_failed_ioj
+                                  refused_failed_ioj_and_means
+                                  refused_failed_means
+                                ])
+
     CourtType = String.enum('crown', 'magistrates')
   end
 end
