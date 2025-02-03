@@ -10,7 +10,7 @@ module LaaCrimeSchemas
       attribute? :interests_of_justice, Types::Nil | TestResult
       attribute? :means, Types::Nil | TestResult
       attribute? :funding_decision, Types::FundingDecision.optional
-      attribute? :overall_result, Types::String.optional
+      attribute? :overall_result, Types::OverallResult.optional
       attribute? :comment, Types::String.optional
     end
   end
