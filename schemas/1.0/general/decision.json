@@ -121,20 +121,16 @@
         }
       ]
     },
-    "court_type": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "type": "string",
-          "enum": [
-            "crown",
-            "magistrates"
-          ]
-        }
+    "assessment_rules": {
+      "type": "string",
+      "enum": [
+        "appeal_to_crown_court",
+        "committal_for_sentence",
+        "crown_court",
+        "magistrates_court",
+        "non_means"
       ],
-      "description": "The court type of the MAAT means result and MAAT funding decision used in this decision"
+      "description": "The assessment rules used to determine the means test and overall result"
     },
     "funding_decision": {
       "type": "string",
