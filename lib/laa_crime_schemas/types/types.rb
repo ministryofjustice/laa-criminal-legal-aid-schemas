@@ -306,6 +306,7 @@ module LaaCrimeSchemas
                                   refused_failed_ioj
                                   refused_failed_ioj_and_means
                                   refused_failed_means
+                                  refused_ineligible
                                 ])
 
     CourtType = String.enum('crown', 'magistrates')
