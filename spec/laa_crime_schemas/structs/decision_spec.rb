@@ -1,4 +1,3 @@
-
 RSpec.describe LaaCrimeSchemas::Structs::Decision do
   subject { described_class.new(attributes) }
 
@@ -8,7 +7,8 @@ RSpec.describe LaaCrimeSchemas::Structs::Decision do
         {
           'reference' => 1234,
           'maat_id' => nil,
-          'case_id' => "123123123",
+          'case_id' => '123123123',
+          'assessment_rules' => 'committal_for_sentence',
           'interests_of_justice' => {
             'result' => 'passed',
             'details' => 'ioj details',
@@ -29,7 +29,8 @@ RSpec.describe LaaCrimeSchemas::Structs::Decision do
       it 'builds a decision struct' do
         expect(subject.reference).to eq(1234)
         expect(subject.maat_id).to be_nil
-        expect(subject.case_id).to eq("123123123")
+        expect(subject.case_id).to eq('123123123')
+        expect(subject.assessment_rules).to eq('committal_for_sentence')
         expect(subject.interests_of_justice.result).to eq('passed')
         expect(subject.interests_of_justice.details).to eq('ioj details')
         expect(subject.interests_of_justice.assessed_by).to eq('Grace Nolan')
