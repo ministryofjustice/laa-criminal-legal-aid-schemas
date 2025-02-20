@@ -5,32 +5,162 @@
   "description": "Attributes of a criminal legal aid application",
   "type": "object",
   "properties": {
-    "id": { "type": "string" },
-    "parent_id": { "type": ["string", "null"] },
-    "schema_version": { "type": "number" },
-    "reference": { "type": "integer" },
-    "application_type": { "type": "string", "enum": ["initial", "post_submission_evidence", "change_in_financial_circumstances"] },
-    "created_at": { "type": "string", "format": "date-time" },
-    "submitted_at": { "type": "string", "format": "date-time" },
-    "date_stamp": { "type": ["string", "null"], "format": "date-time" },
-    "date_stamp_context": {
-      "anyOf": [{ "$ref": "#/definitions/date_stamp_context" }, { "type": "null" }]
+    "id": {
+      "type": "string"
     },
-    "returned_at": { "type": ["string", "null"], "format": "date-time", "readOnly": true },
-    "reviewed_at": { "type": ["string", "null"], "format": "date-time", "readOnly": true },
-    "status": { "type": "string", "enum": ["submitted", "returned", "superseded"], "readOnly": true },
-    "is_means_tested": { "anyOf": [{ "type": "null" }, { "type": "string", "enum": ["yes", "no"] }] },
-    "pre_cifc_reference_number": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["pre_cifc_maat_id", "pre_cifc_usn"]}]},
-    "pre_cifc_maat_id": { "type": ["string", "null"] },
-    "pre_cifc_usn": { "type": ["string", "null"] },
-    "pre_cifc_reason": { "type": ["string", "null"] },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_version": {
+      "type": "number"
+    },
+    "reference": {
+      "type": "integer"
+    },
+    "application_type": {
+      "type": "string",
+      "enum": [
+        "initial",
+        "post_submission_evidence",
+        "change_in_financial_circumstances"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "submitted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "date_stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "date_stamp_context": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/date_stamp_context"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "returned_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "readOnly": true
+    },
+    "review_status": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "application_received",
+            "returned_to_provider",
+            "ready_for_assessment",
+            "assessment_completed"
+          ]
+        }
+      ],
+      "readOnly": true
+    },
+    "reviewed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "readOnly": true
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "submitted",
+        "returned",
+        "superseded"
+      ],
+      "readOnly": true
+    },
+    "is_means_tested": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no"
+          ]
+        }
+      ]
+    },
+    "pre_cifc_reference_number": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "pre_cifc_maat_id",
+            "pre_cifc_usn"
+          ]
+        }
+      ]
+    },
+    "pre_cifc_maat_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pre_cifc_usn": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pre_cifc_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "ioj_passport": {
       "type": "array",
-      "items": { "type": "string", "enum": ["on_age_under18", "on_offence"] }
+      "items": {
+        "type": "string",
+        "enum": [
+          "on_age_under18",
+          "on_offence"
+        ]
+      }
     },
     "means_passport": {
       "type": "array",
-      "items": { "type": "string", "enum": ["on_not_means_tested", "on_age_under18", "on_benefit_check"] }
+      "items": {
+        "type": "string",
+        "enum": [
+          "on_not_means_tested",
+          "on_age_under18",
+          "on_benefit_check"
+        ]
+      }
     },
     "means_details": {
       "$ref": "#/definitions/means"
@@ -41,89 +171,363 @@
     "client_details": {
       "type": "object",
       "properties": {
-        "applicant": { "$ref": "#/definitions/applicant" },
-        "partner": { "anyOf": [{ "$ref": "#/definitions/partner" }, { "type": "null" }] }
+        "applicant": {
+          "$ref": "#/definitions/applicant"
+        },
+        "partner": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/partner"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
       },
-      "required": ["applicant"]
+      "required": [
+        "applicant"
+      ]
     },
     "case_details": {
       "type": "object",
       "properties": {
-        "urn": { "type": ["string", "null"] },
-        "case_type": { "type": ["string", "null"], "enum": ["summary_only", "either_way", "indictable", "already_in_crown_court", "committal", "appeal_to_crown_court", "appeal_to_crown_court_with_changes", null] },
-        "offence_class": { "type": ["string", "null"], "enum": ["A", "K", "G", "B", "I", "J", "D", "C", "H", "F", "E", null] },
-        "appeal_lodged_date": { "type": ["string", "null"], "format": "date" },
-        "appeal_original_app_submitted": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
-        "appeal_financial_circumstances_changed": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
-        "appeal_with_changes_details": { "type": ["string", "null"] },
-        "appeal_reference_number": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["appeal_maat_id", "appeal_usn"]}]},
-        "appeal_maat_id": { "type": ["string", "null"] },
-        "appeal_usn": { "type": ["string", "null"] },
-        "has_case_concluded": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
-        "date_case_concluded": { "type": ["string", "null"], "format": "date" },
-        "is_client_remanded": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
-        "date_client_remanded": { "type": ["string", "null"], "format": "date" },
-        "is_preorder_work_claimed": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
-        "preorder_work_date": { "type": ["string", "null"], "format": "date" },
-        "preorder_work_details": { "type": ["string", "null"] },
+        "urn": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "case_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "summary_only",
+            "either_way",
+            "indictable",
+            "already_in_crown_court",
+            "committal",
+            "appeal_to_crown_court",
+            "appeal_to_crown_court_with_changes",
+            null
+          ]
+        },
+        "offence_class": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "A",
+            "K",
+            "G",
+            "B",
+            "I",
+            "J",
+            "D",
+            "C",
+            "H",
+            "F",
+            "E",
+            null
+          ]
+        },
+        "appeal_lodged_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "appeal_original_app_submitted": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no"
+              ]
+            }
+          ]
+        },
+        "appeal_financial_circumstances_changed": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no"
+              ]
+            }
+          ]
+        },
+        "appeal_with_changes_details": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "appeal_reference_number": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "appeal_maat_id",
+                "appeal_usn"
+              ]
+            }
+          ]
+        },
+        "appeal_maat_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "appeal_usn": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "has_case_concluded": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no"
+              ]
+            }
+          ]
+        },
+        "date_case_concluded": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "is_client_remanded": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no"
+              ]
+            }
+          ]
+        },
+        "date_client_remanded": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "is_preorder_work_claimed": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "yes",
+                "no"
+              ]
+            }
+          ]
+        },
+        "preorder_work_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "preorder_work_details": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "offences": {
           "type": "array",
-          "items": { "$ref": "#/definitions/offence" }
+          "items": {
+            "$ref": "#/definitions/offence"
+          }
         },
         "codefendants": {
           "type": "array",
-          "items": { "$ref": "#/definitions/codefendant" }
+          "items": {
+            "$ref": "#/definitions/codefendant"
+          }
         },
-        "hearing_court_name": { "type": ["string", "null"] },
-        "hearing_date": { "type": ["string", "null"], "format": "date" },
-        "is_first_court_hearing": { "type": ["string", "null"], "enum": ["yes", "no", "no_hearing_yet", null] },
-        "first_court_hearing_name": { "type": ["string", "null"] }
+        "hearing_court_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hearing_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "is_first_court_hearing": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "yes",
+            "no",
+            "no_hearing_yet",
+            null
+          ]
+        },
+        "first_court_hearing_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       },
       "required": [
-        "urn", "offences", "codefendants", "hearing_court_name", "hearing_date"
+        "urn",
+        "offences",
+        "codefendants",
+        "hearing_court_name",
+        "hearing_date"
       ]
     },
     "interests_of_justice": {
       "type": "array",
-      "items": { "$ref": "#/definitions/ioj" }
+      "items": {
+        "$ref": "#/definitions/ioj"
+      }
     },
     "return_details": {
       "type": "object",
       "properties": {
-        "reason": { "type": "string", "enum": ["clarification_required", "evidence_issue", "duplicate_application", "case_concluded", "provider_request"] },
-        "details": { "type": "string" }
+        "reason": {
+          "type": "string",
+          "enum": [
+            "clarification_required",
+            "evidence_issue",
+            "duplicate_application",
+            "case_concluded",
+            "provider_request"
+          ]
+        },
+        "details": {
+          "type": "string"
+        }
       },
-      "required": ["reason", "details"]
+      "required": [
+        "reason",
+        "details"
+      ]
     },
     "evidence_details": {
       "$ref": "#/definitions/evidence"
     },
     "decisions": {
       "type": "array",
-      "items": { "$ref": "#/definitions/decision" }
+      "items": {
+        "$ref": "#/definitions/decision"
+      }
     }
   },
   "supporting_evidence": {
     "type": "array",
-    "items": { "$ref": "#/definitions/document" }
+    "items": {
+      "$ref": "#/definitions/document"
+    }
   },
-  "additional_information": { "type": ["string", "null"] },
-  "work_stream": { "type": ["string", "null"], "enum": ["extradition", "national_crime_team", "criminal_applications_team", null] },
+  "additional_information": {
+    "type": [
+      "string",
+      "null"
+    ]
+  },
+  "work_stream": {
+    "type": [
+      "string",
+      "null"
+    ],
+    "enum": [
+      "extradition",
+      "national_crime_team",
+      "criminal_applications_team",
+      null
+    ]
+  },
   "required": [
-    "id", "parent_id", "schema_version", "reference", "application_type", "created_at", "submitted_at",
-    "provider_details", "client_details"
+    "id",
+    "parent_id",
+    "schema_version",
+    "reference",
+    "application_type",
+    "created_at",
+    "submitted_at",
+    "provider_details",
+    "client_details"
   ],
   "definitions": {
-    "means": { "$ref": "means.json" },
-    "partner": { "$ref": "general/partner.json" },
-    "provider": { "$ref": "general/provider.json" },
-    "applicant": { "$ref": "general/applicant.json" },
-    "codefendant": { "$ref": "general/codefendant.json" },
-    "offence": { "$ref": "general/offence.json" },
-    "ioj": { "$ref": "general/ioj.json" },
-    "document": { "$ref": "general/document.json" },
-    "evidence": { "$ref": "general/evidence.json" },
-    "date_stamp_context": { "$ref": "general/date_stamp_context.json" },
-    "decision": { "$ref": "general/decision.json" }
+    "means": {
+      "$ref": "means.json"
+    },
+    "partner": {
+      "$ref": "general/partner.json"
+    },
+    "provider": {
+      "$ref": "general/provider.json"
+    },
+    "applicant": {
+      "$ref": "general/applicant.json"
+    },
+    "codefendant": {
+      "$ref": "general/codefendant.json"
+    },
+    "offence": {
+      "$ref": "general/offence.json"
+    },
+    "ioj": {
+      "$ref": "general/ioj.json"
+    },
+    "document": {
+      "$ref": "general/document.json"
+    },
+    "evidence": {
+      "$ref": "general/evidence.json"
+    },
+    "date_stamp_context": {
+      "$ref": "general/date_stamp_context.json"
+    },
+    "decision": {
+      "$ref": "general/decision.json"
+    }
   }
 }

@@ -13,7 +13,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
       # Just checking an attribute is enough as
       # if it was invalid it would raise an exception
       it 'builds a crime application struct' do
-        expect(subject.reference).to eq(6000001)
+        expect(subject.reference).to eq(6_000_001)
       end
 
       it 'produces a valid JSON document conforming to the schema' do
@@ -31,7 +31,7 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
       end
 
       it 'raises an error' do
-        expect { subject }.to raise_error(Dry::Struct::Error, /\"work_address\" \(String\) has invalid type/)
+        expect { subject }.to raise_error(Dry::Struct::Error, /"work_address" \(String\) has invalid type/)
       end
     end
 
