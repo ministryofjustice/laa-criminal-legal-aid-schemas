@@ -42,7 +42,6 @@
       "correspondence_address_type": "providers_office_address",
       "home_address": null,
       "correspondence_address": null,
-      "preferred_correspondence_language": null,
       "residence_type": null,
       "relationship_to_owner_of_usual_home_address": null,
       "has_partner": "yes",
