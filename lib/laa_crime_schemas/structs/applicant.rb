@@ -16,6 +16,7 @@ module LaaCrimeSchemas
       attribute? :telephone_number, Types::String.optional
       attribute? :residence_type, Types::ResidenceType.optional
       attribute? :relationship_to_owner_of_usual_home_address, Types::String.optional
+      attribute? :preferred_correspondence_language, Types::String.optional
 
       attribute? :benefit_check_result, Types::Bool.optional
       attribute? :benefit_check_status, Types::BenefitCheckStatus.optional
