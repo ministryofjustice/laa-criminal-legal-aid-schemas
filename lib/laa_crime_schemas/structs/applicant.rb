@@ -3,7 +3,7 @@
 module LaaCrimeSchemas
   module Structs
     class Applicant < Person
-      attribute :date_of_birth, Types::JSON::Date
+      attribute? :date_of_birth, Types::JSON::Date.optional
       attribute? :benefit_type, Types::BenefitType.optional
       attribute? :last_jsa_appointment_date, Types::JSON::Date.optional
       attribute? :has_arc, Types::String.optional
