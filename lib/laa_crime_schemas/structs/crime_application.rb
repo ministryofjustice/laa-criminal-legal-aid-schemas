@@ -9,7 +9,7 @@ module LaaCrimeSchemas
 
       attribute? :provider_details, ProviderDetails
 
-      attribute :client_details, Base do
+      attribute? :client_details, Base do
         attribute :applicant, Applicant
         attribute? :partner, Partner
       end

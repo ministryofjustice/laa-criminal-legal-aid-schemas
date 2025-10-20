@@ -49,6 +49,7 @@ require_relative 'laa_crime_schemas/structs/prompt'
 require_relative 'laa_crime_schemas/structs/evidence_details'
 
 require_relative 'laa_crime_schemas/structs/crime_application'
+require_relative 'laa_crime_schemas/structs/anonymised_crime_application'
 require_relative 'laa_crime_schemas/structs/pruned_application'
 
 module LaaCrimeSchemas
