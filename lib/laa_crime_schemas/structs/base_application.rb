@@ -21,6 +21,7 @@ module LaaCrimeSchemas
       attribute? :date_stamp_context, DateStampContext
       attribute? :returned_at, Types::JSON::DateTime.optional
       attribute? :reviewed_at, Types::JSON::DateTime.optional
+      attribute? :soft_deleted_at, Types::JSON::DateTime.optional
     end
   end
 end
