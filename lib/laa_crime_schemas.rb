@@ -15,8 +15,6 @@ require_relative 'laa_crime_schemas/types/types'
 
 require_relative 'laa_crime_schemas/structs/base'
 require_relative 'laa_crime_schemas/structs/date_stamp_context'
-require_relative 'laa_crime_schemas/structs/base_application'
-
 require_relative 'laa_crime_schemas/structs/amount'
 require_relative 'laa_crime_schemas/structs/asset'
 require_relative 'laa_crime_schemas/structs/offence'
@@ -47,7 +45,6 @@ require_relative 'laa_crime_schemas/structs/capital_details'
 require_relative 'laa_crime_schemas/structs/means_details'
 require_relative 'laa_crime_schemas/structs/prompt'
 require_relative 'laa_crime_schemas/structs/evidence_details'
-
 require_relative 'laa_crime_schemas/structs/crime_application'
 require_relative 'laa_crime_schemas/structs/anonymised_crime_application'
 require_relative 'laa_crime_schemas/structs/pruned_application'
