@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/pruned_application.json",
+  "title": "Anonymised application for criminal legal aid",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_version": {
+      "type": "number"
+    },
+    "reference": {
+      "type": "integer"
+    },
+    "application_type": {
+      "type": "string",
+      "enum": [
+        "initial",
+        "post_submission_evidence",
+        "change_in_financial_circumstances"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "submitted_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "date_stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "means_passport": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "on_not_means_tested",
+          "on_age_under18",
+          "on_benefit_check"
+        ]
+      }
+    },
+    "ioj_passport": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "on_age_under18",
+          "on_offence"
+        ]
+      }
+    },
+    "provider_details": {
+      "type": "object",
+      "properties": {
+        "office_code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "office_code"
+      ],
+      "additionalProperties": false
+    },
+    "returned_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "review_status": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "application_received",
+            "returned_to_provider",
+            "ready_for_assessment",
+            "assessment_completed"
+          ]
+        }
+      ],
+      "readOnly": true
+    },
+    "reviewed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "submitted",
+        "returned",
+        "superseded"
+      ]
+    },
+    "client_details": {
+      "type": "object",
+      "properties": {
+        "applicant": {
+          "type": "object",
+          "properties": {
+            "last_name": {
+              "type": "string",
+              "enum": [
+                "[deleted]"
+              ]
+            }
+          },
+          "required": [
+            "last_name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "applicant"
+      ],
+      "additionalProperties": false
+    },
+    "work_stream": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "extradition",
+        "national_crime_team",
+        "criminal_applications_team",
+        null
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "parent_id",
+    "schema_version",
+    "reference",
+    "application_type",
+    "client_details",
+    "provider_details",
+    "created_at",
+    "submitted_at",
+    "date_stamp",
+    "status"
+  ],
+  "additionalProperties": false
+}
