@@ -29,6 +29,7 @@
     "has_benefit_evidence": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "will_enter_nino": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
     "confirm_dwp_result": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
+    "dwp_response": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["Undetermined", "No", "Yes"]}]},
     "confirm_details": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]}
   },
   "required": [
