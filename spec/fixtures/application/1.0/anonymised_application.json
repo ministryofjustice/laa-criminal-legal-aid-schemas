@@ -1,0 +1,24 @@
+{
+  "id": "696dd4fd-b619-4637-ab42-a5f4565bcf4a",
+  "parent_id": null,
+  "schema_version": 1.0,
+  "reference": 6000001,
+  "application_type": "initial",
+  "created_at": "2022-10-24",
+  "submitted_at": "2022-10-24",
+  "date_stamp": "2022-10-24",
+  "status": "submitted",
+  "ioj_passport": [],
+  "means_passport": [
+    "on_benefit_check"
+  ],
+  "provider_details": {
+    "office_code": "1A123B"
+  },
+  "client_details": {
+    "applicant": {
+      "last_name": "[deleted]"
+    }
+  },
+  "work_stream": "criminal_applications_team"
+}
