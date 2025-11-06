@@ -24,7 +24,7 @@ module LaaCrimeSchemas
       attribute? :will_enter_nino, Types::String.optional
       attribute? :confirm_details, Types::String.optional
       attribute? :confirm_dwp_result, Types::String.optional
-      attribute? :dwp_response, Types::String.optional
+      attribute? :dwp_response, Types::DWPResponse.optional
 
       attribute? :has_partner, Types::String.optional
       attribute? :relationship_to_partner, Types::RelationshipType.optional

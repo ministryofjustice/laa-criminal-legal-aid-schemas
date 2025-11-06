@@ -316,6 +316,8 @@ module LaaCrimeSchemas
                                   refused_failed_means
                                   refused_ineligible
                                 ])
+
+    DWPResponse = String.enum('Yes', 'No', 'Undetermined')
   end
 end
 # rubocop:enable Metrics/ModuleLength
