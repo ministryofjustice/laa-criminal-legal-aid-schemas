@@ -18,6 +18,7 @@ module LaaCrimeSchemas
       attribute? :will_enter_nino, Types::String.optional
       attribute? :confirm_details, Types::String.optional
       attribute? :confirm_dwp_result, Types::String.optional
+      attribute? :dwp_response, Types::DWPResponse.optional
 
       attribute? :involvement_in_case, Types::CaseInvolvement.optional
       attribute? :conflict_of_interest, Types::YesNoValue.optional

@@ -57,6 +57,7 @@
       "benefit_check_result": false,
       "benefit_check_status": "no_record_found",
       "confirm_dwp_result": "no",
+      "dwp_response": null,
       "confirm_details": "yes",
       "has_benefit_evidence": "no",
       "will_enter_nino": null
@@ -83,6 +84,7 @@
       "benefit_check_result": null,
       "benefit_check_status": null,
       "confirm_dwp_result": null,
+      "dwp_response": null,
       "confirm_details": null,
       "has_benefit_evidence": null,
       "will_enter_nino": null,
