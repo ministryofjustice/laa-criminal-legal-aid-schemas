@@ -37,7 +37,8 @@
       "correspondence_address": null,
       "residence_type": null,
       "has_partner": "yes",
-      "welsh_correspondence": false
+      "welsh_correspondence": false,
+      "dwp_response": null
     },
     "partner": {
       "first_name": "Jennifer",
@@ -48,7 +49,8 @@
       "last_jsa_appointment_date": null,
       "date_of_birth": "2001-12-23",
       "involvement_in_case": "codefendant",
-      "conflict_of_interest": "no"
+      "conflict_of_interest": "no",
+      "dwp_response": null
     }
   },
   "case_details": {
