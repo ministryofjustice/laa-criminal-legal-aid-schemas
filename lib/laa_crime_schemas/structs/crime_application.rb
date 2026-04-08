@@ -42,6 +42,7 @@ module LaaCrimeSchemas
       attribute? :review_status, Types::ReviewApplicationStatus
       attribute? :reviewed_at, Types::JSON::DateTime.optional
       attribute? :soft_deleted_at, Types::JSON::DateTime.optional
+      attribute? :archived_at, Types::JSON::DateTime.optional
       attribute? :status, Types::ApplicationStatus
       attribute? :work_stream, Types::WorkStreamType
     end
