@@ -1,10 +1,16 @@
 # LAA Criminal Legal Aid Schemas
 
+The shared, versioned definition of a criminal legal-aid application and the messages exchanged with the criminal-applications datastore. Maintained by the **Crime Apply & Review Team** and used by Crime Apply, Crime Review, the datastore and its other clients.
+
 JSON schema definitions, fixtures and validator for LAA Apply for criminal legal aid.
 
 Schemas are published versioned with major and minor version and stored in directory [schemas](/schemas).
 
 Initial schema 1.0 is implemented. There might be minor changes but overall should give an idea of the final document structure.
+
+## Scope: structure and types, not business rules
+
+These schemas define the **structure and types** of an application — not business rules. Rules change often; structure and types are stable. This is why a single schema version has sufficed despite the `major.minor` versioning support. Validate business *meaning* in the services that own those rules.
 
 ## Installation
 
@@ -56,7 +62,7 @@ Finally, if you want a detailed collection of all errors found, you can get them
 
 ```ruby
 => LaaCrimeSchemas::Validator.new(document, version: 1.0).fully_validate
-=> [{:schema=>#<Addressable::URI:0x2e40 URI:file://laa-criminal-legal-aid-schemas/schemas/1.0/application.json>, :fragment=>\"#/\", :message=>\"The property '#/' did not contain a required property of 'status' in schema file://laa-criminal-legal-aid-schemas/schemas/1.0/application.json\", :failed_attribute=>\"Required\"}]
+=> [{:schema=>#<Addressable::URI:0x2e40 URI:file://laa-criminal-legal-aid-schemas/schemas/1.0/application.json>, :fragment=>"#/", :message=>"The property '#/' did not contain a required property of 'status' in schema file://laa-criminal-legal-aid-schemas/schemas/1.0/application.json", :failed_attribute=>"Required"}]
 ```
 
 As a bonus, you can obtain a fixture JSON document that conforms to a given schema as follows:
@@ -74,7 +80,7 @@ As a bonus, you can obtain a fixture JSON document that conforms to a given sche
 
 ## Building structs that conforms to the schema
 
-In order to facilitate working with the JSON payloads and responses from the datastore API, this gem also contains a shareable collection of `dry-struct` classes.
+The gem also ships a shared `dry-struct` / `dry-types` types library used across services (Crime Apply, Crime Review and the datastore) for working with the JSON payloads and responses from the datastore API.
 
 For instance, include this gem in your service, and them you can build a struct from an API response like this:
 
