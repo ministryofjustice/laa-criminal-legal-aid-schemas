@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/deletion_entry.json",
+  "title": "DeletionEntry",
+  "description": "Log entry for a deletion event",
+  "type": "object",
+  "required": [
+    "deleted_at",
+    "deleted_by",
+    "deleted_from",
+    "reason",
+    "record_id",
+    "record_type"
+  ],
+  "properties": {
+    "record_id": {
+      "description": "Globally unique identifier of the deleted record (UUID)",
+      "type": "string",
+      "format": "uuid"
+    },
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "initial_application",
+        "post_submission_evidence",
+        "change_in_financial_circumstances",
+        "provider",
+        "supporting_evidence",
+        "user"
+      ],
+      "description": "Type of record that has been deleted"
+    },
+    "deleted_by": {
+      "description": "The database UUID of the users OR the name of the system",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "system",
+            "developer"
+          ]
+        }
+      ]
+    },
+    "deleted_at": {
+      "description": "The time at which the record was deleted",
+      "type": "string",
+      "format": "date-time"
+    },
+    "deleted_from": {
+      "description": "Where the record was deleted from",
+      "type": "string",
+      "enum": [
+        "crime_apply",
+        "criminal_applications_datastore",
+        "crime_review"
+      ]
+    },
+    "reason": {
+      "description": "The reason for the record being deleted, if automated, the legal basis of that deletion",
+      "type": "string",
+      "enum": [
+        "user_action",
+        "right_to_erasure",
+        "two_year_retention_rule"
+      ]
+    },
+    "business_reference": {
+      "description": "The LAA Reference Number for application OR auth_system_id if service user. Must not contain PII",
+      "type": "string"
+    },
+    "correlation_id": {
+      "description": "Used to track single deletion event across services",
+      "type": "string",
+      "format": "uuid"
+    },
+    "causation_id": {
+      "description": "Used to link deletion to original command that caused the deletion",
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}
