@@ -129,12 +129,13 @@
             }
           ]
         },
-        "frozen_income_or_assets_subject": { 
-          "anyOf": [
+        "frozen_income_or_assets_subject":{
+          "anyOf":[
             {
-              "type": "null"
-            }, {
-              "type": "string",
+              "type":"null"
+            },
+            {
+              "type":"string",
               "enum": ["client", "partner", "client_and_partner"]
             }
           ]
