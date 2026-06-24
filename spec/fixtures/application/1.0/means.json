@@ -117,6 +117,7 @@
     "date_job_lost": "2023-09-01",
     "income_above_threshold": "no",
     "has_frozen_income_or_assets": "no",
+    "frozen_income_or_assets_subject": null,
     "client_has_dependants": "yes",
     "client_owns_property": "no",
     "has_savings": "yes",
@@ -286,6 +287,7 @@
         ]
       }
     ],
-    "has_frozen_income_or_assets": null
+    "has_frozen_income_or_assets": null,
+    "frozen_income_or_assets_subject": null
   }
 }
