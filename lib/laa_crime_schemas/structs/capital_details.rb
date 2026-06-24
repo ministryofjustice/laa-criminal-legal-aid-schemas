@@ -32,6 +32,7 @@ module LaaCrimeSchemas
       attribute? :national_savings_certificates, Types::Array.of(NationalSavingsCertificate).default([].freeze)
 
       attribute? :has_frozen_income_or_assets, Types::YesNoValue.optional
+      attribute? :frozen_income_or_assets_subject, Types::FrozenIncomeOrAssetsSubject.optional
       attribute? :has_no_other_assets, Types::YesNoValue.optional
     end
   end
