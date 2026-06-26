@@ -15,9 +15,9 @@ RSpec.describe LaaCrimeSchemas::Types do
     context 'for FrozenIncomeOrAssetsSubject' do
       it 'returns all frozen income or assets subject values' do
         expect(LaaCrimeSchemas::Types::FrozenIncomeOrAssetsSubject.values).to match_array(%w[
-          client
+          applicant
           partner
-          client_and_partner
+          applicant_and_partner
         ])
       end
     end

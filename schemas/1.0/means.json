@@ -136,7 +136,7 @@
             },
             {
               "type":"string",
-              "enum": ["client", "partner", "client_and_partner"]
+              "enum": ["applicant", "partner", "applicant_and_partner"]
             }
           ]
         },
@@ -441,7 +441,7 @@
         "partner_trust_fund_amount_held":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "partner_trust_fund_yearly_dividend":{"anyOf":[{ "type":"null" }, { "type":"integer" }]},
         "has_frozen_income_or_assets": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
-        "frozen_income_or_assets_subject": { "anyOf": [{"type": "null" }, {"type": "string", "enum": ["client", "partner", "client_and_partner"]}]},
+        "frozen_income_or_assets_subject": { "anyOf": [{"type": "null" }, {"type": "string", "enum": ["applicant", "partner", "applicant_and_partner"]}]},
         "has_no_savings": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "has_no_properties": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
         "has_no_investments": { "anyOf": [{"type": "null"}, {"type": "string", "enum": ["yes", "no"]}]},
