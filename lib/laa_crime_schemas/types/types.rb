@@ -234,9 +234,9 @@ module LaaCrimeSchemas
     WorkStreamType = Coercible::String.enum(*WORK_STREAM_TYPES)
 
     FROZEN_INCOME_OR_ASSETS_SUBJECTS = %w[
-      client
+      applicant
       partner
-      client_and_partner
+      applicant_and_partner
     ].freeze
 
     FrozenIncomeOrAssetsSubject = String.enum(*FROZEN_INCOME_OR_ASSETS_SUBJECTS)
