@@ -16,6 +16,13 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
         expect(subject.reference).to eq(6_000_001)
       end
 
+      it 'includes the slipstream audit selection outcome' do
+        expect(subject.slipstream_audit_selection_outcome).to have_attributes(
+          status: 'confirmed',
+          sample_rate: 10
+        )
+      end
+
       it 'produces a valid JSON document conforming to the schema' do
         expect(
           LaaCrimeSchemas::Validator.new(subject.to_json)
@@ -35,6 +42,16 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
       end
     end
 
+    context 'without a slipstream audit selection outcome' do
+      let(:attributes) do
+        JSON.parse(file_fixture(valid_fixture).read).except('slipstream_audit_selection_outcome')
+      end
+
+      it 'builds an application without an outcome' do
+        expect(subject.slipstream_audit_selection_outcome).to be_nil
+      end
+    end
+
     context 'for a valid returned JSON document' do
       let(:attributes) do
         JSON.parse(file_fixture(returned_fixture).read)
@@ -42,6 +59,13 @@ RSpec.describe LaaCrimeSchemas::Structs::CrimeApplication do
 
       it 'includes the return_details' do
         expect(subject.return_details).to be_a LaaCrimeSchemas::Structs::ReturnDetails
+      end
+
+      it 'includes the slipstream audit selection outcome' do
+        expect(subject.slipstream_audit_selection_outcome).to have_attributes(
+          status: 'confirmed',
+          sample_rate: 10
+        )
       end
 
       it 'produces a valid JSON document conforming to the schema' do

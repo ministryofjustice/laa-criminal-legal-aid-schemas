@@ -52,6 +52,24 @@ RSpec.describe LaaCrimeSchemas::Validator do
         it { expect(subject).to be_valid }
       end
 
+      context 'when the slipstream audit selection outcome is absent' do
+        let(:document) do
+          JSON.parse(file_fixture(valid_fixture).read).except('slipstream_audit_selection_outcome')
+        end
+
+        it { expect(subject).to be_valid }
+      end
+
+      context 'when the slipstream audit selection outcome is invalid' do
+        let(:document) do
+          JSON.parse(file_fixture(valid_fixture).read).tap do |json|
+            json['slipstream_audit_selection_outcome']['status'] = 'rejected'
+          end
+        end
+
+        it { expect(subject).not_to be_valid }
+      end
+
       context 'when the document is not valid' do
         let(:document) { { schema_version: 1.0 }.to_json }
 

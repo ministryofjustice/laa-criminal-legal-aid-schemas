@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "ministryofjustice/laa-criminal-legal-aid-schemas/main/schemas/1.0/general/slipstream_audit_selection_outcome.json",
+  "title": "Slipstream audit selection outcome",
+  "description": "The result and lifecycle metadata for slipstream audit sampling",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["not_selected", "selected", "confirmed", "withdrawn"]
+    },
+    "sample_rate": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "sampled_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status_determined_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["status", "sample_rate", "sampled_at", "status_determined_at"]
+}

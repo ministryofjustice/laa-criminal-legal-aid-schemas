@@ -30,6 +30,15 @@ module LaaCrimeSchemas
     ].freeze
     ApplicationStatus = String.enum(*APPLICATION_STATUSES)
 
+    SLIPSTREAM_AUDIT_SELECTION_OUTCOME_STATUSES = %w[
+      not_selected
+      selected
+      confirmed
+      withdrawn
+    ].freeze
+    SlipstreamAuditSelectionOutcomeStatus = String.enum(*SLIPSTREAM_AUDIT_SELECTION_OUTCOME_STATUSES)
+    SlipstreamAuditSampleRate = Integer.constrained(gteq: 1, lteq: 100)
+
     AssetType = String.enum(%w[valuable_items money_overseas timeshare land interest])
 
     BENEFIT_TYPES = %w[

@@ -453,6 +453,9 @@
     "evidence_details": {
       "$ref": "#/definitions/evidence"
     },
+    "slipstream_audit_selection_outcome": {
+      "$ref": "#/definitions/slipstream_audit_selection_outcome"
+    },
     "decisions": {
       "type": "array",
       "items": {
@@ -528,6 +531,9 @@
     },
     "decision": {
       "$ref": "general/decision.json"
+    },
+    "slipstream_audit_selection_outcome": {
+      "$ref": "general/slipstream_audit_selection_outcome.json"
     }
   }
 }
