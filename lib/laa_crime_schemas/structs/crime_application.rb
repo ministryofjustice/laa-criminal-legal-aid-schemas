@@ -34,6 +34,7 @@ module LaaCrimeSchemas
       attribute? :pre_cifc_reference_number, Types::String.optional
       attribute? :pre_cifc_usn, Types::String.optional
       attribute? :supporting_evidence, Types::Array.of(Document).default([].freeze)
+      attribute? :slipstream_audit_selection_outcome, SlipstreamAuditSelectionOutcome
 
       # datastore attributes
       attribute? :decisions, Types::Array.of(Decision).default([].freeze)
