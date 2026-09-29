@@ -10,7 +10,8 @@ RSpec.describe LaaCrimeSchemas::Structs::SlipstreamAuditSelectionOutcome do
       status: 'confirmed',
       sample_rate: 10,
       sampled_at: DateTime.parse('2026-09-03T10:00:00.000Z'),
-      status_determined_at: DateTime.parse('2026-09-04T11:00:00.000Z')
+      status_determined_at: DateTime.parse('2026-09-04T11:00:00.000Z'),
+      selection_reason: 'age'
     )
   end
 
@@ -29,6 +30,28 @@ RSpec.describe LaaCrimeSchemas::Structs::SlipstreamAuditSelectionOutcome do
   it 'rejects a sample rate outside the valid percentage range' do
     expect {
       described_class.new(attributes.merge('sample_rate' => 101))
+    }.to raise_error(Dry::Struct::Error)
+  end
+
+  it 'accepts every selection reason' do
+    reasons = %w[offence age]
+
+    expect(reasons.map { |reason| described_class.new(attributes.merge('selection_reason' => reason)).selection_reason }).to eq(reasons)
+  end
+
+  it 'is valid without a selection reason' do
+    expect { described_class.new(attributes.except('selection_reason')) }.not_to raise_error
+  end
+
+  it 'rejects an unsupported selection reason' do
+    expect {
+      described_class.new(attributes.merge('selection_reason' => 'other'))
+    }.to raise_error(Dry::Struct::Error)
+  end
+
+  it 'rejects a null selection reason' do
+    expect {
+      described_class.new(attributes.merge('selection_reason' => nil))
     }.to raise_error(Dry::Struct::Error)
   end
 end

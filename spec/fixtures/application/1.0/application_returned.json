@@ -210,7 +210,8 @@
     "status": "confirmed",
     "sample_rate": 10,
     "sampled_at": "2026-09-03T10:00:00.000Z",
-    "status_determined_at": "2026-09-04T11:00:00.000Z"
+    "status_determined_at": "2026-09-04T11:00:00.000Z",
+    "selection_reason": "age"
   },
   "work_stream": "criminal_applications_team"
 }
