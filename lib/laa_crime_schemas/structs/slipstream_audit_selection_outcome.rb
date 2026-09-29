@@ -7,7 +7,7 @@ module LaaCrimeSchemas
       attribute :sample_rate, Types::SlipstreamAuditSampleRate
       attribute :sampled_at, Types::JSON::DateTime
       attribute :status_determined_at, Types::JSON::DateTime
-      attribute? :selection_reason, Types::SlipstreamAuditSelectionReason.optional
+      attribute? :selection_reason, Types::SlipstreamAuditSelectionReason
     end
   end
 end

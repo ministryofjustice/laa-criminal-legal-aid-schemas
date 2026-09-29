@@ -48,4 +48,10 @@ RSpec.describe LaaCrimeSchemas::Structs::SlipstreamAuditSelectionOutcome do
       described_class.new(attributes.merge('selection_reason' => 'other'))
     }.to raise_error(Dry::Struct::Error)
   end
+
+  it 'rejects a null selection reason' do
+    expect {
+      described_class.new(attributes.merge('selection_reason' => nil))
+    }.to raise_error(Dry::Struct::Error)
+  end
 end

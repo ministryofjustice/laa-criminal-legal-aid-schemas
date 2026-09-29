@@ -23,8 +23,8 @@
       "format": "date-time"
     },
     "selection_reason": {
-      "type": ["string", "null"],
-      "enum": ["offence", "age", null]
+      "type": "string",
+      "enum": ["offence", "age"]
     }
   },
   "required": ["status", "sample_rate", "sampled_at", "status_determined_at"]
