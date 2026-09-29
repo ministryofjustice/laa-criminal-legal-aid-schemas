@@ -21,6 +21,10 @@
     "status_determined_at": {
       "type": "string",
       "format": "date-time"
+    },
+    "selection_reason": {
+      "type": "string",
+      "enum": ["offence", "age"]
     }
   },
   "required": ["status", "sample_rate", "sampled_at", "status_determined_at"]
