@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'dry-schema', '~> 1.13'
   spec.add_dependency 'dry-struct', '~> 1.6.0'
-  spec.add_dependency 'json-schema', '~> 4.0.0'
+  spec.add_dependency 'json-schema', '~> 6.2.1'
 end
